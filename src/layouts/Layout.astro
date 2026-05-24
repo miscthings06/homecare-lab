@@ -1,0 +1,103 @@
+---
+import '../styles/global.css';
+
+interface Props {
+  title: string;
+  description?: string;
+  ogImage?: string;
+  canonical?: string;
+}
+
+const {
+  title,
+  description = '청소부터 가전렌탈까지, 우리집 생활비 줄이는 홈서비스 가이드. 입주청소·이사청소·가전렌탈·생활비절감 정보를 정리합니다.',
+  ogImage = '/og-default.png',
+  canonical,
+} = Astro.props;
+
+const canonicalURL = canonical ?? new URL(Astro.url.pathname, Astro.site).href;
+const pageTitle = title === '홈케어랩' ? title : `${title} | 홈케어랩`;
+---
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{pageTitle}</title>
+  <meta name="description" content={description} />
+  <link rel="canonical" href={canonicalURL} />
+
+  <!-- OG / SNS -->
+  <meta property="og:title" content={pageTitle} />
+  <meta property="og:description" content={description} />
+  <meta property="og:image" content={ogImage} />
+  <meta property="og:url" content={canonicalURL} />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="ko_KR" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content={pageTitle} />
+  <meta name="twitter:description" content={description} />
+
+  <!-- 구글 폰트 -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;600;700;800;900&display=swap" rel="stylesheet" />
+
+  <!-- CSS는 Astro 빌드 시 자동 처리됩니다 -->
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+</head>
+<body>
+  <!-- 헤더 -->
+  <header>
+    <div class="container header-inner">
+      <a href="/" class="logo">홈케어<span>랩</span></a>
+      <button class="nav-toggle" id="navToggle" aria-label="메뉴 열기">
+        <span></span><span></span><span></span>
+      </button>
+      <nav id="mainNav">
+        <a href="/cheongso/" class={Astro.url.pathname.startsWith('/cheongso') ? 'active' : ''}>청소비용</a>
+        <a href="/rental/" class={Astro.url.pathname.startsWith('/rental') ? 'active' : ''}>가전렌탈</a>
+        <a href="/isa-junbi/" class={Astro.url.pathname.startsWith('/isa-junbi') ? 'active' : ''}>이사준비</a>
+        <a href="/jeolryak/" class={Astro.url.pathname.startsWith('/jeolryak') ? 'active' : ''}>생활비절감</a>
+        <a href="/calculator/" class={Astro.url.pathname.startsWith('/calculator') ? 'active' : ''}>계산기</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- 본문 -->
+  <main>
+    <slot />
+  </main>
+
+  <!-- 푸터 -->
+  <footer>
+    <div class="container footer-inner">
+      <div class="footer-logo">홈케어랩</div>
+      <p>청소부터 가전렌탈까지, 우리집 생활비 줄이는 홈서비스 가이드</p>
+      <div class="footer-links">
+        <a href="/about/">소개</a>
+        <a href="/contact/">문의</a>
+        <a href="/privacy/">개인정보처리방침</a>
+        <a href="/terms/">이용약관</a>
+        <a href="/affiliate-disclosure/">광고·제휴 고지</a>
+        <a href="/sitemap/">사이트맵</a>
+      </div>
+      <p class="footer-copy">© 2025 홈케어랩. 본 사이트의 정보는 참고용이며, 실제 비용은 업체마다 다를 수 있습니다.</p>
+    </div>
+  </footer>
+
+  <script>
+    // 모바일 햄버거 메뉴
+    const toggle = document.getElementById('navToggle');
+    const nav = document.getElementById('mainNav');
+    toggle?.addEventListener('click', () => nav?.classList.toggle('open'));
+
+    // FAQ 아코디언
+    document.querySelectorAll('.faq-q').forEach(q => {
+      q.addEventListener('click', () => {
+        q.closest('.faq-item')?.classList.toggle('open');
+      });
+    });
+  </script>
+</body>
+</html>

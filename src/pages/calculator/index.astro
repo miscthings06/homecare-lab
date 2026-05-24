@@ -1,0 +1,165 @@
+---
+import Layout from '../../layouts/Layout.astro';
+---
+<Layout
+  title="홈케어 비용 계산기"
+  description="입주청소 예상비용, 렌탈 vs 구매 손익분기점, 에어컨 전기요금을 직접 계산해보세요. 내 집 조건에 맞는 예상 비용을 확인할 수 있습니다."
+>
+  <div class="container" style="padding:40px 20px 80px">
+    <div class="breadcrumb">
+      <a href="/">홈</a><span>›</span><strong>계산기</strong>
+    </div>
+    <h1 class="section-title" style="font-size:1.7rem;margin-bottom:8px">홈케어 비용 계산기</h1>
+    <p class="section-sub">내 집 조건을 입력하면 예상 비용을 바로 확인할 수 있습니다.<br>아래 계산기는 참고용이며 실제 비용은 업체 견적을 확인하세요.</p>
+
+    <!-- ① 입주청소 계산기 -->
+    <div id="ipju" style="margin-bottom:60px">
+      <h2 style="font-size:1.2rem;font-weight:800;margin-bottom:6px;padding-left:12px;border-left:4px solid var(--primary)">🏠 입주청소 예상비용 계산기</h2>
+      <p style="color:var(--text-muted);font-size:0.9rem;margin-bottom:20px">평수와 조건을 선택하면 예상 비용 범위를 확인할 수 있습니다.</p>
+      <div class="calc-box">
+        <div class="calc-row">
+          <label for="pyeong">아파트 평수</label>
+          <select id="pyeong">
+            <option value="10">10평 이하 (원룸)</option>
+            <option value="20" selected>20평 (소형 아파트)</option>
+            <option value="30">30평 (중형 아파트)</option>
+            <option value="40">40평 (대형 아파트)</option>
+            <option value="50">50평 이상</option>
+          </select>
+        </div>
+        <div class="calc-row">
+          <label for="o염도">오염도</label>
+          <select id="o염도">
+            <option value="normal" selected>보통 (일반적인 생활 흔적)</option>
+            <option value="high">심함 (흡연·장기 거주·곰팡이)</option>
+          </select>
+        </div>
+        <div class="calc-row">
+          <label>추가 항목 (복수 선택 가능)</label>
+          <div style="display:flex;flex-direction:column;gap:8px;margin-top:4px">
+            <label style="font-weight:400;display:flex;gap:8px;align-items:center"><input type="checkbox" id="add_verandah"> 베란다 청소 (1개 기준)</label>
+            <label style="font-weight:400;display:flex;gap:8px;align-items:center"><input type="checkbox" id="add_aircon"> 에어컨 청소</label>
+            <label style="font-weight:400;display:flex;gap:8px;align-items:center"><input type="checkbox" id="add_saetak"> 세탁기 통세척</label>
+          </div>
+        </div>
+        <button class="btn btn-primary" id="calcIpju" style="width:100%;margin-top:8px">예상 비용 계산하기</button>
+        <div class="calc-result" id="ipjuResult">
+          <div class="result-label">예상 비용 범위</div>
+          <div class="result-num" id="ipjuNum">—</div>
+          <div class="result-label" style="margin-top:4px;font-size:0.78rem">※ 실제 비용은 현장 견적 확인 후 결정됩니다</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ② 렌탈 vs 구매 계산기 -->
+    <div id="rental" style="margin-bottom:60px">
+      <h2 style="font-size:1.2rem;font-weight:800;margin-bottom:6px;padding-left:12px;border-left:4px solid var(--primary)">🔄 렌탈 vs 구매 손익분기점 계산기</h2>
+      <p style="color:var(--text-muted);font-size:0.9rem;margin-bottom:20px">몇 개월 후부터 렌탈이 구매보다 손해인지 계산합니다.</p>
+      <div class="calc-box">
+        <div class="calc-row">
+          <label for="purchasePrice">제품 구매가 (만원)</label>
+          <input type="number" id="purchasePrice" placeholder="예: 80" min="0" />
+        </div>
+        <div class="calc-row">
+          <label for="rentalMonthly">월 렌탈료 (만원)</label>
+          <input type="number" id="rentalMonthly" placeholder="예: 3.5" step="0.1" min="0" />
+        </div>
+        <div class="calc-row">
+          <label for="rentalInstall">렌탈 설치비 (만원, 없으면 0)</label>
+          <input type="number" id="rentalInstall" placeholder="예: 0" min="0" />
+        </div>
+        <button class="btn btn-primary" id="calcRental" style="width:100%;margin-top:8px">손익분기점 계산하기</button>
+        <div class="calc-result" id="rentalResult">
+          <div class="result-label">렌탈이 구매보다 손해가 되는 시점</div>
+          <div class="result-num" id="rentalNum">—</div>
+          <div class="result-label" style="margin-top:4px;font-size:0.78rem">이 개월 수 이전에 해지하면 렌탈이 유리합니다</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ③ 에어컨 전기요금 계산기 -->
+    <div id="jeongi">
+      <h2 style="font-size:1.2rem;font-weight:800;margin-bottom:6px;padding-left:12px;border-left:4px solid var(--primary)">⚡ 에어컨 월 전기요금 계산기</h2>
+      <p style="color:var(--text-muted);font-size:0.9rem;margin-bottom:20px">에어컨 소비전력과 하루 사용 시간을 입력하면 월 예상 전기요금을 계산합니다.</p>
+      <div class="calc-box">
+        <div class="calc-row">
+          <label for="watt">소비전력 (W) — 에어컨 라벨 또는 제품 설명 참고</label>
+          <select id="watt">
+            <option value="700">700W (소형 / 6~8평용)</option>
+            <option value="1100" selected>1,100W (중형 / 12~15평용)</option>
+            <option value="1600">1,600W (대형 / 18~23평용)</option>
+            <option value="2200">2,200W (거실형 / 25평 이상)</option>
+          </select>
+        </div>
+        <div class="calc-row">
+          <label for="hoursPerDay">하루 사용 시간 (시간)</label>
+          <input type="number" id="hoursPerDay" placeholder="예: 8" min="1" max="24" />
+        </div>
+        <div class="calc-row">
+          <label for="daysPerMonth">한 달 사용 일수</label>
+          <input type="number" id="daysPerMonth" placeholder="예: 25" min="1" max="31" />
+        </div>
+        <button class="btn btn-primary" id="calcJeongi" style="width:100%;margin-top:8px">전기요금 계산하기</button>
+        <div class="calc-result" id="jeongiResult">
+          <div class="result-label">에어컨 월 예상 전기요금</div>
+          <div class="result-num" id="jeongiNum">—</div>
+          <div class="result-label" style="margin-top:4px;font-size:0.78rem">※ 누진세 구간 미반영, 단순 전력량 기준 추정값입니다</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // ① 입주청소 계산기
+    document.getElementById('calcIpju')?.addEventListener('click', () => {
+      const pyeong = document.getElementById('pyeong').value;
+      const o염도 = document.getElementById('o염도').value;
+      const verandah = document.getElementById('add_verandah').checked;
+      const aircon = document.getElementById('add_aircon').checked;
+      const saetak = document.getElementById('add_saetak').checked;
+
+      const base = {
+        '10': [10, 18], '20': [18, 28], '30': [28, 40], '40': [40, 60], '50': [60, 90]
+      }[pyeong];
+
+      let min = base[0], max = base[1];
+      if (o염도 === 'high') { min += Math.round(min * 0.35); max += Math.round(max * 0.45); }
+      if (verandah) { min += 3; max += 5; }
+      if (aircon) { min += 4; max += 8; }
+      if (saetak) { min += 3; max += 6; }
+
+      document.getElementById('ipjuNum').textContent = `약 ${min}만원 ~ ${max}만원`;
+      document.getElementById('ipjuResult').classList.add('show');
+    });
+
+    // ② 렌탈 vs 구매 계산기
+    document.getElementById('calcRental')?.addEventListener('click', () => {
+      const purchase = parseFloat(document.getElementById('purchasePrice').value) || 0;
+      const monthly = parseFloat(document.getElementById('rentalMonthly').value) || 0;
+      const install = parseFloat(document.getElementById('rentalInstall').value) || 0;
+
+      if (monthly <= 0) {
+        document.getElementById('rentalNum').textContent = '월 렌탈료를 입력해주세요';
+        document.getElementById('rentalResult').classList.add('show');
+        return;
+      }
+      const months = Math.ceil((purchase - install) / monthly);
+      document.getElementById('rentalNum').textContent = months > 0 ? `${months}개월 후` : '렌탈이 처음부터 손해입니다';
+      document.getElementById('rentalResult').classList.add('show');
+    });
+
+    // ③ 전기요금 계산기
+    document.getElementById('calcJeongi')?.addEventListener('click', () => {
+      const watt = parseFloat(document.getElementById('watt').value) || 0;
+      const hours = parseFloat(document.getElementById('hoursPerDay').value) || 0;
+      const days = parseFloat(document.getElementById('daysPerMonth').value) || 0;
+
+      // kWh 단가 약 130원/kWh 적용 (단순 추정)
+      const kwhPerMonth = (watt / 1000) * hours * days;
+      const cost = Math.round(kwhPerMonth * 130);
+
+      document.getElementById('jeongiNum').textContent = `약 ${cost.toLocaleString()}원`;
+      document.getElementById('jeongiResult').classList.add('show');
+    });
+  </script>
+</Layout>
