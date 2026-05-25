@@ -522,9 +522,12 @@ footer {
   color: var(--accent-dark);
   border: 1px solid rgba(47, 191, 155, 0.2);
 }
-.cta-chip-cash  { background: #fff8db; border-color: #f0dc8a; color: #805c00; }
-.cta-chip-gift  { background: #fff0f5; border-color: #f4b8ca; color: #9a274c; }
-.cta-chip-shield{ background: #e9fbf6; border-color: #a8e8d8; color: var(--accent-dark); }
+.cta-chip-cash  { background: #faf8f3; border-color: #e0d9cc; color: #4a3f35; }
+.cta-chip-gift  { background: #faf8f3; border-color: #e0d9cc; color: #4a3f35; }
+.cta-chip-shield{ background: #faf8f3; border-color: #e0d9cc; color: #4a3f35; }
+.cta-chip-cash::before  { content: "💰\00a0"; }
+.cta-chip-gift::before  { content: "🎁\00a0"; }
+.cta-chip-shield::before{ content: "✅\00a0"; }
 .cta-btn-pill {
   display: inline-block;
   padding: 0.88rem 2.2rem;
