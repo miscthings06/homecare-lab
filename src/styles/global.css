@@ -721,12 +721,12 @@ footer {
 
 /* ===== Hero Foot (히어로 내 제휴 고지) ===== */
 .hero-foot-text {
-  font-size: 0.68rem;
-  color: rgba(255,255,255,0.35);
+  font-size: 0.58rem;
+  color: rgba(255,255,255,0.18);
   margin-top: 2.2rem;
-  line-height: 1.5;
+  line-height: 1.4;
   padding-top: 0.6rem;
-  border-top: 1px solid rgba(255,255,255,0.1);
+  border-top: 1px solid rgba(255,255,255,0.06);
 }
 
 /* ===== 반응형 ===== */
@@ -854,29 +854,18 @@ footer {
   margin: 0;
 }
 
-/* ===== 실시간 뱃지 ===== */
-.live-badge {
+/* ===== HOT 뱃지 ===== */
+.hot-badge {
   display: inline-flex;
   align-items: center;
-  gap: 5px;
   font-size: 0.72rem;
-  font-weight: 700;
-  color: #e03c3c;
-  background: rgba(224, 60, 60, 0.1);
+  font-weight: 800;
+  color: #fff;
+  background: linear-gradient(135deg, #ff6b00 0%, #ff9500 100%);
   border-radius: 20px;
-  padding: 2px 8px;
-  margin-bottom: 8px;
-}
-.live-dot {
-  width: 6px;
-  height: 6px;
-  border-radius: 50%;
-  background: #e03c3c;
-  animation: blink 1.4s ease-in-out infinite;
-}
-@keyframes blink {
-  0%, 100% { opacity: 1; }
-  50% { opacity: 0.2; }
+  padding: 3px 10px;
+  letter-spacing: 0.03em;
+  box-shadow: 0 2px 6px rgba(255,107,0,0.35);
 }
 
 /* ===== 견적 버튼 (인덱스 카드용) ===== */
@@ -884,12 +873,13 @@ footer {
   display: inline-block;
   margin-top: 10px;
   padding: 7px 16px;
-  background: var(--accent);
+  background: var(--primary);
   color: #fff;
   border-radius: 6px;
   font-size: 0.82rem;
   font-weight: 700;
   text-decoration: none;
-  transition: background 0.15s;
+  transition: background 0.15s, box-shadow 0.15s;
+  box-shadow: 0 2px 6px rgba(31,45,61,0.18);
 }
-.quote-btn:hover { background: var(--accent-dark); text-decoration: none; }
+.quote-btn:hover { background: #2a3d52; box-shadow: 0 4px 10px rgba(31,45,61,0.28); text-decoration: none; }
