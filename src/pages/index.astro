@@ -15,9 +15,9 @@ import Layout from '../layouts/Layout.astro';
         <h1>청소부터 가전렌탈까지<br>우리집 생활비 줄이는<br>홈서비스 가이드</h1>
         <p class="hero-desc">입주청소, 이사청소, 정수기 렌탈, 인터넷 이전 설치까지<br>우리집 상황에 따라 비용이 달라지는 기준을 쉽게 비교해보세요.</p>
         <div class="hero-btns">
-          <a href="/cheongso/" class="btn btn-white">청소비용 확인하기</a>
-          <a href="/rental/" class="btn btn-outline">가전렌탈 비교하기</a>
-          <a href="/isa-junbi/isa-checklist/" class="btn btn-outline">이사준비 체크하기</a>
+          <a href="/cheongso/" class="btn btn-accent">청소비용 확인하기</a>
+          <a href="/rental/" class="btn btn-accent">가전렌탈 비교하기</a>
+          <a href="/isa-junbi/isa-checklist/" class="btn btn-accent">이사준비 체크하기</a>
         </div>
         <p class="hero-foot-text">
           본 사이트는 홈케어 서비스 직접 제공자가 아니며, 일부 링크 이용 시 제휴 수수료가 발생할 수 있습니다.
@@ -25,13 +25,17 @@ import Layout from '../layouts/Layout.astro';
       </div>
       <div class="hero-right">
         <div class="hero-popular">
-          <p class="popular-title">오늘 많이 보는 정보</p>
+          <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:14px">
+            <p class="popular-title" style="margin-bottom:0">오늘 많이 보는 정보</p>
+            <span class="live-badge"><span class="live-dot"></span>LIVE</span>
+          </div>
           <ol class="popular-list">
             <li><a href="/cheongso/ipju-cheongso-biyong/">입주청소 비용 기준</a></li>
             <li><a href="/rental/jeongsugi-rental/">정수기 렌탈 vs 생수 비교</a></li>
             <li><a href="/isa-junbi/isa-checklist/">이사 전 체크리스트</a></li>
             <li><a href="/cheongso/aircon-cheongso/">에어컨 청소 비용 비교</a></li>
           </ol>
+          <p style="font-size:0.72rem;color:rgba(255,255,255,0.4);margin-top:10px;text-align:right">오늘 기준 인기글</p>
         </div>
       </div>
     </div>
@@ -181,7 +185,7 @@ import Layout from '../layouts/Layout.astro';
         <li class="cta-chip cta-chip-shield">후기 기반 업체 매칭</li>
       </ul>
       <a class="cta-btn-pill" href="https://ajd.co.kr" target="_blank" rel="nofollow sponsored noopener" data-partner-cta="true">
-        아정당에서 무료 견적 받기 →
+        업체별 견적받기 →
       </a>
       <p class="cta-subcopy">청소 범위·추가 비용 사전 안내 · 입주청소·이사청소·에어컨청소<br>상담·계약은 아정당 및 각 업체를 통해 진행됩니다 <a href="/affiliate-disclosure/" style="color:inherit;text-decoration:underline">제휴 고지</a></p>
     </div>
@@ -191,9 +195,9 @@ import Layout from '../layouts/Layout.astro';
 <!-- ④-C 혜택 카드 (Benefits) -->
 <section class="gray">
   <div class="container">
-    <p class="bn-eyebrow">왜 비교 채널로 신청해야 할까?</p>
-    <h2 class="section-title">아정당 파트너 채널로 신청할 때 혜택</h2>
-    <p class="section-sub">회선 품질·렌탈 조건·청소 범위를 먼저 확인한 뒤, 파트너 채널의 혜택을 일반 신청과 같은 기준으로 비교하는 것이 안전합니다.</p>
+    <p class="bn-eyebrow">가입 경로별 혜택을 비교해보세요</p>
+    <h2 class="section-title">비교 채널로 신청하면 달라지는 점</h2>
+    <p class="section-sub">서비스 범위·청소 조건·렌탈 약정을 먼저 확인한 뒤, 비교 채널 경유 시 혜택이 일반 신청 대비 어떻게 다른지 살펴보세요.</p>
     <ul class="bn-grid">
       <li class="bn-card">
         <div class="bn-icon-wrap" aria-hidden="true"><span class="bn-icon">💰</span></div>
@@ -238,7 +242,7 @@ import Layout from '../layouts/Layout.astro';
         <p class="bn-source">출처: 아정당 서비스 가이드</p>
       </li>
     </ul>
-    <p class="bn-foot">ⓘ 위 혜택은 아정당(ajd.co.kr) 파트너 채널 경유 신청 시 적용되는 조건입니다. <strong>본 사이트는 아정당 공식 운영사가 아닙니다.</strong></p>
+    <p class="bn-foot">ⓘ 위 내용은 비교 채널(ajd.co.kr 파트너스) 경유 신청 기준입니다. <strong>본 사이트는 서비스 직접 제공자가 아닙니다.</strong></p>
   </div>
 </section>
 
@@ -302,22 +306,50 @@ import Layout from '../layouts/Layout.astro';
   <div class="container">
     <h2 class="section-title">이사 전후, 무엇부터 준비해야 할까요?</h2>
     <p class="section-sub">이사 준비는 청소, 인터넷 이전, 도시가스, 폐가전, 렌탈 이전을 따로 보면 놓치는 항목이 생깁니다. 날짜별로 필요한 홈서비스를 한 번에 정리해보세요.</p>
-    <div class="timeline">
-      <div class="timeline-item">
-        <span class="timeline-badge">D-30</span>
-        <div class="timeline-body">이사 날짜 확정 · 이사 업체 예약 · 인터넷 이전 신청</div>
+    <div class="dday-grid">
+      <div class="dday-card">
+        <span class="dday-badge">D-30</span>
+        <p class="dday-title">이사 한 달 전</p>
+        <ul class="dday-list">
+          <li>이사 날짜 확정 및 업체 예약</li>
+          <li>인터넷 이전 신청 (2~4주 소요)</li>
+          <li>현 거주지 렌탈 이전 문의</li>
+          <li>짐 분류 및 불필요 물품 정리</li>
+        </ul>
+        <a href="/isa-junbi/internet-isa/" class="dday-link">인터넷 이전 신청 방법 →</a>
       </div>
-      <div class="timeline-item">
-        <span class="timeline-badge">D-14</span>
-        <div class="timeline-body">도시가스 전출입 신청 · 폐가전 무상수거 예약 · 렌탈 이전 확인</div>
+      <div class="dday-card">
+        <span class="dday-badge">D-14</span>
+        <p class="dday-title">이사 2주 전</p>
+        <ul class="dday-list">
+          <li>도시가스 전출입 신청</li>
+          <li>폐가전 무상수거 예약</li>
+          <li>렌탈 이전 설치 일정 확정</li>
+          <li>전입신고·주소 변경 준비</li>
+        </ul>
+        <a href="/isa-junbi/dosigas/" class="dday-link">도시가스 신청 방법 →</a>
       </div>
-      <div class="timeline-item">
-        <span class="timeline-badge">D-7</span>
-        <div class="timeline-body">입주청소 범위 확인 · 관리사무소 문의 · 새집 하자 점검</div>
+      <div class="dday-card">
+        <span class="dday-badge">D-7</span>
+        <p class="dday-title">이사 1주 전</p>
+        <ul class="dday-list">
+          <li>입주청소 업체 최종 확인</li>
+          <li>관리사무소 이사 신청</li>
+          <li>새집 하자 사전 점검</li>
+          <li>이삿짐 포장 시작</li>
+        </ul>
+        <a href="/cheongso/ipju-cheongso-biyong/" class="dday-link">입주청소 비용 확인 →</a>
       </div>
-      <div class="timeline-item">
-        <span class="timeline-badge">D-1</span>
-        <div class="timeline-body">냉장고 정리 · 귀중품 분리 포장 · 이사 당일 동선 확인</div>
+      <div class="dday-card">
+        <span class="dday-badge">D-1</span>
+        <p class="dday-title">이사 하루 전</p>
+        <ul class="dday-list">
+          <li>냉장고 음식 정리</li>
+          <li>귀중품 별도 포장</li>
+          <li>이사 당일 동선 확인</li>
+          <li>청소 업체 일정 재확인</li>
+        </ul>
+        <a href="/isa-junbi/isa-checklist/" class="dday-link">이사 체크리스트 →</a>
       </div>
     </div>
     <div class="card-grid" style="margin-top:32px">
@@ -419,16 +451,41 @@ import Layout from '../layouts/Layout.astro';
 
 <!-- ⑧ 업체 선택 전 체크리스트 -->
 <section class="gray">
-  <div class="container" style="max-width:760px">
+  <div class="container">
     <h2 class="section-title">업체를 고르기 전, 이것만은 확인하세요</h2>
     <p class="section-sub">비용보다 청소 범위와 추가요금 기준을 먼저 확인하면 계약 후 분쟁을 예방할 수 있습니다.</p>
-    <ul class="checklist" style="margin-bottom:28px">
-      <li>기본 청소 범위가 어디까지인지 확인했나요?</li>
-      <li>창틀, 베란다, 주방 후드, 곰팡이 제거가 포함되나요?</li>
-      <li>추가요금이 붙는 조건을 견적서에서 확인했나요?</li>
-      <li>예약 취소·변경 시 환불 기준을 확인했나요?</li>
-      <li>후기에서 시간 준수와 A/S 대응을 확인했나요?</li>
-    </ul>
+    <div class="check-grid">
+      <div class="check-card">
+        <span class="check-card-icon">🔍</span>
+        <h3>기본 청소 범위 확인</h3>
+        <p>기본 청소 범위가 어디까지인지 견적서 상에서 확인하세요.</p>
+      </div>
+      <div class="check-card">
+        <span class="check-card-icon">🪟</span>
+        <h3>포함 항목 체크</h3>
+        <p>창틀·베란다·주방 후드·곰팡이 제거 포함 여부를 확인하세요.</p>
+      </div>
+      <div class="check-card">
+        <span class="check-card-icon">💸</span>
+        <h3>추가요금 조건 확인</h3>
+        <p>추가요금이 붙는 조건이 견적서에 명시되어 있는지 확인하세요.</p>
+      </div>
+      <div class="check-card">
+        <span class="check-card-icon">↩️</span>
+        <h3>환불·취소 기준</h3>
+        <p>예약 취소·변경 시 환불 기준을 사전에 확인해두세요.</p>
+      </div>
+      <div class="check-card">
+        <span class="check-card-icon">⭐</span>
+        <h3>후기·응대 확인</h3>
+        <p>실제 후기에서 시간 준수와 A/S 대응 여부를 살펴보세요.</p>
+      </div>
+      <div class="check-card">
+        <span class="check-card-icon">📋</span>
+        <h3>계약서 서면 수령</h3>
+        <p>구두 계약을 피하고 청소 범위·비용을 서면으로 받으세요.</p>
+      </div>
+    </div>
     <div style="text-align:center">
       <a href="/cheongso/ipju-cheongso-biyong/" class="btn btn-primary">청소 견적 전 체크리스트 자세히 보기 →</a>
     </div>
@@ -519,7 +576,7 @@ import Layout from '../layouts/Layout.astro';
         <li class="cta-chip cta-chip-shield">후기 기반 업체 매칭</li>
       </ul>
       <a class="cta-btn-pill" href="https://ajd.co.kr" target="_blank" rel="nofollow sponsored noopener" data-partner-cta="true">
-        아정당에서 무료 견적 받기 →
+        업체별 견적받기 →
       </a>
       <p class="cta-subcopy" style="color:rgba(255,255,255,0.5)">상담·계약·개통은 아정당 및 각 업체를 통해 진행됩니다</p>
     </div>
@@ -636,7 +693,7 @@ import Layout from '../layouts/Layout.astro';
 .quick-card em {
   font-style: normal;
   font-size: 0.8rem;
-  color: var(--primary);
+  color: var(--accent);
   font-weight: 600;
   margin-top: 4px;
 }
@@ -647,52 +704,10 @@ import Layout from '../layouts/Layout.astro';
   margin-top: 8px;
   font-size: 0.82rem;
   font-weight: 600;
-  color: var(--primary);
+  color: var(--accent);
 }
 
-/* D-day 타임라인 */
-.timeline {
-  display: flex;
-  flex-direction: column;
-  gap: 0;
-  margin-top: 28px;
-  border-left: 3px solid var(--primary);
-  padding-left: 0;
-  margin-left: 12px;
-}
-.timeline-item {
-  display: flex;
-  align-items: flex-start;
-  gap: 16px;
-  padding: 14px 0 14px 20px;
-  position: relative;
-}
-.timeline-item::before {
-  content: '';
-  position: absolute;
-  left: -7px;
-  top: 20px;
-  width: 11px;
-  height: 11px;
-  border-radius: 50%;
-  background: var(--primary);
-}
-.timeline-badge {
-  background: var(--primary);
-  color: #fff;
-  font-size: 0.78rem;
-  font-weight: 700;
-  padding: 3px 10px;
-  border-radius: 20px;
-  white-space: nowrap;
-  flex-shrink: 0;
-}
-.timeline-body {
-  font-size: 0.93rem;
-  color: #3a4a5a;
-  line-height: 1.6;
-  padding-top: 2px;
-}
+/* D-day 카드는 global.css에서 관리 */
 
 /* 계산기 카드 강조 */
 .card-calc {

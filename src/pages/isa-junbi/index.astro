@@ -2,73 +2,191 @@
 import Layout from '../../layouts/Layout.astro';
 ---
 <Layout
-  title="이사준비 체크리스트"
-  description="이사 전후 꼭 해야 할 인터넷 이전, 도시가스 신청, 폐가전 수거, 입주 하자 점검까지 순서대로 정리했습니다."
+  title="이사준비 체크리스트 — 인터넷·도시가스·청소·폐가전 신청 순서"
+  description="이사 전후 꼭 해야 할 인터넷 이전, 도시가스 신청, 폐가전 수거, 입주청소까지 D-30부터 순서대로 정리했습니다. 놓치기 쉬운 항목을 사전에 확인하세요."
 >
-  <div class="container" style="padding-top:32px">
+  <div class="container" style="padding-top:32px;padding-bottom:80px">
     <div class="breadcrumb">
       <a href="/">홈</a><span>›</span><strong>이사준비</strong>
     </div>
-    <h1 class="section-title" style="font-size:1.7rem;margin-bottom:8px">이사준비 체크리스트</h1>
-    <p class="section-sub">이사할 때 빠뜨리기 쉬운 항목들을<br>순서대로 정리했습니다.</p>
 
-    <div class="card-grid" style="margin-bottom:48px">
-      <a href="/isa-junbi/isa-checklist/" class="card" style="text-decoration:none">
+    <!-- 헤더 -->
+    <h1 class="section-title" style="font-size:1.75rem;margin-bottom:8px">이사준비 체크리스트</h1>
+    <p class="section-sub" style="max-width:620px">이사 준비는 항목별로 따로 보면 놓치기 쉽습니다. D-30부터 이사 당일까지 해야 할 일을 순서대로 정리했습니다. 인터넷·도시가스·폐가전·청소를 한 번에 확인하세요.</p>
+
+    <!-- D-day 카드 -->
+    <div class="dday-grid" style="margin-bottom:40px">
+      <div class="dday-card">
+        <span class="dday-badge">D-30</span>
+        <p class="dday-title">이사 한 달 전</p>
+        <ul class="dday-list">
+          <li>이사 날짜 확정</li>
+          <li>이사 업체 예약</li>
+          <li>인터넷 이전 신청 (2~4주 소요)</li>
+          <li>현 렌탈 이전 문의</li>
+          <li>짐 분류 시작</li>
+        </ul>
+        <a href="/isa-junbi/internet-isa/" class="dday-link">인터넷 이전 신청 →</a>
+      </div>
+      <div class="dday-card">
+        <span class="dday-badge">D-14</span>
+        <p class="dday-title">이사 2주 전</p>
+        <ul class="dday-list">
+          <li>도시가스 전출 신청</li>
+          <li>폐가전 무상수거 예약</li>
+          <li>렌탈 이전 설치 일정 확정</li>
+          <li>전입신고·주소 변경 준비</li>
+          <li>불필요 물품 정리</li>
+        </ul>
+        <a href="/isa-junbi/dosigas/" class="dday-link">도시가스 신청 방법 →</a>
+      </div>
+      <div class="dday-card">
+        <span class="dday-badge">D-7</span>
+        <p class="dday-title">이사 1주 전</p>
+        <ul class="dday-list">
+          <li>입주청소 업체 최종 확인</li>
+          <li>관리사무소 이사 신청</li>
+          <li>새집 하자 사전 점검</li>
+          <li>이삿짐 포장 시작</li>
+          <li>인터넷 개통 일정 재확인</li>
+        </ul>
+        <a href="/cheongso/ipju-cheongso-biyong/" class="dday-link">입주청소 비용 확인 →</a>
+      </div>
+      <div class="dday-card">
+        <span class="dday-badge">D-1</span>
+        <p class="dday-title">이사 하루 전</p>
+        <ul class="dday-list">
+          <li>냉장고 음식 정리</li>
+          <li>귀중품 별도 포장</li>
+          <li>이사 동선 확인</li>
+          <li>청소 업체 일정 재확인</li>
+          <li>도시가스 안전장치 확인</li>
+        </ul>
+        <a href="/isa-junbi/isa-checklist/" class="dday-link">이사 체크리스트 →</a>
+      </div>
+    </div>
+
+    <!-- 이사 서비스별 카드 -->
+    <h2 class="section-title" style="margin-bottom:20px">이사 준비 항목별 가이드</h2>
+    <div class="card-grid" style="margin-bottom:40px">
+      <div class="card">
         <div class="card-icon">📋</div>
         <div class="card-tag">체크리스트</div>
         <h3>이사 전 점검 체크리스트</h3>
-        <p>이사 전 꼭 해야 할 항목 총정리</p>
-      </a>
-      <a href="/isa-junbi/internet-isa/" class="card" style="text-decoration:none">
+        <p>수도·전기·가스·벽면 균열까지 이사 전 반드시 확인해야 할 항목을 순서대로 정리했습니다. 놓치면 입주 후 비용이 발생할 수 있습니다.</p>
+        <a href="/isa-junbi/isa-checklist/" class="card-link">체크리스트 보기 →</a>
+      </div>
+      <div class="card">
         <div class="card-icon">📶</div>
         <div class="card-tag">인터넷</div>
-        <h3>인터넷 이전 설치 신청</h3>
-        <p>이사 전 미리 신청해야 하는 이유</p>
-      </a>
-      <a href="/isa-junbi/dosigas/" class="card" style="text-decoration:none">
+        <h3>인터넷 이전 vs 신규 가입</h3>
+        <p>이사 시 기존 인터넷을 이전할지 신규 가입할지 비용이 달라집니다. 현금 지원·위약금·공사비를 비교해 유리한 방법을 선택하세요.</p>
+        <div style="display:flex;gap:8px;margin-top:12px;flex-wrap:wrap">
+          <a href="/isa-junbi/internet-isa/" class="card-link">신청 순서 확인 →</a>
+          <a href="https://partners.ajl.to/lead/internet?partnerId=UDXBJ0IC" target="_blank" rel="nofollow sponsored noopener" class="quote-btn" data-partner-cta="true">인터넷 견적받기</a>
+        </div>
+      </div>
+      <div class="card">
         <div class="card-icon">🔥</div>
         <div class="card-tag">도시가스</div>
         <h3>도시가스 전입·전출 신청</h3>
-        <p>전출 신청 안 하면 요금 계속 나옵니다</p>
-      </a>
-      <a href="/isa-junbi/pye-gajeon/" class="card" style="text-decoration:none">
+        <p>이사 시 도시가스 전출 신청을 빠뜨리면 이사 후에도 요금이 계속 청구될 수 있습니다. 신청 방법과 필요 서류를 확인하세요.</p>
+        <a href="/isa-junbi/dosigas/" class="card-link">신청 방법 보기 →</a>
+      </div>
+      <div class="card">
         <div class="card-icon">♻️</div>
         <div class="card-tag">폐가전</div>
         <h3>폐가전 무상수거 신청</h3>
-        <p>신청 방법과 수거 가능한 품목</p>
-      </a>
+        <p>냉장고·세탁기·TV 등 대형 폐가전은 환경부 무상수거 서비스를 신청할 수 있습니다. 수거 불가 품목과 신청 일정 기준을 확인하세요.</p>
+        <a href="/isa-junbi/pye-gajeon/" class="card-link">준비사항 확인 →</a>
+      </div>
+      <div class="card">
+        <div class="card-icon">🏡</div>
+        <div class="card-tag">입주청소</div>
+        <h3>이사 후 입주청소 비용</h3>
+        <p>새 집에 이사 후 청소 업체를 이용하면 초기 위생 상태를 확보할 수 있습니다. 평수별 비용과 포함 항목 기준을 확인하세요.</p>
+        <div style="display:flex;gap:8px;margin-top:12px;flex-wrap:wrap">
+          <a href="/cheongso/ipju-cheongso-biyong/" class="card-link">비용 기준 보기 →</a>
+          <a href="https://ajd.co.kr" target="_blank" rel="nofollow sponsored noopener" class="quote-btn" data-partner-cta="true">청소 견적받기</a>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-icon">🔄</div>
+        <div class="card-tag">렌탈이전</div>
+        <h3>가전렌탈 이전 설치 기준</h3>
+        <p>정수기·공기청정기 등 렌탈 제품은 이사 시 이전 설치 서비스를 이용해야 합니다. 이전 비용과 해지 위약금을 비교하세요.</p>
+        <a href="/rental/rental-yakjeong/" class="card-link">이전 기준 확인 →</a>
+      </div>
     </div>
 
-    <h2 class="section-title" style="margin-bottom:20px">이사준비 관련 글</h2>
-    <div class="post-list">
-      <a href="/isa-junbi/isa-checklist/" class="post-item" style="text-decoration:none">
-        <div class="post-num">01</div>
-        <div class="post-info">
-          <h3>이사 전 꼭 해야 할 집 점검 체크리스트</h3>
-          <p>수도·전기·가스·벽면 균열까지 빠짐없이</p>
+    <!-- 비교 채널 혜택 (인터넷) -->
+    <div style="background:var(--bg-gray);border-radius:14px;padding:28px;margin-bottom:40px">
+      <p style="font-size:0.8rem;font-weight:600;color:var(--accent-dark);margin-bottom:8px">가입 경로별 혜택을 비교해보세요</p>
+      <h2 style="font-size:1.15rem;font-weight:800;margin-bottom:16px;color:var(--primary)">이사 시 인터넷 비교 채널로 가입하면</h2>
+      <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:12px;margin-bottom:20px">
+        <div style="background:#fff;border-radius:10px;padding:16px">
+          <p style="font-size:1.4rem;font-weight:900;color:var(--primary);margin-bottom:4px">10~30만</p>
+          <p style="font-size:0.88rem;font-weight:700;margin-bottom:4px">현금·상품권 혜택</p>
+          <p style="font-size:0.82rem;color:var(--text-muted)">신규 가입 시 통신사별 가입 혜택 비교.</p>
         </div>
-      </a>
-      <a href="/isa-junbi/internet-isa/" class="post-item" style="text-decoration:none">
-        <div class="post-num">02</div>
-        <div class="post-info">
-          <h3>인터넷 이전 설치 신청 전 확인해야 할 것</h3>
-          <p>이사 후 개통 지연 없이 쓰는 방법</p>
+        <div style="background:#fff;border-radius:10px;padding:16px">
+          <p style="font-size:1.4rem;font-weight:900;color:var(--primary);margin-bottom:4px">3사</p>
+          <p style="font-size:0.88rem;font-weight:700;margin-bottom:4px">통신사 동시 비교</p>
+          <p style="font-size:0.82rem;color:var(--text-muted)">KT·SKB·LGU+ 조건을 한 번에 비교.</p>
         </div>
-      </a>
-      <a href="/isa-junbi/dosigas/" class="post-item" style="text-decoration:none">
-        <div class="post-num">03</div>
-        <div class="post-info">
-          <h3>도시가스 전입·전출 신청 순서</h3>
-          <p>전출 신청을 빠뜨리면 어떻게 되는지</p>
+        <div style="background:#fff;border-radius:10px;padding:16px">
+          <p style="font-size:1.4rem;font-weight:900;color:var(--primary);margin-bottom:4px">무료</p>
+          <p style="font-size:0.88rem;font-weight:700;margin-bottom:4px">상담 비용</p>
+          <p style="font-size:0.82rem;color:var(--text-muted)">가입 여부와 관계없이 비교·상담 무료.</p>
         </div>
-      </a>
-      <a href="/isa-junbi/pye-gajeon/" class="post-item" style="text-decoration:none">
-        <div class="post-num">04</div>
-        <div class="post-info">
-          <h3>폐가전 무상수거 신청 전 준비사항</h3>
-          <p>신청 방법과 수거 불가 품목 확인</p>
+        <div style="background:#fff;border-radius:10px;padding:16px">
+          <p style="font-size:1.4rem;font-weight:900;color:var(--primary);margin-bottom:4px">결합</p>
+          <p style="font-size:0.88rem;font-weight:700;margin-bottom:4px">할인 상품 비교</p>
+          <p style="font-size:0.82rem;color:var(--text-muted)">모바일·TV 결합 시 추가 할인 조건 확인.</p>
         </div>
-      </a>
+      </div>
+      <div style="text-align:center">
+        <a href="https://partners.ajl.to/lead/internet?partnerId=UDXBJ0IC" target="_blank" rel="nofollow sponsored noopener" class="cta-btn-pill" data-partner-cta="true" style="display:inline-block;padding:0.75rem 2rem;font-size:0.95rem">인터넷 조건 비교하기 →</a>
+        <p style="font-size:0.75rem;color:var(--text-muted);margin-top:8px">본 사이트는 서비스 직접 제공자가 아닙니다 · <a href="/affiliate-disclosure/" style="color:inherit;text-decoration:underline">제휴 고지</a></p>
+      </div>
+    </div>
+
+    <!-- FAQ -->
+    <h2 class="section-title" style="margin-bottom:20px">이사준비 자주 묻는 질문</h2>
+    <div class="faq-list" style="margin-bottom:40px">
+      <div class="faq-item">
+        <div class="faq-q">인터넷 이전과 신규 가입 중 어느 것이 유리한가요?</div>
+        <div class="faq-a">기존 약정 잔여 기간과 신규 가입 혜택을 비교해야 합니다. 약정이 많이 남아 있어 위약금이 크다면 이전이 유리하고, 약정이 거의 만료됐거나 신규 혜택(현금·상품권 등)이 위약금보다 크다면 신규 가입이 유리합니다. 이사 2~4주 전에 신청해야 이사 당일 개통이 가능합니다.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">도시가스 전출 신청을 안 하면 어떻게 되나요?</div>
+        <div class="faq-a">이사 후에도 기존 주소지의 가스 요금이 계속 청구됩니다. 이사 당일 또는 전날 전출 신청을 완료해야 요금 정산이 됩니다. 전출 신청은 각 지역 도시가스 공급사 고객센터 또는 앱에서 가능합니다.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">폐가전 무상수거 신청은 언제 해야 하나요?</div>
+        <div class="faq-a">이사 2주 전부터 신청하는 것이 좋습니다. 이사 성수기(3~4월, 9~10월)에는 수거 일정이 빠르게 차므로 더 일찍 신청해야 합니다. 냉장고·세탁기·TV·에어컨 등 대형 가전은 무상수거 가능하며, 환경부 폐가전 무상방문 수거 서비스(www.15990903.or.kr)에서 신청합니다.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">렌탈 제품은 이사 시 어떻게 처리하나요?</div>
+        <div class="faq-a">대부분의 렌탈 업체는 이전 설치 서비스를 제공합니다. 이사 최소 1~2주 전 렌탈 업체 고객센터에 문의해 이전 일정을 잡아야 합니다. 이전 설치 비용이 별도로 발생할 수 있으며, 계약서에서 이전 서비스 조건을 미리 확인하는 것이 좋습니다.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">입주청소는 이사 전에 해야 하나요, 이사 후에 해야 하나요?</div>
+        <div class="faq-a">짐이 들어오기 전인 이사 당일 또는 이사 전날에 하는 것이 가장 효율적입니다. 짐이 없는 공실 상태에서 청소하면 구석구석 청소 범위가 넓어지고 청소 품질이 높아집니다. 청소 업체와 이사 일정을 맞춰 예약하는 것이 중요합니다.</div>
+      </div>
+    </div>
+
+    <!-- 관련 글 -->
+    <div class="related-posts">
+      <h3>이사준비 관련 글 전체 보기</h3>
+      <div class="related-grid">
+        <a href="/isa-junbi/isa-checklist/" class="related-item">이사 전 점검 체크리스트</a>
+        <a href="/isa-junbi/internet-isa/" class="related-item">인터넷 이전·신규 가입 비교</a>
+        <a href="/isa-junbi/dosigas/" class="related-item">도시가스 전입·전출 신청</a>
+        <a href="/isa-junbi/pye-gajeon/" class="related-item">폐가전 무상수거 신청</a>
+        <a href="/cheongso/ipju-cheongso-biyong/" class="related-item">입주청소 비용 기준</a>
+        <a href="/rental/rental-yakjeong/" class="related-item">렌탈 이전 위약금 기준</a>
+      </div>
     </div>
   </div>
 </Layout>

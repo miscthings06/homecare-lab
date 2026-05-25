@@ -2,103 +2,197 @@
 import Layout from '../../layouts/Layout.astro';
 ---
 <Layout
-  title="청소비용 가이드"
-  description="입주청소, 이사청소, 에어컨청소, 세탁기청소 비용을 평수·조건별로 비교합니다. 견적 요청 전 꼭 확인해야 할 체크리스트도 함께 제공합니다."
+  title="청소비용 가이드 — 입주청소·이사청소·에어컨 비용 비교"
+  description="입주청소·이사청소·에어컨청소·세탁기청소 비용을 평수·조건별로 비교합니다. 견적 전 꼭 확인해야 할 기준과 업체 선택 체크리스트를 함께 제공합니다."
 >
-  <div class="container" style="padding-top:32px">
+  <div class="container" style="padding-top:32px;padding-bottom:80px">
     <div class="breadcrumb">
       <a href="/">홈</a><span>›</span><strong>청소비용</strong>
     </div>
-    <h1 class="section-title" style="font-size:1.7rem;margin-bottom:8px">청소비용 가이드</h1>
-    <p class="section-sub">입주청소·이사청소·에어컨청소·세탁기청소까지<br>평수와 조건에 따라 비용이 어떻게 달라지는지 확인하세요.</p>
 
-    <!-- 카테고리 카드 -->
-    <div class="card-grid" style="margin-bottom:48px">
-      <a href="/cheongso/ipju-cheongso-biyong/" class="card" style="text-decoration:none">
+    <!-- 헤더 -->
+    <h1 class="section-title" style="font-size:1.75rem;margin-bottom:8px">청소비용 가이드</h1>
+    <p class="section-sub" style="max-width:620px">입주청소·이사청소·에어컨청소까지, 평수와 오염도·포함 항목에 따라 비용이 달라지는 기준을 정리했습니다. 견적 전 반드시 확인해야 할 체크포인트와 함께 제공합니다.</p>
+
+    <!-- 평수별 기준 요약 -->
+    <div style="background:var(--bg-gray);border-radius:12px;padding:24px 28px;margin-bottom:40px">
+      <h2 style="font-size:1.1rem;font-weight:800;margin-bottom:16px;color:var(--primary)">📋 입주청소 평수별 기준 요금 (2025년 기준)</h2>
+      <div style="overflow-x:auto">
+        <table style="width:100%;border-collapse:collapse;font-size:0.9rem">
+          <thead>
+            <tr style="background:var(--primary);color:#fff">
+              <th style="padding:10px 14px;text-align:left">평수</th>
+              <th style="padding:10px 14px;text-align:left">기본 요금 범위</th>
+              <th style="padding:10px 14px;text-align:left">창틀 포함 시</th>
+              <th style="padding:10px 14px;text-align:left">에어컨 추가 시</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td style="padding:9px 14px;border-bottom:1px solid var(--border)">20평 이하</td><td style="padding:9px 14px;border-bottom:1px solid var(--border)">15~25만원</td><td style="padding:9px 14px;border-bottom:1px solid var(--border)">+3~5만원</td><td style="padding:9px 14px;border-bottom:1px solid var(--border)">+4~8만원</td></tr>
+            <tr style="background:var(--bg-gray)"><td style="padding:9px 14px;border-bottom:1px solid var(--border)">25~33평</td><td style="padding:9px 14px;border-bottom:1px solid var(--border)">25~45만원</td><td style="padding:9px 14px;border-bottom:1px solid var(--border)">+5~8만원</td><td style="padding:9px 14px;border-bottom:1px solid var(--border)">+6~12만원</td></tr>
+            <tr><td style="padding:9px 14px;border-bottom:1px solid var(--border)">34~42평</td><td style="padding:9px 14px;border-bottom:1px solid var(--border)">40~70만원</td><td style="padding:9px 14px;border-bottom:1px solid var(--border)">+8~12만원</td><td style="padding:9px 14px;border-bottom:1px solid var(--border)">+8~15만원</td></tr>
+            <tr style="background:var(--bg-gray)"><td style="padding:9px 14px">50평 이상</td><td style="padding:9px 14px">70만원~</td><td style="padding:9px 14px">별도 협의</td><td style="padding:9px 14px">별도 협의</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p style="font-size:0.78rem;color:var(--text-muted);margin-top:10px">※ 위 금액은 업체·지역·오염도에 따라 달라집니다. 반드시 견적서로 확인하세요.</p>
+    </div>
+
+    <!-- 청소 종류별 카드 -->
+    <h2 class="section-title" style="margin-bottom:20px">청소 종류별 비용 가이드</h2>
+    <div class="card-grid" style="margin-bottom:40px">
+      <div class="card">
         <div class="card-icon">🏡</div>
         <div class="card-tag">입주청소</div>
         <h3>입주청소 비용 기준</h3>
-        <p>평수별 예상 비용과 추가 항목별 가격 차이</p>
-      </a>
-      <a href="/cheongso/isa-cheongso/" class="card" style="text-decoration:none">
+        <p>평수별 예상 비용과 창틀·베란다·곰팡이 제거 등 추가 항목별 가격 차이. 견적 전 확인해야 할 포함 범위 기준을 정리했습니다.</p>
+        <div style="display:flex;gap:8px;margin-top:12px;flex-wrap:wrap">
+          <a href="/cheongso/ipju-cheongso-biyong/" class="card-link">비용 기준 보기 →</a>
+          <a href="https://ajd.co.kr" target="_blank" rel="nofollow sponsored noopener" class="quote-btn" data-partner-cta="true">견적받기</a>
+        </div>
+      </div>
+      <div class="card">
         <div class="card-icon">📦</div>
         <div class="card-tag">이사청소</div>
         <h3>이사청소 비용</h3>
-        <p>이사 후 구청소 비용과 입주청소 차이</p>
-      </a>
-      <a href="/cheongso/aircon-cheongso/" class="card" style="text-decoration:none">
+        <p>나가는 집 원상복구 목적의 이사청소와 들어오는 집의 입주청소 차이. 비용이 다른 이유와 한 업체에 묶어 의뢰 시 절감 방법을 안내합니다.</p>
+        <div style="display:flex;gap:8px;margin-top:12px;flex-wrap:wrap">
+          <a href="/cheongso/isa-cheongso/" class="card-link">차이 보기 →</a>
+          <a href="https://ajd.co.kr" target="_blank" rel="nofollow sponsored noopener" class="quote-btn" data-partner-cta="true">견적받기</a>
+        </div>
+      </div>
+      <div class="card">
         <div class="card-icon">❄️</div>
         <div class="card-tag">에어컨청소</div>
         <h3>에어컨 청소 비용</h3>
-        <p>셀프 청소와 전문 업체 청소 비용 비교</p>
-      </a>
-      <a href="/cheongso/saetak-cheongso/" class="card" style="text-decoration:none">
+        <p>셀프 청소로 처리 가능한 범위와 전문업체가 필요한 상황 구분. 벽걸이·스탠드·시스템 에어컨별 업체 청소 비용 기준을 안내합니다.</p>
+        <div style="display:flex;gap:8px;margin-top:12px;flex-wrap:wrap">
+          <a href="/cheongso/aircon-cheongso/" class="card-link">비교하기 →</a>
+          <a href="https://ajd.co.kr" target="_blank" rel="nofollow sponsored noopener" class="quote-btn" data-partner-cta="true">견적받기</a>
+        </div>
+      </div>
+      <div class="card">
         <div class="card-icon">🫧</div>
         <div class="card-tag">세탁기청소</div>
         <h3>세탁기 청소 비용</h3>
-        <p>통세척 주기와 청소 비용 기준 정리</p>
-      </a>
+        <p>냄새·이물질 발생 시 통세척이 필요한 시점과 통돌이·드럼 유형별 주기 차이. 업체 청소와 셀프 청소 비용 기준을 정리했습니다.</p>
+        <div style="display:flex;gap:8px;margin-top:12px;flex-wrap:wrap">
+          <a href="/cheongso/saetak-cheongso/" class="card-link">주기 확인 →</a>
+          <a href="https://ajd.co.kr" target="_blank" rel="nofollow sponsored noopener" class="quote-btn" data-partner-cta="true">견적받기</a>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-icon">🛁</div>
+        <div class="card-tag">욕실청소</div>
+        <h3>욕실 곰팡이 제거</h3>
+        <p>셀프 곰팡이 제거의 한계와 전문 업체 청소가 필요한 경우. 실리콘 교체 포함 비용과 재발 방지 방법을 안내합니다.</p>
+        <div style="display:flex;gap:8px;margin-top:12px;flex-wrap:wrap">
+          <a href="/cheongso/욕실-곰팡이/" class="card-link">확인하기 →</a>
+          <a href="https://ajd.co.kr" target="_blank" rel="nofollow sponsored noopener" class="quote-btn" data-partner-cta="true">견적받기</a>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-icon">🍳</div>
+        <div class="card-tag">주방청소</div>
+        <h3>주방 후드 청소 비용</h3>
+        <p>기름때가 심한 후드 필터·내부 청소 비용과 직접 닦을 때 대비 효과 차이. 업체 청소 주기와 견적 기준을 비교합니다.</p>
+        <div style="display:flex;gap:8px;margin-top:12px;flex-wrap:wrap">
+          <a href="/cheongso/hood-biyong/" class="card-link">비용 보기 →</a>
+          <a href="https://ajd.co.kr" target="_blank" rel="nofollow sponsored noopener" class="quote-btn" data-partner-cta="true">견적받기</a>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-icon">🛏️</div>
+        <div class="card-tag">매트리스</div>
+        <h3>매트리스 청소 주기</h3>
+        <p>진드기·먼지 관리를 위한 스팀청소·흡입청소·전문업체 비용 비교. 가정용 청소와 전문 관리의 효과 차이를 정리했습니다.</p>
+        <div style="display:flex;gap:8px;margin-top:12px;flex-wrap:wrap">
+          <a href="/cheongso/mattress-cheongso/" class="card-link">주기 확인 →</a>
+          <a href="https://ajd.co.kr" target="_blank" rel="nofollow sponsored noopener" class="quote-btn" data-partner-cta="true">견적받기</a>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-icon">🪟</div>
+        <div class="card-tag">창틀청소</div>
+        <h3>창틀·베란다 청소 포함 기준</h3>
+        <p>입주청소 견적에 창틀·베란다가 포함되는지 확인하는 방법. 포함 여부에 따른 실제 비용 차이와 추가 비용 발생 조건을 안내합니다.</p>
+        <div style="display:flex;gap:8px;margin-top:12px;flex-wrap:wrap">
+          <a href="/cheongso/changtul-cheongso/" class="card-link">확인하기 →</a>
+          <a href="https://ajd.co.kr" target="_blank" rel="nofollow sponsored noopener" class="quote-btn" data-partner-cta="true">견적받기</a>
+        </div>
+      </div>
     </div>
 
-    <!-- 글 목록 -->
-    <h2 class="section-title" style="margin-bottom:20px">청소비용 관련 글</h2>
-    <div class="post-list">
-      <a href="/cheongso/ipju-cheongso-biyong/" class="post-item" style="text-decoration:none">
-        <div class="post-num">01</div>
-        <div class="post-info">
-          <h3>입주청소 비용은 어떻게 정해질까? 평수별 확인 기준</h3>
-          <p>오염도, 창틀, 베란다, 곰팡이 유무에 따라 달라지는 비용 요인 정리</p>
+    <!-- 비교 채널 혜택 -->
+    <div style="background:var(--bg-gray);border-radius:14px;padding:28px;margin-bottom:40px">
+      <p style="font-size:0.8rem;font-weight:600;color:var(--accent-dark);margin-bottom:8px">가입 경로별 혜택을 비교해보세요</p>
+      <h2 style="font-size:1.15rem;font-weight:800;margin-bottom:16px;color:var(--primary)">비교 채널로 청소 견적받으면 달라지는 점</h2>
+      <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:12px;margin-bottom:20px">
+        <div style="background:#fff;border-radius:10px;padding:16px">
+          <p style="font-size:1.4rem;font-weight:900;color:var(--primary);margin-bottom:4px">무료</p>
+          <p style="font-size:0.88rem;font-weight:700;margin-bottom:4px">견적 비교</p>
+          <p style="font-size:0.82rem;color:var(--text-muted)">여러 업체 견적을 동시에 비교. 비교만 해도 비용 없음.</p>
         </div>
-      </a>
-      <a href="/cheongso/isa-cheongso/" class="post-item" style="text-decoration:none">
-        <div class="post-num">02</div>
-        <div class="post-info">
-          <h3>이사청소와 입주청소 차이, 비용이 달라지는 이유</h3>
-          <p>나가는 집 청소 vs 들어오는 집 청소 — 어떤 차이가 있는지</p>
+        <div style="background:#fff;border-radius:10px;padding:16px">
+          <p style="font-size:1.4rem;font-weight:900;color:var(--primary);margin-bottom:4px">전국</p>
+          <p style="font-size:0.88rem;font-weight:700;margin-bottom:4px">서비스 지역</p>
+          <p style="font-size:0.82rem;color:var(--text-muted)">주소 입력 후 가능한 청소 업체를 즉시 확인.</p>
         </div>
-      </a>
-      <a href="/cheongso/aircon-cheongso/" class="post-item" style="text-decoration:none">
-        <div class="post-num">03</div>
-        <div class="post-info">
-          <h3>에어컨 청소 셀프와 업체 청소 차이 비교</h3>
-          <p>셀프 청소로 충분한 경우와 전문업체가 필요한 상황 구분</p>
+        <div style="background:#fff;border-radius:10px;padding:16px">
+          <p style="font-size:1.4rem;font-weight:900;color:var(--primary);margin-bottom:4px">사전</p>
+          <p style="font-size:0.88rem;font-weight:700;margin-bottom:4px">범위·비용 안내</p>
+          <p style="font-size:0.82rem;color:var(--text-muted)">계약 전 청소 범위와 추가 비용 조건을 미리 안내.</p>
         </div>
-      </a>
-      <a href="/cheongso/saetak-cheongso/" class="post-item" style="text-decoration:none">
-        <div class="post-num">04</div>
-        <div class="post-info">
-          <h3>세탁기 청소가 필요한 증상과 통세척 주기</h3>
-          <p>냄새·이물질·오작동 — 청소 신호와 업체 비용 기준</p>
+        <div style="background:#fff;border-radius:10px;padding:16px">
+          <p style="font-size:1.4rem;font-weight:900;color:var(--primary);margin-bottom:4px">후기</p>
+          <p style="font-size:0.88rem;font-weight:700;margin-bottom:4px">기반 매칭</p>
+          <p style="font-size:0.82rem;color:var(--text-muted)">실제 이용 후기를 바탕으로 평점 높은 업체와 매칭.</p>
         </div>
-      </a>
-      <a href="/cheongso/욕실-곰팡이/" class="post-item" style="text-decoration:none">
-        <div class="post-num">05</div>
-        <div class="post-info">
-          <h3>욕실 곰팡이 제거 전 확인해야 할 주의사항</h3>
-          <p>셀프 제거 한계와 업체 청소가 필요한 경우</p>
-        </div>
-      </a>
-      <a href="/cheongso/hood-biyong/" class="post-item" style="text-decoration:none">
-        <div class="post-num">06</div>
-        <div class="post-info">
-          <h3>주방 후드 기름때 제거 방법과 업체 청소 기준</h3>
-          <p>직접 닦을 때와 전문 청소를 맡길 때 기준 비교</p>
-        </div>
-      </a>
-      <a href="/cheongso/mattress-cheongso/" class="post-item" style="text-decoration:none">
-        <div class="post-num">07</div>
-        <div class="post-info">
-          <h3>매트리스 청소 주기와 진드기 관리 방법</h3>
-          <p>스팀청소·흡입청소·전문업체 비용 비교</p>
-        </div>
-      </a>
-      <a href="/cheongso/changtul-cheongso/" class="post-item" style="text-decoration:none">
-        <div class="post-num">08</div>
-        <div class="post-info">
-          <h3>창틀·베란다 청소가 입주청소 비용에 포함되는지 확인하는 법</h3>
-          <p>견적서에 명시되지 않으면 추가 비용이 발생합니다</p>
-        </div>
-      </a>
+      </div>
+      <div style="text-align:center">
+        <a href="https://ajd.co.kr" target="_blank" rel="nofollow sponsored noopener" class="cta-btn-pill" data-partner-cta="true" style="display:inline-block;padding:0.75rem 2rem;font-size:0.95rem">업체별 견적받기 →</a>
+        <p style="font-size:0.75rem;color:var(--text-muted);margin-top:8px">본 사이트는 서비스 직접 제공자가 아닙니다 · <a href="/affiliate-disclosure/" style="color:inherit;text-decoration:underline">제휴 고지</a></p>
+      </div>
+    </div>
+
+    <!-- FAQ -->
+    <h2 class="section-title" style="margin-bottom:20px">청소비용 자주 묻는 질문</h2>
+    <div class="faq-list" style="margin-bottom:40px">
+      <div class="faq-item">
+        <div class="faq-q">입주청소와 이사청소는 같은 건가요?</div>
+        <div class="faq-a">다릅니다. 입주청소는 새로 이사 들어가는 집을 청소하는 것으로 위생과 새집 상태 점검이 목적입니다. 이사청소는 나가는 집을 원상복구 목적으로 청소하는 서비스입니다. 두 서비스를 같은 업체에 동시에 의뢰하면 비용 절감이 가능한 경우가 있습니다.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">창틀과 베란다 청소는 기본 견적에 포함되나요?</div>
+        <div class="faq-a">업체마다 다릅니다. 일부 업체는 기본 입주청소에 창틀과 베란다를 포함하지만, 별도 추가 항목으로 분리해 청구하는 업체도 많습니다. 견적서에 포함 항목을 명확히 확인하지 않으면 계약 후 추가 비용이 발생할 수 있습니다.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">에어컨 청소는 셀프로 가능한가요?</div>
+        <div class="faq-a">필터 청소는 셀프로 가능하지만, 내부 열교환기·팬 청소는 전문 장비가 필요합니다. 1~2년 이상 사용한 에어컨, 냄새가 나거나 가동 초반 먼지가 나오는 경우에는 전문 업체 청소를 추천합니다. 벽걸이 기준 업체 청소 비용은 4~8만 원 수준입니다.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">청소 견적을 여러 곳에서 받아도 되나요?</div>
+        <div class="faq-a">네, 여러 업체에 견적을 의뢰하는 것이 좋습니다. 같은 평수라도 업체에 따라 비용 차이가 크게 나는 경우가 있습니다. 비교 채널을 통해 여러 업체 견적을 한 번에 비교하면 시간을 절약할 수 있습니다.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">청소 후 불만족스러우면 어떻게 하나요?</div>
+        <div class="faq-a">계약 시 재청소(A/S) 기준을 반드시 확인해두세요. 청소 완료 당일이나 다음 날 내에 사진을 찍어 증거를 남기고, 업체에 재청소를 요청하는 것이 일반적인 절차입니다. A/S 기준이 계약서에 없다면 분쟁이 생길 수 있으므로 사전에 서면으로 확인하는 것이 중요합니다.</div>
+      </div>
+    </div>
+
+    <!-- 관련 글 -->
+    <div class="related-posts">
+      <h3>청소비용 관련 글 전체 보기</h3>
+      <div class="related-grid">
+        <a href="/cheongso/ipju-cheongso-biyong/" class="related-item">입주청소 비용 기준</a>
+        <a href="/cheongso/isa-cheongso/" class="related-item">이사청소와 입주청소 차이</a>
+        <a href="/cheongso/aircon-cheongso/" class="related-item">에어컨 청소 비용 비교</a>
+        <a href="/cheongso/saetak-cheongso/" class="related-item">세탁기 청소 주기와 비용</a>
+        <a href="/cheongso/욕실-곰팡이/" class="related-item">욕실 곰팡이 제거</a>
+        <a href="/cheongso/hood-biyong/" class="related-item">주방 후드 청소 비용</a>
+        <a href="/cheongso/mattress-cheongso/" class="related-item">매트리스 청소 주기</a>
+        <a href="/cheongso/changtul-cheongso/" class="related-item">창틀·베란다 청소 기준</a>
+      </div>
     </div>
   </div>
 </Layout>
