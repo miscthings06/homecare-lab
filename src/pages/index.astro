@@ -16,8 +16,8 @@ import Layout from '../layouts/Layout.astro';
         <p class="hero-desc">입주청소, 이사청소, 정수기 렌탈, 인터넷 이전 설치까지<br>우리집 상황에 따라 비용이 달라지는 기준을 쉽게 비교해보세요.</p>
         <div class="hero-btns">
           <a href="/cheongso/" class="btn btn-accent">청소비용 확인하기</a>
-          <a href="/rental/" class="btn btn-accent">가전렌탈 비교하기</a>
-          <a href="/isa-junbi/isa-checklist/" class="btn btn-accent">이사준비 체크하기</a>
+          <a href="/rental/" class="btn btn-white">가전렌탈 비교하기</a>
+          <a href="/isa-junbi/isa-checklist/" class="btn btn-outline">이사준비 체크하기</a>
         </div>
         <p class="hero-foot-text">
           본 사이트는 홈케어 서비스 직접 제공자가 아니며, 일부 링크 이용 시 제휴 수수료가 발생할 수 있습니다.
@@ -27,7 +27,7 @@ import Layout from '../layouts/Layout.astro';
         <div class="hero-popular">
           <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:14px">
             <p class="popular-title" style="margin-bottom:0">오늘 많이 보는 정보</p>
-            <span class="hot-badge">🔥 HOT</span>
+            <span class="hot-badge">HOT</span>
           </div>
           <ol class="popular-list">
             <li><a href="/cheongso/ipju-cheongso-biyong/">입주청소 비용 기준</a></li>
@@ -35,7 +35,7 @@ import Layout from '../layouts/Layout.astro';
             <li><a href="/isa-junbi/isa-checklist/">이사 전 체크리스트</a></li>
             <li><a href="/cheongso/aircon-cheongso/">에어컨 청소 비용 비교</a></li>
           </ol>
-          <p style="font-size:0.72rem;color:rgba(255,255,255,0.4);margin-top:10px;text-align:right">오늘 기준 인기글</p>
+          <p style="font-size:0.72rem;color:rgba(255,255,255,0.4);margin-top:10px;text-align:right">2026.05.25. 기준 인기글</p>
         </div>
       </div>
     </div>
@@ -589,7 +589,7 @@ import Layout from '../layouts/Layout.astro';
 /* 히어로 2단 구조 */
 .hero-inner {
   display: grid;
-  grid-template-columns: 1fr 280px;
+  grid-template-columns: 1fr 340px;
   gap: 40px;
   align-items: center;
 }
@@ -606,17 +606,16 @@ import Layout from '../layouts/Layout.astro';
   margin-bottom: 28px;
 }
 .hero-popular {
-  background: rgba(255,255,255,0.13);
-  border: 1px solid rgba(255,255,255,0.22);
-  border-radius: 12px;
-  padding: 20px 22px;
+  background: rgba(255,255,255,0.15);
+  border: 1px solid rgba(255,255,255,0.28);
+  border-radius: 16px;
+  padding: 26px 26px 22px;
 }
 .popular-title {
-  font-size: 0.82rem;
-  font-weight: 700;
-  color: rgba(255,255,255,0.7);
-  text-transform: uppercase;
-  letter-spacing: 0.06em;
+  font-size: 0.9rem;
+  font-weight: 800;
+  color: #2fbf9b;
+  letter-spacing: 0.01em;
   margin-bottom: 14px;
 }
 .popular-list {
@@ -630,9 +629,9 @@ import Layout from '../layouts/Layout.astro';
   display: flex;
   align-items: center;
   gap: 10px;
-  padding: 8px 0;
+  padding: 10px 0;
   border-bottom: 1px solid rgba(255,255,255,0.1);
-  font-size: 0.92rem;
+  font-size: 0.96rem;
 }
 .popular-list li:last-child { border-bottom: none; }
 .popular-list li::before {
