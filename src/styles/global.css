@@ -2,18 +2,20 @@
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
 :root {
-  --primary: #1e6abf;
-  --primary-dark: #155096;
-  --primary-light: #e8f0fb;
-  --accent: #f97316;
-  --text: #1a1a2e;
-  --text-muted: #555577;
-  --bg: #ffffff;
-  --bg-gray: #f8f9fc;
-  --border: #e2e8f0;
+  /* ── 홈케어랩 브랜드 컬러 : 클린 네이비 & 민트 ── */
+  --primary:       #1f2d3d;   /* 딥 네이비  — 헤더·히어로·H2 강조 */
+  --primary-dark:  #2f4258;   /* 소프트 네이비 — hover */
+  --primary-light: #eaf6f2;   /* 연민트 — 배지·카드태그 배경 */
+  --accent:        #2fbf9b;   /* 민트 — CTA 버튼·강조 */
+  --accent-dark:   #189a7b;   /* 다크 민트 — hover */
+  --text:          #1f2d3d;   /* 본문 기본색 (네이비) */
+  --text-muted:    #666f7a;   /* 보조 텍스트 */
+  --bg:            #fbfaf7;   /* 아이보리 — 페이지 배경 */
+  --bg-gray:       #f6f1e8;   /* 베이지 — 섹션 배경 */
+  --border:        #e7e1d8;   /* 따뜻한 라인 */
   --radius: 10px;
-  --shadow: 0 2px 12px rgba(0,0,0,0.08);
-  --shadow-hover: 0 6px 24px rgba(0,0,0,0.13);
+  --shadow:        0 12px 30px rgba(31, 45, 61, 0.08);
+  --shadow-hover:  0 6px 24px rgba(31, 45, 61, 0.16);
   --font: 'Noto Sans KR', 'Apple SD Gothic Neo', sans-serif;
   --max-w: 1100px;
 }
@@ -79,7 +81,7 @@ nav a:hover, nav a.active {
 
 /* ===== 히어로 ===== */
 .hero {
-  background: linear-gradient(135deg, #1e6abf 0%, #0f4a9c 100%);
+  background: linear-gradient(135deg, #1f2d3d 0%, #2f4258 100%);
   color: #fff;
   padding: 72px 20px 64px;
   text-align: center;
@@ -100,10 +102,10 @@ nav a:hover, nav a.active {
 .btn-white:hover { background: var(--primary-light); text-decoration: none; }
 .btn-outline { border: 2px solid rgba(255,255,255,0.7); color: #fff; }
 .btn-outline:hover { background: rgba(255,255,255,0.15); text-decoration: none; }
-.btn-primary { background: var(--primary); color: #fff; }
-.btn-primary:hover { background: var(--primary-dark); text-decoration: none; }
+.btn-primary { background: var(--accent); color: #fff; }          /* 민트 CTA */
+.btn-primary:hover { background: var(--accent-dark); text-decoration: none; }
 .btn-accent { background: var(--accent); color: #fff; }
-.btn-accent:hover { background: #ea6c0a; text-decoration: none; }
+.btn-accent:hover { background: var(--accent-dark); text-decoration: none; }
 
 /* ===== 섹션 공통 ===== */
 section { padding: 60px 20px; }
@@ -132,8 +134,8 @@ section.gray { background: var(--bg-gray); }
 .card p { font-size: 0.88rem; color: var(--text-muted); line-height: 1.5; }
 .card-tag {
   display: inline-block;
-  background: var(--primary-light);
-  color: var(--primary);
+  background: var(--primary-light);   /* 연민트 배경 */
+  color: var(--accent-dark);           /* 민트 텍스트 */
   font-size: 0.75rem;
   font-weight: 700;
   padding: 2px 8px;
@@ -191,7 +193,7 @@ tr:last-child td { border-bottom: none; }
 
 /* ===== CTA 박스 ===== */
 .cta-box {
-  background: linear-gradient(135deg, #1e6abf, #0f4a9c);
+  background: linear-gradient(135deg, #1f2d3d, #2f4258);
   color: #fff;
   border-radius: var(--radius);
   padding: 32px 28px;
@@ -234,9 +236,10 @@ tr:last-child td { border-bottom: none; }
 
 /* ===== 배지 ===== */
 .badge { display: inline-block; padding: 3px 10px; border-radius: 20px; font-size: 0.78rem; font-weight: 700; }
-.badge-blue { background: var(--primary-light); color: var(--primary); }
-.badge-orange { background: #fff3e0; color: #e65100; }
-.badge-green { background: #e8f5e9; color: #2e7d32; }
+.badge-blue  { background: var(--primary-light); color: var(--accent-dark); }  /* 청소비용 */
+.badge-orange{ background: #fef3ec;              color: #b84800; }              /* 이사준비 */
+.badge-green { background: var(--primary-light); color: var(--accent-dark); }  /* 가전렌탈 */
+.badge-purple{ background: #f0eaf8;              color: #5a3e9a; }              /* 생활비절감 */
 
 /* ===== 본문 글 스타일 ===== */
 .article-wrap { max-width: 780px; margin: 0 auto; padding: 40px 20px 80px; }
@@ -265,7 +268,7 @@ tr:last-child td { border-bottom: none; }
 
 /* ===== 푸터 ===== */
 footer {
-  background: #1a1a2e;
+  background: #1f2d3d;
   color: rgba(255,255,255,0.65);
   padding: 40px 20px;
   font-size: 0.85rem;
