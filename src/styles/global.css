@@ -547,6 +547,21 @@ footer {
   color: var(--text-muted);
   line-height: 1.55;
 }
+/* 본문 중간 compact CTA */
+.cta-block[data-variant="mid"] {
+  padding: 1rem;
+  background: rgba(47, 191, 155, 0.04);
+  border-color: rgba(47, 191, 155, 0.18);
+  box-shadow: none;
+}
+.cta-block[data-variant="mid"] .cta-intro {
+  margin-bottom: 0.6rem;
+  font-size: 0.88rem;
+}
+.cta-block[data-variant="mid"] .cta-btn-pill {
+  padding: 0.65rem 1.6rem;
+  font-size: 0.95rem;
+}
 
 /* ===== 혜택 카드 (Benefits / bn-*) ===== */
 .bn-eyebrow {
