@@ -883,3 +883,71 @@ footer {
   box-shadow: 0 2px 6px rgba(31,45,61,0.18);
 }
 .quote-btn:hover { background: #2a3d52; box-shadow: 0 4px 10px rgba(31,45,61,0.28); text-decoration: none; }
+
+/* ===== 가이드 버튼 (카드 내 단일 링크용) ===== */
+.guide-btn {
+  display: inline-block;
+  margin-top: 12px;
+  padding: 8px 18px;
+  background: var(--primary);
+  color: #fff !important;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-decoration: none !important;
+  transition: background 0.15s;
+  align-self: flex-start;
+}
+.guide-btn:hover { background: #2a3d52; text-decoration: none !important; }
+
+/* ===== 상황별 가이드 섹션 ===== */
+.scenario-section {
+  background: var(--bg-gray);
+  border-radius: 14px;
+  padding: 28px;
+  margin-bottom: 40px;
+}
+.scenario-eyebrow {
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--accent-dark);
+  margin-bottom: 6px;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  display: block;
+}
+.scenario-heading {
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: var(--primary);
+  margin: 0 0 20px;
+}
+.scenario-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+  gap: 14px;
+}
+.scenario-card {
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.scenario-icon { font-size: 1.35rem; line-height: 1; }
+.scenario-q {
+  font-size: 0.93rem;
+  font-weight: 700;
+  color: var(--text);
+  line-height: 1.4;
+  margin: 0;
+}
+.scenario-tip {
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  line-height: 1.5;
+  margin: 0;
+  flex: 1;
+}
