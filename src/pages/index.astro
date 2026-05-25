@@ -2,212 +2,573 @@
 import Layout from '../layouts/Layout.astro';
 ---
 <Layout
-  title="홈케어랩"
+  title="홈케어랩 — 청소·렌탈·이사 비용 비교 가이드"
   description="청소부터 가전렌탈까지, 우리집 생활비 줄이는 홈서비스 가이드. 입주청소·이사청소 비용, 정수기·공기청정기 렌탈 비교, 이사 전후 준비, 전기요금 절약 정보를 확인하세요."
 >
 
-  <!-- 히어로 -->
-  <section class="hero">
-    <div class="container">
-      <h1>청소부터 가전렌탈까지<br>우리집 생활비 줄이는 홈서비스 가이드</h1>
-      <p>입주청소, 이사청소, 정수기 렌탈, 인터넷 이전까지<br>비용이 달라지는 기준을 쉽게 비교해보세요.</p>
-      <div class="hero-btns">
-        <a href="/cheongso/" class="btn btn-white">청소비용 알아보기</a>
-        <a href="/rental/" class="btn btn-outline">가전렌탈 비교하기</a>
-        <a href="/calculator/" class="btn btn-outline">비용 계산기</a>
+<!-- ① 히어로 ─ 2단 구조 -->
+<section class="hero">
+  <div class="container">
+    <div class="hero-inner">
+      <div class="hero-left">
+        <p class="hero-eyebrow">우리집 청소·렌탈·이사 비용 비교 가이드</p>
+        <h1>청소부터 가전렌탈까지<br>우리집 생활비 줄이는<br>홈서비스 가이드</h1>
+        <p class="hero-desc">입주청소, 이사청소, 정수기 렌탈, 인터넷 이전 설치까지<br>우리집 상황에 따라 비용이 달라지는 기준을 쉽게 비교해보세요.</p>
+        <div class="hero-btns">
+          <a href="/cheongso/" class="btn btn-white">청소비용 확인하기</a>
+          <a href="/rental/" class="btn btn-outline">가전렌탈 비교하기</a>
+          <a href="/isa-junbi/isa-checklist/" class="btn btn-outline">이사준비 체크하기</a>
+        </div>
+      </div>
+      <div class="hero-right">
+        <div class="hero-popular">
+          <p class="popular-title">오늘 많이 보는 정보</p>
+          <ol class="popular-list">
+            <li><a href="/cheongso/ipju-cheongso-biyong/">입주청소 비용 기준</a></li>
+            <li><a href="/rental/jeongsugi-rental/">정수기 렌탈 vs 생수 비교</a></li>
+            <li><a href="/isa-junbi/isa-checklist/">이사 전 체크리스트</a></li>
+            <li><a href="/cheongso/aircon-cheongso/">에어컨 청소 비용 비교</a></li>
+          </ol>
+        </div>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- 많이 찾는 정보 -->
-  <section class="gray">
-    <div class="container">
-      <h2 class="section-title">많이 찾는 홈케어 정보</h2>
-      <p class="section-sub">지금 가장 필요한 정보를 바로 확인해보세요.</p>
-      <div class="card-grid">
-        <a href="/cheongso/ipju-cheongso-biyong/" class="card" style="text-decoration:none">
-          <div class="card-icon">🏠</div>
-          <div class="card-tag">청소비용</div>
-          <h3>입주청소 비용 기준</h3>
-          <p>평수별 예상 비용과 추가 항목 확인</p>
-        </a>
-        <a href="/cheongso/aircon-cheongso/" class="card" style="text-decoration:none">
-          <div class="card-icon">❄️</div>
-          <div class="card-tag">청소비용</div>
-          <h3>에어컨 청소 셀프 vs 업체</h3>
-          <p>비용 차이와 어떤 경우 업체를 쓸지</p>
-        </a>
-        <a href="/rental/jeongsugi-rental/" class="card" style="text-decoration:none">
-          <div class="card-icon">💧</div>
-          <div class="card-tag">가전렌탈</div>
-          <h3>정수기 렌탈 vs 생수 구매</h3>
-          <p>월 비용 비교와 손익분기점 계산</p>
-        </a>
-        <a href="/isa-junbi/internet-isa/" class="card" style="text-decoration:none">
-          <div class="card-icon">📶</div>
-          <div class="card-tag">이사준비</div>
-          <h3>인터넷 이전 설치 체크리스트</h3>
-          <p>신청 전 꼭 확인해야 할 4가지</p>
-        </a>
-      </div>
+<!-- ② 빠른 선택 카드 (8개) -->
+<section class="gray">
+  <div class="container">
+    <h2 class="section-title">지금 어떤 정보가 필요하세요?</h2>
+    <p class="section-sub">집 상태, 이사 일정, 렌탈 기간에 따라 필요한 정보가 달라집니다. 가장 먼저 확인할 항목부터 선택해보세요.</p>
+    <div class="quick-grid">
+      <a href="/cheongso/ipju-cheongso-biyong/" class="quick-card">
+        <span class="quick-icon">🏠</span>
+        <strong>입주청소 비용 기준</strong>
+        <span>평수·오염도·창틀 포함 여부 확인</span>
+        <em>비용 기준 보기 →</em>
+      </a>
+      <a href="/cheongso/isa-cheongso/" class="quick-card">
+        <span class="quick-icon">📦</span>
+        <strong>이사청소 비용</strong>
+        <span>입주청소와 이사청소 차이 비교</span>
+        <em>차이 보기 →</em>
+      </a>
+      <a href="/cheongso/aircon-cheongso/" class="quick-card">
+        <span class="quick-icon">❄️</span>
+        <strong>에어컨 청소</strong>
+        <span>셀프 청소와 업체 청소 비교</span>
+        <em>비교하기 →</em>
+      </a>
+      <a href="/rental/jeongsugi-rental/" class="quick-card">
+        <span class="quick-icon">💧</span>
+        <strong>정수기 렌탈</strong>
+        <span>렌탈과 생수 구매 비용 비교</span>
+        <em>계산하기 →</em>
+      </a>
+      <a href="/rental/gonggi-rental/" class="quick-card">
+        <span class="quick-icon">🌬️</span>
+        <strong>공기청정기 렌탈</strong>
+        <span>구매·렌탈 선택 기준</span>
+        <em>확인하기 →</em>
+      </a>
+      <a href="/isa-junbi/internet-isa/" class="quick-card">
+        <span class="quick-icon">📶</span>
+        <strong>인터넷 이전</strong>
+        <span>이사 전 신청 순서 확인</span>
+        <em>체크하기 →</em>
+      </a>
+      <a href="/isa-junbi/isa-checklist/" class="quick-card">
+        <span class="quick-icon">📋</span>
+        <strong>이사 전 준비</strong>
+        <span>도시가스·폐가전·청소 순서</span>
+        <em>순서 보기 →</em>
+      </a>
+      <a href="/jeolryak/aircon-jeongi/" class="quick-card">
+        <span class="quick-icon">⚡</span>
+        <strong>에너지 절감</strong>
+        <span>전기요금·난방비 줄이는 방법</span>
+        <em>절약법 보기 →</em>
+      </a>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- 청소비용 가이드 -->
-  <section>
-    <div class="container">
-      <h2 class="section-title">청소비용 가이드</h2>
-      <p class="section-sub">평수, 오염도, 추가 항목에 따라 비용이 얼마나 달라지는지 확인하세요.</p>
-      <div class="card-grid">
-        <a href="/cheongso/ipju-cheongso-biyong/" class="card" style="text-decoration:none">
-          <div class="card-icon">🏡</div>
-          <h3>입주청소 비용</h3>
-          <p>새집 입주 전 청소 비용과 주의사항</p>
-        </a>
-        <a href="/cheongso/isa-cheongso/" class="card" style="text-decoration:none">
-          <div class="card-icon">📦</div>
-          <h3>이사청소 비용</h3>
-          <p>이사 후 구청소 비용과 견적 기준</p>
-        </a>
-        <a href="/cheongso/aircon-cheongso/" class="card" style="text-decoration:none">
-          <div class="card-icon">❄️</div>
-          <h3>에어컨 청소</h3>
-          <p>셀프 청소와 업체 청소 비용 비교</p>
-        </a>
-        <a href="/cheongso/saetak-cheongso/" class="card" style="text-decoration:none">
-          <div class="card-icon">🫧</div>
-          <h3>세탁기 청소</h3>
-          <p>통세척 주기와 청소 비용 기준</p>
-        </a>
-      </div>
-      <div style="margin-top:20px;text-align:center">
-        <a href="/cheongso/" class="btn btn-primary">청소비용 전체보기 →</a>
-      </div>
+<!-- ③ 청소비용 가이드 -->
+<section>
+  <div class="container">
+    <h2 class="section-title">청소비용, 왜 집마다 다를까요?</h2>
+    <p class="section-sub">입주청소와 이사청소는 평수만으로 비용이 정해지지 않습니다. 오염도, 창틀·베란다 포함 여부, 주방 기름때, 곰팡이, 가전청소 추가 여부에 따라 실제 비용이 달라질 수 있습니다.</p>
+    <div class="card-grid">
+      <a href="/cheongso/ipju-cheongso-biyong/" class="card" style="text-decoration:none">
+        <div class="card-tag">청소비용</div>
+        <h3>입주청소 비용 기준</h3>
+        <p>평수별 예상 비용과 추가 항목 확인</p>
+        <span class="card-link">비용 기준 보기 →</span>
+      </a>
+      <a href="/cheongso/isa-cheongso/" class="card" style="text-decoration:none">
+        <div class="card-tag">청소비용</div>
+        <h3>이사청소와 입주청소 차이</h3>
+        <p>공실 상태와 짐 유무에 따른 비용 차이</p>
+        <span class="card-link">차이 보기 →</span>
+      </a>
+      <a href="/cheongso/aircon-cheongso/" class="card" style="text-decoration:none">
+        <div class="card-tag">청소비용</div>
+        <h3>에어컨 청소 셀프 vs 업체</h3>
+        <p>셀프 청소와 업체 청소의 범위·비용 비교</p>
+        <span class="card-link">비교하기 →</span>
+      </a>
+      <a href="/cheongso/saetak-cheongso/" class="card" style="text-decoration:none">
+        <div class="card-tag">청소비용</div>
+        <h3>세탁기 청소가 필요한 시점</h3>
+        <p>통돌이·드럼 통세척 주기와 비용 기준</p>
+        <span class="card-link">주기 확인 →</span>
+      </a>
     </div>
-  </section>
+    <div style="margin-top:24px;text-align:center">
+      <a href="/cheongso/" class="btn btn-primary">청소비용 전체 가이드 →</a>
+    </div>
+  </div>
+</section>
 
-  <!-- 가전렌탈 비교 -->
-  <section class="gray">
-    <div class="container">
-      <h2 class="section-title">가전렌탈 비교</h2>
-      <p class="section-sub">렌탈이 유리한 경우와 직접 구매가 나은 경우, 조건별로 비교합니다.</p>
-      <div class="card-grid">
-        <a href="/rental/jeongsugi-rental/" class="card" style="text-decoration:none">
-          <div class="card-icon">💧</div>
-          <h3>정수기 렌탈</h3>
-          <p>월 렌탈료와 생수 구매 비용 비교</p>
-        </a>
-        <a href="/rental/gonggi-rental/" class="card" style="text-decoration:none">
-          <div class="card-icon">🌬️</div>
-          <h3>공기청정기 렌탈</h3>
-          <p>렌탈과 직접 구매 중 유리한 경우</p>
-        </a>
-        <a href="/rental/bidet-rental/" class="card" style="text-decoration:none">
-          <div class="card-icon">🚿</div>
-          <h3>비데 렌탈</h3>
-          <p>설치 조건과 월 납입금 확인</p>
-        </a>
-        <a href="/rental/geondogi-rental/" class="card" style="text-decoration:none">
-          <div class="card-icon">🌀</div>
-          <h3>건조기 렌탈</h3>
-          <p>전기요금과 공간 조건 미리 확인</p>
-        </a>
-      </div>
-      <div style="margin-top:20px;text-align:center">
-        <a href="/rental/" class="btn btn-primary">가전렌탈 전체보기 →</a>
-      </div>
+<!-- ④ 가전렌탈 비교 -->
+<section class="gray">
+  <div class="container">
+    <h2 class="section-title">가전렌탈, 구매보다 유리한 경우가 있을까요?</h2>
+    <p class="section-sub">정수기, 공기청정기, 비데, 건조기 렌탈은 월 렌탈료만 보고 판단하면 안 됩니다. 약정기간, 관리주기, 필터 교체, 설치 조건, 해지 비용까지 함께 비교해야 합니다.</p>
+    <div class="card-grid">
+      <a href="/rental/jeongsugi-rental/" class="card" style="text-decoration:none">
+        <div class="card-tag">가전렌탈</div>
+        <h3>정수기 렌탈</h3>
+        <p>생수 구매와 월 비용 비교</p>
+        <span class="card-link">계산하기 →</span>
+      </a>
+      <a href="/rental/gonggi-rental/" class="card" style="text-decoration:none">
+        <div class="card-tag">가전렌탈</div>
+        <h3>공기청정기 렌탈</h3>
+        <p>필터 교체와 관리비 포함 비교</p>
+        <span class="card-link">확인하기 →</span>
+      </a>
+      <a href="/rental/bidet-rental/" class="card" style="text-decoration:none">
+        <div class="card-tag">가전렌탈</div>
+        <h3>비데 렌탈</h3>
+        <p>설치 조건과 약정 확인 기준</p>
+        <span class="card-link">확인하기 →</span>
+      </a>
+      <a href="/rental/geondogi-rental/" class="card" style="text-decoration:none">
+        <div class="card-tag">가전렌탈</div>
+        <h3>건조기 렌탈</h3>
+        <p>전기요금과 공간 조건 미리 확인</p>
+        <span class="card-link">비교하기 →</span>
+      </a>
     </div>
-  </section>
+    <div style="margin-top:24px;text-align:center">
+      <a href="/rental/" class="btn btn-primary">렌탈 vs 구매 비용 비교표 보기 →</a>
+    </div>
+  </div>
+</section>
 
-  <!-- 이사 전후 준비 -->
-  <section>
-    <div class="container">
-      <h2 class="section-title">이사 전후 준비</h2>
-      <p class="section-sub">이사할 때 빠뜨리기 쉬운 항목들을 순서대로 정리했습니다.</p>
-      <div class="card-grid">
-        <a href="/isa-junbi/isa-checklist/" class="card" style="text-decoration:none">
-          <div class="card-icon">📋</div>
-          <h3>이사 전 점검 체크리스트</h3>
-          <p>꼭 해야 할 항목 순서대로 정리</p>
-        </a>
-        <a href="/isa-junbi/internet-isa/" class="card" style="text-decoration:none">
-          <div class="card-icon">📶</div>
-          <h3>인터넷 이전 설치</h3>
-          <p>신청 전 확인사항과 업체 비교</p>
-        </a>
-        <a href="/isa-junbi/dosigas/" class="card" style="text-decoration:none">
-          <div class="card-icon">🔥</div>
-          <h3>도시가스 전입·전출</h3>
-          <p>신청 순서와 준비물 안내</p>
-        </a>
-        <a href="/isa-junbi/pye-gajeon/" class="card" style="text-decoration:none">
-          <div class="card-icon">♻️</div>
-          <h3>폐가전 무상수거</h3>
-          <p>신청 방법과 수거 가능한 품목</p>
-        </a>
-      </div>
-      <div style="margin-top:20px;text-align:center">
-        <a href="/isa-junbi/" class="btn btn-primary">이사준비 전체보기 →</a>
-      </div>
+<!-- ⑤ 홈케어 계산기 -->
+<section>
+  <div class="container">
+    <h2 class="section-title">우리집 상황별 예상 비용 계산하기</h2>
+    <p class="section-sub">평수, 사용 기간, 렌탈 조건을 입력하면 예상 비용을 바로 확인할 수 있습니다.</p>
+    <div class="card-grid" style="max-width:900px;margin:0 auto">
+      <a href="/calculator/#ipju" class="card card-calc" style="text-decoration:none">
+        <div class="card-icon">🏠</div>
+        <h3>입주청소 예상비용 계산기</h3>
+        <p>평수·주거형태·베란다·오염도 선택으로 예상 비용 범위 확인</p>
+        <span class="card-link">계산하기 →</span>
+      </a>
+      <a href="/calculator/#rental" class="card card-calc" style="text-decoration:none">
+        <div class="card-icon">🔄</div>
+        <h3>렌탈 vs 구매 손익분기 계산기</h3>
+        <p>약정 기간 기준 렌탈이 유리한 시점 계산</p>
+        <span class="card-link">계산하기 →</span>
+      </a>
+      <a href="/calculator/#jeongi" class="card card-calc" style="text-decoration:none">
+        <div class="card-icon">⚡</div>
+        <h3>에어컨 전기요금 계산기</h3>
+        <p>하루 사용 시간으로 월 전기요금 추정</p>
+        <span class="card-link">계산하기 →</span>
+      </a>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- 생활비 절감 -->
-  <section class="gray">
-    <div class="container">
-      <h2 class="section-title">생활비 절감 정보</h2>
-      <p class="section-sub">전기요금부터 정부 지원 제도까지, 실생활에서 바로 쓸 수 있는 절약 정보입니다.</p>
-      <div class="card-grid">
-        <a href="/jeolryak/aircon-jeongi/" class="card" style="text-decoration:none">
-          <div class="card-icon">⚡</div>
-          <h3>에어컨 전기요금 계산</h3>
-          <p>하루 얼마나 나오는지 바로 확인</p>
-        </a>
-        <a href="/jeolryak/nanbangbi-juligigi/" class="card" style="text-decoration:none">
-          <div class="card-icon">🌡️</div>
-          <h3>난방비 줄이는 보일러 설정</h3>
-          <p>겨울철 보일러 온도 설정 기준</p>
-        </a>
-        <a href="/jeolryak/energy-voucher/" class="card" style="text-decoration:none">
-          <div class="card-icon">🎫</div>
-          <h3>에너지바우처 신청</h3>
-          <p>신청 기준과 신청 방법 안내</p>
-        </a>
-        <a href="/jeolryak/goyo-gajeon-hwangup/" class="card" style="text-decoration:none">
-          <div class="card-icon">💰</div>
-          <h3>고효율 가전 환급</h3>
-          <p>환급 대상과 신청 방법 확인</p>
-        </a>
+<!-- ⑥ 이사 전후 준비 (D-day 타임라인) -->
+<section class="gray">
+  <div class="container">
+    <h2 class="section-title">이사 전후, 무엇부터 준비해야 할까요?</h2>
+    <p class="section-sub">이사 준비는 청소, 인터넷 이전, 도시가스, 폐가전, 렌탈 이전을 따로 보면 놓치는 항목이 생깁니다. 날짜별로 필요한 홈서비스를 한 번에 정리해보세요.</p>
+    <div class="timeline">
+      <div class="timeline-item">
+        <span class="timeline-badge">D-30</span>
+        <div class="timeline-body">이사 날짜 확정 · 이사 업체 예약 · 인터넷 이전 신청</div>
       </div>
-      <div style="margin-top:20px;text-align:center">
-        <a href="/jeolryak/" class="btn btn-primary">생활비절감 전체보기 →</a>
+      <div class="timeline-item">
+        <span class="timeline-badge">D-14</span>
+        <div class="timeline-body">도시가스 전출입 신청 · 폐가전 무상수거 예약 · 렌탈 이전 확인</div>
+      </div>
+      <div class="timeline-item">
+        <span class="timeline-badge">D-7</span>
+        <div class="timeline-body">입주청소 범위 확인 · 관리사무소 문의 · 새집 하자 점검</div>
+      </div>
+      <div class="timeline-item">
+        <span class="timeline-badge">D-1</span>
+        <div class="timeline-body">냉장고 정리 · 귀중품 분리 포장 · 이사 당일 동선 확인</div>
       </div>
     </div>
-  </section>
+    <div class="card-grid" style="margin-top:32px">
+      <a href="/isa-junbi/isa-checklist/" class="card" style="text-decoration:none">
+        <div class="card-tag">이사준비</div>
+        <h3>이사 전 점검 체크리스트</h3>
+        <p>꼭 해야 할 항목을 순서대로 정리</p>
+        <span class="card-link">체크리스트 보기 →</span>
+      </a>
+      <a href="/isa-junbi/internet-isa/" class="card" style="text-decoration:none">
+        <div class="card-tag">이사준비</div>
+        <h3>인터넷 이전 설치 신청 순서</h3>
+        <p>이전 vs 신규 가입 비용 비교</p>
+        <span class="card-link">신청 순서 확인 →</span>
+      </a>
+      <a href="/isa-junbi/dosigas/" class="card" style="text-decoration:none">
+        <div class="card-tag">이사준비</div>
+        <h3>도시가스 전입·전출 신청 방법</h3>
+        <p>이사 당일 처리해야 할 가스 관련 절차</p>
+        <span class="card-link">신청 방법 보기 →</span>
+      </a>
+      <a href="/isa-junbi/pye-gajeon/" class="card" style="text-decoration:none">
+        <div class="card-tag">이사준비</div>
+        <h3>폐가전 무상수거 신청 전 준비</h3>
+        <p>수거 대상 품목과 신청 일정 안내</p>
+        <span class="card-link">준비사항 확인 →</span>
+      </a>
+    </div>
+    <div style="margin-top:24px;text-align:center">
+      <a href="/isa-junbi/" class="btn btn-primary">이사 준비 체크리스트 전체 보기 →</a>
+    </div>
+  </div>
+</section>
 
-  <!-- 계산기 섹션 -->
-  <section>
-    <div class="container" style="text-align:center">
-      <h2 class="section-title">홈케어 비용 계산기</h2>
-      <p class="section-sub">내 집 조건을 입력하면 예상 비용을 바로 확인할 수 있습니다.</p>
-      <div class="card-grid" style="max-width:800px;margin:0 auto">
-        <a href="/calculator/#ipju" class="card" style="text-decoration:none">
-          <div class="card-icon">🏠</div>
-          <h3>입주청소 예상비용 계산기</h3>
-          <p>평수와 옵션 선택으로 예상 범위 확인</p>
-        </a>
-        <a href="/calculator/#rental" class="card" style="text-decoration:none">
-          <div class="card-icon">🔄</div>
-          <h3>렌탈 vs 구매 비교 계산기</h3>
-          <p>몇 개월 후 렌탈이 더 손해인지 계산</p>
-        </a>
-        <a href="/calculator/#jeongi" class="card" style="text-decoration:none">
-          <div class="card-icon">⚡</div>
-          <h3>에어컨 전기요금 계산기</h3>
-          <p>하루 사용량으로 월 요금 추정</p>
-        </a>
-      </div>
+<!-- ⑦ 생활비 절감 -->
+<section>
+  <div class="container">
+    <h2 class="section-title">매달 새는 생활비도 함께 줄여보세요</h2>
+    <p class="section-sub">청소비와 렌탈비는 한 번의 선택으로 차이가 나고, 전기요금과 난방비는 매달 누적됩니다. 집에서 반복적으로 나가는 비용을 항목별로 점검해보세요.</p>
+    <div class="card-grid">
+      <a href="/jeolryak/aircon-jeongi/" class="card" style="text-decoration:none">
+        <div class="card-tag">생활비절감</div>
+        <h3>에어컨 전기요금 계산법</h3>
+        <p>하루 사용 시간별 전기요금 기준 정리</p>
+        <span class="card-link">계산법 보기 →</span>
+      </a>
+      <a href="/jeolryak/" class="card" style="text-decoration:none">
+        <div class="card-tag">생활비절감</div>
+        <h3>난방비 줄이는 보일러 설정</h3>
+        <p>겨울철 보일러 온도와 외출 설정 기준</p>
+        <span class="card-link">설정법 보기 →</span>
+      </a>
+      <a href="/jeolryak/" class="card" style="text-decoration:none">
+        <div class="card-tag">생활비절감</div>
+        <h3>에너지바우처 신청 방법</h3>
+        <p>신청 기준과 지원 금액 안내</p>
+        <span class="card-link">신청 확인 →</span>
+      </a>
+      <a href="/jeolryak/" class="card" style="text-decoration:none">
+        <div class="card-tag">생활비절감</div>
+        <h3>고효율 가전 환급 확인</h3>
+        <p>환급 대상 제품과 신청 방법</p>
+        <span class="card-link">환급 확인 →</span>
+      </a>
     </div>
-  </section>
+    <div style="margin-top:24px;text-align:center">
+      <a href="/jeolryak/" class="btn btn-primary">생활비절감 전체보기 →</a>
+    </div>
+  </div>
+</section>
+
+<!-- ⑧ 업체 선택 전 체크리스트 -->
+<section class="gray">
+  <div class="container" style="max-width:760px">
+    <h2 class="section-title">업체를 고르기 전, 이것만은 확인하세요</h2>
+    <p class="section-sub">비용보다 청소 범위와 추가요금 기준을 먼저 확인하면 계약 후 분쟁을 예방할 수 있습니다.</p>
+    <ul class="checklist" style="margin-bottom:28px">
+      <li>기본 청소 범위가 어디까지인지 확인했나요?</li>
+      <li>창틀, 베란다, 주방 후드, 곰팡이 제거가 포함되나요?</li>
+      <li>추가요금이 붙는 조건을 견적서에서 확인했나요?</li>
+      <li>예약 취소·변경 시 환불 기준을 확인했나요?</li>
+      <li>후기에서 시간 준수와 A/S 대응을 확인했나요?</li>
+    </ul>
+    <div style="text-align:center">
+      <a href="/cheongso/ipju-cheongso-biyong/" class="btn btn-primary">청소 견적 전 체크리스트 자세히 보기 →</a>
+    </div>
+  </div>
+</section>
+
+<!-- ⑨ 최신 글·가이드 -->
+<section>
+  <div class="container">
+    <h2 class="section-title">최근 업데이트된 홈케어 가이드</h2>
+    <p class="section-sub">청소비용·가전렌탈·이사준비·생활비 절감 카테고리별로 최신 정보를 확인하세요.</p>
+    <div class="card-grid">
+      <a href="/cheongso/ipju-cheongso-biyong/" class="card" style="text-decoration:none">
+        <div class="card-tag">청소비용</div>
+        <h3>입주청소 비용은 어떻게 정해질까?</h3>
+        <p>평수별·오염도별 실제 비용 기준 정리</p>
+        <span class="card-link">읽기 →</span>
+      </a>
+      <a href="/rental/jeongsugi-rental/" class="card" style="text-decoration:none">
+        <div class="card-tag">가전렌탈</div>
+        <h3>정수기 렌탈과 생수 구매 비용 비교</h3>
+        <p>5년 총비용으로 따지면 어느 쪽이 유리한가</p>
+        <span class="card-link">읽기 →</span>
+      </a>
+      <a href="/isa-junbi/internet-isa/" class="card" style="text-decoration:none">
+        <div class="card-tag">이사준비</div>
+        <h3>인터넷 이전 설치, 신청 전 확인할 것</h3>
+        <p>이전 vs 신규 가입 비용 비교와 신청 타이밍</p>
+        <span class="card-link">읽기 →</span>
+      </a>
+      <a href="/jeolryak/aircon-jeongi/" class="card" style="text-decoration:none">
+        <div class="card-tag">생활비절감</div>
+        <h3>에어컨 청소 셀프와 업체 차이 비교</h3>
+        <p>비용과 청소 효과 기준으로 선택하는 법</p>
+        <span class="card-link">읽기 →</span>
+      </a>
+    </div>
+    <div style="margin-top:24px;text-align:center">
+      <a href="/cheongso/" class="btn btn-primary">전체 글 보기 →</a>
+    </div>
+  </div>
+</section>
+
+<!-- ⑩ 승인 전 CTA (정보형) -->
+<section class="cta-section">
+  <div class="container" style="text-align:center;max-width:700px">
+    <h2>우리집 조건에 맞는 선택 기준을 먼저 확인하세요</h2>
+    <p>청소, 렌탈, 인터넷 이전은 집의 상태와 사용 기간에 따라 유리한 선택이 달라질 수 있습니다.</p>
+    <div class="hero-btns" style="justify-content:center;margin-top:24px">
+      <a href="/calculator/" class="btn btn-white">비용 계산하기</a>
+      <a href="/isa-junbi/isa-checklist/" class="btn btn-outline-white">체크리스트 보기</a>
+    </div>
+  </div>
+</section>
 
 </Layout>
+
+<style>
+/* 히어로 2단 구조 */
+.hero-inner {
+  display: grid;
+  grid-template-columns: 1fr 280px;
+  gap: 40px;
+  align-items: center;
+}
+.hero-eyebrow {
+  font-size: 0.85rem;
+  color: rgba(255,255,255,0.75);
+  margin-bottom: 12px;
+  letter-spacing: 0.02em;
+}
+.hero-desc {
+  font-size: 1rem;
+  color: rgba(255,255,255,0.88);
+  line-height: 1.7;
+  margin-bottom: 28px;
+}
+.hero-popular {
+  background: rgba(255,255,255,0.13);
+  border: 1px solid rgba(255,255,255,0.22);
+  border-radius: 12px;
+  padding: 20px 22px;
+}
+.popular-title {
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: rgba(255,255,255,0.7);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin-bottom: 14px;
+}
+.popular-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  counter-reset: pop;
+}
+.popular-list li {
+  counter-increment: pop;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 0;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+  font-size: 0.92rem;
+}
+.popular-list li:last-child { border-bottom: none; }
+.popular-list li::before {
+  content: counter(pop);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.2);
+  font-size: 0.75rem;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+.popular-list a {
+  color: rgba(255,255,255,0.9);
+  text-decoration: none;
+  line-height: 1.4;
+}
+.popular-list a:hover { color: #fff; text-decoration: underline; }
+
+/* 빠른 선택 카드 8개 그리드 */
+.quick-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  margin-top: 28px;
+}
+.quick-card {
+  background: #fff;
+  border: 1px solid #e8edf2;
+  border-radius: 10px;
+  padding: 18px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  text-decoration: none;
+  color: inherit;
+  transition: box-shadow 0.2s, transform 0.2s;
+}
+.quick-card:hover {
+  box-shadow: 0 4px 16px rgba(30,106,191,0.12);
+  transform: translateY(-2px);
+}
+.quick-icon { font-size: 1.6rem; margin-bottom: 2px; }
+.quick-card strong {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #1a2b3c;
+  line-height: 1.3;
+}
+.quick-card span {
+  font-size: 0.8rem;
+  color: #6b7a8d;
+  line-height: 1.4;
+}
+.quick-card em {
+  font-style: normal;
+  font-size: 0.8rem;
+  color: var(--primary);
+  font-weight: 600;
+  margin-top: 4px;
+}
+
+/* 카드 링크 텍스트 */
+.card-link {
+  display: inline-block;
+  margin-top: 8px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--primary);
+}
+
+/* D-day 타임라인 */
+.timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  margin-top: 28px;
+  border-left: 3px solid var(--primary);
+  padding-left: 0;
+  margin-left: 12px;
+}
+.timeline-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  padding: 14px 0 14px 20px;
+  position: relative;
+}
+.timeline-item::before {
+  content: '';
+  position: absolute;
+  left: -7px;
+  top: 20px;
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+  background: var(--primary);
+}
+.timeline-badge {
+  background: var(--primary);
+  color: #fff;
+  font-size: 0.78rem;
+  font-weight: 700;
+  padding: 3px 10px;
+  border-radius: 20px;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.timeline-body {
+  font-size: 0.93rem;
+  color: #3a4a5a;
+  line-height: 1.6;
+  padding-top: 2px;
+}
+
+/* 계산기 카드 강조 */
+.card-calc {
+  border-left: 4px solid var(--primary);
+}
+
+/* CTA 섹션 */
+.cta-section {
+  background: linear-gradient(135deg, var(--primary) 0%, #1557a0 100%);
+  color: #fff;
+  padding: 64px 20px;
+}
+.cta-section h2 {
+  font-size: 1.5rem;
+  margin-bottom: 12px;
+  color: #fff;
+}
+.cta-section p {
+  color: rgba(255,255,255,0.85);
+  font-size: 1rem;
+  line-height: 1.7;
+}
+.btn-outline-white {
+  background: transparent;
+  border: 2px solid rgba(255,255,255,0.6);
+  color: #fff;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background 0.2s;
+}
+.btn-outline-white:hover { background: rgba(255,255,255,0.15); }
+
+/* 반응형 */
+@media (max-width: 900px) {
+  .quick-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 768px) {
+  .hero-inner {
+    grid-template-columns: 1fr;
+  }
+  .hero-right { order: -1; }
+  .hero-popular { max-width: 100%; }
+  .quick-grid { grid-template-columns: repeat(2, 1fr); gap: 12px; }
+  .timeline { margin-left: 6px; }
+}
+@media (max-width: 480px) {
+  .quick-grid { grid-template-columns: 1fr 1fr; }
+}
+</style>
