@@ -3,7 +3,7 @@ import Layout from '../../layouts/Layout.astro';
 ---
 <Layout
   title="홈케어 비용 계산기 — 입주청소·렌탈·전기요금 예상 비용"
-  description="입주청소 예상비용, 렌탈 vs 구매 손익분기점, 에어컨 전기요금을 직접 계산해보세요. 평수·조건별 세부 입력으로 내 상황에 맞는 비용 기준을 정확하게 확인합니다."
+  description="입주청소 예상비용, 렌탈 vs 구매 손익분기점, 가전제품별 전기요금을 직접 계산해보세요. 평수·조건별 세부 입력으로 내 상황에 맞는 비용 기준을 정확하게 확인합니다."
 >
 
 <!-- 카테고리 히어로 -->
@@ -15,7 +15,7 @@ import Layout from '../../layouts/Layout.astro';
     <div class="cat-stats">
       <span class="cat-stat">🏠 입주청소 예상비용</span>
       <span class="cat-stat">🔄 렌탈 vs 구매 손익분기</span>
-      <span class="cat-stat">⚡ 에어컨 전기요금</span>
+      <span class="cat-stat">⚡ 가전 전기요금 계산</span>
     </div>
   </div>
 </section>
@@ -32,12 +32,12 @@ import Layout from '../../layouts/Layout.astro';
   <!-- ① 입주청소 계산기 -->
   <section id="ipju" class="calc-panel active">
 
-    <!-- 사용 가이드 -->
-    <details class="calc-guide">
-      <summary>📖 이 계산기 사용 방법</summary>
+    <!-- 사용 가이드 (항상 펼쳐진 상태) -->
+    <div class="calc-guide">
+      <div class="calc-guide-header">📖 이 계산기 사용 방법</div>
       <div class="calc-guide-body">
         <ol>
-          <li><strong>평수 선택</strong> — 등기부등본 또는 분양 면적 기준으로 선택하세요. 공급면적과 전용면적 중 청소 업체는 보통 <em>전용면적</em>을 기준으로 합니다.</li>
+          <li><strong>평수 선택</strong> — 등기부등본 또는 분양 면적 기준으로 선택하세요. 청소 업체는 보통 <em>전용면적</em>을 기준으로 합니다.</li>
           <li><strong>주거 형태 선택</strong> — 아파트 기준 가격이 가장 높고, 빌라·오피스텔은 구조상 다소 낮게 책정됩니다.</li>
           <li><strong>공실·거주 상태</strong> — 짐이 없는 공실 상태에서 청소하면 효율이 높아 비용이 절감됩니다.</li>
           <li><strong>이전 거주 기간</strong> — 오랜 기간 거주한 집일수록 기름때·오염이 누적돼 비용이 올라갑니다.</li>
@@ -45,7 +45,7 @@ import Layout from '../../layouts/Layout.astro';
         </ol>
         <p class="guide-tip">💡 <strong>팁:</strong> 같은 조건이라도 업체마다 비용이 크게 다를 수 있습니다. 계산 결과를 기준 예산으로 사용하되, 최소 2~3곳 견적을 비교하는 것을 권장합니다.</p>
       </div>
-    </details>
+    </div>
 
     <div class="calc-card">
       <h2 class="calc-section-title">🏠 입주청소 예상비용 계산기</h2>
@@ -141,7 +141,7 @@ import Layout from '../../layouts/Layout.astro';
         <div class="result-cta-wrap">
           <p class="result-cta-label">이 예산 범위에서 입주청소 업체를 무료로 비교해보세요</p>
           <a href="https://ajd.co.kr" rel="nofollow sponsored noopener" data-partner-cta="true" class="result-cta-btn">
-            아정당에서 무료 견적받기 →
+            무료 견적받기 →
           </a>
           <p class="result-cta-note">* 제휴 링크 · 이용자 추가 비용 없음 · <a href="/affiliate-disclosure/" style="color:inherit;text-decoration:underline">제휴 고지</a></p>
         </div>
@@ -164,9 +164,9 @@ import Layout from '../../layouts/Layout.astro';
   <!-- ② 렌탈 vs 구매 계산기 -->
   <section id="rental" class="calc-panel">
 
-    <!-- 사용 가이드 -->
-    <details class="calc-guide">
-      <summary>📖 이 계산기 사용 방법</summary>
+    <!-- 사용 가이드 (항상 펼쳐진 상태) -->
+    <div class="calc-guide">
+      <div class="calc-guide-header">📖 이 계산기 사용 방법</div>
       <div class="calc-guide-body">
         <ol>
           <li><strong>제품 선택</strong> — 제품을 선택하면 평균 렌탈료·구매가·유지비가 자동으로 채워집니다. 직접 수정도 가능합니다.</li>
@@ -177,7 +177,7 @@ import Layout from '../../layouts/Layout.astro';
         </ol>
         <p class="guide-tip">💡 <strong>팁:</strong> 렌탈과 구매의 비용 차이가 30만원 이내라면 관리 편의성·고장 대응·최신 모델 교체 등 비금전적 요소도 함께 고려하세요.</p>
       </div>
-    </details>
+    </div>
 
     <div class="calc-card">
       <h2 class="calc-section-title">🔄 렌탈 vs 구매 손익분기 계산기</h2>
@@ -200,7 +200,7 @@ import Layout from '../../layouts/Layout.astro';
         <div class="calc-row">
           <div class="calc-field">
             <label for="rental-fee">월 렌탈료 (원) <span class="required">*</span></label>
-            <input type="number" id="rental-fee" placeholder="예: 39900" min="0">
+            <input type="text" id="rental-fee" placeholder="예: 39,900" inputmode="numeric">
           </div>
           <div class="calc-field">
             <label for="rental-months">약정 기간</label>
@@ -216,11 +216,11 @@ import Layout from '../../layouts/Layout.astro';
         <div class="calc-row">
           <div class="calc-field">
             <label for="buy-price">제품 구매 가격 (원) <span class="required">*</span></label>
-            <input type="number" id="buy-price" placeholder="예: 1800000" min="0">
+            <input type="text" id="buy-price" placeholder="예: 1,800,000" inputmode="numeric">
           </div>
           <div class="calc-field">
             <label for="annual-maintenance">구매 시 연간 유지비 (원)</label>
-            <input type="number" id="annual-maintenance" placeholder="필터·수리 등 (없으면 0)" min="0" value="0">
+            <input type="text" id="annual-maintenance" placeholder="필터·수리 등 (없으면 0)" inputmode="numeric" value="0">
           </div>
         </div>
 
@@ -249,6 +249,7 @@ import Layout from '../../layouts/Layout.astro';
 
       <div class="calc-result-box" id="rental-result" style="display:none">
         <div class="result-range" id="rental-range"></div>
+        <div id="rental-infographic"></div>
         <div class="result-detail" id="rental-detail"></div>
         <p class="result-note">위약금·소모품 교체 빈도 등 개인 조건에 따라 달라질 수 있습니다.</p>
         <div class="result-cta-wrap" id="rental-cta-wrap"></div>
@@ -267,77 +268,89 @@ import Layout from '../../layouts/Layout.astro';
     </div>
   </section>
 
-  <!-- ③ 에어컨 전기요금 계산기 -->
+  <!-- ③ 전기용품 전기요금 계산기 -->
   <section id="jeongi" class="calc-panel">
 
-    <!-- 사용 가이드 -->
-    <details class="calc-guide">
-      <summary>📖 이 계산기 사용 방법</summary>
+    <!-- 사용 가이드 (항상 펼쳐진 상태) -->
+    <div class="calc-guide">
+      <div class="calc-guide-header">📖 이 계산기 사용 방법</div>
       <div class="calc-guide-body">
         <ol>
-          <li><strong>소비전력</strong> — 에어컨 실외기나 리모컨에 표시된 소비전력(W)을 확인하세요. 모르면 평수 기준 근사값을 선택하세요.</li>
-          <li><strong>설정 온도</strong> — 설정 온도가 1도 올라갈수록 소비전력이 약 7% 줄어듭니다. 현재 주로 사용하는 온도를 선택하세요.</li>
-          <li><strong>냉방 보조</strong> — 선풍기를 함께 사용하면 체감 온도가 2~3도 낮아져 설정 온도를 높일 수 있습니다.</li>
-          <li><strong>전기요금 단가</strong> — 여름철 에어컨 사용량이 많으면 높은 누진 구간이 적용될 수 있습니다.</li>
+          <li><strong>가전제품 선택</strong> — 제품을 선택하면 평균 소비전력과 사용 패턴이 자동으로 채워집니다. 직접 수정도 가능합니다.</li>
+          <li><strong>소비전력(W)</strong> — 제품 뒷면 라벨이나 설명서에서 확인하세요. 모르면 프리셋 선택 후 그대로 사용하세요.</li>
+          <li><strong>하루 사용 시간</strong> — 냉장고처럼 24시간 켜두는 제품은 24시간으로 입력하세요.</li>
+          <li><strong>월 사용 일수</strong> — 에어컨·전기히터처럼 계절성 기기는 실제 사용 일수를 입력하세요.</li>
+          <li><strong>전기요금 단가</strong> — 현재 가구의 월 사용량 구간에 맞는 단가를 선택하세요. 고사용 구간일수록 누진 요금이 높아집니다.</li>
         </ol>
-        <p class="guide-tip">💡 <strong>팁:</strong> 계산 결과는 에어컨만의 추가 전기요금입니다. 기존 가전 사용량에 이 값이 더해지므로 누진 구간이 올라갈 수 있습니다.</p>
+        <p class="guide-tip">💡 <strong>팁:</strong> 여러 가전제품의 월 요금을 각각 계산한 뒤 합산하면 가정 내 전기 소비 현황을 파악하는 데 도움이 됩니다.</p>
       </div>
-    </details>
+    </div>
 
     <div class="calc-card">
-      <h2 class="calc-section-title">⚡ 에어컨 전기요금 계산기</h2>
-      <p class="calc-desc">소비전력·설정 온도·사용 패턴을 입력하면 월 추가 전기요금을 추정합니다.</p>
+      <h2 class="calc-section-title">⚡ 전기용품 전기요금 계산기</h2>
+      <p class="calc-desc">에어컨·전기히터·건조기 등 가전제품의 소비전력과 사용 패턴을 입력하면 월 추가 전기요금을 추정합니다.</p>
+
+      <!-- 가전제품 프리셋 -->
+      <div class="calc-field" style="margin-bottom:20px">
+        <label>가전제품 빠른 선택 (자동 입력)</label>
+        <div class="preset-grid elec-preset-grid">
+          <button class="preset-btn elec-preset" data-watt="1500" data-hours="6" data-days="30" data-tip="냉방">❄️ 에어컨</button>
+          <button class="preset-btn elec-preset" data-watt="1500" data-hours="8" data-days="30" data-tip="난방">🔥 전기히터·온풍기</button>
+          <button class="preset-btn elec-preset" data-watt="100" data-hours="8" data-days="30" data-tip="난방">🛏️ 전기장판</button>
+          <button class="preset-btn elec-preset" data-watt="2000" data-hours="1.5" data-days="25" data-tip="건조">🌀 건조기</button>
+          <button class="preset-btn elec-preset" data-watt="160" data-hours="24" data-days="30" data-tip="냉장">🧊 냉장고</button>
+          <button class="preset-btn elec-preset" data-watt="700" data-hours="1" data-days="25" data-tip="조리">🍚 전기밥솥·전자레인지</button>
+          <button class="preset-btn elec-preset" data-watt="150" data-hours="4" data-days="30" data-tip="영상">📺 TV</button>
+          <button class="preset-btn elec-preset" data-watt="35" data-hours="12" data-days="30" data-tip="공조">💨 공기청정기</button>
+          <button class="preset-btn elec-preset" data-watt="800" data-hours="1.2" data-days="20" data-tip="세탁">🫧 세탁기</button>
+        </div>
+      </div>
 
       <div class="calc-form">
         <div class="calc-row">
           <div class="calc-field">
-            <label for="ac-watt">에어컨 소비전력</label>
-            <select id="ac-watt">
-              <option value="700">700W — 소형 벽걸이 (6~9평)</option>
-              <option value="1000">1000W — 중형 벽걸이 (10~13평)</option>
-              <option value="1500" selected>1500W — 대형 스탠드 (14~18평)</option>
-              <option value="2000">2000W — 대형 스탠드 (18~23평)</option>
-              <option value="2500">2500W — 시스템/대형 (23평+)</option>
+            <label for="elec-watt">소비전력 (W) <span class="required">*</span></label>
+            <select id="elec-watt">
+              <option value="35">35W — 공기청정기·소형 선풍기</option>
+              <option value="100">100W — 전기장판·소형 TV</option>
+              <option value="160">160W — 냉장고 (일반형)</option>
+              <option value="300">300W — 중형 TV·전자레인지 (저출력)</option>
+              <option value="700">700W — 전기밥솥·소형 에어컨·소형 전열기</option>
+              <option value="800">800W — 세탁기 (일반)</option>
+              <option value="1000">1000W — 전기온풍기 (소형)·중형 에어컨</option>
+              <option value="1500" selected>1500W — 전기히터·중대형 에어컨</option>
+              <option value="2000">2000W — 대형 에어컨·건조기 (소형)</option>
+              <option value="2500">2500W — 대형 건조기·대형 에어컨</option>
             </select>
           </div>
           <div class="calc-field">
-            <label for="ac-temp">주로 사용하는 설정 온도</label>
-            <select id="ac-temp">
-              <option value="1.28">24°C (기준 대비 +28% 전력)</option>
-              <option value="1.14">25°C (기준 대비 +14% 전력)</option>
-              <option value="1" selected>26°C (기준값)</option>
-              <option value="0.86">27°C (기준 대비 -14% 절약)</option>
-              <option value="0.72">28°C (기준 대비 -28% 절약)</option>
-            </select>
+            <label for="elec-watt-custom">소비전력 직접 입력 (W, 선택사항)</label>
+            <input type="number" id="elec-watt-custom" placeholder="예: 1200 (직접 입력 시 우선 적용)" min="1" max="10000">
           </div>
         </div>
 
         <div class="calc-row">
           <div class="calc-field">
-            <label for="ac-hours">하루 평균 사용 시간 (시간)</label>
-            <input type="number" id="ac-hours" value="6" min="1" max="24">
+            <label for="elec-hours">하루 평균 사용 시간 (시간)</label>
+            <input type="number" id="elec-hours" value="6" min="0.5" max="24" step="0.5">
           </div>
           <div class="calc-field">
-            <label for="ac-days">월 사용 일수 (일)</label>
-            <input type="number" id="ac-days" value="30" min="1" max="31">
+            <label for="elec-days">월 사용 일수 (일)</label>
+            <input type="number" id="elec-days" value="30" min="1" max="31">
           </div>
         </div>
 
         <div class="calc-field">
-          <label>냉방 보조 방법</label>
-          <div class="radio-group">
-            <label class="radio-item"><input type="radio" name="ac-fan" value="1" checked> 에어컨만 사용</label>
-            <label class="radio-item"><input type="radio" name="ac-fan" value="0.86"> 에어컨 + 선풍기 병행 (설정 온도 2도 효과 — 약 14% 절약)</label>
-          </div>
-        </div>
-
-        <div class="calc-field">
-          <label for="kwh-price">전기요금 단가 (원/kWh)</label>
-          <select id="kwh-price">
+          <label for="elec-price">전기요금 단가 (원/kWh)</label>
+          <select id="elec-price">
             <option value="120">약 120원 — 낮은 누진 구간 (월 200kWh 이하)</option>
             <option value="185" selected>약 185원 — 일반 평균 (월 200~400kWh)</option>
             <option value="280">약 280원 — 높은 누진 구간 (월 400kWh 초과)</option>
           </select>
+        </div>
+
+        <div class="calc-field" id="elec-tip-box" style="display:none">
+          <div class="elec-tip-banner" id="elec-tip-text"></div>
         </div>
       </div>
 
@@ -349,20 +362,21 @@ import Layout from '../../layouts/Layout.astro';
       <div class="calc-result-box" id="jeongi-result" style="display:none">
         <div class="result-range" id="jeongi-range"></div>
         <div class="result-detail" id="jeongi-detail"></div>
-        <p class="result-note">실제 전기요금은 가구별 전체 사용량·누진 구간에 따라 달라집니다. 이 값은 에어컨 단독 추가분입니다.</p>
-        <a href="/jeolryak/aircon-jeongi/" class="result-cta-btn" style="background:var(--primary)">에어컨 전기요금 줄이는 법 →</a>
+        <p class="result-note" id="jeongi-note">실제 전기요금은 가구별 전체 사용량·누진 구간에 따라 달라집니다. 이 값은 해당 가전제품 단독 추가분입니다.</p>
+        <a href="/jeolryak/" class="result-cta-btn" style="background:var(--primary)">생활비 절감 정보 보러가기 →</a>
         <button class="result-retry-btn" id="jeongi-retry-btn">↩ 다시 계산하기</button>
       </div>
     </div>
 
     <div class="calc-info-box">
-      <h3>에어컨 전기요금 절약 — 실제 수치 기준</h3>
+      <h3>가전제품별 전기요금 절약 포인트</h3>
       <ul>
-        <li>설정 온도 26°C → 28°C 조정 시: 소비전력 약 28% 감소, 월 1~3만원 절약 가능</li>
-        <li>선풍기 병행 사용: 체감 온도 2~3도 낮아져 설정 온도 높여도 시원함 유지</li>
-        <li>에너지 효율 1등급 vs 5등급: 전력 소비 최대 30~40% 차이</li>
-        <li>필터 청소 주기 준수: 막힌 필터는 냉방 효율 저하 → 같은 온도에서 전력 더 소모</li>
-        <li>인버터형 에어컨: 정속형 대비 최대 40% 전기 절약 (초기 비용 높지만 장기 유리)</li>
+        <li><strong>에어컨:</strong> 설정 온도 1도 올리면 약 7% 절약, 선풍기 병행 시 체감 온도 2~3도 낮아짐</li>
+        <li><strong>전기히터·온풍기:</strong> 인버터형이 정속형 대비 20~40% 전력 절감, 가동 시간 최소화 중요</li>
+        <li><strong>건조기:</strong> 저온 건조 모드 활용 시 전력 15~25% 절감, 필터 청결이 효율에 직결됨</li>
+        <li><strong>냉장고:</strong> 문 개방 빈도·냉장고 위치(직사광선 유무)에 따라 소비전력이 20% 이상 차이</li>
+        <li><strong>세탁기:</strong> 냉수 세탁 전환 시 온수 가열 전력 절감, 가득 채워서 1번 vs 소량 여러 번 큰 차이</li>
+        <li><strong>대기전력:</strong> TV·전자레인지 등 미사용 시 콘센트 뽑으면 월 3,000~5,000원 절약 가능</li>
       </ul>
     </div>
   </section>
@@ -382,28 +396,22 @@ import Layout from '../../layouts/Layout.astro';
 .calc-panel { display: none; }
 .calc-panel.active { display: block; }
 
-/* 사용 가이드 */
+/* 사용 가이드 — 항상 펼쳐진 고정 블록 */
 .calc-guide {
   background: #f7fbf9;
   border: 1px solid rgba(47,191,155,0.25);
   border-radius: 10px;
-  padding: 0;
   margin-bottom: 16px;
   overflow: hidden;
 }
-.calc-guide summary {
+.calc-guide-header {
   padding: 14px 18px;
   font-size: 0.88rem;
   font-weight: 700;
   color: var(--accent-dark);
-  cursor: pointer;
-  list-style: none;
-  display: flex;
-  align-items: center;
-  gap: 6px;
+  border-bottom: 1px solid rgba(47,191,155,0.2);
+  background: rgba(47,191,155,0.06);
 }
-.calc-guide summary::-webkit-details-marker { display: none; }
-.calc-guide[open] summary { border-bottom: 1px solid rgba(47,191,155,0.2); }
 .calc-guide-body {
   padding: 16px 20px;
   font-size: 0.86rem;
@@ -434,10 +442,11 @@ import Layout from '../../layouts/Layout.astro';
 .calc-field > label { font-size: 0.88rem; font-weight: 700; color: var(--text); }
 .required { color: var(--accent); }
 .calc-field select,
-.calc-field input[type="number"] {
+.calc-field input[type="number"],
+.calc-field input[type="text"] {
   padding: 10px 14px; border: 1.5px solid var(--border); border-radius: 8px;
   font-size: 0.93rem; background: #fff; font-family: var(--font); color: var(--text);
-  transition: border-color 0.15s; width: 100%;
+  transition: border-color 0.15s; width: 100%; box-sizing: border-box;
 }
 .calc-field select:focus, .calc-field input:focus { outline: none; border-color: var(--accent); }
 .radio-group, .checkbox-group { display: flex; flex-direction: column; gap: 8px; }
@@ -449,6 +458,7 @@ import Layout from '../../layouts/Layout.astro';
 
 /* 제품 프리셋 */
 .preset-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; }
+.elec-preset-grid { grid-template-columns: repeat(3, 1fr); }
 .preset-btn {
   padding: 9px 8px; border: 1.5px solid var(--border); background: #fff;
   border-radius: 8px; font-size: 0.82rem; font-weight: 700; color: var(--text-muted);
@@ -456,6 +466,17 @@ import Layout from '../../layouts/Layout.astro';
 }
 .preset-btn:hover { border-color: var(--accent); color: var(--accent-dark); background: rgba(47,191,155,0.06); }
 .preset-btn.selected { border-color: var(--accent); background: rgba(47,191,155,0.1); color: var(--accent-dark); }
+
+/* 전기 팁 배너 */
+.elec-tip-banner {
+  background: rgba(255,193,7,0.1);
+  border: 1px solid rgba(255,193,7,0.35);
+  border-radius: 8px;
+  padding: 10px 14px;
+  font-size: 0.84rem;
+  color: #7a5a00;
+  line-height: 1.6;
+}
 
 /* 버튼 행 */
 .calc-btn-row { display: flex; gap: 10px; align-items: center; margin-bottom: 4px; }
@@ -501,6 +522,66 @@ import Layout from '../../layouts/Layout.astro';
 }
 .result-retry-btn:hover { border-color: rgba(255,255,255,0.7); color: #fff; }
 
+/* 렌탈 인포그래픽 */
+.result-infographic {
+  background: rgba(255,255,255,0.06);
+  border-radius: 10px;
+  padding: 16px 20px;
+  margin: 14px 0;
+  text-align: left;
+}
+.infograph-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+.infograph-row:last-child { margin-bottom: 0; }
+.infograph-label {
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: rgba(255,255,255,0.7);
+  white-space: nowrap;
+  min-width: 70px;
+}
+.infograph-bar-track {
+  flex: 1;
+  background: rgba(255,255,255,0.08);
+  border-radius: 999px;
+  height: 22px;
+  overflow: hidden;
+  position: relative;
+}
+.infograph-bar {
+  height: 100%;
+  border-radius: 999px;
+  transition: width 0.5s ease;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding-right: 8px;
+  font-size: 0.72rem;
+  font-weight: 800;
+  color: #fff;
+  min-width: 40px;
+  box-sizing: border-box;
+}
+.infograph-bar.rental { background: var(--accent); }
+.infograph-bar.buy { background: rgba(255,255,255,0.35); }
+.infograph-note {
+  font-size: 0.8rem;
+  color: rgba(255,255,255,0.6);
+  margin: 10px 0 0;
+  text-align: center;
+}
+.infograph-winner {
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: var(--accent);
+  text-align: center;
+  margin-top: 10px;
+}
+
 /* 정보 박스 */
 .calc-info-box { background: var(--bg-gray); border-radius: 10px; padding: 20px 24px; margin-bottom: 40px; }
 .calc-info-box h3 { font-size: 0.95rem; font-weight: 800; color: var(--primary); margin-bottom: 12px; }
@@ -513,8 +594,10 @@ import Layout from '../../layouts/Layout.astro';
   .calc-tab { padding: 8px 12px; font-size: 0.82rem; }
   .calc-row { grid-template-columns: 1fr; }
   .preset-grid { grid-template-columns: repeat(3, 1fr); }
+  .elec-preset-grid { grid-template-columns: repeat(3, 1fr); }
   .calc-btn-row { flex-wrap: wrap; }
   .calc-run-btn { max-width: 100%; }
+  .infograph-label { min-width: 56px; font-size: 0.72rem; }
 }
 </style>
 
@@ -585,73 +668,123 @@ document.getElementById('ipju-reset-btn')?.addEventListener('click', () => {
   (document.getElementById('ipju-result') as HTMLElement).style.display = 'none';
 });
 
-// 입주청소 다시 계산
 document.getElementById('ipju-retry-btn')?.addEventListener('click', () => {
   (document.getElementById('ipju-result') as HTMLElement).style.display = 'none';
   document.getElementById('ipju-calc-btn')?.scrollIntoView({ behavior:'smooth', block:'center' });
 });
 
-// ② 렌탈 프리셋
+// ② 렌탈 — 천단위 콤마 자동 포맷
+function setupCommaInput(id: string) {
+  const el = document.getElementById(id) as HTMLInputElement;
+  if (!el) return;
+  el.addEventListener('input', () => {
+    const pos = el.selectionStart ?? 0;
+    const raw = el.value.replace(/[^0-9]/g, '');
+    const formatted = raw ? parseInt(raw).toLocaleString('ko-KR') : '';
+    el.value = formatted;
+    // 커서 위치 보정
+    const diff = formatted.length - el.value.length;
+    try { el.setSelectionRange(pos + diff, pos + diff); } catch(e) {}
+  });
+}
+setupCommaInput('rental-fee');
+setupCommaInput('buy-price');
+setupCommaInput('annual-maintenance');
+
+function parseComma(id: string): number {
+  const el = document.getElementById(id) as HTMLInputElement;
+  return parseInt((el?.value ?? '0').replace(/,/g, '')) || 0;
+}
+
+// 렌탈 프리셋
 document.querySelectorAll('.preset-btn').forEach(btn => {
   btn.addEventListener('click', () => {
     const el = btn as HTMLElement;
-    document.querySelectorAll('.preset-btn').forEach(b => b.classList.remove('selected'));
+    // 같은 패널의 preset만 selected 처리
+    const panel = el.closest('.calc-panel');
+    panel?.querySelectorAll('.preset-btn').forEach(b => b.classList.remove('selected'));
     el.classList.add('selected');
-    (document.getElementById('rental-fee') as HTMLInputElement).value = el.dataset.fee!;
-    (document.getElementById('rental-months') as HTMLSelectElement).value = el.dataset.months!;
-    (document.getElementById('buy-price') as HTMLInputElement).value = el.dataset.buy!;
-    (document.getElementById('annual-maintenance') as HTMLInputElement).value = el.dataset.maint!;
+    if (el.dataset.fee !== undefined) {
+      // 렌탈 프리셋
+      const fee = parseInt(el.dataset.fee!);
+      const buy = parseInt(el.dataset.buy!);
+      const maint = parseInt(el.dataset.maint!);
+      (document.getElementById('rental-fee') as HTMLInputElement).value = fee.toLocaleString('ko-KR');
+      (document.getElementById('rental-months') as HTMLSelectElement).value = el.dataset.months!;
+      (document.getElementById('buy-price') as HTMLInputElement).value = buy.toLocaleString('ko-KR');
+      (document.getElementById('annual-maintenance') as HTMLInputElement).value = maint > 0 ? maint.toLocaleString('ko-KR') : '0';
+    }
   });
 });
 
 // 렌탈 계산기
 document.getElementById('rental-calc-btn')?.addEventListener('click', () => {
-  const fee = parseInt((document.getElementById('rental-fee') as HTMLInputElement).value);
+  const fee = parseComma('rental-fee');
   const months = parseInt((document.getElementById('rental-months') as HTMLSelectElement).value);
-  const buyPrice = parseInt((document.getElementById('buy-price') as HTMLInputElement).value);
-  const annualMaint = parseInt((document.getElementById('annual-maintenance') as HTMLInputElement).value) || 0;
+  const buyPrice = parseComma('buy-price');
+  const annualMaint = parseComma('annual-maintenance');
   const channelBenefit = parseInt((document.querySelector('input[name="rental-channel"]:checked') as HTMLInputElement)?.value ?? '0');
   const ownership = parseInt((document.querySelector('input[name="rental-ownership"]:checked') as HTMLInputElement)?.value ?? '0');
   if (!fee || !buyPrice) { alert('렌탈료와 구매 가격을 입력해주세요.'); return; }
   const ownershipCost = ownership === 2 ? 75000 : 0;
   const totalRental = fee * months - channelBenefit + ownershipCost;
   const totalBuy = buyPrice + (annualMaint * months / 12);
-  const fmt = (n: number) => Math.round(Math.abs(n)/10000) + '만원';
+  const totalBuyRound = Math.round(totalBuy);
+  const fmt = (n: number) => Math.round(Math.abs(n) / 10000) + '만원';
   let breakEven = 0;
   for (let m=1; m<=200; m++) {
     const rCost = fee * m - channelBenefit + ownershipCost;
     const bCost = buyPrice + annualMaint * m / 12;
     if (bCost < rCost) { breakEven = m; break; }
   }
-  const diff = totalRental - totalBuy;
+  const diff = totalRental - totalBuyRound;
   const rangeEl = document.getElementById('rental-range') as HTMLElement;
   if (diff > 0) {
-    rangeEl.innerHTML = `${months}개월 기준 구매가 <strong>${fmt(diff)}</strong> 저렴`;
+    rangeEl.innerHTML = `${months}개월 기준 구매가 <strong>${fmt(diff)}</strong> 더 저렴`;
   } else if (diff < 0) {
-    rangeEl.innerHTML = `${months}개월 기준 렌탈이 <strong>${fmt(diff)}</strong> 저렴`;
+    rangeEl.innerHTML = `${months}개월 기준 렌탈이 <strong>${fmt(Math.abs(diff))}</strong> 더 저렴`;
   } else {
     rangeEl.innerHTML = `${months}개월 기준 렌탈과 구매 비용이 동일합니다`;
   }
+
+  // 인포그래픽
+  const maxVal = Math.max(totalRental, totalBuyRound);
+  const rentalPct = Math.max(20, Math.round(totalRental / maxVal * 100));
+  const buyPct = Math.max(20, Math.round(totalBuyRound / maxVal * 100));
+  const infographic = document.getElementById('rental-infographic') as HTMLElement;
+  infographic.innerHTML = `
+    <div class="result-infographic">
+      <div class="infograph-row">
+        <span class="infograph-label">렌탈 총비용</span>
+        <div class="infograph-bar-track">
+          <div class="infograph-bar rental" style="width:${rentalPct}%">${fmt(totalRental)}</div>
+        </div>
+      </div>
+      <div class="infograph-row">
+        <span class="infograph-label">구매 총비용</span>
+        <div class="infograph-bar-track">
+          <div class="infograph-bar buy" style="width:${buyPct}%">${fmt(totalBuyRound)}</div>
+        </div>
+      </div>
+      ${breakEven > 0 ? `<p class="infograph-note">📍 <strong>${breakEven}개월</strong> 이후부터 구매 총비용이 렌탈보다 저렴해집니다</p>` : `<p class="infograph-note">📍 약정 기간(${months}개월) 내에는 구매가 더 유리합니다</p>`}
+      <p class="infograph-winner">${diff > 0 ? `✅ 구매가 ${fmt(diff)} 절약` : diff < 0 ? `✅ 렌탈이 ${fmt(Math.abs(diff))} 절약` : '✅ 비용 동일 — 관리 편의성 고려 추천'}</p>
+    </div>`;
+
+  // 상세 텍스트
   const detailLines = [
-    `렌탈 총비용: ${fmt(totalRental)}원${channelBenefit > 0 ? ` (혜택 ${fmt(channelBenefit)} 차감)` : ''}`,
-    `구매 총비용: ${fmt(Math.round(totalBuy))}원 (유지비 포함)`,
-    breakEven > 0 ? `구매가 유리해지는 시점: ${breakEven}개월 이후` : `약정 기간 내 구매가 더 유리`
+    `렌탈 총비용: ${fmt(totalRental)}${channelBenefit > 0 ? ` (혜택 ${fmt(channelBenefit)} 차감 후)` : ''}`,
+    `구매 총비용: ${fmt(totalBuyRound)} (유지비 포함)`,
   ];
-  (document.getElementById('rental-detail') as HTMLElement).innerHTML = detailLines.join('<br>');
-  // CTA 분기
+  (document.getElementById('rental-detail') as HTMLElement).innerHTML = detailLines.join(' &nbsp;·&nbsp; ');
+
+  // CTA
   const ctaWrap = document.getElementById('rental-cta-wrap') as HTMLElement;
-  if (diff >= 0 || channelBenefit > 0) {
-    ctaWrap.innerHTML = `
-      <p class="result-cta-label">${diff >= -300000 ? '렌탈과 구매 비용 차이가 크지 않습니다. 비교채널 경유 가입 시 추가 혜택으로 차이를 더 줄일 수 있습니다.' : '렌탈이 더 유리합니다. 비교채널 경유 가입 시 최대 31만원 혜택까지 확인하세요.'}</p>
-      <a href="https://partners.ajl.to/lead/rental?partnerId=UDXBJ0IC" rel="nofollow sponsored noopener" data-partner-cta="true" class="result-cta-btn">
-        렌탈 조건 비교하기 →
-      </a>
-      <p class="result-cta-note">* 제휴 링크 · 이용자 추가 비용 없음 · <a href="/affiliate-disclosure/" style="color:inherit;text-decoration:underline">제휴 고지</a></p>`;
-  } else {
-    ctaWrap.innerHTML = `
-      <p class="result-cta-label">구매가 유리하더라도, 비교채널 경유 렌탈 가입 시 평균 20만원 혜택으로 실질 차이를 줄일 수 있습니다.</p>
-      <a href="/rental/" class="result-cta-btn" style="background:var(--primary)">렌탈 조건 상세 확인 →</a>`;
-  }
+  ctaWrap.innerHTML = `
+    <a href="https://partners.ajl.to/lead/rental?partnerId=UDXBJ0IC" rel="nofollow sponsored noopener" data-partner-cta="true" class="result-cta-btn">
+      렌탈 알아보기 →
+    </a>
+    <p class="result-cta-note">* 제휴 링크 · 이용자 추가 비용 없음 · <a href="/affiliate-disclosure/" style="color:inherit;text-decoration:underline">제휴 고지</a></p>`;
+
   const res = document.getElementById('rental-result') as HTMLElement;
   res.style.display = 'block';
   res.scrollIntoView({ behavior:'smooth', block:'nearest' });
@@ -665,7 +798,7 @@ document.getElementById('rental-reset-btn')?.addEventListener('click', () => {
   (document.getElementById('annual-maintenance') as HTMLInputElement).value = '0';
   (document.querySelector('input[name="rental-channel"][value="0"]') as HTMLInputElement).checked = true;
   (document.querySelector('input[name="rental-ownership"][value="0"]') as HTMLInputElement).checked = true;
-  document.querySelectorAll('.preset-btn').forEach(b => b.classList.remove('selected'));
+  document.querySelectorAll('#rental .preset-btn').forEach(b => b.classList.remove('selected'));
   (document.getElementById('rental-result') as HTMLElement).style.display = 'none';
 });
 
@@ -674,23 +807,66 @@ document.getElementById('rental-retry-btn')?.addEventListener('click', () => {
   document.getElementById('rental-calc-btn')?.scrollIntoView({ behavior:'smooth', block:'center' });
 });
 
-// ③ 전기요금 계산기
+// ③ 전기요금 — 가전 프리셋
+const elecTips: Record<string, string> = {
+  '냉방': '💡 에어컨은 설정 온도 1도 높일수록 약 7% 전력 절감됩니다. 선풍기 병행 시 체감 온도 2~3도 낮아집니다.',
+  '난방': '💡 전기히터는 가동 시간 단축이 핵심입니다. 적정 온도 도달 후 끄고 보온재·내복으로 체감 온도를 높이세요.',
+  '건조': '💡 건조기 필터를 매 사용 후 청소하면 전력 효율이 유지됩니다. 저온 건조 모드 활용 시 15~25% 절감 가능합니다.',
+  '냉장': '💡 냉장고는 24시간 가동되므로 직사광선을 피하고 벽과 10cm 이상 간격을 유지하면 소비전력이 낮아집니다.',
+  '조리': '💡 전기밥솥 보온 기능은 전력 소모가 큽니다. 조리 후 바로 끄고 단열 용기에 보관하는 방법을 고려하세요.',
+  '영상': '💡 TV 미시청 시 대기전력(0.5~3W)이 계속 소모됩니다. 콘센트를 뽑거나 스마트 멀티탭을 활용하세요.',
+  '공조': '💡 공기청정기는 저전력 기기지만 24시간 가동 시 연간 2~4만원 수준입니다. 자동 모드로 두면 효율적입니다.',
+  '세탁': '💡 세탁기는 냉수 세탁 전환만으로 온수 가열 비용을 없앨 수 있습니다. 가득 채워 1회 세탁이 소량 여러 번보다 효율적입니다.',
+};
+
+document.querySelectorAll('.elec-preset').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const el = btn as HTMLElement;
+    document.querySelectorAll('.elec-preset').forEach(b => b.classList.remove('selected'));
+    el.classList.add('selected');
+    const watt = el.dataset.watt!;
+    const hours = el.dataset.hours!;
+    const days = el.dataset.days!;
+    const tip = el.dataset.tip!;
+    // watt select 매칭
+    const wattSel = document.getElementById('elec-watt') as HTMLSelectElement;
+    const opts = Array.from(wattSel.options).map(o => o.value);
+    if (opts.includes(watt)) wattSel.value = watt;
+    (document.getElementById('elec-watt-custom') as HTMLInputElement).value = '';
+    (document.getElementById('elec-hours') as HTMLInputElement).value = hours;
+    (document.getElementById('elec-days') as HTMLInputElement).value = days;
+    const tipBox = document.getElementById('elec-tip-box') as HTMLElement;
+    const tipText = document.getElementById('elec-tip-text') as HTMLElement;
+    if (elecTips[tip]) {
+      tipText.textContent = elecTips[tip];
+      tipBox.style.display = 'block';
+    } else {
+      tipBox.style.display = 'none';
+    }
+  });
+});
+
+// 전기요금 계산기
 document.getElementById('jeongi-calc-btn')?.addEventListener('click', () => {
-  const watt = parseInt((document.getElementById('ac-watt') as HTMLSelectElement).value);
-  const tempFactor = parseFloat((document.getElementById('ac-temp') as HTMLSelectElement).value);
-  const hours = parseFloat((document.getElementById('ac-hours') as HTMLInputElement).value);
-  const days = parseInt((document.getElementById('ac-days') as HTMLInputElement).value);
-  const fanFactor = parseFloat((document.querySelector('input[name="ac-fan"]:checked') as HTMLInputElement)?.value ?? '1');
-  const price = parseInt((document.getElementById('kwh-price') as HTMLSelectElement).value);
-  const effectiveWatt = watt * tempFactor * fanFactor;
-  const kwhPerMonth = effectiveWatt / 1000 * hours * days;
+  const customWatt = parseInt((document.getElementById('elec-watt-custom') as HTMLInputElement).value);
+  const selectedWatt = parseInt((document.getElementById('elec-watt') as HTMLSelectElement).value);
+  const watt = customWatt > 0 ? customWatt : selectedWatt;
+  const hours = parseFloat((document.getElementById('elec-hours') as HTMLInputElement).value);
+  const days = parseInt((document.getElementById('elec-days') as HTMLInputElement).value);
+  const price = parseInt((document.getElementById('elec-price') as HTMLSelectElement).value);
+  if (!watt || !hours || !days) { alert('소비전력, 사용 시간, 사용 일수를 입력해주세요.'); return; }
+  const kwhPerMonth = watt / 1000 * hours * days;
   const cost = Math.round(kwhPerMonth * price);
+  const annualCost = cost * 12;
   (document.getElementById('jeongi-range') as HTMLElement).innerHTML =
     `월 추가 전기요금 약 <strong>${cost.toLocaleString('ko-KR')}원</strong>`;
-  const savingBase = watt / 1000 * hours * days * price;
-  const saving = Math.round(savingBase - cost);
+  const yearlyStr = annualCost >= 10000 ? `연간 약 ${Math.round(annualCost/10000)}만원` : `연간 약 ${annualCost.toLocaleString('ko-KR')}원`;
   (document.getElementById('jeongi-detail') as HTMLElement).innerHTML =
-    `소비 전력량 ${kwhPerMonth.toFixed(1)} kWh${saving > 0 ? ` · 26°C 기준 대비 월 ${saving.toLocaleString('ko-KR')}원 절약` : saving < 0 ? ` · 26°C 기준 대비 월 ${Math.abs(saving).toLocaleString('ko-KR')}원 추가` : ''}`;
+    `월 소비 전력량 ${kwhPerMonth.toFixed(1)} kWh &nbsp;·&nbsp; ${yearlyStr}`;
+  const noteEl = document.getElementById('jeongi-note') as HTMLElement;
+  noteEl.textContent = customWatt > 0
+    ? `직접 입력한 ${customWatt}W 기준으로 계산되었습니다. 실제 요금은 가구 전체 사용량·누진 구간에 따라 달라집니다.`
+    : `실제 전기요금은 가구별 전체 사용량·누진 구간에 따라 달라집니다. 이 값은 해당 가전제품 단독 추가분입니다.`;
   const res = document.getElementById('jeongi-result') as HTMLElement;
   res.style.display = 'block';
   res.scrollIntoView({ behavior:'smooth', block:'nearest' });
@@ -698,12 +874,13 @@ document.getElementById('jeongi-calc-btn')?.addEventListener('click', () => {
 
 // 전기요금 초기화
 document.getElementById('jeongi-reset-btn')?.addEventListener('click', () => {
-  (document.getElementById('ac-watt') as HTMLSelectElement).value = '1500';
-  (document.getElementById('ac-temp') as HTMLSelectElement).value = '1';
-  (document.getElementById('ac-hours') as HTMLInputElement).value = '6';
-  (document.getElementById('ac-days') as HTMLInputElement).value = '30';
-  (document.querySelector('input[name="ac-fan"][value="1"]') as HTMLInputElement).checked = true;
-  (document.getElementById('kwh-price') as HTMLSelectElement).value = '185';
+  (document.getElementById('elec-watt') as HTMLSelectElement).value = '1500';
+  (document.getElementById('elec-watt-custom') as HTMLInputElement).value = '';
+  (document.getElementById('elec-hours') as HTMLInputElement).value = '6';
+  (document.getElementById('elec-days') as HTMLInputElement).value = '30';
+  (document.getElementById('elec-price') as HTMLSelectElement).value = '185';
+  document.querySelectorAll('.elec-preset').forEach(b => b.classList.remove('selected'));
+  (document.getElementById('elec-tip-box') as HTMLElement).style.display = 'none';
   (document.getElementById('jeongi-result') as HTMLElement).style.display = 'none';
 });
 
