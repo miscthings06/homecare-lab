@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://www.homecare-lab.co.kr/sitemap-index.xml

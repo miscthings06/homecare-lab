@@ -80,10 +80,16 @@ import Layout from '../../layouts/Layout.astro';
           <a href="/calculator/#rental" class="guide-btn">손익분기점 계산기</a>
         </div>
         <div class="scenario-card">
-          <span class="scenario-icon">🏠</span>
-          <p class="scenario-q">이사 후 집 고정비를 전반적으로 줄이고 싶어요</p>
-          <p class="scenario-tip">인터넷·렌탈·전기요금 절감 방법을 한 번에 정리해 안내합니다</p>
-          <a href="/rental/" class="guide-btn">가전렌탈 절감 가이드</a>
+          <span class="scenario-icon">🔥</span>
+          <p class="scenario-q">겨울에 난방비가 너무 많이 나와요</p>
+          <p class="scenario-tip">보일러 설정 온도·외출 모드·단열 개선으로 실질적인 절감 방법을 확인하세요</p>
+          <a href="/jeolryak/nanbangbi-jeollyak/" class="guide-btn">난방비 절감법 보기</a>
+        </div>
+        <div class="scenario-card">
+          <span class="scenario-icon">🎟️</span>
+          <p class="scenario-q">에너지바우처 신청 자격이 되는지 확인하고 싶어요</p>
+          <p class="scenario-tip">기초수급자·차상위계층이면서 노인·장애인·영유아 가구원이 있으면 신청 가능합니다</p>
+          <a href="/jeolryak/energy-voucher/" class="guide-btn">신청 자격 확인</a>
         </div>
         <div class="scenario-card">
           <span class="scenario-icon">🧮</span>
@@ -138,6 +144,34 @@ import Layout from '../../layouts/Layout.astro';
         <h3>공기청정기 렌탈 vs 구매 총비용 비교</h3>
         <p>헤파 필터 자가 교체 비용과 렌탈 월 요금을 4년 기준으로 비교. 공간 면적별 적정 용량 선택 기준도 함께 확인합니다.</p>
         <a href="/rental/gonggi-rental/" class="guide-btn">비용 기준 보기</a>
+      </div>
+      <div class="card" style="display:flex;flex-direction:column">
+        <div class="card-icon">🔥</div>
+        <div class="card-tag">난방비 절감</div>
+        <h3>겨울 난방비 줄이는 보일러 설정법</h3>
+        <p>설정 온도 1도 낮추면 연료비 약 7% 절감. 외출 모드 활용법, 뽁뽁이·문풍지 단열 팁, 콘덴싱 보일러 교체 효과까지 수치 기준으로 정리했습니다.</p>
+        <a href="/jeolryak/nanbangbi-jeollyak/" class="guide-btn">절감법 보기</a>
+      </div>
+      <div class="card" style="display:flex;flex-direction:column">
+        <div class="card-icon">📊</div>
+        <div class="card-tag">전기요금</div>
+        <h3>전기요금 누진제 구간 기준 완전 정리</h3>
+        <p>200kWh, 400kWh 경계에서 단가가 크게 달라지는 누진제 구조. 구간별 단가·기본요금 계산 예시와 월 중반 사용량 관리 방법을 정리했습니다.</p>
+        <a href="/jeolryak/jeongi-nujin/" class="guide-btn">기준 보기</a>
+      </div>
+      <div class="card" style="display:flex;flex-direction:column">
+        <div class="card-icon">🎟️</div>
+        <div class="card-tag">정부 지원</div>
+        <h3>에너지바우처 신청 방법 완전 정리</h3>
+        <p>기초수급자·차상위계층 가구에 연간 30~50만원 에너지 비용 지원. 신청 자격, 지원 금액, 하절기·동절기 신청 방법을 정리했습니다.</p>
+        <a href="/jeolryak/energy-voucher/" class="guide-btn">신청 방법 보기</a>
+      </div>
+      <div class="card" style="display:flex;flex-direction:column">
+        <div class="card-icon">🏷️</div>
+        <div class="card-tag">가전 환급</div>
+        <h3>고효율 가전 환급 신청 방법</h3>
+        <p>에너지 1등급 냉장고·에어컨·세탁기 구매 시 최대 30만원 환급. 한국에너지공단 환급 대상 제품, 신청 방법, 예산 소진 전 신청 팁을 안내합니다.</p>
+        <a href="/jeolryak/gogoyul-hwanbul/" class="guide-btn">환급 신청 보기</a>
       </div>
     </div>
 
@@ -240,6 +274,26 @@ import Layout from '../../layouts/Layout.astro';
           <p class="related-card-title">렌탈 vs 구매 손익분기점 계산기</p>
           <p class="related-card-desc">월 렌탈료·약정 기간·구매가·유지비를 입력하면 손익분기 월 수를 자동 계산. 렌탈과 구매 중 어느 쪽이 유리한지 숫자로 즉시 확인합니다.</p>
           <a href="/calculator/#rental" class="related-card-btn">자세히 보기 →</a>
+        </div>
+        <div class="related-card">
+          <p class="related-card-title">겨울 난방비 줄이는 보일러 설정법</p>
+          <p class="related-card-desc">보일러 설정 온도·외출 모드 활용·단열 개선으로 겨울철 도시가스 요금을 줄이는 방법. 콘덴싱 보일러 교체 절감 효과도 함께 안내합니다.</p>
+          <a href="/jeolryak/nanbangbi-jeollyak/" class="related-card-btn">자세히 보기 →</a>
+        </div>
+        <div class="related-card">
+          <p class="related-card-title">전기요금 누진제 구간 기준 완전 정리</p>
+          <p class="related-card-desc">200kWh·400kWh 경계를 기준으로 단가가 크게 달라지는 누진 구조. 여름·겨울 사용량 관리 방법과 한전 앱 활용법을 안내합니다.</p>
+          <a href="/jeolryak/jeongi-nujin/" class="related-card-btn">자세히 보기 →</a>
+        </div>
+        <div class="related-card">
+          <p class="related-card-title">에너지바우처 신청 방법</p>
+          <p class="related-card-desc">기초수급자·차상위계층 중 노인·영유아·장애인 가구원이 있으면 신청 가능. 지원 금액, 신청 기간, 복지로 온라인 신청 방법을 정리했습니다.</p>
+          <a href="/jeolryak/energy-voucher/" class="related-card-btn">자세히 보기 →</a>
+        </div>
+        <div class="related-card">
+          <p class="related-card-title">고효율 가전 환급 신청 방법</p>
+          <p class="related-card-desc">에너지 1등급 냉장고·에어컨·세탁기 구매 시 최대 30만원 환급. 한국에너지공단 사업 대상 제품과 신청 방법을 안내합니다.</p>
+          <a href="/jeolryak/gogoyul-hwanbul/" class="related-card-btn">자세히 보기 →</a>
         </div>
       </div>
     </div>

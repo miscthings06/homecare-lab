@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <rect width="1200" height="630" fill="#1f2d3d"/>
+  <rect x="0" y="0" width="8" height="630" fill="#2fbf9b"/>
+  <text x="80" y="260" font-family="sans-serif" font-size="72" font-weight="900" fill="#ffffff">홈케어랩</text>
+  <text x="80" y="340" font-family="sans-serif" font-size="36" font-weight="400" fill="rgba(255,255,255,0.7)">청소 · 렌탈 · 이사 비용 비교 가이드</text>
+  <text x="80" y="400" font-family="sans-serif" font-size="28" fill="rgba(255,255,255,0.45)">www.homecare-lab.co.kr</text>
+  <rect x="80" y="460" width="160" height="4" fill="#2fbf9b" rx="2"/>
+</svg>
