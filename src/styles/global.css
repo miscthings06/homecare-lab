@@ -59,7 +59,8 @@ header {
   color: var(--accent);
   letter-spacing: -0.5px;
 }
-.logo span:not(.logo-url) { color: var(--accent-dark); }
+.logo-name { color: var(--accent); }
+.logo-name em { color: var(--accent-dark); font-style: normal; }
 .logo-url {
   font-size: 0.65rem; font-weight: 500; color: var(--primary);
   letter-spacing: 0; opacity: 0.75; margin-left: 2px;
