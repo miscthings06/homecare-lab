@@ -92,9 +92,9 @@ import Layout from '../layouts/Layout.astro';
 </section>
 
 <!-- 비용 계산하기 섹션 -->
-<section class="gray calc-cta-section">
+<section class="calc-cta-section">
   <div class="container">
-    <h2 class="section-title">홈케어랩 비용 계산하기</h2>
+    <h2 class="section-title">내 상황에 맞는 비용, 직접 계산해보세요</h2>
     <p class="section-sub">청소 견적 기준, 렌탈과 구매 손익분기, 가전 전기요금까지 — 조건을 입력하면 내 상황에 맞는 예상 비용을 바로 확인할 수 있습니다.</p>
     <div class="card-grid" style="max-width:900px;margin:0 auto">
       <a href="/calculator/#ipju" class="card card-calc" style="text-decoration:none">
@@ -793,6 +793,15 @@ import Layout from '../layouts/Layout.astro';
   transition: background 0.2s;
 }
 .btn-outline-white:hover { background: rgba(255,255,255,0.15); }
+
+/* 비용 계산하기 섹션 — 다크 배경 */
+.calc-cta-section {
+  background: var(--primary);
+  padding: 48px 20px 52px;
+  text-align: center;
+}
+.calc-cta-section .section-title { color: #fff; }
+.calc-cta-section .section-sub { color: rgba(255,255,255,0.6); }
 
 /* 반응형 */
 @media (max-width: 900px) {
