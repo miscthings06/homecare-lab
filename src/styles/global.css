@@ -59,10 +59,10 @@ header {
   color: var(--accent);
   letter-spacing: -0.5px;
 }
-.logo span { color: var(--accent-dark); }
+.logo span:not(.logo-url) { color: var(--accent-dark); }
 .logo-url {
-  font-size: 0.65rem; font-weight: 500; color: var(--text-muted);
-  letter-spacing: 0; opacity: 0.7; margin-left: 2px;
+  font-size: 0.65rem; font-weight: 500; color: var(--primary);
+  letter-spacing: 0; opacity: 0.75; margin-left: 2px;
 }
 
 nav { display: flex; gap: 6px; }
@@ -872,12 +872,15 @@ footer {
 
 /* ===== Hero Foot (히어로 내 제휴 고지) ===== */
 .hero-foot-text {
-  font-size: 0.74rem;
+  display: inline-block;
+  font-size: 0.62rem;
   color: var(--text-muted);
-  margin-top: 2.2rem;
-  line-height: 1.4;
-  padding-top: 0.6rem;
-  border-top: 1px solid rgba(0,0,0,0.04);
+  margin-top: 1.8rem;
+  line-height: 1.5;
+  border: 1px solid rgba(0,0,0,0.08);
+  border-radius: 6px;
+  padding: 6px 14px;
+  background: rgba(0,0,0,0.02);
 }
 
 /* ===== 렌탈 계산기 결과 — 가로형 VS 비교 (global: JS 동적 생성 HTML에 적용) ===== */
