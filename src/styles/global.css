@@ -871,16 +871,17 @@ footer {
 }
 
 /* ===== Hero Foot (히어로 내 제휴 고지) ===== */
-.hero-foot-text {
-  display: inline-block;
+/* .hero p 의 specificity(0,1,1)를 이기려면 .hero .hero-foot-text(0,2,0) 사용 */
+.hero .hero-foot-text {
   font-size: 0.62rem;
   color: var(--text-muted);
   margin-top: 1.8rem;
-  line-height: 1.5;
-  border: 1px solid rgba(0,0,0,0.08);
-  border-radius: 6px;
-  padding: 6px 14px;
-  background: rgba(0,0,0,0.02);
+  line-height: 1.6;
+  max-width: none;
+  margin-bottom: 0;
+  border: none;
+  background: none;
+  padding: 0;
 }
 
 /* ===== 렌탈 계산기 결과 — 가로형 VS 비교 (global: JS 동적 생성 HTML에 적용) ===== */

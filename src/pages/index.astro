@@ -50,7 +50,7 @@ import Layout from '../layouts/Layout.astro';
         <span class="hero-tag">🧮 렌탈 vs 구매 계산기</span>
       </div>
 
-      <p class="hero-foot-text">본 사이트는 홈케어 서비스 직접 제공자가 아니며, 일부 링크 이용 시 제휴 수수료가 발생할 수 있습니다.</p>
+      <p class="hero-foot-text">본 사이트는 홈케어 서비스 직접 제공자가 아니며,<br>일부 링크 이용 시 제휴 수수료가 발생할 수 있습니다.</p>
     </div>
   </div>
 </section>
@@ -802,6 +802,21 @@ import Layout from '../layouts/Layout.astro';
 }
 .calc-cta-section .section-title { color: #fff; }
 .calc-cta-section .section-sub { color: rgba(255,255,255,0.6); }
+
+/* 다크 배경 위 투명 카드 */
+.calc-cta-section .card {
+  background: rgba(255,255,255,0.05);
+  border: 1.5px solid rgba(255,255,255,0.15);
+  border-left: 4px solid var(--accent);
+}
+.calc-cta-section .card:hover {
+  background: rgba(47,191,155,0.12);
+  border-color: var(--accent);
+  box-shadow: 0 4px 20px rgba(47,191,155,0.2);
+}
+.calc-cta-section .card h3 { color: #fff; }
+.calc-cta-section .card p { color: rgba(255,255,255,0.65); }
+.calc-cta-section .card .card-icon { filter: none; }
 
 /* 반응형 */
 @media (max-width: 900px) {
