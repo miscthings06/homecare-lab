@@ -867,13 +867,81 @@ footer {
 
 /* ===== Hero Foot (히어로 내 제휴 고지) ===== */
 .hero-foot-text {
-  font-size: 0.62rem;
-  color: rgba(0,0,0,0.22);
+  font-size: 0.53rem;
+  color: rgba(0,0,0,0.13);
   margin-top: 2.2rem;
   line-height: 1.4;
   padding-top: 0.6rem;
-  border-top: 1px solid rgba(255,255,255,0.06);
+  border-top: 1px solid rgba(0,0,0,0.04);
 }
+
+/* ===== 렌탈 계산기 결과 — 가로형 VS 비교 (global: JS 동적 생성 HTML에 적용) ===== */
+.rc-result-box {
+  background: #fff; color: var(--primary);
+  border: 2px solid rgba(47,191,155,0.28); text-align: left;
+}
+.rc-result-box .result-note { color: var(--text-muted); font-size: 0.75rem; }
+.rc-result-box .result-retry-btn {
+  border-color: var(--border); color: var(--text-muted); background: var(--bg-gray);
+}
+.rc-result-box .result-retry-btn:hover { border-color: var(--primary); color: var(--primary); }
+.rc-period {
+  font-size: 0.82rem; font-weight: 700; color: var(--text-muted);
+  margin-bottom: 14px; text-align: center;
+}
+.rc-compare {
+  display: flex; align-items: flex-start; gap: 0; margin-bottom: 14px;
+}
+.rc-col {
+  flex: 1; background: var(--bg-gray); border-radius: 10px;
+  padding: 15px 12px; text-align: center; border: 2px solid transparent; min-width: 0;
+}
+.rc-col--win { background: rgba(47,191,155,0.08); border-color: var(--accent); }
+.rc-col--win-buy { background: rgba(31,45,61,0.06); border-color: var(--primary); }
+.rc-vs {
+  flex-shrink: 0; width: 48px; display: flex; flex-direction: column;
+  align-items: center; justify-content: flex-start; gap: 8px; padding-top: 28px;
+}
+.rc-vs-text { font-size: 0.78rem; font-weight: 900; color: var(--text-muted); }
+.rc-vs-pill {
+  font-size: 0.66rem; font-weight: 700; text-align: center; line-height: 1.5;
+  background: var(--accent); color: #fff; border-radius: 8px; padding: 5px 5px;
+  word-break: keep-all;
+}
+.rc-vs-pill--buy { background: var(--primary); }
+.rc-col-head {
+  display: flex; align-items: center; justify-content: center;
+  gap: 4px; margin-bottom: 8px; flex-wrap: wrap;
+}
+.rc-col-emoji { font-size: 1rem; }
+.rc-col-title { font-size: 0.82rem; font-weight: 700; color: var(--text-muted); }
+.rc-recommend-badge {
+  background: var(--accent); color: #fff; font-size: 0.66rem;
+  font-weight: 700; padding: 2px 7px; border-radius: 999px;
+}
+.rc-col-amount { font-size: 1.35rem; font-weight: 900; color: var(--primary); margin-bottom: 10px; line-height: 1.2; }
+.rc-col--win .rc-col-amount { color: var(--accent-dark); }
+.rc-col-items { list-style: none; padding: 0; margin: 0; text-align: left; display: flex; flex-direction: column; gap: 4px; }
+.rc-col-items li { font-size: 0.73rem; color: var(--text-muted); line-height: 1.4; }
+.rc-col-items li.rc-plus { color: #1a7a5e; font-weight: 600; }
+.rc-col-items li.rc-minus { color: #c0392b; }
+.rc-conclusion {
+  background: rgba(47,191,155,0.07); border: 1px solid rgba(47,191,155,0.25);
+  border-radius: 10px; padding: 14px 16px; text-align: left; margin-bottom: 16px;
+}
+.rc-conclusion strong {
+  display: block; font-size: 0.88rem; color: var(--accent-dark);
+  margin-bottom: 8px; font-weight: 700; line-height: 1.4;
+}
+.rc-conclusion p { font-size: 0.82rem; color: var(--text-muted); line-height: 1.7; margin: 0; }
+.rc-cta-btn {
+  display: inline-block; padding: 13px 32px; background: var(--accent);
+  color: #fff; border-radius: 9px; font-weight: 800; font-size: 0.95rem;
+  text-decoration: none; transition: opacity 0.15s; margin-bottom: 8px;
+}
+.rc-cta-btn:hover { opacity: 0.85; text-decoration: none; }
+.rc-cta-note { font-size: 0.72rem; color: rgba(0,0,0,0.32); margin: 0; }
+.rc-cta-note a { color: var(--accent-dark); }
 
 /* ===== 반응형 ===== */
 @media (max-width: 768px) {
