@@ -231,69 +231,83 @@ import Layout from '../../layouts/Layout.astro';
       </div>
     </div>
 
-    <!-- 관련 글 -->
+    <!-- 홈서비스 비용 한눈에 보기 섹션 -->
+    <div style="background:var(--bg-gray);border-radius:14px;padding:28px;margin-bottom:40px">
+      <p style="font-size:0.8rem;font-weight:600;color:var(--accent-dark);margin-bottom:8px">항목별 평균 비용 범위</p>
+      <h2 style="font-size:1.15rem;font-weight:800;margin-bottom:16px;color:var(--primary)">💡 홈서비스 비용 기준 한눈에 보기</h2>
+      <div style="overflow-x:auto;margin-bottom:12px">
+        <table style="width:100%;border-collapse:collapse;font-size:0.88rem">
+          <thead>
+            <tr style="background:var(--primary);color:#fff">
+              <th style="padding:10px 14px;text-align:left">서비스</th>
+              <th style="padding:10px 14px;text-align:left">비용 범위</th>
+              <th style="padding:10px 14px;text-align:left">주요 변수</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td style="padding:9px 14px;border-bottom:1px solid var(--border)">입주청소 (20평)</td><td style="padding:9px 14px;border-bottom:1px solid var(--border)">15~25만원</td><td style="padding:9px 14px;border-bottom:1px solid var(--border)">평수·오염도·포함 항목</td></tr>
+            <tr style="background:#f9fafb"><td style="padding:9px 14px;border-bottom:1px solid var(--border)">에어컨 청소 (벽걸이)</td><td style="padding:9px 14px;border-bottom:1px solid var(--border)">6~12만원</td><td style="padding:9px 14px;border-bottom:1px solid var(--border)">분해 여부·오염도</td></tr>
+            <tr><td style="padding:9px 14px;border-bottom:1px solid var(--border)">정수기 렌탈</td><td style="padding:9px 14px;border-bottom:1px solid var(--border)">3~6만원/월</td><td style="padding:9px 14px;border-bottom:1px solid var(--border)">약정 기간·필터 포함 여부</td></tr>
+            <tr style="background:#f9fafb"><td style="padding:9px 14px;border-bottom:1px solid var(--border)">인터넷 (기가)</td><td style="padding:9px 14px;border-bottom:1px solid var(--border)">2~4만원/월</td><td style="padding:9px 14px;border-bottom:1px solid var(--border)">통신사·결합 상품</td></tr>
+            <tr><td style="padding:9px 14px">에어컨 전기요금</td><td style="padding:9px 14px">월 5~10만원</td><td style="padding:9px 14px">소비전력·사용 시간·누진제</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p style="font-size:0.78rem;color:var(--text-muted);margin-bottom:10px">※ 지역·오염도·약정 조건에 따라 달라집니다. 성수기에는 비용이 높아질 수 있습니다.</p>
+      <p style="text-align:right;margin:0"><a href="/homeservice-biyong/" style="font-size:0.85rem;color:var(--accent-dark);font-weight:600">전체 홈서비스 비용 기준표 →</a></p>
+    </div>
+
+    <!-- 최신글 -->
     <div class="related-posts">
-      <h3>생활비 절감 관련 글 전체 보기</h3>
+      <h3>최신글</h3>
       <div class="related-card-grid">
-        <div class="related-card">
-          <p class="related-card-title">에어컨 전기요금 계산법</p>
-          <p class="related-card-desc">소비전력·사용 시간·누진제 구간으로 월 전기요금을 미리 계산하는 방법. 설정 온도 조정과 필터 청소가 전기요금에 미치는 실제 수치 효과를 정리했습니다.</p>
-          <a href="/jeolryak/aircon-jeongi/" class="related-card-btn">자세히 보기 →</a>
+        <div class="related-card" style="position:relative">
+          <span style="position:absolute;top:8px;right:8px;background:#e53e3e;color:#fff;font-size:0.68rem;font-weight:800;padding:2px 7px;border-radius:4px;letter-spacing:0.05em">NEW</span>
+          <p class="related-card-title">공기청정기 전기요금 계산법</p>
+          <p class="related-card-desc">용량별 공기청정기 소비전력과 월 전기요금 기준. 전기요금 절약을 위한 설정법과 효율적인 사용 방법을 정리했습니다.</p>
+          <a href="/jeolryak/gonggi-jeongi/" class="related-card-btn">자세히 보기 →</a>
+        </div>
+        <div class="related-card" style="position:relative">
+          <span style="position:absolute;top:8px;right:8px;background:#e53e3e;color:#fff;font-size:0.68rem;font-weight:800;padding:2px 7px;border-radius:4px;letter-spacing:0.05em">NEW</span>
+          <p class="related-card-title">수도요금 절약 방법</p>
+          <p class="related-card-desc">가정에서 실천할 수 있는 수도요금 절약 방법과 절약 효과 수치. 샤워·세탁·설거지 습관 개선으로 절약하는 기준을 안내합니다.</p>
+          <a href="/jeolryak/sudo-jeollyak/" class="related-card-btn">자세히 보기 →</a>
+        </div>
+        <div class="related-card" style="position:relative">
+          <span style="position:absolute;top:8px;right:8px;background:#e53e3e;color:#fff;font-size:0.68rem;font-weight:800;padding:2px 7px;border-radius:4px;letter-spacing:0.05em">NEW</span>
+          <p class="related-card-title">여름철 전기요금 줄이는 방법</p>
+          <p class="related-card-desc">에어컨·선풍기·냉장고 등 여름철 가전 전기요금 절약 방법. 누진제 구간 관리와 사용 시간 조정으로 절약하는 기준을 정리했습니다.</p>
+          <a href="/jeolryak/yeorim-jeongi/" class="related-card-btn">자세히 보기 →</a>
         </div>
         <div class="related-card">
-          <p class="related-card-title">인터넷 이전 vs 신규가입 비용 비교</p>
-          <p class="related-card-desc">이사할 때 기존 인터넷을 이전할지 새로 가입할지에 따라 비용이 달라집니다. 통신사 3사 비교 기준과 신규가입 현금 혜택 조건을 안내합니다.</p>
-          <a href="/isa-junbi/internet-isa/" class="related-card-btn">자세히 보기 →</a>
+          <p class="related-card-title">제습기 전기요금과 적정 용량 확인법</p>
+          <p class="related-card-desc">집 크기에 맞는 제습기 용량 선택 기준과 하루 8시간 기준 월 전기요금. 효율적으로 사용하는 목표 습도 설정법을 안내합니다.</p>
+          <a href="/jeolryak/jesiugi-jeongi/" class="related-card-btn">자세히 보기 →</a>
         </div>
         <div class="related-card">
-          <p class="related-card-title">가전렌탈 비용 비교 가이드</p>
-          <p class="related-card-desc">정수기·공기청정기·비데·건조기 렌탈 비용과 직접 구매 총비용 비교. 손익분기점과 약정 해지 기준, 가입 경로별 혜택을 함께 확인하세요.</p>
-          <a href="/rental/" class="related-card-btn">자세히 보기 →</a>
+          <p class="related-card-title">보일러 외출모드와 예약모드 차이</p>
+          <p class="related-card-desc">보일러 외출모드·예약모드 작동 방식과 상황별 권장 설정. 난방비 절약을 위한 보일러 설정 가이드를 정리했습니다.</p>
+          <a href="/jeolryak/boiler-oechul-mode/" class="related-card-btn">자세히 보기 →</a>
         </div>
         <div class="related-card">
-          <p class="related-card-title">정수기 렌탈 vs 생수 구매 비용</p>
-          <p class="related-card-desc">가족 수에 따라 달라지는 월 생수 구매 비용과 정수기 렌탈 월 요금 비교. 필터 관리 포함 5년 총비용 기준으로 유리한 선택을 확인합니다.</p>
-          <a href="/rental/jeongsugi-rental/" class="related-card-btn">자세히 보기 →</a>
+          <p class="related-card-title">대기전력 차단하면 실제로 얼마나 절약될까?</p>
+          <p class="related-card-desc">가전별 대기전력 소비량과 멀티탭 차단 시 실제 절약 금액 수치. 셋톱박스 등 대기전력이 큰 제품 중심으로 정리했습니다.</p>
+          <a href="/jeolryak/daegi-jeonryok/" class="related-card-btn">자세히 보기 →</a>
         </div>
         <div class="related-card">
-          <p class="related-card-title">공기청정기 렌탈 vs 구매 총비용</p>
-          <p class="related-card-desc">헤파 필터 자가 교체 비용과 렌탈 월 요금의 4년 총비용 비교. 공간 면적별 적정 용량 선택 기준과 필터 관리 난이도도 함께 제공합니다.</p>
-          <a href="/rental/gonggi-rental/" class="related-card-btn">자세히 보기 →</a>
-        </div>
-        <div class="related-card">
-          <p class="related-card-title">렌탈 약정 해지 위약금 기준</p>
-          <p class="related-card-desc">중도 해지 시 위약금 계산 방식과 위약금 없이 해지 가능한 예외 조항. 약정 만료 후 자동 재약정 조건과 해지 통보 기한도 확인하세요.</p>
-          <a href="/rental/rental-yakjeong/" class="related-card-btn">자세히 보기 →</a>
-        </div>
-        <div class="related-card">
-          <p class="related-card-title">홈케어 비용 계산기</p>
-          <p class="related-card-desc">입주청소 예상비용, 렌탈 vs 구매 손익분기점, 에어컨 전기요금을 한 곳에서 계산. 탭 전환으로 세 가지 항목을 바로 확인할 수 있습니다.</p>
-          <a href="/calculator/" class="related-card-btn">자세히 보기 →</a>
-        </div>
-        <div class="related-card">
-          <p class="related-card-title">렌탈 vs 구매 손익분기점 계산기</p>
-          <p class="related-card-desc">월 렌탈료·약정 기간·구매가·유지비를 입력하면 손익분기 월 수를 자동 계산. 렌탈과 구매 중 어느 쪽이 유리한지 숫자로 즉시 확인합니다.</p>
-          <a href="/calculator/#rental" class="related-card-btn">자세히 보기 →</a>
-        </div>
-        <div class="related-card">
-          <p class="related-card-title">겨울 난방비 줄이는 보일러 설정법</p>
-          <p class="related-card-desc">보일러 설정 온도·외출 모드 활용·단열 개선으로 겨울철 도시가스 요금을 줄이는 방법. 콘덴싱 보일러 교체 절감 효과도 함께 안내합니다.</p>
-          <a href="/jeolryak/nanbangbi-jeollyak/" class="related-card-btn">자세히 보기 →</a>
-        </div>
-        <div class="related-card">
-          <p class="related-card-title">전기요금 누진제 구간 기준 완전 정리</p>
-          <p class="related-card-desc">200kWh·400kWh 경계를 기준으로 단가가 크게 달라지는 누진 구조. 여름·겨울 사용량 관리 방법과 한전 앱 활용법을 안내합니다.</p>
-          <a href="/jeolryak/jeongi-nujin/" class="related-card-btn">자세히 보기 →</a>
-        </div>
-        <div class="related-card">
-          <p class="related-card-title">에너지바우처 신청 방법</p>
-          <p class="related-card-desc">기초수급자·차상위계층 중 노인·영유아·장애인 가구원이 있으면 신청 가능. 지원 금액, 신청 기간, 복지로 온라인 신청 방법을 정리했습니다.</p>
-          <a href="/jeolryak/energy-voucher/" class="related-card-btn">자세히 보기 →</a>
+          <p class="related-card-title">냉장고 전기요금 줄이는 온도 설정 기준</p>
+          <p class="related-card-desc">냉장고 용량별 월 전기요금과 냉장 3~5°C 설정으로 절약하는 방법. 오래된 냉장고 교체 효과도 수치로 정리했습니다.</p>
+          <a href="/jeolryak/naengjangg-jeongi/" class="related-card-btn">자세히 보기 →</a>
         </div>
         <div class="related-card">
           <p class="related-card-title">고효율 가전 환급 신청 방법</p>
-          <p class="related-card-desc">에너지 1등급 냉장고·에어컨·세탁기 구매 시 최대 30만원 환급. 한국에너지공단 사업 대상 제품과 신청 방법을 안내합니다.</p>
+          <p class="related-card-desc">에너지 1등급 냉장고·에어컨·세탁기 구매 시 최대 30만원 환급. 한국에너지공단 환급 대상 제품과 예산 소진 전 신청 팁.</p>
           <a href="/jeolryak/gogoyul-hwanbul/" class="related-card-btn">자세히 보기 →</a>
+        </div>
+        <div class="related-card">
+          <p class="related-card-title">에너지바우처 신청 방법 완전 정리</p>
+          <p class="related-card-desc">기초수급자·차상위계층 에너지바우처 신청 자격과 연간 지원 금액. 하절기·동절기 신청 기간과 복지로 온라인 신청 방법을 안내합니다.</p>
+          <a href="/jeolryak/energy-voucher/" class="related-card-btn">자세히 보기 →</a>
         </div>
       </div>
     </div>

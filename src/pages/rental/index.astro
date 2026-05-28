@@ -193,49 +193,84 @@ import Layout from '../../layouts/Layout.astro';
       </div>
     </div>
 
-    <!-- 관련 글 -->
+    <!-- 렌탈 vs 구매 기준 비교 섹션 -->
+    <div style="background:var(--bg-gray);border-radius:14px;padding:28px;margin-bottom:40px">
+      <p style="font-size:0.8rem;font-weight:600;color:var(--accent-dark);margin-bottom:8px">렌탈이 유리한 경우 vs 구매가 유리한 경우</p>
+      <h2 style="font-size:1.15rem;font-weight:800;margin-bottom:16px;color:var(--primary)">🔄 렌탈 vs 직접 구매 기준 비교</h2>
+      <div style="overflow-x:auto;margin-bottom:12px">
+        <table style="width:100%;border-collapse:collapse;font-size:0.88rem">
+          <thead>
+            <tr style="background:var(--primary);color:#fff">
+              <th style="padding:10px 14px;text-align:left">제품</th>
+              <th style="padding:10px 14px;text-align:left">손익분기점</th>
+              <th style="padding:10px 14px;text-align:left">렌탈 추천 상황</th>
+              <th style="padding:10px 14px;text-align:left">구매 추천 상황</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td style="padding:9px 14px;border-bottom:1px solid var(--border)">정수기</td><td style="padding:9px 14px;border-bottom:1px solid var(--border)">3~4년</td><td style="padding:9px 14px;border-bottom:1px solid var(--border)">필터 관리 귀찮은 경우</td><td style="padding:9px 14px;border-bottom:1px solid var(--border)">자가 관리 가능한 경우</td></tr>
+            <tr style="background:#f9fafb"><td style="padding:9px 14px;border-bottom:1px solid var(--border)">공기청정기</td><td style="padding:9px 14px;border-bottom:1px solid var(--border)">3~4년</td><td style="padding:9px 14px;border-bottom:1px solid var(--border)">헤파필터 자가 교체 번거로운 경우</td><td style="padding:9px 14px;border-bottom:1px solid var(--border)">장기 사용 예정인 경우</td></tr>
+            <tr><td style="padding:9px 14px;border-bottom:1px solid var(--border)">비데</td><td style="padding:9px 14px;border-bottom:1px solid var(--border)">4~5년</td><td style="padding:9px 14px;border-bottom:1px solid var(--border)">첫 설치·이사 예정인 경우</td><td style="padding:9px 14px;border-bottom:1px solid var(--border)">장기 거주 확정된 경우</td></tr>
+            <tr style="background:#f9fafb"><td style="padding:9px 14px;border-bottom:1px solid var(--border)">건조기</td><td style="padding:9px 14px;border-bottom:1px solid var(--border)">4~5년</td><td style="padding:9px 14px;border-bottom:1px solid var(--border)">목돈 부담 줄이고 싶은 경우</td><td style="padding:9px 14px;border-bottom:1px solid var(--border)">히트펌프 제품 장기 사용 예정</td></tr>
+            <tr><td style="padding:9px 14px">냉장고·세탁기</td><td style="padding:9px 14px">5년+</td><td style="padding:9px 14px">고장 수리 걱정 줄이고 싶은 경우</td><td style="padding:9px 14px">10년 이상 장기 사용 예정</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p style="font-size:0.78rem;color:var(--text-muted);margin-bottom:10px">※ 손익분기점은 렌탈 총비용과 구매 총비용(필터·유지비 포함)이 같아지는 시점 기준입니다.</p>
+      <p style="text-align:right;margin:0"><a href="/rental/rental-vs-purchase/" style="font-size:0.85rem;color:var(--accent-dark);font-weight:600">렌탈 vs 구매 전체 비교 →</a></p>
+    </div>
+
+    <!-- 최신글 -->
     <div class="related-posts">
-      <h3>가전렌탈 관련 글 전체 보기</h3>
+      <h3>최신글</h3>
       <div class="related-card-grid">
-        <div class="related-card">
-          <p class="related-card-title">정수기 렌탈 비용 비교</p>
-          <p class="related-card-desc">직수형·저수형 유형별 월 요금과 구매 총비용 비교. 4인 가족 기준 렌탈·구매·생수 3가지 선택지 5년 총비용을 직접 계산한 데이터를 확인하세요.</p>
-          <a href="/rental/jeongsugi-rental/" class="related-card-btn">자세히 보기 →</a>
+        <div class="related-card" style="position:relative">
+          <span style="position:absolute;top:8px;right:8px;background:#e53e3e;color:#fff;font-size:0.68rem;font-weight:800;padding:2px 7px;border-radius:4px;letter-spacing:0.05em">NEW</span>
+          <p class="related-card-title">렌탈 vs 직접 구매 어느 쪽이 유리할까?</p>
+          <p class="related-card-desc">제품별 렌탈과 직접 구매의 5년 총비용 비교와 손익분기점 기준. 상황별 유리한 선택 방법을 수치로 정리했습니다.</p>
+          <a href="/rental/rental-vs-purchase/" class="related-card-btn">자세히 보기 →</a>
+        </div>
+        <div class="related-card" style="position:relative">
+          <span style="position:absolute;top:8px;right:8px;background:#e53e3e;color:#fff;font-size:0.68rem;font-weight:800;padding:2px 7px;border-radius:4px;letter-spacing:0.05em">NEW</span>
+          <p class="related-card-title">공기청정기 필터 교체 비용과 주기</p>
+          <p class="related-card-desc">헤파·카본 필터별 교체 비용과 교체 주기 기준. 렌탈 계약에서 필터 교체가 포함되는 조건을 확인하세요.</p>
+          <a href="/rental/gonggi-filter-biyong/" class="related-card-btn">자세히 보기 →</a>
+        </div>
+        <div class="related-card" style="position:relative">
+          <span style="position:absolute;top:8px;right:8px;background:#e53e3e;color:#fff;font-size:0.68rem;font-weight:800;padding:2px 7px;border-radius:4px;letter-spacing:0.05em">NEW</span>
+          <p class="related-card-title">정수기 필터 렌탈 포함 여부 확인법</p>
+          <p class="related-card-desc">정수기 렌탈 계약에서 필터 교체가 포함되는 조건과 자가 교체 비용 비교. 계약 전 반드시 확인해야 할 사항을 정리했습니다.</p>
+          <a href="/rental/jeongsugi-filter-rental/" class="related-card-btn">자세히 보기 →</a>
         </div>
         <div class="related-card">
-          <p class="related-card-title">공기청정기 렌탈 비용 비교</p>
-          <p class="related-card-desc">공간 면적별 권장 용량과 헤파 필터 교체 비용 포함 기준. 렌탈과 직접 구매의 4년 총비용 차이와 필터 자가 관리 여부 판단 기준을 비교합니다.</p>
-          <a href="/rental/gonggi-rental/" class="related-card-btn">자세히 보기 →</a>
+          <p class="related-card-title">얼음정수기 렌탈 비용과 특징</p>
+          <p class="related-card-desc">냉온수·얼음 기능이 있는 얼음정수기 렌탈 월 요금과 관리 서비스 포함 조건. 일반 정수기 렌탈과 비용 차이를 비교합니다.</p>
+          <a href="/rental/eoreum-jeongsugi-rental/" class="related-card-btn">자세히 보기 →</a>
         </div>
         <div class="related-card">
-          <p class="related-card-title">비데 렌탈 비용 비교</p>
-          <p class="related-card-desc">기본형부터 고급형까지 유형별 월 요금과 구매 비용 비교. 설치 환경(콘센트 위치·변기 규격) 사전 확인 방법과 노즐 관리 포함 여부를 정리했습니다.</p>
-          <a href="/rental/bidet-rental/" class="related-card-btn">자세히 보기 →</a>
+          <p class="related-card-title">부모님 명의 렌탈 계약 시 주의사항</p>
+          <p class="related-card-desc">부모님 명의로 렌탈 계약 시 본인 인증·해지·이전 설치 과정에서 확인해야 할 조건과 대리인 처리 방법.</p>
+          <a href="/rental/bumonim-rental/" class="related-card-btn">자세히 보기 →</a>
         </div>
         <div class="related-card">
-          <p class="related-card-title">건조기 렌탈 비용 비교</p>
-          <p class="related-card-desc">히트펌프 vs 일반 드럼 렌탈 월 요금과 5년 구매 총비용 비교. 설치 환경과 전기요금 절감 효과, 렌탈이 유리한 구체적 상황을 정리했습니다.</p>
-          <a href="/rental/geondogi-rental/" class="related-card-btn">자세히 보기 →</a>
+          <p class="related-card-title">렌탈 이전 설치 비용과 조건</p>
+          <p class="related-card-desc">이사 시 렌탈 제품 이전 설치 비용과 서비스 가능 지역·횟수 제한 조건. 계약 전 반드시 확인해야 할 이전 서비스 기준.</p>
+          <a href="/rental/rental-isa-transfer/" class="related-card-btn">자세히 보기 →</a>
         </div>
         <div class="related-card">
-          <p class="related-card-title">냉장고 렌탈 비용 비교</p>
-          <p class="related-card-desc">용량·냉각 방식별 월 렌탈 요금 범위와 에너지 효율 등급이 장기 전기요금에 미치는 영향. 구매 대비 렌탈의 경제적 기준을 안내합니다.</p>
-          <a href="/rental/naengjangg-rental/" class="related-card-btn">자세히 보기 →</a>
+          <p class="related-card-title">1인 가구 가전렌탈 추천 기준</p>
+          <p class="related-card-desc">혼자 사는 1인 가구에 렌탈이 유리한 제품과 기준. 소형 제품 위주 월 요금 기준과 렌탈이 유리한 상황을 안내합니다.</p>
+          <a href="/rental/oin-rental/" class="related-card-btn">자세히 보기 →</a>
         </div>
         <div class="related-card">
-          <p class="related-card-title">세탁기 렌탈 비용 비교</p>
-          <p class="related-card-desc">드럼·통돌이·건조겸용 유형별 렌탈 월 요금과 구매 비용 비교. 통세척 관리 포함 여부와 렌탈이 구매보다 유리한 구체적 상황을 정리했습니다.</p>
-          <a href="/rental/saetak-rental/" class="related-card-btn">자세히 보기 →</a>
+          <p class="related-card-title">렌탈 해지 비용과 반납 절차</p>
+          <p class="related-card-desc">렌탈 약정 해지 시 반납 절차와 실제 해지 비용 계산 방법. 위약금 분쟁 예방을 위한 확인 사항을 정리했습니다.</p>
+          <a href="/rental/rental-haejibiyong/" class="related-card-btn">자세히 보기 →</a>
         </div>
         <div class="related-card">
-          <p class="related-card-title">렌탈 약정 해지 위약금 기준</p>
-          <p class="related-card-desc">중도 해지 시 위약금 계산 방식과 자동 재약정 조건. 약정 만료 후 해지 통보 기한과 위약금 없이 해지 가능한 예외 상황을 함께 안내합니다.</p>
+          <p class="related-card-title">렌탈 약정 해지와 위약금 기준</p>
+          <p class="related-card-desc">잔여 약정 기간별 위약금 계산 방식과 위약금 없이 해지 가능한 예외 조건. 중도 해지 전 반드시 확인할 사항을 정리했습니다.</p>
           <a href="/rental/rental-yakjeong/" class="related-card-btn">자세히 보기 →</a>
-        </div>
-        <div class="related-card">
-          <p class="related-card-title">렌탈 청구 비용 항목 정리</p>
-          <p class="related-card-desc">설치비·이전 설치비·필터 별도 청구 등 렌탈 계약에서 자주 발생하는 추가 비용 항목. 계약 전 서면으로 확인해야 할 체크리스트를 제공합니다.</p>
-          <a href="/rental/rental-chunga-biyong/" class="related-card-btn">자세히 보기 →</a>
         </div>
       </div>
     </div>

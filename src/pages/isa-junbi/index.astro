@@ -193,39 +193,85 @@ import Layout from '../../layouts/Layout.astro';
       </div>
     </div>
 
-    <!-- 관련 글 -->
+    <!-- 이사 홈서비스 신청 체크리스트 섹션 -->
+    <div style="background:var(--bg-gray);border-radius:14px;padding:28px;margin-bottom:40px">
+      <p style="font-size:0.8rem;font-weight:600;color:var(--accent-dark);margin-bottom:8px">홈서비스 신청 타이밍</p>
+      <h2 style="font-size:1.15rem;font-weight:800;margin-bottom:16px;color:var(--primary)">📅 이사 홈서비스 신청 체크리스트</h2>
+      <div style="overflow-x:auto;margin-bottom:12px">
+        <table style="width:100%;border-collapse:collapse;font-size:0.88rem">
+          <thead>
+            <tr style="background:var(--primary);color:#fff">
+              <th style="padding:10px 14px;text-align:left">시점</th>
+              <th style="padding:10px 14px;text-align:left">서비스</th>
+              <th style="padding:10px 14px;text-align:left">신청 방법</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td style="padding:9px 14px;border-bottom:1px solid var(--border)">D-30 이전</td><td style="padding:9px 14px;border-bottom:1px solid var(--border)">인터넷 이전·신규 신청</td><td style="padding:9px 14px;border-bottom:1px solid var(--border)">통신사 고객센터 / 비교 채널</td></tr>
+            <tr style="background:#f9fafb"><td style="padding:9px 14px;border-bottom:1px solid var(--border)">D-14</td><td style="padding:9px 14px;border-bottom:1px solid var(--border)">폐가전 무상수거 예약</td><td style="padding:9px 14px;border-bottom:1px solid var(--border)">한국전자제품자원순환공제조합 앱</td></tr>
+            <tr><td style="padding:9px 14px;border-bottom:1px solid var(--border)">D-7</td><td style="padding:9px 14px;border-bottom:1px solid var(--border)">입주청소 업체 예약</td><td style="padding:9px 14px;border-bottom:1px solid var(--border)">비교 채널·업체 직접 예약</td></tr>
+            <tr style="background:#f9fafb"><td style="padding:9px 14px;border-bottom:1px solid var(--border)">D-7</td><td style="padding:9px 14px;border-bottom:1px solid var(--border)">렌탈 이전 설치 일정 확정</td><td style="padding:9px 14px;border-bottom:1px solid var(--border)">렌탈 업체 고객센터</td></tr>
+            <tr><td style="padding:9px 14px;border-bottom:1px solid var(--border)">D-1</td><td style="padding:9px 14px;border-bottom:1px solid var(--border)">도시가스 전출 신청</td><td style="padding:9px 14px;border-bottom:1px solid var(--border)">각 지역 도시가스 앱·고객센터</td></tr>
+            <tr style="background:#f9fafb"><td style="padding:9px 14px">이사 당일</td><td style="padding:9px 14px">관리사무소 이사 신고·입주청소 확인</td><td style="padding:9px 14px">청소 완료 후 항목별 직접 확인</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p style="text-align:right;margin:0"><a href="/isa-junbi/homeservice-dday/" style="font-size:0.85rem;color:var(--accent-dark);font-weight:600">전체 D-Day 체크리스트 →</a></p>
+    </div>
+
+    <!-- 최신글 -->
     <div class="related-posts">
-      <h3>이사준비 관련 글 전체 보기</h3>
+      <h3>최신글</h3>
       <div class="related-card-grid">
-        <div class="related-card">
-          <p class="related-card-title">이사 전 점검 체크리스트</p>
-          <p class="related-card-desc">수도·전기·가스·벽면 균열까지 이사 전 반드시 확인해야 할 항목을 순서대로 정리했습니다. 놓치면 입주 후 비용이 발생할 수 있는 핵심 포인트 안내.</p>
-          <a href="/isa-junbi/isa-checklist/" class="related-card-btn">자세히 보기 →</a>
+        <div class="related-card" style="position:relative">
+          <span style="position:absolute;top:8px;right:8px;background:#e53e3e;color:#fff;font-size:0.68rem;font-weight:800;padding:2px 7px;border-radius:4px;letter-spacing:0.05em">NEW</span>
+          <p class="related-card-title">이사 홈서비스 신청 D-Day 체크리스트</p>
+          <p class="related-card-desc">D-30부터 이사 당일까지 인터넷·청소·가스·렌탈 신청 순서와 놓치기 쉬운 항목을 날짜별로 정리했습니다.</p>
+          <a href="/isa-junbi/homeservice-dday/" class="related-card-btn">자세히 보기 →</a>
+        </div>
+        <div class="related-card" style="position:relative">
+          <span style="position:absolute;top:8px;right:8px;background:#e53e3e;color:#fff;font-size:0.68rem;font-weight:800;padding:2px 7px;border-radius:4px;letter-spacing:0.05em">NEW</span>
+          <p class="related-card-title">이사 전 관리사무소 확인 항목</p>
+          <p class="related-card-desc">이사 전날 반드시 확인해야 할 관리사무소 신청·승인 절차와 이사 당일 엘리베이터·주차 예약 방법.</p>
+          <a href="/isa-junbi/gwanrisauso-hwakyin/" class="related-card-btn">자세히 보기 →</a>
+        </div>
+        <div class="related-card" style="position:relative">
+          <span style="position:absolute;top:8px;right:8px;background:#e53e3e;color:#fff;font-size:0.68rem;font-weight:800;padding:2px 7px;border-radius:4px;letter-spacing:0.05em">NEW</span>
+          <p class="related-card-title">이사 당일 서비스 처리 순서</p>
+          <p class="related-card-desc">이사 당일 청소·인터넷·가스·렌탈 서비스를 처리하는 최적의 순서와 각 서비스 담당자 연락 방법.</p>
+          <a href="/isa-junbi/isa-service-sunseot/" class="related-card-btn">자세히 보기 →</a>
+        </div>
+        <div class="related-card" style="position:relative">
+          <span style="position:absolute;top:8px;right:8px;background:#e53e3e;color:#fff;font-size:0.68rem;font-weight:800;padding:2px 7px;border-radius:4px;letter-spacing:0.05em">NEW</span>
+          <p class="related-card-title">부모님 이사 사전 점검 체크리스트</p>
+          <p class="related-card-desc">고령의 부모님 이사 시 필요한 사전 점검 항목과 안전 설비·렌탈 서비스 확인 기준을 정리했습니다.</p>
+          <a href="/isa-junbi/bumonim-isa-jeongeom/" class="related-card-btn">자세히 보기 →</a>
+        </div>
+        <div class="related-card" style="position:relative">
+          <span style="position:absolute;top:8px;right:8px;background:#e53e3e;color:#fff;font-size:0.68rem;font-weight:800;padding:2px 7px;border-radius:4px;letter-spacing:0.05em">NEW</span>
+          <p class="related-card-title">이사 당일 청소 순서와 타이밍</p>
+          <p class="related-card-desc">짐 이동 전·후 청소 타이밍과 업체 이용 시 주의사항. 이사 당일 입주청소 진행 순서를 안내합니다.</p>
+          <a href="/isa-junbi/isa-dangil-cheongso/" class="related-card-btn">자세히 보기 →</a>
         </div>
         <div class="related-card">
-          <p class="related-card-title">인터넷 이전·신규 가입 비교</p>
-          <p class="related-card-desc">이사 시 기존 인터넷 이전과 신규 가입 중 어느 쪽이 유리한지 비교. 현금 지원·위약금·공사비를 기준으로 선택하는 방법을 안내합니다.</p>
-          <a href="/isa-junbi/internet-isa/" class="related-card-btn">자세히 보기 →</a>
+          <p class="related-card-title">원룸 이사 준비 체크리스트</p>
+          <p class="related-card-desc">원룸 이사 시 반드시 챙겨야 할 항목별 체크리스트와 인터넷·가스·청소 신청 순서를 정리했습니다.</p>
+          <a href="/isa-junbi/wonroom-isa-junbi/" class="related-card-btn">자세히 보기 →</a>
         </div>
         <div class="related-card">
-          <p class="related-card-title">도시가스 전입·전출 신청</p>
-          <p class="related-card-desc">이사 시 도시가스 전출 신청을 빠뜨리면 이사 후에도 요금이 계속 청구됩니다. 신청 방법과 필요 서류, 신청 기한을 확인하세요.</p>
-          <a href="/isa-junbi/dosigas/" class="related-card-btn">자세히 보기 →</a>
+          <p class="related-card-title">새 집 하자 점검 방법</p>
+          <p class="related-card-desc">입주 전 벽면·배관·전기·창문 하자 여부 확인 체크리스트. 발견한 하자는 입주 전에 처리해야 분쟁을 예방할 수 있습니다.</p>
+          <a href="/isa-junbi/haja-jeongeom/" class="related-card-btn">자세히 보기 →</a>
         </div>
         <div class="related-card">
-          <p class="related-card-title">폐가전 무상수거 신청</p>
-          <p class="related-card-desc">냉장고·세탁기·TV 등 대형 폐가전 환경부 무상수거 서비스 신청 방법. 수거 불가 품목과 이사 성수기 예약 일정 기준을 안내합니다.</p>
-          <a href="/isa-junbi/pye-gajeon/" class="related-card-btn">자세히 보기 →</a>
+          <p class="related-card-title">인터넷 신규가입 vs 이전 비교</p>
+          <p class="related-card-desc">이사 시 기존 인터넷 이전과 신규가입 중 유리한 방법 비교. 약정 잔여 기간과 신규 혜택 금액을 기준으로 선택하는 방법.</p>
+          <a href="/isa-junbi/internet-sinyu-vs-isa/" class="related-card-btn">자세히 보기 →</a>
         </div>
         <div class="related-card">
-          <p class="related-card-title">입주청소 비용 기준</p>
-          <p class="related-card-desc">새 집에 이사 후 입주청소 업체를 이용하면 초기 위생 상태를 확보할 수 있습니다. 평수별 예상 비용과 포함 항목 기준을 확인하세요.</p>
-          <a href="/cheongso/ipju-cheongso-biyong/" class="related-card-btn">자세히 보기 →</a>
-        </div>
-        <div class="related-card">
-          <p class="related-card-title">렌탈 이전 설치 위약금 기준</p>
-          <p class="related-card-desc">렌탈 약정 중 이사 시 이전 설치 비용과 위약금 발생 조건. 계약 전 이전 서비스 조항을 확인해야 이사 후 추가 비용을 막을 수 있습니다.</p>
-          <a href="/rental/rental-yakjeong/" class="related-card-btn">자세히 보기 →</a>
+          <p class="related-card-title">신혼집 이사 준비 체크리스트</p>
+          <p class="related-card-desc">신혼부부 첫 이사 시 필요한 서비스 신청 목록과 가전·렌탈·청소 준비 순서를 정리했습니다.</p>
+          <a href="/isa-junbi/sinhonjip-junbi/" class="related-card-btn">자세히 보기 →</a>
         </div>
       </div>
     </div>
