@@ -1,0 +1,80 @@
+---
+interface Props {
+  publishDate: string;
+  publishTime?: string;
+  reviewDate: string;
+  author?: string;
+  reviewCriteria: string;
+}
+
+const {
+  publishDate,
+  publishTime = "오전",
+  reviewDate,
+  author = "홈케어랩 편집자",
+  reviewCriteria,
+} = Astro.props;
+---
+<div class="article-info-card">
+  <div class="ai-row">
+    <div class="ai-item">
+      <span class="ai-label">발행일</span>
+      <span class="ai-value">{publishDate} {publishTime}</span>
+    </div>
+    <div class="ai-item">
+      <span class="ai-label">최종 검토일</span>
+      <span class="ai-value">{reviewDate}</span>
+    </div>
+  </div>
+  <div class="ai-row">
+    <div class="ai-item">
+      <span class="ai-label">작성자</span>
+      <span class="ai-value ai-author">{author}</span>
+    </div>
+    <div class="ai-item">
+      <span class="ai-label">검토 기준</span>
+      <span class="ai-value">{reviewCriteria}</span>
+    </div>
+  </div>
+</div>
+
+<style>
+.article-info-card {
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 20px 24px;
+  margin: 4px 0 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  background: #fafbfc;
+}
+.ai-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+.ai-item {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.ai-label {
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: var(--primary);
+}
+.ai-value {
+  font-size: 0.88rem;
+  color: var(--text-muted);
+  line-height: 1.5;
+}
+.ai-author {
+  color: var(--accent-dark);
+  font-weight: 600;
+}
+@media (max-width: 480px) {
+  .ai-row { grid-template-columns: 1fr; gap: 10px; }
+  .article-info-card { padding: 16px 18px; }
+}
+</style>
