@@ -18,7 +18,7 @@ const {
 const canonicalURL = canonical ?? new URL(Astro.url.pathname, Astro.site).href;
 // og:image는 반드시 절대 URL이어야 소셜/구글에서 인식됨
 const ogImageURL = ogImage.startsWith('http') ? ogImage : new URL(ogImage, Astro.site).href;
-const pageTitle = title === '홈케어랩' ? title : `${title} | 홈케어랩`;
+const pageTitle = title.includes('홈케어랩') ? title : `${title} | 홈케어랩`;
 ---
 <!DOCTYPE html>
 <html lang="ko">
