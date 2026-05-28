@@ -20,7 +20,7 @@ import Layout from '../../layouts/Layout.astro';
   </div>
 </section>
 
-<div class="container" style="max-width:820px;padding-top:40px;padding-bottom:80px">
+<div class="container" style="max-width:820px;padding-top:20px;padding-bottom:60px">
 
   <!-- 탭 네비게이션 -->
   <div class="calc-tabs" role="tablist">
@@ -31,6 +31,18 @@ import Layout from '../../layouts/Layout.astro';
 
   <!-- ① 입주청소 계산기 -->
   <section id="ipju" class="calc-panel active">
+
+    <!-- 계산기 소개 -->
+    <div class="calc-intro">
+      <div class="calc-intro-item">
+        <span class="calc-intro-label">👤 이런 분께 필요해요</span>
+        <span class="calc-intro-text">이사 전 청소 예산을 계획 중인 분 · 업체 견적 전 기준 금액이 필요한 분</span>
+      </div>
+      <div class="calc-intro-item">
+        <span class="calc-intro-label">📊 계산 결과로 확인하는 것</span>
+        <span class="calc-intro-text">평수 · 주거형태 · 오염도 · 추가 항목별 예상 비용 범위 (최저~최고)</span>
+      </div>
+    </div>
 
     <!-- 사용 가이드 (항상 펼쳐진 상태) -->
     <div class="calc-guide">
@@ -191,6 +203,18 @@ import Layout from '../../layouts/Layout.astro';
   <!-- ② 렌탈 vs 구매 계산기 -->
   <section id="rental" class="calc-panel">
 
+    <!-- 계산기 소개 -->
+    <div class="calc-intro">
+      <div class="calc-intro-item">
+        <span class="calc-intro-label">👤 이런 분께 필요해요</span>
+        <span class="calc-intro-text">정수기 · 공기청정기 등 렌탈을 고려 중인 분 · 구매와 비용 차이가 궁금한 분</span>
+      </div>
+      <div class="calc-intro-item">
+        <span class="calc-intro-label">📊 계산 결과로 확인하는 것</span>
+        <span class="calc-intro-text">약정 기간 총비용 비교 · 구매 대비 손익분기 시점 · 어느 쪽이 유리한지</span>
+      </div>
+    </div>
+
     <!-- 사용 가이드 (항상 펼쳐진 상태) -->
     <div class="calc-guide">
       <div class="calc-guide-header">📖 이 계산기 사용 방법</div>
@@ -322,6 +346,18 @@ import Layout from '../../layouts/Layout.astro';
 
   <!-- ③ 전기용품 전기요금 계산기 -->
   <section id="jeongi" class="calc-panel">
+
+    <!-- 계산기 소개 -->
+    <div class="calc-intro">
+      <div class="calc-intro-item">
+        <span class="calc-intro-label">👤 이런 분께 필요해요</span>
+        <span class="calc-intro-text">에어컨 · 히터 · 건조기 등 특정 가전의 전기요금이 얼마인지 궁금한 분</span>
+      </div>
+      <div class="calc-intro-item">
+        <span class="calc-intro-label">📊 계산 결과로 확인하는 것</span>
+        <span class="calc-intro-text">소비전력 · 사용 패턴 기반 월 추가 전기요금 추정 · 연간 누적 비용</span>
+      </div>
+    </div>
 
     <!-- 사용 가이드 (항상 펼쳐진 상태) -->
     <div class="calc-guide">
@@ -490,7 +526,7 @@ import Layout from '../../layouts/Layout.astro';
 
 <style>
 /* 탭 */
-.calc-tabs { display: flex; gap: 8px; margin-bottom: 24px; flex-wrap: wrap; }
+.calc-tabs { display: flex; gap: 8px; margin-bottom: 12px; flex-wrap: wrap; }
 .calc-tab {
   padding: 11px 20px; border: 2px solid var(--primary); background: #fff;
   border-radius: 8px; font-size: 0.92rem; font-weight: 800; color: var(--primary);
@@ -501,6 +537,26 @@ import Layout from '../../layouts/Layout.astro';
 .calc-tab.active { border-color: var(--accent); background: var(--accent); color: #fff; box-shadow: 0 3px 10px rgba(47,191,155,0.35); }
 .calc-panel { display: none; }
 .calc-panel.active { display: block; }
+
+/* 계산기 소개 — 대상/결과 요약 */
+.calc-intro {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 8px;
+  margin-bottom: 10px;
+}
+.calc-intro-item {
+  background: var(--bg-gray); border-radius: 8px;
+  padding: 10px 14px; display: flex; flex-direction: column; gap: 3px;
+}
+.calc-intro-label {
+  font-size: 0.72rem; font-weight: 800; color: var(--accent-dark);
+  letter-spacing: 0.04em; text-transform: uppercase;
+}
+.calc-intro-text {
+  font-size: 0.86rem; color: var(--text); line-height: 1.5; font-weight: 500;
+}
+@media (max-width: 520px) {
+  .calc-intro { grid-template-columns: 1fr; gap: 6px; }
+}
 
 /* 사용 가이드 — 항상 펼쳐진 고정 블록 */
 .calc-guide {
@@ -654,7 +710,7 @@ import Layout from '../../layouts/Layout.astro';
 .calc-info-box li::before { content: '✓'; position: absolute; left: 0; color: var(--accent); font-weight: 700; }
 
 /* 계산기 전용 FAQ */
-.calc-faq { margin-bottom: 40px; }
+.calc-faq { margin-bottom: 14px; }
 .calc-faq-title {
   font-size: 0.97rem; font-weight: 800; color: var(--primary);
   margin-bottom: 12px; padding-bottom: 8px;
