@@ -1,4 +1,7 @@
-User-agent: *
+﻿User-agent: *
 Allow: /
 
-Sitemap: https://www.homecare-lab.co.kr/sitemap-index.xml
+# 색인 제외 권장 페이지
+Disallow: /404
+
+Sitemap: https://homecare-lab.co.kr/sitemap/
