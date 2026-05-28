@@ -1,0 +1,18 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+<Layout title="페이지를 찾을 수 없습니다" description="요청하신 페이지를 찾을 수 없습니다.">
+  <div class="container" style="max-width:600px;padding-top:80px;padding-bottom:100px;text-align:center">
+    <p style="font-size:4rem;font-weight:900;color:var(--accent);margin:0;line-height:1">404</p>
+    <h1 style="font-size:1.4rem;font-weight:700;margin:16px 0 12px;color:var(--primary)">페이지를 찾을 수 없습니다</h1>
+    <p style="color:var(--text-muted);margin-bottom:36px;line-height:1.7">요청하신 주소의 페이지가 존재하지 않거나 이동되었습니다.<br>아래 링크에서 원하시는 정보를 찾아보세요.</p>
+    <div style="display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin-bottom:40px">
+      <a href="/cheongso/" style="padding:10px 20px;background:var(--bg-gray);border-radius:8px;font-size:0.9rem;font-weight:600;color:var(--primary);text-decoration:none">청소비용</a>
+      <a href="/rental/"   style="padding:10px 20px;background:var(--bg-gray);border-radius:8px;font-size:0.9rem;font-weight:600;color:var(--primary);text-decoration:none">가전렌탈</a>
+      <a href="/isa-junbi/" style="padding:10px 20px;background:var(--bg-gray);border-radius:8px;font-size:0.9rem;font-weight:600;color:var(--primary);text-decoration:none">이사준비</a>
+      <a href="/jeolryak/" style="padding:10px 20px;background:var(--bg-gray);border-radius:8px;font-size:0.9rem;font-weight:600;color:var(--primary);text-decoration:none">생활비절감</a>
+      <a href="/calculator/" style="padding:10px 20px;background:var(--bg-gray);border-radius:8px;font-size:0.9rem;font-weight:600;color:var(--primary);text-decoration:none">계산기</a>
+    </div>
+    <a href="/" style="display:inline-block;padding:14px 32px;background:var(--accent);color:#fff;border-radius:10px;font-weight:700;text-decoration:none">홈으로 돌아가기</a>
+  </div>
+</Layout>
