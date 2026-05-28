@@ -52,6 +52,15 @@ const pageTitle = title.includes('홈케어랩') ? title : `${title} | 홈케어
 
   <!-- CSS는 Astro 빌드 시 자동 처리됩니다 -->
   <link rel="icon" type="image/svg+xml" href="/favicon.svg?v=2" />
+
+  <!-- Google Analytics 4 -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-CCT0XXDJE0"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-CCT0XXDJE0');
+  </script>
 </head>
 <body>
   <!-- 헤더 -->
