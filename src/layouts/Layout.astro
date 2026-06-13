@@ -122,6 +122,13 @@ const pageTitle = title.includes('홈케어랩') ? title : `${title} | 홈케어
         q.closest('.faq-item')?.classList.toggle('open');
       });
     });
+
+    // NEW 배지 24시간 자동 숨김
+    document.querySelectorAll('.new-badge[data-pub]').forEach(function(el) {
+      if (Date.now() - new Date(el.dataset.pub).getTime() > 864e5) {
+        el.style.display = 'none';
+      }
+    });
   </script>
 </body>
 </html>
