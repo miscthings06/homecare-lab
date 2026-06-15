@@ -1,0 +1,40 @@
+<svg viewBox="0 0 720 440" xmlns="http://www.w3.org/2000/svg" role="img" font-family="'Malgun Gothic','Apple SD Gothic Neo','Noto Sans KR',sans-serif">
+  <title>이사 당일 청소·정리 시간순 타임라인 인포그래픽</title>
+  <desc>이사 당일 진행 순서. 이사 전날 냉장고 정리·귀중품 분리, 당일 오전 입주청소 완료, 짐 이동 전 하자 점검·입주 신고, 짐 이동 중 가구·가전 배치, 이동 완료 후 가스·전기·인터넷 확인, 당일 저녁 도시가스 전입·정리.</desc>
+  <rect x="0.5" y="0.5" width="719" height="439" rx="14" fill="#ffffff" stroke="#ece7dc"/>
+  <text x="40" y="46" font-size="21" font-weight="700" fill="#1f2d3d">이사 당일 청소·정리 순서</text>
+  <text x="40" y="70" font-size="13" fill="#666f7a">짐 들이기 전 청소가 핵심입니다</text>
+
+  <line x1="190" y1="110" x2="190" y2="400" stroke="#9fe1cb" stroke-width="3"/>
+
+  <g>
+    <circle cx="190" cy="113" r="7" fill="#2fbf9b"/>
+    <text x="168" y="118" font-size="13.5" font-weight="700" fill="#1f2d3d" text-anchor="end">이사 전날</text>
+    <text x="210" y="118" font-size="13" fill="#4a5568">냉장고 정리·귀중품 분리</text>
+  </g>
+  <g>
+    <circle cx="190" cy="171" r="7" fill="#189a7b"/>
+    <text x="168" y="176" font-size="13.5" font-weight="700" fill="#1f2d3d" text-anchor="end">당일 오전</text>
+    <text x="210" y="176" font-size="13" fill="#4a5568">입주청소 완료 (짐 들이기 전)</text>
+  </g>
+  <g>
+    <circle cx="190" cy="229" r="7" fill="#2fbf9b"/>
+    <text x="168" y="234" font-size="13.5" font-weight="700" fill="#1f2d3d" text-anchor="end">짐 이동 전</text>
+    <text x="210" y="234" font-size="13" fill="#4a5568">하자 점검·사진 촬영·입주 신고</text>
+  </g>
+  <g>
+    <circle cx="190" cy="287" r="7" fill="#2fbf9b"/>
+    <text x="168" y="292" font-size="13.5" font-weight="700" fill="#1f2d3d" text-anchor="end">짐 이동 중</text>
+    <text x="210" y="292" font-size="13" fill="#4a5568">가구·가전 배치 위치 안내</text>
+  </g>
+  <g>
+    <circle cx="190" cy="345" r="7" fill="#2fbf9b"/>
+    <text x="168" y="350" font-size="13.5" font-weight="700" fill="#1f2d3d" text-anchor="end">이동 완료 후</text>
+    <text x="210" y="350" font-size="13" fill="#4a5568">가스·전기 연결·인터넷 확인</text>
+  </g>
+  <g>
+    <circle cx="190" cy="400" r="7" fill="#2fbf9b"/>
+    <text x="168" y="405" font-size="13.5" font-weight="700" fill="#1f2d3d" text-anchor="end">당일 저녁</text>
+    <text x="210" y="405" font-size="13" fill="#4a5568">도시가스 전입 신청·정리 마무리</text>
+  </g>
+</svg>

@@ -1,0 +1,46 @@
+<svg viewBox="0 0 720 230" xmlns="http://www.w3.org/2000/svg" role="img" font-family="'Malgun Gothic','Apple SD Gothic Neo','Noto Sans KR',sans-serif">
+  <title>이사 준비 단계별 체크리스트 인포그래픽</title>
+  <desc>이사 준비 단계. 1개월 전 업체 견적·인터넷 신청, 2주 전 폐가전 수거·짐 정리, 1주 전 짐 포장·주소 변경, 이사 당일 검침 사진·하자 점검, 이사 후 14일 내 전입신고.</desc>
+  <rect x="0.5" y="0.5" width="719" height="229" rx="14" fill="#ffffff" stroke="#ece7dc"/>
+  <text x="40" y="42" font-size="21" font-weight="700" fill="#1f2d3d">이사 준비 단계별 체크리스트</text>
+  <text x="40" y="66" font-size="13" fill="#666f7a">1개월 전부터 이사 후까지 핵심 일정</text>
+
+  <g>
+    <rect x="40" y="92" width="116" height="106" rx="10" fill="#eef6f3"/>
+    <text x="98" y="122" font-size="13" font-weight="700" fill="#0f6e56" text-anchor="middle">1개월 전</text>
+    <text x="98" y="148" font-size="10.5" fill="#4a5568" text-anchor="middle">업체 견적·예약</text>
+    <text x="98" y="167" font-size="10.5" fill="#4a5568" text-anchor="middle">인터넷 이전 신청</text>
+  </g>
+  <path d="M159 145 L171 145 M165 139 L171 145 L165 151" stroke="#2fbf9b" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <g>
+    <rect x="169" y="92" width="116" height="106" rx="10" fill="#eef6f3"/>
+    <text x="227" y="122" font-size="13" font-weight="700" fill="#0f6e56" text-anchor="middle">2주 전</text>
+    <text x="227" y="148" font-size="10.5" fill="#4a5568" text-anchor="middle">폐가전 수거 신청</text>
+    <text x="227" y="167" font-size="10.5" fill="#4a5568" text-anchor="middle">짐 정리 시작</text>
+  </g>
+  <path d="M288 145 L300 145 M294 139 L300 145 L294 151" stroke="#2fbf9b" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <g>
+    <rect x="298" y="92" width="116" height="106" rx="10" fill="#eef6f3"/>
+    <text x="356" y="122" font-size="13" font-weight="700" fill="#0f6e56" text-anchor="middle">1주 전</text>
+    <text x="356" y="148" font-size="10.5" fill="#4a5568" text-anchor="middle">짐 포장</text>
+    <text x="356" y="167" font-size="10.5" fill="#4a5568" text-anchor="middle">주소 변경 신청</text>
+  </g>
+  <path d="M417 145 L429 145 M423 139 L429 145 L423 151" stroke="#2fbf9b" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <g>
+    <rect x="427" y="92" width="116" height="106" rx="10" fill="#eef6f3"/>
+    <text x="485" y="122" font-size="13" font-weight="700" fill="#0f6e56" text-anchor="middle">이사 당일</text>
+    <text x="485" y="148" font-size="10.5" fill="#4a5568" text-anchor="middle">검침 사진 촬영</text>
+    <text x="485" y="167" font-size="10.5" fill="#4a5568" text-anchor="middle">하자 점검</text>
+  </g>
+  <path d="M546 145 L558 145 M552 139 L558 145 L552 151" stroke="#2fbf9b" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <g>
+    <rect x="556" y="92" width="116" height="106" rx="10" fill="#eef6f3"/>
+    <text x="614" y="122" font-size="13" font-weight="700" fill="#0f6e56" text-anchor="middle">이사 후</text>
+    <text x="614" y="148" font-size="10.5" fill="#4a5568" text-anchor="middle">전입신고</text>
+    <text x="614" y="167" font-size="10.5" fill="#4a5568" text-anchor="middle">(14일 이내)</text>
+  </g>
+</svg>

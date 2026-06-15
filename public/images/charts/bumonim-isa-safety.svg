@@ -1,0 +1,44 @@
+<svg viewBox="0 0 720 435" xmlns="http://www.w3.org/2000/svg" role="img" font-family="'Malgun Gothic','Apple SD Gothic Neo','Noto Sans KR',sans-serif">
+  <title>부모님 집 이사 전 안전 점검 6대 항목 인포그래픽</title>
+  <desc>고령자 주거 안전 점검 항목과 권장 조치. 욕실 미끄럼 방지 매트, 화장실 안전 바, 계단 난간 견고성, 바닥 단차 제거, 조명 센서등, 가스 인덕션 전환.</desc>
+  <rect x="0.5" y="0.5" width="719" height="434" rx="14" fill="#ffffff" stroke="#ece7dc"/>
+  <text x="40" y="46" font-size="20" font-weight="700" fill="#1f2d3d">부모님 집 이사 전 안전 점검 6대 항목</text>
+  <text x="40" y="70" font-size="13" fill="#666f7a">고령자 생활 안전을 위한 사전 점검</text>
+
+  <g>
+    <rect x="40" y="90" width="640" height="50" rx="8" fill="#eef6f3"/>
+    <rect x="40" y="90" width="5" height="50" fill="#2fbf9b"/>
+    <text x="66" y="121" font-size="14.5" font-weight="700" fill="#1f2d3d">욕실 미끄럼 방지</text>
+    <text x="658" y="121" font-size="13" fill="#4a5568" text-anchor="end">미끄럼 방지 매트·스티커</text>
+  </g>
+  <g>
+    <rect x="40" y="146" width="640" height="50" rx="8" fill="#eef6f3"/>
+    <rect x="40" y="146" width="5" height="50" fill="#2fbf9b"/>
+    <text x="66" y="177" font-size="14.5" font-weight="700" fill="#1f2d3d">화장실 손잡이</text>
+    <text x="658" y="177" font-size="13" fill="#4a5568" text-anchor="end">벽 고정형 안전 바 설치</text>
+  </g>
+  <g>
+    <rect x="40" y="202" width="640" height="50" rx="8" fill="#eef6f3"/>
+    <rect x="40" y="202" width="5" height="50" fill="#2fbf9b"/>
+    <text x="66" y="233" font-size="14.5" font-weight="700" fill="#1f2d3d">계단 난간</text>
+    <text x="658" y="233" font-size="13" fill="#4a5568" text-anchor="end">흔들림 없는지 확인</text>
+  </g>
+  <g>
+    <rect x="40" y="258" width="640" height="50" rx="8" fill="#eef6f3"/>
+    <rect x="40" y="258" width="5" height="50" fill="#2fbf9b"/>
+    <text x="66" y="289" font-size="14.5" font-weight="700" fill="#1f2d3d">바닥 단차</text>
+    <text x="658" y="289" font-size="13" fill="#4a5568" text-anchor="end">낮은 단차도 제거·표시</text>
+  </g>
+  <g>
+    <rect x="40" y="314" width="640" height="50" rx="8" fill="#eef6f3"/>
+    <rect x="40" y="314" width="5" height="50" fill="#2fbf9b"/>
+    <text x="66" y="345" font-size="14.5" font-weight="700" fill="#1f2d3d">조명 밝기</text>
+    <text x="658" y="345" font-size="13" fill="#4a5568" text-anchor="end">복도·화장실 센서등 설치</text>
+  </g>
+  <g>
+    <rect x="40" y="370" width="640" height="50" rx="8" fill="#eef6f3"/>
+    <rect x="40" y="370" width="5" height="50" fill="#2fbf9b"/>
+    <text x="66" y="401" font-size="14.5" font-weight="700" fill="#1f2d3d">가스 안전</text>
+    <text x="658" y="401" font-size="13" fill="#4a5568" text-anchor="end">인덕션 전환 검토</text>
+  </g>
+</svg>

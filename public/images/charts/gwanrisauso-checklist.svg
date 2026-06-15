@@ -1,0 +1,20 @@
+<svg viewBox="0 0 720 290" xmlns="http://www.w3.org/2000/svg" role="img" font-family="'Malgun Gothic','Apple SD Gothic Neo','Noto Sans KR',sans-serif">
+  <title>입주 시 관리사무소 확인 7가지 인포그래픽</title>
+  <desc>입주 시 관리사무소에서 확인할 항목. 입주 신고, 출입 카드·비밀번호, 우편함 번호·키, 주차 등록, 분리수거 방법, 관리비 납부 방법, 택배 보관 방법.</desc>
+  <rect x="0.5" y="0.5" width="719" height="289" rx="14" fill="#ffffff" stroke="#ece7dc"/>
+  <text x="40" y="44" font-size="21" font-weight="700" fill="#1f2d3d">입주 시 관리사무소 확인 7가지</text>
+  <text x="40" y="68" font-size="13" fill="#666f7a">이사 당일 방문해 한 번에 처리하세요</text>
+
+  <g font-size="14" fill="#1f2d3d">
+    <circle cx="64" cy="116" r="6" fill="#2fbf9b"/><text x="80" y="121">입주 신고</text>
+    <circle cx="64" cy="156" r="6" fill="#2fbf9b"/><text x="80" y="161">출입 카드·비밀번호</text>
+    <circle cx="64" cy="196" r="6" fill="#2fbf9b"/><text x="80" y="201">우편함 번호·열쇠</text>
+    <circle cx="64" cy="236" r="6" fill="#2fbf9b"/><text x="80" y="241">주차 등록 (차량 시)</text>
+
+    <circle cx="392" cy="116" r="6" fill="#2fbf9b"/><text x="408" y="121">분리수거 방법</text>
+    <circle cx="392" cy="156" r="6" fill="#2fbf9b"/><text x="408" y="161">관리비 납부 방법</text>
+    <circle cx="392" cy="196" r="6" fill="#2fbf9b"/><text x="408" y="201">택배 보관 방법</text>
+  </g>
+
+  <text x="40" y="272" font-size="11" fill="#9a9488">※ 준비물: 임대차계약서 사본·신분증·차량 번호·전입신고 예정일</text>
+</svg>

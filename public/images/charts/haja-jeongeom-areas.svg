@@ -1,0 +1,38 @@
+<svg viewBox="0 0 720 420" xmlns="http://www.w3.org/2000/svg" role="img" font-family="'Malgun Gothic','Apple SD Gothic Neo','Noto Sans KR',sans-serif">
+  <title>입주 전 하자 점검 5대 구역 인포그래픽</title>
+  <desc>입주 전 하자 점검 구역별 핵심 항목. 벽면·천장은 벽지 찢김·천장 누수·못 자국, 바닥은 마루 긁힘·타일 균열·방수, 욕실은 코킹·곰팡이·수전 누수, 주방은 싱크대·수전·후드, 창문·문은 개폐·방충망·도어락.</desc>
+  <rect x="0.5" y="0.5" width="719" height="419" rx="14" fill="#ffffff" stroke="#ece7dc"/>
+  <text x="40" y="46" font-size="21" font-weight="700" fill="#1f2d3d">입주 전 하자 점검 5대 구역</text>
+  <text x="40" y="70" font-size="13" fill="#666f7a">사진으로 기록해 퇴거 시 분쟁을 예방하세요</text>
+
+  <g>
+    <rect x="40" y="92" width="640" height="58" rx="8" fill="#eef6f3"/>
+    <rect x="40" y="92" width="5" height="58" fill="#2fbf9b"/>
+    <text x="66" y="127" font-size="15" font-weight="700" fill="#1f2d3d">벽면·천장</text>
+    <text x="230" y="127" font-size="13" fill="#4a5568">벽지 찢김 · 천장 누수 흔적 · 못 자국</text>
+  </g>
+  <g>
+    <rect x="40" y="156" width="640" height="58" rx="8" fill="#eef6f3"/>
+    <rect x="40" y="156" width="5" height="58" fill="#2fbf9b"/>
+    <text x="66" y="191" font-size="15" font-weight="700" fill="#1f2d3d">바닥</text>
+    <text x="230" y="191" font-size="13" fill="#4a5568">마루 긁힘 · 타일 균열 · 방수 상태</text>
+  </g>
+  <g>
+    <rect x="40" y="220" width="640" height="58" rx="8" fill="#eef6f3"/>
+    <rect x="40" y="220" width="5" height="58" fill="#2fbf9b"/>
+    <text x="66" y="255" font-size="15" font-weight="700" fill="#1f2d3d">욕실</text>
+    <text x="230" y="255" font-size="13" fill="#4a5568">코킹 변색 · 곰팡이 · 수전 누수</text>
+  </g>
+  <g>
+    <rect x="40" y="284" width="640" height="58" rx="8" fill="#eef6f3"/>
+    <rect x="40" y="284" width="5" height="58" fill="#2fbf9b"/>
+    <text x="66" y="319" font-size="15" font-weight="700" fill="#1f2d3d">주방</text>
+    <text x="230" y="319" font-size="13" fill="#4a5568">싱크대 도어 · 수전 누수 · 후드 작동</text>
+  </g>
+  <g>
+    <rect x="40" y="348" width="640" height="58" rx="8" fill="#eef6f3"/>
+    <rect x="40" y="348" width="5" height="58" fill="#2fbf9b"/>
+    <text x="66" y="383" font-size="15" font-weight="700" fill="#1f2d3d">창문·문</text>
+    <text x="230" y="383" font-size="13" fill="#4a5568">개폐 작동 · 방충망 · 도어락 확인</text>
+  </g>
+</svg>
