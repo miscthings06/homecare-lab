@@ -1,0 +1,42 @@
+<svg viewBox="0 0 720 450" xmlns="http://www.w3.org/2000/svg" role="img" font-family="'Malgun Gothic','Apple SD Gothic Neo','Noto Sans KR',sans-serif">
+  <title>정수기 5년 총비용 비교 그래프</title>
+  <desc>4인 가족 기준 정수기 선택지별 5년 누적 비용 중간값. 렌탈 약 234만원, 직접 구매 약 260만원, 생수 구입 약 300만원으로 렌탈이 항상 저렴한 것은 아님.</desc>
+  <rect x="0.5" y="0.5" width="719" height="449" rx="14" fill="#ffffff" stroke="#ece7dc"/>
+  <text x="40" y="46" font-size="21" font-weight="700" fill="#1f2d3d">정수기 5년 총비용 비교 (4인 가족)</text>
+  <text x="40" y="70" font-size="13" fill="#666f7a">렌탈이 항상 저렴한 것은 아닙니다</text>
+
+  <g stroke="#eee8db" stroke-width="1">
+    <line x1="78" y1="390" x2="690" y2="390"/>
+    <line x1="78" y1="316" x2="690" y2="316"/>
+    <line x1="78" y1="243" x2="690" y2="243"/>
+    <line x1="78" y1="169" x2="690" y2="169"/>
+    <line x1="78" y1="95" x2="690" y2="95"/>
+  </g>
+  <g font-size="12" fill="#9a9488" text-anchor="end">
+    <text x="68" y="394">0</text>
+    <text x="68" y="320">100만</text>
+    <text x="68" y="247">200만</text>
+    <text x="68" y="173">300만</text>
+    <text x="68" y="99">400만</text>
+  </g>
+
+  <g fill="#2fbf9b">
+    <rect x="140" y="217" width="80" height="173" rx="4"/>
+    <rect x="344" y="198" width="80" height="192" rx="4"/>
+    <rect x="548" y="169" width="80" height="221" rx="4"/>
+  </g>
+
+  <g font-size="14" font-weight="700" fill="#1f2d3d" text-anchor="middle">
+    <text x="180" y="209">234만</text>
+    <text x="384" y="190">260만</text>
+    <text x="588" y="161">300만</text>
+  </g>
+
+  <g font-size="13" fill="#1f2d3d" text-anchor="middle">
+    <text x="180" y="411">렌탈</text>
+    <text x="384" y="411">직접 구매</text>
+    <text x="588" y="411">생수 구입</text>
+  </g>
+
+  <text x="40" y="438" font-size="11" fill="#9a9488">※ 5년 누적 추정. 브랜드·사용량·프로모션에 따라 달라집니다.</text>
+</svg>

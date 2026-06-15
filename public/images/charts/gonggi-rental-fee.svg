@@ -1,0 +1,47 @@
+<svg viewBox="0 0 720 460" xmlns="http://www.w3.org/2000/svg" role="img" font-family="'Malgun Gothic','Apple SD Gothic Neo','Noto Sans KR',sans-serif">
+  <title>공기청정기 공간별 렌탈 월 요금 그래프</title>
+  <desc>청정 면적별 공기청정기 렌탈 월 요금 중간값. 원룸 10평 이하 약 1.5만원, 거실 10~20평 약 2.8만원, 대형 20~33평 약 4만원, 사무실 33평 이상 5만원 이상.</desc>
+  <rect x="0.5" y="0.5" width="719" height="459" rx="14" fill="#ffffff" stroke="#ece7dc"/>
+  <text x="40" y="46" font-size="21" font-weight="700" fill="#1f2d3d">공기청정기 공간별 렌탈 월 요금</text>
+  <text x="40" y="70" font-size="13" fill="#666f7a">청정 면적에 맞는 제품 등급 기준</text>
+
+  <g stroke="#eee8db" stroke-width="1">
+    <line x1="78" y1="390" x2="690" y2="390"/>
+    <line x1="78" y1="292" x2="690" y2="292"/>
+    <line x1="78" y1="193" x2="690" y2="193"/>
+    <line x1="78" y1="95" x2="690" y2="95"/>
+  </g>
+  <g font-size="12" fill="#9a9488" text-anchor="end">
+    <text x="68" y="394">0</text>
+    <text x="68" y="296">2만</text>
+    <text x="68" y="197">4만</text>
+    <text x="68" y="99">6만</text>
+  </g>
+
+  <g fill="#2fbf9b">
+    <rect x="119" y="316" width="72" height="74" rx="4"/>
+    <rect x="272" y="252" width="72" height="138" rx="4"/>
+    <rect x="425" y="193" width="72" height="197" rx="4"/>
+    <rect x="578" y="120" width="72" height="270" rx="4"/>
+  </g>
+
+  <g font-size="13" font-weight="700" fill="#1f2d3d" text-anchor="middle">
+    <text x="155" y="308">1.5만</text>
+    <text x="308" y="244">2.8만</text>
+    <text x="461" y="185">4만</text>
+    <text x="614" y="112">5만~</text>
+  </g>
+
+  <g text-anchor="middle">
+    <text x="155" y="411" font-size="13" fill="#1f2d3d">원룸</text>
+    <text x="308" y="411" font-size="13" fill="#1f2d3d">거실</text>
+    <text x="461" y="411" font-size="13" fill="#1f2d3d">대형</text>
+    <text x="614" y="411" font-size="13" fill="#1f2d3d">사무실</text>
+    <text x="155" y="429" font-size="11" fill="#9a9488">10평 이하</text>
+    <text x="308" y="429" font-size="11" fill="#9a9488">10~20평</text>
+    <text x="461" y="429" font-size="11" fill="#9a9488">20~33평</text>
+    <text x="614" y="429" font-size="11" fill="#9a9488">33평 이상</text>
+  </g>
+
+  <text x="40" y="452" font-size="11" fill="#9a9488">※ 브랜드·모델·약정 조건에 따라 실제 요금은 달라집니다.</text>
+</svg>

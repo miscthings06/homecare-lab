@@ -1,0 +1,43 @@
+<svg viewBox="0 0 720 450" xmlns="http://www.w3.org/2000/svg" role="img" font-family="'Malgun Gothic','Apple SD Gothic Neo','Noto Sans KR',sans-serif">
+  <title>비데 유형별 렌탈 월 요금 그래프</title>
+  <desc>비데 유형별 렌탈 월 요금 중간값. 기본형 약 1.3만원, 중급형 약 2만원, 고급형 약 3.3만원, 일체형 약 4.5만원.</desc>
+  <rect x="0.5" y="0.5" width="719" height="449" rx="14" fill="#ffffff" stroke="#ece7dc"/>
+  <text x="40" y="46" font-size="21" font-weight="700" fill="#1f2d3d">비데 유형별 렌탈 월 요금</text>
+  <text x="40" y="70" font-size="13" fill="#666f7a">온수 세정~스마트 기능별 기준</text>
+
+  <g stroke="#eee8db" stroke-width="1">
+    <line x1="78" y1="390" x2="690" y2="390"/>
+    <line x1="78" y1="292" x2="690" y2="292"/>
+    <line x1="78" y1="193" x2="690" y2="193"/>
+    <line x1="78" y1="95" x2="690" y2="95"/>
+  </g>
+  <g font-size="12" fill="#9a9488" text-anchor="end">
+    <text x="68" y="394">0</text>
+    <text x="68" y="296">2만</text>
+    <text x="68" y="197">4만</text>
+    <text x="68" y="99">6만</text>
+  </g>
+
+  <g fill="#2fbf9b">
+    <rect x="119" y="328" width="72" height="62" rx="4"/>
+    <rect x="272" y="292" width="72" height="98" rx="4"/>
+    <rect x="425" y="230" width="72" height="160" rx="4"/>
+    <rect x="578" y="169" width="72" height="221" rx="4"/>
+  </g>
+
+  <g font-size="13" font-weight="700" fill="#1f2d3d" text-anchor="middle">
+    <text x="155" y="320">1.3만</text>
+    <text x="308" y="284">2만</text>
+    <text x="461" y="222">3.3만</text>
+    <text x="614" y="161">4.5만</text>
+  </g>
+
+  <g font-size="13" fill="#1f2d3d" text-anchor="middle">
+    <text x="155" y="411">기본형</text>
+    <text x="308" y="411">중급형</text>
+    <text x="461" y="411">고급형</text>
+    <text x="614" y="411">일체형</text>
+  </g>
+
+  <text x="40" y="438" font-size="11" fill="#9a9488">※ 브랜드·약정·설치 조건에 따라 실제 요금은 달라집니다.</text>
+</svg>
