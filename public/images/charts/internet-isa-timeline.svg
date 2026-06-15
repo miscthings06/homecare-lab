@@ -1,0 +1,30 @@
+<svg viewBox="0 0 720 230" xmlns="http://www.w3.org/2000/svg" role="img" font-family="'Malgun Gothic','Apple SD Gothic Neo','Noto Sans KR',sans-serif">
+  <title>이사 인터넷 신청 타임라인 인포그래픽</title>
+  <desc>이사 인터넷 신청 순서. 이사 2~4주 전 약정 잔여 확인과 이전·신규 비교, 1~2주 전 통신사 선택과 개통 신청, 이사 당일~다음날 개통 공사 완료.</desc>
+  <rect x="0.5" y="0.5" width="719" height="229" rx="14" fill="#ffffff" stroke="#ece7dc"/>
+  <text x="40" y="42" font-size="21" font-weight="700" fill="#1f2d3d">이사 인터넷 신청 타임라인</text>
+  <text x="40" y="66" font-size="13" fill="#666f7a">이사 성수기(3~4월·9~10월)엔 더 일찍 신청하세요</text>
+
+  <g>
+    <rect x="40" y="90" width="196" height="104" rx="10" fill="#eef6f3"/>
+    <text x="138" y="124" font-size="15" font-weight="700" fill="#0f6e56" text-anchor="middle">2~4주 전</text>
+    <text x="138" y="150" font-size="12.5" fill="#4a5568" text-anchor="middle">약정 잔여 기간 확인</text>
+    <text x="138" y="170" font-size="12.5" fill="#4a5568" text-anchor="middle">이전 vs 신규 비교</text>
+  </g>
+  <path d="M246 142 L262 142 M256 136 L262 142 L256 148" stroke="#2fbf9b" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <g>
+    <rect x="262" y="90" width="196" height="104" rx="10" fill="#eef6f3"/>
+    <text x="360" y="124" font-size="15" font-weight="700" fill="#0f6e56" text-anchor="middle">1~2주 전</text>
+    <text x="360" y="150" font-size="12.5" fill="#4a5568" text-anchor="middle">통신사 선택</text>
+    <text x="360" y="170" font-size="12.5" fill="#4a5568" text-anchor="middle">개통 신청·일정 예약</text>
+  </g>
+  <path d="M468 142 L484 142 M478 136 L484 142 L478 148" stroke="#2fbf9b" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <g>
+    <rect x="484" y="90" width="196" height="104" rx="10" fill="#eef6f3"/>
+    <text x="582" y="124" font-size="15" font-weight="700" fill="#0f6e56" text-anchor="middle">이사 당일~다음날</text>
+    <text x="582" y="150" font-size="12.5" fill="#4a5568" text-anchor="middle">개통 공사 완료</text>
+    <text x="582" y="170" font-size="12.5" fill="#4a5568" text-anchor="middle">인터넷 사용 시작</text>
+  </g>
+</svg>

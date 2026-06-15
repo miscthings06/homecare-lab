@@ -1,0 +1,37 @@
+<svg viewBox="0 0 720 450" xmlns="http://www.w3.org/2000/svg" role="img" font-family="'Malgun Gothic','Apple SD Gothic Neo','Noto Sans KR',sans-serif">
+  <title>인터넷 개통 소요 기간 이전 vs 신규 그래프</title>
+  <desc>인터넷 개통 소요 기간 중간값. 이전 설치 약 10일(7~14일), 신규 가입 약 21일(14~28일)로 이사 일정이 촉박하면 이전 설치가 빠름.</desc>
+  <rect x="0.5" y="0.5" width="719" height="449" rx="14" fill="#ffffff" stroke="#ece7dc"/>
+  <text x="40" y="46" font-size="21" font-weight="700" fill="#1f2d3d">인터넷 개통 소요 기간 — 이전 vs 신규</text>
+  <text x="40" y="70" font-size="13" fill="#666f7a">일정이 촉박하면 이전 설치가 빠릅니다</text>
+
+  <g stroke="#eee8db" stroke-width="1">
+    <line x1="78" y1="390" x2="690" y2="390"/>
+    <line x1="78" y1="292" x2="690" y2="292"/>
+    <line x1="78" y1="193" x2="690" y2="193"/>
+    <line x1="78" y1="95" x2="690" y2="95"/>
+  </g>
+  <g font-size="12" fill="#9a9488" text-anchor="end">
+    <text x="68" y="394">0</text>
+    <text x="68" y="296">10일</text>
+    <text x="68" y="197">20일</text>
+    <text x="68" y="99">30일</text>
+  </g>
+
+  <g fill="#2fbf9b">
+    <rect x="176" y="287" width="110" height="103" rx="4"/>
+    <rect x="482" y="183" width="110" height="207" rx="4"/>
+  </g>
+
+  <g font-size="15" font-weight="700" fill="#1f2d3d" text-anchor="middle">
+    <text x="231" y="279">약 10일</text>
+    <text x="537" y="175">약 21일</text>
+  </g>
+
+  <g font-size="14" fill="#1f2d3d" text-anchor="middle">
+    <text x="231" y="412">이전 설치</text>
+    <text x="537" y="412">신규 가입</text>
+  </g>
+
+  <text x="40" y="438" font-size="11" fill="#9a9488">※ 이전 7~14일, 신규 14~28일. 지역·통신사에 따라 달라집니다.</text>
+</svg>

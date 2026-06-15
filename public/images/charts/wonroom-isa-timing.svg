@@ -1,0 +1,38 @@
+<svg viewBox="0 0 720 430" xmlns="http://www.w3.org/2000/svg" role="img" font-family="'Malgun Gothic','Apple SD Gothic Neo','Noto Sans KR',sans-serif">
+  <title>원룸 이사 생활서비스 신청 시점 인포그래픽</title>
+  <desc>원룸 이사 전 생활서비스 신청 시점. 인터넷 신청 D-21 이상, 렌탈 가전 이전 D-14, 입주청소·폐가전 수거 D-7, 도시가스 전입 이사 당일, 전입신고 이사 후 14일 이내.</desc>
+  <rect x="0.5" y="0.5" width="719" height="429" rx="14" fill="#ffffff" stroke="#ece7dc"/>
+  <text x="40" y="46" font-size="21" font-weight="700" fill="#1f2d3d">원룸 이사 생활서비스 신청 시점</text>
+  <text x="40" y="70" font-size="13" fill="#666f7a">빠뜨리기 쉬운 항목을 시점별로 정리했습니다</text>
+
+  <g>
+    <rect x="40" y="90" width="640" height="50" rx="8" fill="#f6f4ee"/>
+    <text x="62" y="121" font-size="15" font-weight="700" fill="#1f2d3d">인터넷 신청</text>
+    <text x="658" y="121" font-size="14" font-weight="700" fill="#189a7b" text-anchor="end">D-21 이상</text>
+  </g>
+  <g>
+    <rect x="40" y="146" width="640" height="50" rx="8" fill="#f6f4ee"/>
+    <text x="62" y="177" font-size="15" font-weight="700" fill="#1f2d3d">렌탈 가전 이전 설치</text>
+    <text x="658" y="177" font-size="14" font-weight="700" fill="#189a7b" text-anchor="end">D-14</text>
+  </g>
+  <g>
+    <rect x="40" y="202" width="640" height="50" rx="8" fill="#f6f4ee"/>
+    <text x="62" y="233" font-size="15" font-weight="700" fill="#1f2d3d">입주청소 예약</text>
+    <text x="658" y="233" font-size="14" font-weight="700" fill="#189a7b" text-anchor="end">D-7 (성수기 D-14)</text>
+  </g>
+  <g>
+    <rect x="40" y="258" width="640" height="50" rx="8" fill="#f6f4ee"/>
+    <text x="62" y="289" font-size="15" font-weight="700" fill="#1f2d3d">폐가전 무상수거</text>
+    <text x="658" y="289" font-size="14" font-weight="700" fill="#189a7b" text-anchor="end">D-7</text>
+  </g>
+  <g>
+    <rect x="40" y="314" width="640" height="50" rx="8" fill="#f6f4ee"/>
+    <text x="62" y="345" font-size="15" font-weight="700" fill="#1f2d3d">도시가스 전입</text>
+    <text x="658" y="345" font-size="14" font-weight="700" fill="#189a7b" text-anchor="end">이사 당일</text>
+  </g>
+  <g>
+    <rect x="40" y="370" width="640" height="50" rx="8" fill="#f6f4ee"/>
+    <text x="62" y="401" font-size="15" font-weight="700" fill="#1f2d3d">전입신고</text>
+    <text x="658" y="401" font-size="14" font-weight="700" fill="#189a7b" text-anchor="end">이사 후 14일 이내</text>
+  </g>
+</svg>

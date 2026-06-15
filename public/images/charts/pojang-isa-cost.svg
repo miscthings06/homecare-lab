@@ -1,0 +1,62 @@
+<svg viewBox="0 0 720 450" xmlns="http://www.w3.org/2000/svg" role="img" font-family="'Malgun Gothic','Apple SD Gothic Neo','Noto Sans KR',sans-serif">
+  <title>평수별 일반이사 vs 포장이사 비용 비교 그래프</title>
+  <desc>수도권 기준 이사 규모별 비용 중간값. 원룸 일반 40만·포장 58만, 투룸 일반 65만·포장 90만, 25~33평 일반 105만·포장 145만, 34~42평 일반 150만·포장 205만, 50평 이상 일반 200만·포장 270만으로 포장이사가 20~40% 높음.</desc>
+  <rect x="0.5" y="0.5" width="719" height="449" rx="14" fill="#ffffff" stroke="#ece7dc"/>
+  <text x="40" y="46" font-size="21" font-weight="700" fill="#1f2d3d">평수별 일반이사 vs 포장이사 비용</text>
+  <g font-size="12" fill="#666f7a">
+    <rect x="430" y="36" width="12" height="12" rx="2" fill="#9fe1cb"/>
+    <text x="447" y="46">일반이사</text>
+    <rect x="540" y="36" width="12" height="12" rx="2" fill="#2fbf9b"/>
+    <text x="557" y="46">포장이사</text>
+  </g>
+  <text x="40" y="70" font-size="13" fill="#666f7a">수도권 기준 중간값 (단위 만원)</text>
+
+  <g stroke="#eee8db" stroke-width="1">
+    <line x1="78" y1="390" x2="690" y2="390"/>
+    <line x1="78" y1="292" x2="690" y2="292"/>
+    <line x1="78" y1="193" x2="690" y2="193"/>
+    <line x1="78" y1="95" x2="690" y2="95"/>
+  </g>
+  <g font-size="12" fill="#9a9488" text-anchor="end">
+    <text x="68" y="394">0</text>
+    <text x="68" y="296">100만</text>
+    <text x="68" y="197">200만</text>
+    <text x="68" y="99">300만</text>
+  </g>
+
+  <g>
+    <rect x="96" y="351" width="40" height="39" rx="3" fill="#9fe1cb"/>
+    <rect x="142" y="333" width="40" height="57" rx="3" fill="#2fbf9b"/>
+    <rect x="219" y="326" width="40" height="64" rx="3" fill="#9fe1cb"/>
+    <rect x="265" y="301" width="40" height="89" rx="3" fill="#2fbf9b"/>
+    <rect x="341" y="287" width="40" height="103" rx="3" fill="#9fe1cb"/>
+    <rect x="387" y="247" width="40" height="143" rx="3" fill="#2fbf9b"/>
+    <rect x="463" y="242" width="40" height="148" rx="3" fill="#9fe1cb"/>
+    <rect x="509" y="188" width="40" height="202" rx="3" fill="#2fbf9b"/>
+    <rect x="586" y="193" width="40" height="197" rx="3" fill="#9fe1cb"/>
+    <rect x="632" y="124" width="40" height="266" rx="3" fill="#2fbf9b"/>
+  </g>
+
+  <g font-size="10" font-weight="700" fill="#1f2d3d" text-anchor="middle">
+    <text x="116" y="343">40</text>
+    <text x="162" y="325">58</text>
+    <text x="239" y="318">65</text>
+    <text x="285" y="293">90</text>
+    <text x="361" y="279">105</text>
+    <text x="407" y="239">145</text>
+    <text x="483" y="234">150</text>
+    <text x="529" y="180">205</text>
+    <text x="606" y="185">200</text>
+    <text x="652" y="116">270</text>
+  </g>
+
+  <g font-size="11" fill="#1f2d3d" text-anchor="middle">
+    <text x="139" y="411">원룸</text>
+    <text x="262" y="411">투룸</text>
+    <text x="384" y="411">25~33평</text>
+    <text x="506" y="411">34~42평</text>
+    <text x="629" y="411">50평 이상</text>
+  </g>
+
+  <text x="40" y="438" font-size="11" fill="#9a9488">※ 거리·계절·짐 양·층수에 따라 크게 달라집니다. 현장 견적 필수.</text>
+</svg>
