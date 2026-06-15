@@ -1,0 +1,50 @@
+<svg viewBox="0 0 720 450" xmlns="http://www.w3.org/2000/svg" role="img" font-family="'Malgun Gothic','Apple SD Gothic Neo','Noto Sans KR',sans-serif">
+  <title>부모님 댁 가전별 렌탈 적합도 그래프</title>
+  <desc>관리 편의성 기준 부모님 댁 가전별 렌탈 적합도(5점 만점). 정수기 5점, 비데 4점, 공기청정기 3점, 건조기 3점, 냉장고·세탁기 2점.</desc>
+  <rect x="0.5" y="0.5" width="719" height="449" rx="14" fill="#ffffff" stroke="#ece7dc"/>
+  <text x="40" y="46" font-size="21" font-weight="700" fill="#1f2d3d">부모님 댁 가전별 렌탈 적합도</text>
+  <text x="40" y="70" font-size="13" fill="#666f7a">5점 만점 · 관리 편의성 기준</text>
+
+  <g stroke="#eee8db" stroke-width="1">
+    <line x1="78" y1="390" x2="690" y2="390"/>
+    <line x1="78" y1="331" x2="690" y2="331"/>
+    <line x1="78" y1="272" x2="690" y2="272"/>
+    <line x1="78" y1="213" x2="690" y2="213"/>
+    <line x1="78" y1="154" x2="690" y2="154"/>
+    <line x1="78" y1="95" x2="690" y2="95"/>
+  </g>
+  <g font-size="12" fill="#9a9488" text-anchor="end">
+    <text x="68" y="394">0</text>
+    <text x="68" y="335">1</text>
+    <text x="68" y="276">2</text>
+    <text x="68" y="217">3</text>
+    <text x="68" y="158">4</text>
+    <text x="68" y="99">5</text>
+  </g>
+
+  <g fill="#2fbf9b">
+    <rect x="109" y="95" width="60" height="295" rx="4"/>
+    <rect x="232" y="154" width="60" height="236" rx="4"/>
+    <rect x="354" y="213" width="60" height="177" rx="4"/>
+    <rect x="476" y="213" width="60" height="177" rx="4"/>
+    <rect x="599" y="272" width="60" height="118" rx="4"/>
+  </g>
+
+  <g font-size="13" font-weight="700" fill="#1f2d3d" text-anchor="middle">
+    <text x="139" y="87">5점</text>
+    <text x="262" y="146">4점</text>
+    <text x="384" y="205">3점</text>
+    <text x="506" y="205">3점</text>
+    <text x="629" y="264">2점</text>
+  </g>
+
+  <g font-size="12" fill="#1f2d3d" text-anchor="middle">
+    <text x="139" y="411">정수기</text>
+    <text x="262" y="411">비데</text>
+    <text x="384" y="411">공기청정기</text>
+    <text x="506" y="411">건조기</text>
+    <text x="629" y="411">냉장고·세탁기</text>
+  </g>
+
+  <text x="40" y="438" font-size="11" fill="#9a9488">※ 거주 기간·사용 패턴에 따라 적합도가 달라질 수 있습니다.</text>
+</svg>

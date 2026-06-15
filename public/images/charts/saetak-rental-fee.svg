@@ -1,0 +1,47 @@
+<svg viewBox="0 0 720 460" xmlns="http://www.w3.org/2000/svg" role="img" font-family="'Malgun Gothic','Apple SD Gothic Neo','Noto Sans KR',sans-serif">
+  <title>세탁기 유형별 렌탈 월 요금 그래프</title>
+  <desc>세탁기 유형별 렌탈 월 요금 중간값. 통돌이 기본형 약 2.8만원, 드럼 중급형 약 4.3만원, 드럼 프리미엄 약 7만원, 세탁건조 일체형 약 7만원.</desc>
+  <rect x="0.5" y="0.5" width="719" height="459" rx="14" fill="#ffffff" stroke="#ece7dc"/>
+  <text x="40" y="46" font-size="21" font-weight="700" fill="#1f2d3d">세탁기 유형별 렌탈 월 요금</text>
+  <text x="40" y="70" font-size="13" fill="#666f7a">통돌이·드럼 방식별 기준</text>
+
+  <g stroke="#eee8db" stroke-width="1">
+    <line x1="78" y1="390" x2="690" y2="390"/>
+    <line x1="78" y1="292" x2="690" y2="292"/>
+    <line x1="78" y1="193" x2="690" y2="193"/>
+    <line x1="78" y1="95" x2="690" y2="95"/>
+  </g>
+  <g font-size="12" fill="#9a9488" text-anchor="end">
+    <text x="68" y="394">0</text>
+    <text x="68" y="296">3만</text>
+    <text x="68" y="197">6만</text>
+    <text x="68" y="99">9만</text>
+  </g>
+
+  <g fill="#2fbf9b">
+    <rect x="119" y="300" width="72" height="90" rx="4"/>
+    <rect x="272" y="251" width="72" height="139" rx="4"/>
+    <rect x="425" y="161" width="72" height="229" rx="4"/>
+    <rect x="578" y="161" width="72" height="229" rx="4"/>
+  </g>
+
+  <g font-size="13" font-weight="700" fill="#1f2d3d" text-anchor="middle">
+    <text x="155" y="292">2.8만</text>
+    <text x="308" y="243">4.3만</text>
+    <text x="461" y="153">7만</text>
+    <text x="614" y="153">7만</text>
+  </g>
+
+  <g text-anchor="middle">
+    <text x="155" y="411" font-size="13" fill="#1f2d3d">통돌이</text>
+    <text x="308" y="411" font-size="13" fill="#1f2d3d">드럼</text>
+    <text x="461" y="411" font-size="13" fill="#1f2d3d">드럼</text>
+    <text x="614" y="411" font-size="13" fill="#1f2d3d">세탁건조</text>
+    <text x="155" y="429" font-size="11" fill="#9a9488">기본형</text>
+    <text x="308" y="429" font-size="11" fill="#9a9488">중급형</text>
+    <text x="461" y="429" font-size="11" fill="#9a9488">프리미엄</text>
+    <text x="614" y="429" font-size="11" fill="#9a9488">일체형</text>
+  </g>
+
+  <text x="40" y="452" font-size="11" fill="#9a9488">※ 용량·브랜드·약정 조건에 따라 실제 요금은 달라집니다.</text>
+</svg>

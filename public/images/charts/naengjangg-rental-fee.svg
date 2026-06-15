@@ -1,0 +1,49 @@
+<svg viewBox="0 0 720 460" xmlns="http://www.w3.org/2000/svg" role="img" font-family="'Malgun Gothic','Apple SD Gothic Neo','Noto Sans KR',sans-serif">
+  <title>냉장고 용량별 렌탈 월 요금 그래프</title>
+  <desc>냉장고 용량별 렌탈 월 요금 중간값. 소형 200~300L 약 2.3만원, 중형 400~500L 약 4만원, 대형 양문형 600~800L 약 6.5만원, 프리미엄 4도어 800L 이상 약 9.5만원.</desc>
+  <rect x="0.5" y="0.5" width="719" height="459" rx="14" fill="#ffffff" stroke="#ece7dc"/>
+  <text x="40" y="46" font-size="21" font-weight="700" fill="#1f2d3d">냉장고 용량별 렌탈 월 요금</text>
+  <text x="40" y="70" font-size="13" fill="#666f7a">가구 규모별 제품 기준</text>
+
+  <g stroke="#eee8db" stroke-width="1">
+    <line x1="78" y1="390" x2="690" y2="390"/>
+    <line x1="78" y1="316" x2="690" y2="316"/>
+    <line x1="78" y1="243" x2="690" y2="243"/>
+    <line x1="78" y1="169" x2="690" y2="169"/>
+    <line x1="78" y1="95" x2="690" y2="95"/>
+  </g>
+  <g font-size="12" fill="#9a9488" text-anchor="end">
+    <text x="68" y="394">0</text>
+    <text x="68" y="320">3만</text>
+    <text x="68" y="247">6만</text>
+    <text x="68" y="173">9만</text>
+    <text x="68" y="99">12만</text>
+  </g>
+
+  <g fill="#2fbf9b">
+    <rect x="119" y="335" width="72" height="55" rx="4"/>
+    <rect x="272" y="292" width="72" height="98" rx="4"/>
+    <rect x="425" y="230" width="72" height="160" rx="4"/>
+    <rect x="578" y="156" width="72" height="234" rx="4"/>
+  </g>
+
+  <g font-size="13" font-weight="700" fill="#1f2d3d" text-anchor="middle">
+    <text x="155" y="327">2.3만</text>
+    <text x="308" y="284">4만</text>
+    <text x="461" y="222">6.5만</text>
+    <text x="614" y="148">9.5만</text>
+  </g>
+
+  <g text-anchor="middle">
+    <text x="155" y="411" font-size="13" fill="#1f2d3d">소형</text>
+    <text x="308" y="411" font-size="13" fill="#1f2d3d">중형</text>
+    <text x="461" y="411" font-size="13" fill="#1f2d3d">대형 양문형</text>
+    <text x="614" y="411" font-size="13" fill="#1f2d3d">프리미엄</text>
+    <text x="155" y="429" font-size="11" fill="#9a9488">200~300L</text>
+    <text x="308" y="429" font-size="11" fill="#9a9488">400~500L</text>
+    <text x="461" y="429" font-size="11" fill="#9a9488">600~800L</text>
+    <text x="614" y="429" font-size="11" fill="#9a9488">800L 이상</text>
+  </g>
+
+  <text x="40" y="452" font-size="11" fill="#9a9488">※ 브랜드·모델·약정 조건에 따라 실제 요금은 달라집니다.</text>
+</svg>

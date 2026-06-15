@@ -1,0 +1,47 @@
+<svg viewBox="0 0 720 450" xmlns="http://www.w3.org/2000/svg" role="img" font-family="'Malgun Gothic','Apple SD Gothic Neo','Noto Sans KR',sans-serif">
+  <title>1인 가구 정수기 렌탈 vs 구매 총비용 그래프</title>
+  <desc>1인 가구 정수기 누적 총비용 중간값. 3년 기준 렌탈 약 108만원·구매 약 70만원, 5년 기준 렌탈 약 180만원·구매 약 113만원으로 기간이 길수록 구매가 유리.</desc>
+  <rect x="0.5" y="0.5" width="719" height="449" rx="14" fill="#ffffff" stroke="#ece7dc"/>
+  <text x="40" y="46" font-size="21" font-weight="700" fill="#1f2d3d">1인 가구 정수기 렌탈 vs 구매</text>
+  <g font-size="12" fill="#666f7a">
+    <rect x="470" y="36" width="12" height="12" rx="2" fill="#2fbf9b"/>
+    <text x="487" y="46">렌탈</text>
+    <rect x="540" y="36" width="12" height="12" rx="2" fill="#9fe1cb"/>
+    <text x="557" y="46">구매</text>
+  </g>
+  <text x="40" y="70" font-size="13" fill="#666f7a">3년·5년 누적 비용 (필터·관리 포함, 단위 만원)</text>
+
+  <g stroke="#eee8db" stroke-width="1">
+    <line x1="78" y1="390" x2="690" y2="390"/>
+    <line x1="78" y1="316" x2="690" y2="316"/>
+    <line x1="78" y1="243" x2="690" y2="243"/>
+    <line x1="78" y1="169" x2="690" y2="169"/>
+    <line x1="78" y1="95" x2="690" y2="95"/>
+  </g>
+  <g font-size="12" fill="#9a9488" text-anchor="end">
+    <text x="68" y="394">0</text>
+    <text x="68" y="320">50만</text>
+    <text x="68" y="247">100만</text>
+    <text x="68" y="173">150만</text>
+    <text x="68" y="99">200만</text>
+  </g>
+
+  <rect x="157" y="231" width="70" height="159" rx="4" fill="#2fbf9b"/>
+  <rect x="235" y="287" width="70" height="103" rx="4" fill="#9fe1cb"/>
+  <rect x="463" y="124" width="70" height="266" rx="4" fill="#2fbf9b"/>
+  <rect x="541" y="223" width="70" height="167" rx="4" fill="#9fe1cb"/>
+
+  <g font-size="12" font-weight="700" fill="#1f2d3d" text-anchor="middle">
+    <text x="192" y="223">108</text>
+    <text x="270" y="279">70</text>
+    <text x="498" y="116">180</text>
+    <text x="576" y="215">113</text>
+  </g>
+
+  <g font-size="14" fill="#1f2d3d" text-anchor="middle">
+    <text x="231" y="412">3년</text>
+    <text x="537" y="412">5년</text>
+  </g>
+
+  <text x="40" y="438" font-size="11" fill="#9a9488">※ 기간이 길수록 구매가 유리. 브랜드·모델에 따라 달라집니다.</text>
+</svg>
