@@ -1,0 +1,38 @@
+<svg viewBox="0 0 720 240" xmlns="http://www.w3.org/2000/svg" role="img" font-family="'Malgun Gothic','Apple SD Gothic Neo','Noto Sans KR',sans-serif">
+  <title>폐가전 무상 수거 신청 4단계 인포그래픽</title>
+  <desc>대형 폐가전 무상 방문 수거 절차. 1단계 온라인 또는 전화(1599-0903) 신청, 2단계 방문 일정 확정(3~10일 소요), 3단계 현관 앞·단지 입구에 배치, 4단계 무료 수거 완료 및 증명서 발급.</desc>
+  <rect x="0.5" y="0.5" width="719" height="239" rx="14" fill="#ffffff" stroke="#ece7dc"/>
+  <text x="40" y="42" font-size="21" font-weight="700" fill="#1f2d3d">폐가전 무상 수거 신청 4단계</text>
+  <text x="40" y="66" font-size="13" fill="#666f7a">대형 가전을 비용 없이 방문 수거 (환경부)</text>
+
+  <g>
+    <rect x="40" y="92" width="150" height="104" rx="10" fill="#eef6f3"/>
+    <text x="115" y="124" font-size="14" font-weight="700" fill="#0f6e56" text-anchor="middle">1. 신청</text>
+    <text x="115" y="150" font-size="12" fill="#4a5568" text-anchor="middle">온라인·전화</text>
+    <text x="115" y="170" font-size="12" fill="#4a5568" text-anchor="middle">1599-0903</text>
+  </g>
+  <path d="M192 144 L205 144 M199 138 L205 144 L199 150" stroke="#2fbf9b" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <g>
+    <rect x="205" y="92" width="150" height="104" rx="10" fill="#eef6f3"/>
+    <text x="280" y="124" font-size="14" font-weight="700" fill="#0f6e56" text-anchor="middle">2. 일정 확정</text>
+    <text x="280" y="150" font-size="12" fill="#4a5568" text-anchor="middle">방문까지</text>
+    <text x="280" y="170" font-size="12" fill="#4a5568" text-anchor="middle">3~10일 소요</text>
+  </g>
+  <path d="M357 144 L370 144 M364 138 L370 144 L364 150" stroke="#2fbf9b" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <g>
+    <rect x="370" y="92" width="150" height="104" rx="10" fill="#eef6f3"/>
+    <text x="445" y="124" font-size="14" font-weight="700" fill="#0f6e56" text-anchor="middle">3. 배치</text>
+    <text x="445" y="150" font-size="12" fill="#4a5568" text-anchor="middle">현관 앞 ·</text>
+    <text x="445" y="170" font-size="12" fill="#4a5568" text-anchor="middle">단지 입구</text>
+  </g>
+  <path d="M522 144 L535 144 M529 138 L535 144 L529 150" stroke="#2fbf9b" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <g>
+    <rect x="535" y="92" width="150" height="104" rx="10" fill="#eef6f3"/>
+    <text x="610" y="124" font-size="14" font-weight="700" fill="#0f6e56" text-anchor="middle">4. 수거 완료</text>
+    <text x="610" y="150" font-size="12" fill="#4a5568" text-anchor="middle">무료 처리</text>
+    <text x="610" y="170" font-size="12" fill="#4a5568" text-anchor="middle">증명서 발급</text>
+  </g>
+</svg>

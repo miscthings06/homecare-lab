@@ -1,0 +1,25 @@
+<svg viewBox="0 0 720 310" xmlns="http://www.w3.org/2000/svg" role="img" font-family="'Malgun Gothic','Apple SD Gothic Neo','Noto Sans KR',sans-serif">
+  <title>이사 시 도시가스 처리 두 가지 인포그래픽</title>
+  <desc>이사 시 도시가스는 나가는 집과 들어가는 집 모두 처리해야 함. 나가는 집은 고객센터에 이사일 통보, 당일 검침·정산, 계약 종료. 들어가는 집은 계량기 사진 촬영, 명의 변경 신청, 신규 개통 시 2주 전 신청.</desc>
+  <rect x="0.5" y="0.5" width="719" height="309" rx="14" fill="#ffffff" stroke="#ece7dc"/>
+  <text x="40" y="44" font-size="21" font-weight="700" fill="#1f2d3d">이사 시 도시가스 처리 — 두 가지</text>
+  <text x="40" y="68" font-size="13" fill="#666f7a">나가는 집 정산과 새 집 개통을 모두 챙기세요</text>
+
+  <rect x="40" y="84" width="310" height="40" rx="8" fill="#e1f5ee"/>
+  <text x="58" y="110" font-size="15" font-weight="700" fill="#0f6e56">이사 나가는 집</text>
+  <g font-size="13" fill="#4a5568">
+    <circle cx="62" cy="153" r="3.5" fill="#2fbf9b"/><text x="74" y="158">고객센터에 이사일 통보 (3~7일 전)</text>
+    <circle cx="62" cy="187" r="3.5" fill="#2fbf9b"/><text x="74" y="192">당일 계량기 검침·요금 정산</text>
+    <circle cx="62" cy="221" r="3.5" fill="#2fbf9b"/><text x="74" y="226">기존 계약 종료 처리</text>
+  </g>
+
+  <rect x="370" y="84" width="310" height="40" rx="8" fill="#e1f5ee"/>
+  <text x="388" y="110" font-size="15" font-weight="700" fill="#0f6e56">이사 들어가는 집</text>
+  <g font-size="13" fill="#4a5568">
+    <circle cx="392" cy="153" r="3.5" fill="#2fbf9b"/><text x="404" y="158">당일 계량기 수치 사진 촬영</text>
+    <circle cx="392" cy="187" r="3.5" fill="#2fbf9b"/><text x="404" y="192">명의 변경 신청 (당일~익일)</text>
+    <circle cx="392" cy="221" r="3.5" fill="#2fbf9b"/><text x="404" y="226">신규 개통은 2주 이상 전 신청</text>
+  </g>
+
+  <text x="40" y="288" font-size="11" fill="#9a9488">※ 전 세입자 미납 대비, 이사 당일 계량기 수치를 꼭 남겨두세요.</text>
+</svg>

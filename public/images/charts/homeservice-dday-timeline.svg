@@ -1,0 +1,45 @@
+<svg viewBox="0 0 720 470" xmlns="http://www.w3.org/2000/svg" role="img" font-family="'Malgun Gothic','Apple SD Gothic Neo','Noto Sans KR',sans-serif">
+  <title>이사 홈서비스 D-day 준비 타임라인 인포그래픽</title>
+  <desc>이사 전후 홈서비스 준비 순서. D-30 인터넷 신청, D-21 렌탈 가전 이전, D-14 입주청소 예약과 폐가전 수거, D-7 하자 사전 점검, 이사 당일 입주청소·도시가스·관리사무소 신고, 이사 후 3일 렌탈 설치 확인, 이사 후 14일 전입신고와 주소 변경.</desc>
+  <rect x="0.5" y="0.5" width="719" height="469" rx="14" fill="#ffffff" stroke="#ece7dc"/>
+  <text x="40" y="46" font-size="21" font-weight="700" fill="#1f2d3d">이사 홈서비스 D-day 준비표</text>
+  <text x="40" y="70" font-size="13" fill="#666f7a">D-30부터 이사 후까지 한눈에 정리</text>
+
+  <line x1="172" y1="108" x2="172" y2="430" stroke="#9fe1cb" stroke-width="3"/>
+
+  <g>
+    <circle cx="172" cy="113" r="7" fill="#2fbf9b"/>
+    <text x="150" y="118" font-size="14" font-weight="700" fill="#1f2d3d" text-anchor="end">D-30</text>
+    <text x="192" y="118" font-size="13.5" fill="#4a5568">인터넷 이전·신규 신청 (개통 2~4주)</text>
+  </g>
+  <g>
+    <circle cx="172" cy="166" r="7" fill="#2fbf9b"/>
+    <text x="150" y="171" font-size="14" font-weight="700" fill="#1f2d3d" text-anchor="end">D-21</text>
+    <text x="192" y="171" font-size="13.5" fill="#4a5568">렌탈 가전 이전 설치 신청</text>
+  </g>
+  <g>
+    <circle cx="172" cy="219" r="7" fill="#2fbf9b"/>
+    <text x="150" y="224" font-size="14" font-weight="700" fill="#1f2d3d" text-anchor="end">D-14</text>
+    <text x="192" y="224" font-size="13.5" fill="#4a5568">입주청소 예약 · 폐가전 무상수거</text>
+  </g>
+  <g>
+    <circle cx="172" cy="272" r="7" fill="#2fbf9b"/>
+    <text x="150" y="277" font-size="14" font-weight="700" fill="#1f2d3d" text-anchor="end">D-7</text>
+    <text x="192" y="277" font-size="13.5" fill="#4a5568">새 집 하자 사전 점검 (사진 촬영)</text>
+  </g>
+  <g>
+    <circle cx="172" cy="325" r="7" fill="#189a7b"/>
+    <text x="150" y="330" font-size="14" font-weight="700" fill="#1f2d3d" text-anchor="end">이사 당일</text>
+    <text x="192" y="330" font-size="13.5" fill="#4a5568">입주청소·도시가스 전입·관리사무소 신고</text>
+  </g>
+  <g>
+    <circle cx="172" cy="378" r="7" fill="#2fbf9b"/>
+    <text x="150" y="383" font-size="14" font-weight="700" fill="#1f2d3d" text-anchor="end">이사 후 3일</text>
+    <text x="192" y="383" font-size="13.5" fill="#4a5568">렌탈 가전 설치 확인</text>
+  </g>
+  <g>
+    <circle cx="172" cy="430" r="7" fill="#2fbf9b"/>
+    <text x="150" y="435" font-size="14" font-weight="700" fill="#1f2d3d" text-anchor="end">이사 후 14일</text>
+    <text x="192" y="435" font-size="13.5" fill="#4a5568">전입신고 · 카드·은행 주소 변경</text>
+  </g>
+</svg>
