@@ -1,0 +1,38 @@
+<svg viewBox="0 0 720 430" xmlns="http://www.w3.org/2000/svg" role="img" font-family="'Malgun Gothic','Apple SD Gothic Neo','Noto Sans KR',sans-serif">
+  <title>이사 생활서비스 신청처·연락처 인포그래픽</title>
+  <desc>이사 생활서비스별 신청처. 인터넷·TV는 통신 3사 고객센터, 도시가스는 관할 도시가스사, 렌탈 가전은 브랜드 고객센터, 입주청소는 청소 플랫폼, 폐가전 수거는 1599-0903, 전입신고는 정부24·주민센터.</desc>
+  <rect x="0.5" y="0.5" width="719" height="429" rx="14" fill="#ffffff" stroke="#ece7dc"/>
+  <text x="40" y="46" font-size="21" font-weight="700" fill="#1f2d3d">이사 생활서비스 신청처·연락처</text>
+  <text x="40" y="70" font-size="13" fill="#666f7a">어디에 어떻게 신청하는지 한눈에</text>
+
+  <g>
+    <rect x="40" y="90" width="640" height="50" rx="8" fill="#f6f4ee"/>
+    <text x="62" y="121" font-size="15" font-weight="700" fill="#1f2d3d">인터넷·TV</text>
+    <text x="658" y="121" font-size="13.5" fill="#189a7b" text-anchor="end">통신 3사 고객센터</text>
+  </g>
+  <g>
+    <rect x="40" y="146" width="640" height="50" rx="8" fill="#f6f4ee"/>
+    <text x="62" y="177" font-size="15" font-weight="700" fill="#1f2d3d">도시가스</text>
+    <text x="658" y="177" font-size="13.5" fill="#189a7b" text-anchor="end">관할 도시가스사 (지역별)</text>
+  </g>
+  <g>
+    <rect x="40" y="202" width="640" height="50" rx="8" fill="#f6f4ee"/>
+    <text x="62" y="233" font-size="15" font-weight="700" fill="#1f2d3d">렌탈 가전</text>
+    <text x="658" y="233" font-size="13.5" fill="#189a7b" text-anchor="end">각 브랜드 고객센터</text>
+  </g>
+  <g>
+    <rect x="40" y="258" width="640" height="50" rx="8" fill="#f6f4ee"/>
+    <text x="62" y="289" font-size="15" font-weight="700" fill="#1f2d3d">입주청소</text>
+    <text x="658" y="289" font-size="13.5" fill="#189a7b" text-anchor="end">청소 플랫폼·지역 업체</text>
+  </g>
+  <g>
+    <rect x="40" y="314" width="640" height="50" rx="8" fill="#f6f4ee"/>
+    <text x="62" y="345" font-size="15" font-weight="700" fill="#1f2d3d">폐가전 수거</text>
+    <text x="658" y="345" font-size="13.5" fill="#189a7b" text-anchor="end">1599-0903 · 온라인</text>
+  </g>
+  <g>
+    <rect x="40" y="370" width="640" height="50" rx="8" fill="#f6f4ee"/>
+    <text x="62" y="401" font-size="15" font-weight="700" fill="#1f2d3d">전입신고</text>
+    <text x="658" y="401" font-size="13.5" fill="#189a7b" text-anchor="end">정부24 · 주민센터</text>
+  </g>
+</svg>
