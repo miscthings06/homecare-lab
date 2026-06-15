@@ -1,0 +1,47 @@
+<svg viewBox="0 0 720 450" xmlns="http://www.w3.org/2000/svg" role="img" font-family="'Malgun Gothic','Apple SD Gothic Neo','Noto Sans KR',sans-serif">
+  <title>주방 후드 종류별 전문 청소 비용 그래프</title>
+  <desc>분해 청소 기준 후드 종류별 비용 중간값. 슬림형 약 8만원, T형·박스형 약 12만원, 빌트인 약 16만원, 업소용 20만원 이상.</desc>
+  <rect x="0.5" y="0.5" width="719" height="449" rx="14" fill="#ffffff" stroke="#ece7dc"/>
+  <text x="40" y="46" font-size="21" font-weight="700" fill="#1f2d3d">주방 후드 종류별 전문 청소 비용</text>
+  <text x="40" y="70" font-size="13" fill="#666f7a">분해 청소 기준</text>
+
+  <g stroke="#eee8db" stroke-width="1">
+    <line x1="78" y1="390" x2="690" y2="390"/>
+    <line x1="78" y1="331" x2="690" y2="331"/>
+    <line x1="78" y1="272" x2="690" y2="272"/>
+    <line x1="78" y1="213" x2="690" y2="213"/>
+    <line x1="78" y1="154" x2="690" y2="154"/>
+    <line x1="78" y1="95" x2="690" y2="95"/>
+  </g>
+  <g font-size="12" fill="#9a9488" text-anchor="end">
+    <text x="68" y="394">0</text>
+    <text x="68" y="335">5만</text>
+    <text x="68" y="276">10만</text>
+    <text x="68" y="217">15만</text>
+    <text x="68" y="158">20만</text>
+    <text x="68" y="99">25만</text>
+  </g>
+
+  <g fill="#2fbf9b">
+    <rect x="119" y="296" width="72" height="94" rx="4"/>
+    <rect x="272" y="248" width="72" height="142" rx="4"/>
+    <rect x="425" y="201" width="72" height="189" rx="4"/>
+    <rect x="578" y="130" width="72" height="260" rx="4"/>
+  </g>
+
+  <g font-size="13" font-weight="700" fill="#1f2d3d" text-anchor="middle">
+    <text x="155" y="288">8만</text>
+    <text x="308" y="240">12만</text>
+    <text x="461" y="193">16만</text>
+    <text x="614" y="122">20만~</text>
+  </g>
+
+  <g font-size="13" fill="#1f2d3d" text-anchor="middle">
+    <text x="155" y="411">슬림형</text>
+    <text x="308" y="411">T형·박스형</text>
+    <text x="461" y="411">빌트인</text>
+    <text x="614" y="411">업소용</text>
+  </g>
+
+  <text x="40" y="438" font-size="11" fill="#9a9488">※ 오염도·덕트 상태·지역에 따라 실제 비용은 달라집니다.</text>
+</svg>
