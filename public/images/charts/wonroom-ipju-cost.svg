@@ -1,0 +1,53 @@
+<svg viewBox="0 0 720 460" xmlns="http://www.w3.org/2000/svg" role="img" font-family="'Malgun Gothic','Apple SD Gothic Neo','Noto Sans KR',sans-serif">
+  <title>원룸·오피스텔 유형별 입주청소 비용 그래프</title>
+  <desc>수도권 일반 오염도 기준 유형별 입주청소 기본 비용 중간값. 원룸 7평 이하 약 10만원, 원룸 10평 약 15만원, 오피스텔 15평 약 22만원, 오피스텔 20평 약 27만원, 투룸 20평 약 32만원.</desc>
+  <rect x="0.5" y="0.5" width="719" height="459" rx="14" fill="#ffffff" stroke="#ece7dc"/>
+  <text x="40" y="46" font-size="20" font-weight="700" fill="#1f2d3d">원룸·오피스텔 유형별 입주청소 비용</text>
+  <text x="40" y="70" font-size="13" fill="#666f7a">수도권 일반 오염도 기준 (2026년)</text>
+
+  <g stroke="#eee8db" stroke-width="1">
+    <line x1="78" y1="390" x2="690" y2="390"/>
+    <line x1="78" y1="316" x2="690" y2="316"/>
+    <line x1="78" y1="243" x2="690" y2="243"/>
+    <line x1="78" y1="169" x2="690" y2="169"/>
+    <line x1="78" y1="95" x2="690" y2="95"/>
+  </g>
+  <g font-size="12" fill="#9a9488" text-anchor="end">
+    <text x="68" y="394">0</text>
+    <text x="68" y="320">10만</text>
+    <text x="68" y="247">20만</text>
+    <text x="68" y="173">30만</text>
+    <text x="68" y="99">40만</text>
+  </g>
+
+  <g fill="#2fbf9b">
+    <rect x="109" y="316" width="60" height="74" rx="4"/>
+    <rect x="232" y="279" width="60" height="111" rx="4"/>
+    <rect x="354" y="228" width="60" height="162" rx="4"/>
+    <rect x="476" y="191" width="60" height="199" rx="4"/>
+    <rect x="599" y="154" width="60" height="236" rx="4"/>
+  </g>
+
+  <g font-size="13" font-weight="700" fill="#1f2d3d" text-anchor="middle">
+    <text x="139" y="308">10만</text>
+    <text x="262" y="271">15만</text>
+    <text x="384" y="220">22만</text>
+    <text x="506" y="183">27만</text>
+    <text x="629" y="146">32만</text>
+  </g>
+
+  <g text-anchor="middle">
+    <text x="139" y="411" font-size="13" fill="#1f2d3d">원룸</text>
+    <text x="262" y="411" font-size="13" fill="#1f2d3d">원룸</text>
+    <text x="384" y="411" font-size="13" fill="#1f2d3d">오피스텔</text>
+    <text x="506" y="411" font-size="13" fill="#1f2d3d">오피스텔</text>
+    <text x="629" y="411" font-size="13" fill="#1f2d3d">투룸</text>
+    <text x="139" y="429" font-size="11" fill="#9a9488">7평 이하</text>
+    <text x="262" y="429" font-size="11" fill="#9a9488">10평</text>
+    <text x="384" y="429" font-size="11" fill="#9a9488">15평</text>
+    <text x="506" y="429" font-size="11" fill="#9a9488">20평</text>
+    <text x="629" y="429" font-size="11" fill="#9a9488">20평</text>
+  </g>
+
+  <text x="40" y="452" font-size="11" fill="#9a9488">※ 곰팡이 심할 시 상향. 에어컨·분진 제거는 추가 비용.</text>
+</svg>

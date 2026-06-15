@@ -1,0 +1,48 @@
+<svg viewBox="0 0 720 450" xmlns="http://www.w3.org/2000/svg" role="img" font-family="'Malgun Gothic','Apple SD Gothic Neo','Noto Sans KR',sans-serif">
+  <title>소파 종류별 전문 청소 비용 그래프</title>
+  <desc>스팀·진드기·얼룩 제거 기준 소파 종류별 비용 중간값. 1인용 약 4만원, 2인용 약 6만원, 3인용 약 10만원, L자형 약 16만원, 가죽 소파 약 15만원.</desc>
+  <rect x="0.5" y="0.5" width="719" height="449" rx="14" fill="#ffffff" stroke="#ece7dc"/>
+  <text x="40" y="46" font-size="21" font-weight="700" fill="#1f2d3d">소파 종류별 전문 청소 비용</text>
+  <text x="40" y="70" font-size="13" fill="#666f7a">스팀·진드기·얼룩 제거 기준</text>
+
+  <g stroke="#eee8db" stroke-width="1">
+    <line x1="78" y1="390" x2="690" y2="390"/>
+    <line x1="78" y1="316" x2="690" y2="316"/>
+    <line x1="78" y1="243" x2="690" y2="243"/>
+    <line x1="78" y1="169" x2="690" y2="169"/>
+    <line x1="78" y1="95" x2="690" y2="95"/>
+  </g>
+  <g font-size="12" fill="#9a9488" text-anchor="end">
+    <text x="68" y="394">0</text>
+    <text x="68" y="320">5만</text>
+    <text x="68" y="247">10만</text>
+    <text x="68" y="173">15만</text>
+    <text x="68" y="99">20만</text>
+  </g>
+
+  <g fill="#2fbf9b">
+    <rect x="109" y="331" width="60" height="59" rx="4"/>
+    <rect x="232" y="301" width="60" height="89" rx="4"/>
+    <rect x="354" y="242" width="60" height="148" rx="4"/>
+    <rect x="476" y="154" width="60" height="236" rx="4"/>
+    <rect x="599" y="169" width="60" height="221" rx="4"/>
+  </g>
+
+  <g font-size="13" font-weight="700" fill="#1f2d3d" text-anchor="middle">
+    <text x="139" y="323">4만</text>
+    <text x="262" y="293">6만</text>
+    <text x="384" y="234">10만</text>
+    <text x="506" y="146">16만</text>
+    <text x="629" y="161">15만</text>
+  </g>
+
+  <g font-size="13" fill="#1f2d3d" text-anchor="middle">
+    <text x="139" y="411">1인용</text>
+    <text x="262" y="411">2인용</text>
+    <text x="384" y="411">3인용</text>
+    <text x="506" y="411">L자형</text>
+    <text x="629" y="411">가죽</text>
+  </g>
+
+  <text x="40" y="438" font-size="11" fill="#9a9488">※ 얼룩 집중 제거 시 1~3만원 추가. 소파 상태·지역에 따라 변동.</text>
+</svg>
