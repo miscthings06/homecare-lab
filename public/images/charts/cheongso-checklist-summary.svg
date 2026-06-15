@@ -1,0 +1,32 @@
+<svg viewBox="0 0 720 400" xmlns="http://www.w3.org/2000/svg" role="img" font-family="'Malgun Gothic','Apple SD Gothic Neo','Noto Sans KR',sans-serif">
+  <title>청소 종류별 견적 전 핵심 확인사항 인포그래픽</title>
+  <desc>청소 종류별 견적 전 준비할 핵심 정보. 입주·이사청소는 평수·방 수·베란다·창틀·오염 사진, 에어컨 청소는 종류·대수·분해 포함 여부, 세탁기 청소는 종류·증상·모델명, 욕실 곰팡이는 범위 사진·줄눈/코킹 교체 여부.</desc>
+  <rect x="0.5" y="0.5" width="719" height="399" rx="14" fill="#ffffff" stroke="#ece7dc"/>
+  <text x="40" y="46" font-size="21" font-weight="700" fill="#1f2d3d">청소 종류별 견적 전 핵심 확인사항</text>
+  <text x="40" y="70" font-size="13" fill="#666f7a">종류에 맞는 정보를 준비하면 견적이 정확해집니다</text>
+
+  <g>
+    <rect x="40" y="92" width="640" height="72" rx="10" fill="#eef6f3"/>
+    <rect x="40" y="92" width="5" height="72" fill="#2fbf9b"/>
+    <text x="66" y="135" font-size="16" font-weight="700" fill="#1f2d3d">입주·이사청소</text>
+    <text x="240" y="135" font-size="13" fill="#4a5568">평수·방 수·베란다·창틀·오염 상태 사진</text>
+  </g>
+  <g>
+    <rect x="40" y="172" width="640" height="72" rx="10" fill="#eef6f3"/>
+    <rect x="40" y="172" width="5" height="72" fill="#2fbf9b"/>
+    <text x="66" y="215" font-size="16" font-weight="700" fill="#1f2d3d">에어컨 청소</text>
+    <text x="240" y="215" font-size="13" fill="#4a5568">종류(벽걸이·스탠드·시스템)·대수·분해 포함</text>
+  </g>
+  <g>
+    <rect x="40" y="252" width="640" height="72" rx="10" fill="#eef6f3"/>
+    <rect x="40" y="252" width="5" height="72" fill="#2fbf9b"/>
+    <text x="66" y="295" font-size="16" font-weight="700" fill="#1f2d3d">세탁기 청소</text>
+    <text x="240" y="295" font-size="13" fill="#4a5568">종류(드럼·통돌이)·냄새 증상·모델명</text>
+  </g>
+  <g>
+    <rect x="40" y="332" width="640" height="56" rx="10" fill="#eef6f3"/>
+    <rect x="40" y="332" width="5" height="56" fill="#2fbf9b"/>
+    <text x="66" y="367" font-size="16" font-weight="700" fill="#1f2d3d">욕실 곰팡이</text>
+    <text x="240" y="367" font-size="13" fill="#4a5568">곰팡이 범위 사진·줄눈/코킹 교체 여부</text>
+  </g>
+</svg>

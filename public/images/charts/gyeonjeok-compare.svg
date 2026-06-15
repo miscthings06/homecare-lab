@@ -1,0 +1,49 @@
+<svg viewBox="0 0 720 450" xmlns="http://www.w3.org/2000/svg" role="img" font-family="'Malgun Gothic','Apple SD Gothic Neo','Noto Sans KR',sans-serif">
+  <title>기본 견적 vs 실제 총비용 비교 그래프</title>
+  <desc>같은 조건에서 업체 A는 기본 견적 28만원이지만 창틀·베란다 별도로 실제 총비용 41만원, 업체 B는 기본 견적 35만원에 포함되어 실제 총비용도 35만원. 최저가 업체가 실제로 더 비쌀 수 있음.</desc>
+  <rect x="0.5" y="0.5" width="719" height="449" rx="14" fill="#ffffff" stroke="#ece7dc"/>
+  <text x="40" y="46" font-size="21" font-weight="700" fill="#1f2d3d">기본 견적 vs 실제 총비용</text>
+  <g font-size="12" fill="#666f7a">
+    <rect x="420" y="36" width="12" height="12" rx="2" fill="#9fe1cb"/>
+    <text x="437" y="46">기본 견적</text>
+    <rect x="540" y="36" width="12" height="12" rx="2" fill="#2fbf9b"/>
+    <text x="557" y="46">실제 총비용</text>
+  </g>
+  <text x="40" y="70" font-size="13" fill="#666f7a">최저가 업체가 실제로는 더 비쌀 수 있습니다</text>
+
+  <g stroke="#eee8db" stroke-width="1">
+    <line x1="78" y1="390" x2="690" y2="390"/>
+    <line x1="78" y1="331" x2="690" y2="331"/>
+    <line x1="78" y1="272" x2="690" y2="272"/>
+    <line x1="78" y1="213" x2="690" y2="213"/>
+    <line x1="78" y1="154" x2="690" y2="154"/>
+    <line x1="78" y1="95" x2="690" y2="95"/>
+  </g>
+  <g font-size="12" fill="#9a9488" text-anchor="end">
+    <text x="68" y="394">0</text>
+    <text x="68" y="335">10만</text>
+    <text x="68" y="276">20만</text>
+    <text x="68" y="217">30만</text>
+    <text x="68" y="158">40만</text>
+    <text x="68" y="99">50만</text>
+  </g>
+
+  <rect x="157" y="225" width="70" height="165" rx="4" fill="#9fe1cb"/>
+  <rect x="235" y="148" width="70" height="242" rx="4" fill="#2fbf9b"/>
+  <rect x="463" y="183" width="70" height="207" rx="4" fill="#9fe1cb"/>
+  <rect x="541" y="183" width="70" height="207" rx="4" fill="#2fbf9b"/>
+
+  <g font-size="12" font-weight="700" fill="#1f2d3d" text-anchor="middle">
+    <text x="192" y="217">28만</text>
+    <text x="270" y="140">41만</text>
+    <text x="498" y="175">35만</text>
+    <text x="576" y="175">35만</text>
+  </g>
+
+  <g font-size="14" fill="#1f2d3d" text-anchor="middle">
+    <text x="231" y="412">업체 A</text>
+    <text x="537" y="412">업체 B</text>
+  </g>
+
+  <text x="40" y="438" font-size="11" fill="#9a9488">※ 창틀·베란다 등 포함 범위에 따라 실제 총비용이 달라집니다.</text>
+</svg>

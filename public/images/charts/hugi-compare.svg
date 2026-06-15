@@ -1,0 +1,26 @@
+<svg viewBox="0 0 720 300" xmlns="http://www.w3.org/2000/svg" role="img" font-family="'Malgun Gothic','Apple SD Gothic Neo','Noto Sans KR',sans-serif">
+  <title>참고할 후기 vs 걸러야 할 후기 비교 인포그래픽</title>
+  <desc>참고할 후기는 구체적 상황(평수·날짜·범위), 좋은 점과 아쉬운 점 함께 언급, 재청소·추가비용 실제 경험이 담긴 후기. 걸러야 할 후기는 한 줄 칭찬, 한날에 몰린 후기, 비슷한 문체 다수, 부정 후기가 하나도 없는 경우.</desc>
+  <rect x="0.5" y="0.5" width="719" height="299" rx="14" fill="#ffffff" stroke="#ece7dc"/>
+  <text x="40" y="42" font-size="21" font-weight="700" fill="#1f2d3d">좋은 후기 vs 걸러야 할 후기</text>
+  <text x="40" y="66" font-size="13" fill="#666f7a">별점 숫자보다 후기 내용으로 판단하세요</text>
+
+  <rect x="40" y="84" width="310" height="40" rx="8" fill="#e1f5ee"/>
+  <text x="58" y="110" font-size="15" font-weight="700" fill="#0f6e56">참고할 후기</text>
+  <g font-size="13" fill="#4a5568">
+    <circle cx="62" cy="153" r="3.5" fill="#2fbf9b"/><text x="74" y="158">구체적 상황 (평수·날짜·범위)</text>
+    <circle cx="62" cy="187" r="3.5" fill="#2fbf9b"/><text x="74" y="192">좋은 점과 아쉬운 점 함께 언급</text>
+    <circle cx="62" cy="221" r="3.5" fill="#2fbf9b"/><text x="74" y="226">재청소·추가비용 실제 경험</text>
+  </g>
+
+  <rect x="370" y="84" width="310" height="40" rx="8" fill="#f1efe8"/>
+  <text x="388" y="110" font-size="15" font-weight="700" fill="#5f5e5a">걸러야 할 후기</text>
+  <g font-size="13" fill="#4a5568">
+    <circle cx="392" cy="153" r="3.5" fill="#b4b2a9"/><text x="404" y="158">“좋아요” 한 줄짜리 후기</text>
+    <circle cx="392" cy="187" r="3.5" fill="#b4b2a9"/><text x="404" y="192">하루에 몰려 올라온 후기</text>
+    <circle cx="392" cy="221" r="3.5" fill="#b4b2a9"/><text x="404" y="226">문체가 비슷한 후기 다수</text>
+    <circle cx="392" cy="255" r="3.5" fill="#b4b2a9"/><text x="404" y="260">부정 후기가 하나도 없음</text>
+  </g>
+
+  <text x="40" y="288" font-size="11" fill="#9a9488">※ 최근 3~6개월 이내 후기를 중심으로 확인하세요.</text>
+</svg>

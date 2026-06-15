@@ -1,0 +1,51 @@
+<svg viewBox="0 0 720 450" xmlns="http://www.w3.org/2000/svg" role="img" font-family="'Malgun Gothic','Apple SD Gothic Neo','Noto Sans KR',sans-serif">
+  <title>입주청소 항목별 평균 추가요금 그래프</title>
+  <desc>기본 견적 외 자주 붙는 추가 항목별 평균 금액. 흡연 탈취 약 10만원, 욕실 곰팡이 약 7만원, 에어컨 대당 약 6만원, 후드 분해 약 5만원, 베란다 개당 약 4만원, 창틀 약 2만원.</desc>
+  <rect x="0.5" y="0.5" width="719" height="449" rx="14" fill="#ffffff" stroke="#ece7dc"/>
+  <text x="40" y="46" font-size="21" font-weight="700" fill="#1f2d3d">입주청소 항목별 추가요금 (평균)</text>
+  <text x="40" y="70" font-size="13" fill="#666f7a">기본 견적 외 자주 붙는 추가 항목</text>
+
+  <g stroke="#eee8db" stroke-width="1">
+    <line x1="78" y1="390" x2="690" y2="390"/>
+    <line x1="78" y1="316" x2="690" y2="316"/>
+    <line x1="78" y1="243" x2="690" y2="243"/>
+    <line x1="78" y1="169" x2="690" y2="169"/>
+    <line x1="78" y1="95" x2="690" y2="95"/>
+  </g>
+  <g font-size="12" fill="#9a9488" text-anchor="end">
+    <text x="68" y="394">0</text>
+    <text x="68" y="320">3만</text>
+    <text x="68" y="247">6만</text>
+    <text x="68" y="173">9만</text>
+    <text x="68" y="99">12만</text>
+  </g>
+
+  <g fill="#2fbf9b">
+    <rect x="101" y="144" width="56" height="246" rx="4"/>
+    <rect x="203" y="218" width="56" height="172" rx="4"/>
+    <rect x="305" y="242" width="56" height="148" rx="4"/>
+    <rect x="407" y="267" width="56" height="123" rx="4"/>
+    <rect x="509" y="292" width="56" height="98" rx="4"/>
+    <rect x="611" y="341" width="56" height="49" rx="4"/>
+  </g>
+
+  <g font-size="12" font-weight="700" fill="#1f2d3d" text-anchor="middle">
+    <text x="129" y="136">10만</text>
+    <text x="231" y="210">7만</text>
+    <text x="333" y="234">6만</text>
+    <text x="435" y="259">5만</text>
+    <text x="537" y="284">4만</text>
+    <text x="639" y="333">2만</text>
+  </g>
+
+  <g font-size="11" fill="#1f2d3d" text-anchor="middle">
+    <text x="129" y="411">흡연 탈취</text>
+    <text x="231" y="411">욕실 곰팡이</text>
+    <text x="333" y="411">에어컨</text>
+    <text x="435" y="411">후드 분해</text>
+    <text x="537" y="411">베란다</text>
+    <text x="639" y="411">창틀</text>
+  </g>
+
+  <text x="40" y="438" font-size="11" fill="#9a9488">※ 오염 범위·개수에 따라 달라지는 평균값. 흡연 탈취는 5~15만원.</text>
+</svg>

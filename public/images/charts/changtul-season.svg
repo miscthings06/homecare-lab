@@ -1,0 +1,35 @@
+<svg viewBox="0 0 720 420" xmlns="http://www.w3.org/2000/svg" role="img" font-family="'Malgun Gothic','Apple SD Gothic Neo','Noto Sans KR',sans-serif">
+  <title>창틀 계절별 관리 포인트 인포그래픽</title>
+  <desc>창틀을 계절에 맞춰 관리하는 방법. 봄 3~4월 미세먼지 시즌 전 레일 홈 청소, 여름 장마 실리콘·코너 곰팡이 점검, 가을 10~11월 창문 닫기 전 전체 청소, 겨울 결로 수분 즉시 제거.</desc>
+  <rect x="0.5" y="0.5" width="719" height="419" rx="14" fill="#ffffff" stroke="#ece7dc"/>
+  <text x="40" y="46" font-size="21" font-weight="700" fill="#1f2d3d">창틀 계절별 관리 포인트</text>
+  <text x="40" y="70" font-size="13" fill="#666f7a">계절에 맞춰 청소하면 오염 재발을 줄일 수 있습니다</text>
+
+  <g>
+    <rect x="40" y="92" width="640" height="72" rx="10" fill="#eef6f3"/>
+    <rect x="40" y="92" width="5" height="72" fill="#2fbf9b"/>
+    <text x="66" y="135" font-size="16" font-weight="700" fill="#1f2d3d">봄 · 3~4월</text>
+    <text x="240" y="135" font-size="13.5" fill="#4a5568">미세먼지 시즌 전 레일 홈 전체 청소</text>
+  </g>
+
+  <g>
+    <rect x="40" y="172" width="640" height="72" rx="10" fill="#eef6f3"/>
+    <rect x="40" y="172" width="5" height="72" fill="#2fbf9b"/>
+    <text x="66" y="215" font-size="16" font-weight="700" fill="#1f2d3d">여름 · 장마</text>
+    <text x="240" y="215" font-size="13.5" fill="#4a5568">실리콘·코너 곰팡이 점검 및 처리</text>
+  </g>
+
+  <g>
+    <rect x="40" y="252" width="640" height="72" rx="10" fill="#eef6f3"/>
+    <rect x="40" y="252" width="5" height="72" fill="#2fbf9b"/>
+    <text x="66" y="295" font-size="16" font-weight="700" fill="#1f2d3d">가을 · 10~11월</text>
+    <text x="240" y="295" font-size="13.5" fill="#4a5568">창문 닫기 전 전체 청소·결로 방지</text>
+  </g>
+
+  <g>
+    <rect x="40" y="332" width="640" height="72" rx="10" fill="#eef6f3"/>
+    <rect x="40" y="332" width="5" height="72" fill="#2fbf9b"/>
+    <text x="66" y="375" font-size="16" font-weight="700" fill="#1f2d3d">겨울</text>
+    <text x="240" y="375" font-size="13.5" fill="#4a5568">결로 발생 시 수분 즉시 제거 (방치 금지)</text>
+  </g>
+</svg>
