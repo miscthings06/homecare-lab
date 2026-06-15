@@ -1,0 +1,48 @@
+<svg viewBox="0 0 720 450" xmlns="http://www.w3.org/2000/svg" role="img" font-family="'Malgun Gothic','Apple SD Gothic Neo','Noto Sans KR',sans-serif">
+  <title>가정 내 생활용수 사용 비율 그래프</title>
+  <desc>용도별 가정 생활용수 사용 비중. 화장실 약 30%, 샤워 약 25%, 세탁 약 20%, 주방 약 15%, 기타 약 10%.</desc>
+  <rect x="0.5" y="0.5" width="719" height="449" rx="14" fill="#ffffff" stroke="#ece7dc"/>
+  <text x="40" y="46" font-size="21" font-weight="700" fill="#1f2d3d">가정 내 생활용수 사용 비율</text>
+  <text x="40" y="70" font-size="13" fill="#666f7a">용도별 사용 비중 · 한국수자원공사 통계 기반</text>
+
+  <g stroke="#eee8db" stroke-width="1">
+    <line x1="78" y1="390" x2="690" y2="390"/>
+    <line x1="78" y1="316" x2="690" y2="316"/>
+    <line x1="78" y1="243" x2="690" y2="243"/>
+    <line x1="78" y1="169" x2="690" y2="169"/>
+    <line x1="78" y1="95" x2="690" y2="95"/>
+  </g>
+  <g font-size="12" fill="#9a9488" text-anchor="end">
+    <text x="68" y="394">0%</text>
+    <text x="68" y="320">10%</text>
+    <text x="68" y="247">20%</text>
+    <text x="68" y="173">30%</text>
+    <text x="68" y="99">40%</text>
+  </g>
+
+  <g fill="#2fbf9b">
+    <rect x="109" y="169" width="60" height="221" rx="4"/>
+    <rect x="232" y="206" width="60" height="184" rx="4"/>
+    <rect x="354" y="242" width="60" height="148" rx="4"/>
+    <rect x="476" y="279" width="60" height="111" rx="4"/>
+    <rect x="599" y="316" width="60" height="74" rx="4"/>
+  </g>
+
+  <g font-size="13" font-weight="700" fill="#1f2d3d" text-anchor="middle">
+    <text x="139" y="161">30%</text>
+    <text x="262" y="198">25%</text>
+    <text x="384" y="234">20%</text>
+    <text x="506" y="271">15%</text>
+    <text x="629" y="308">10%</text>
+  </g>
+
+  <g font-size="13" fill="#1f2d3d" text-anchor="middle">
+    <text x="139" y="411">화장실</text>
+    <text x="262" y="411">샤워</text>
+    <text x="384" y="411">세탁</text>
+    <text x="506" y="411">주방</text>
+    <text x="629" y="411">기타</text>
+  </g>
+
+  <text x="40" y="438" font-size="11" fill="#9a9488">※ 화장실·샤워·세탁이 전체 사용량의 약 75%를 차지합니다.</text>
+</svg>

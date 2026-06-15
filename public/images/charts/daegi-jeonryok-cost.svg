@@ -1,0 +1,51 @@
+<svg viewBox="0 0 720 450" xmlns="http://www.w3.org/2000/svg" role="img" font-family="'Malgun Gothic','Apple SD Gothic Neo','Noto Sans KR',sans-serif">
+  <title>가전별 대기전력 월 전기요금 그래프</title>
+  <desc>kWh당 165원 기준 가전별 월 대기전력 요금 중간값. 셋톱박스 약 1,750원으로 가장 크고, 컴퓨터 약 495원, 전자레인지 약 415원, 공기청정기 약 222원, TV 약 160원, 충전기 약 40원.</desc>
+  <rect x="0.5" y="0.5" width="719" height="449" rx="14" fill="#ffffff" stroke="#ece7dc"/>
+  <text x="40" y="46" font-size="21" font-weight="700" fill="#1f2d3d">가전별 대기전력 월 전기요금</text>
+  <text x="40" y="70" font-size="13" fill="#666f7a">kWh당 165원 기준 · 셋톱박스 대기전력이 가장 큼</text>
+
+  <g stroke="#eee8db" stroke-width="1">
+    <line x1="78" y1="390" x2="690" y2="390"/>
+    <line x1="78" y1="316" x2="690" y2="316"/>
+    <line x1="78" y1="243" x2="690" y2="243"/>
+    <line x1="78" y1="169" x2="690" y2="169"/>
+    <line x1="78" y1="95" x2="690" y2="95"/>
+  </g>
+  <g font-size="12" fill="#9a9488" text-anchor="end">
+    <text x="68" y="394">0</text>
+    <text x="68" y="320">500</text>
+    <text x="68" y="247">1,000</text>
+    <text x="68" y="173">1,500</text>
+    <text x="68" y="99">2,000</text>
+  </g>
+
+  <g fill="#2fbf9b">
+    <rect x="101" y="132" width="56" height="258" rx="4"/>
+    <rect x="203" y="366" width="56" height="24" rx="4"/>
+    <rect x="305" y="329" width="56" height="61" rx="4"/>
+    <rect x="407" y="317" width="56" height="73" rx="4"/>
+    <rect x="509" y="357" width="56" height="33" rx="4"/>
+    <rect x="611" y="384" width="56" height="6" rx="3"/>
+  </g>
+
+  <g font-size="12" font-weight="700" fill="#1f2d3d" text-anchor="middle">
+    <text x="129" y="124">1,750원</text>
+    <text x="231" y="358">160원</text>
+    <text x="333" y="321">415원</text>
+    <text x="435" y="309">495원</text>
+    <text x="537" y="349">222원</text>
+    <text x="639" y="376">40원</text>
+  </g>
+
+  <g font-size="12" fill="#1f2d3d" text-anchor="middle">
+    <text x="129" y="411">셋톱박스</text>
+    <text x="231" y="411">TV</text>
+    <text x="333" y="411">전자레인지</text>
+    <text x="435" y="411">컴퓨터</text>
+    <text x="537" y="411">공기청정기</text>
+    <text x="639" y="411">충전기</text>
+  </g>
+
+  <text x="40" y="438" font-size="11" fill="#9a9488">※ 제품마다 다름. 셋톱박스는 24시간 전원 연결 상태 기준.</text>
+</svg>

@@ -1,0 +1,42 @@
+<svg viewBox="0 0 720 450" xmlns="http://www.w3.org/2000/svg" role="img" font-family="'Malgun Gothic','Apple SD Gothic Neo','Noto Sans KR',sans-serif">
+  <title>보일러 설정 온도 하향에 따른 난방비 절감률 그래프</title>
+  <desc>실내 온도 1도 하향 시 약 7% 절감 기준. 1도 낮추면 약 7%, 2도 낮추면 약 14%, 3도 낮추면 약 21% 난방비 절감.</desc>
+  <rect x="0.5" y="0.5" width="719" height="449" rx="14" fill="#ffffff" stroke="#ece7dc"/>
+  <text x="40" y="46" font-size="21" font-weight="700" fill="#1f2d3d">설정 온도를 낮출 때 난방비 절감률</text>
+  <text x="40" y="70" font-size="13" fill="#666f7a">실내 온도 1도 하향 시 약 7% 절감 기준</text>
+
+  <g stroke="#eee8db" stroke-width="1">
+    <line x1="78" y1="390" x2="690" y2="390"/>
+    <line x1="78" y1="316" x2="690" y2="316"/>
+    <line x1="78" y1="243" x2="690" y2="243"/>
+    <line x1="78" y1="169" x2="690" y2="169"/>
+    <line x1="78" y1="95" x2="690" y2="95"/>
+  </g>
+  <g font-size="12" fill="#9a9488" text-anchor="end">
+    <text x="68" y="394">0%</text>
+    <text x="68" y="320">7%</text>
+    <text x="68" y="247">14%</text>
+    <text x="68" y="173">21%</text>
+    <text x="68" y="99">28%</text>
+  </g>
+
+  <g fill="#2fbf9b">
+    <rect x="140" y="316" width="80" height="74" rx="4"/>
+    <rect x="344" y="242" width="80" height="148" rx="4"/>
+    <rect x="548" y="169" width="80" height="221" rx="4"/>
+  </g>
+
+  <g font-size="14" font-weight="700" fill="#1f2d3d" text-anchor="middle">
+    <text x="180" y="308">7%</text>
+    <text x="384" y="234">14%</text>
+    <text x="588" y="161">21%</text>
+  </g>
+
+  <g font-size="13" fill="#1f2d3d" text-anchor="middle">
+    <text x="180" y="411">1도 낮춤</text>
+    <text x="384" y="411">2도 낮춤</text>
+    <text x="588" y="411">3도 낮춤</text>
+  </g>
+
+  <text x="40" y="438" font-size="11" fill="#9a9488">※ 한국에너지공단 공표 기준. 단열 상태에 따라 달라집니다.</text>
+</svg>

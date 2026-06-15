@@ -1,0 +1,45 @@
+<svg viewBox="0 0 720 460" xmlns="http://www.w3.org/2000/svg" role="img" font-family="'Malgun Gothic','Apple SD Gothic Neo','Noto Sans KR',sans-serif">
+  <title>에어컨 설정 온도별 월 전기요금 그래프</title>
+  <desc>하루 8시간 가동 기준 설정 온도별 월 전기요금 중간값. 24도 약 35,000원, 26도 약 29,500원(10~15% 절감), 28도 약 25,000원(20~30% 절감).</desc>
+  <rect x="0.5" y="0.5" width="719" height="459" rx="14" fill="#ffffff" stroke="#ece7dc"/>
+  <text x="40" y="46" font-size="21" font-weight="700" fill="#1f2d3d">에어컨 설정 온도별 월 전기요금</text>
+  <text x="40" y="70" font-size="13" fill="#666f7a">하루 8시간 가동 기준 · 한국에너지공단 권장 26°C</text>
+
+  <g stroke="#eee8db" stroke-width="1">
+    <line x1="78" y1="390" x2="690" y2="390"/>
+    <line x1="78" y1="316" x2="690" y2="316"/>
+    <line x1="78" y1="243" x2="690" y2="243"/>
+    <line x1="78" y1="169" x2="690" y2="169"/>
+    <line x1="78" y1="95" x2="690" y2="95"/>
+  </g>
+  <g font-size="12" fill="#9a9488" text-anchor="end">
+    <text x="68" y="394">0</text>
+    <text x="68" y="320">1만</text>
+    <text x="68" y="247">2만</text>
+    <text x="68" y="173">3만</text>
+    <text x="68" y="99">4만</text>
+  </g>
+
+  <g fill="#2fbf9b">
+    <rect x="140" y="132" width="80" height="258" rx="4"/>
+    <rect x="344" y="172" width="80" height="218" rx="4"/>
+    <rect x="548" y="206" width="80" height="184" rx="4"/>
+  </g>
+
+  <g font-size="13" font-weight="700" fill="#1f2d3d" text-anchor="middle">
+    <text x="180" y="124">35,000원</text>
+    <text x="384" y="164">29,500원</text>
+    <text x="588" y="198">25,000원</text>
+  </g>
+
+  <g text-anchor="middle">
+    <text x="180" y="412" font-size="14" fill="#1f2d3d">24°C</text>
+    <text x="384" y="412" font-size="14" fill="#1f2d3d">26°C</text>
+    <text x="588" y="412" font-size="14" fill="#1f2d3d">28°C</text>
+    <text x="180" y="430" font-size="11" fill="#9a9488">기준</text>
+    <text x="384" y="430" font-size="11" fill="#189a7b">10~15% 절감</text>
+    <text x="588" y="430" font-size="11" fill="#189a7b">20~30% 절감</text>
+  </g>
+
+  <text x="40" y="452" font-size="11" fill="#9a9488">※ 기기 성능·공간 크기·외부 기온에 따라 달라집니다.</text>
+</svg>

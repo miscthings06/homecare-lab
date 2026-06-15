@@ -1,0 +1,31 @@
+<svg viewBox="0 0 720 400" xmlns="http://www.w3.org/2000/svg" role="img" font-family="'Malgun Gothic','Apple SD Gothic Neo','Noto Sans KR',sans-serif">
+  <title>겨울 난방비를 결정하는 3대 요인 인포그래픽</title>
+  <desc>겨울 난방비에 영향을 주는 요인. 창문·문 단열 상태는 열 손실 최대 40%, 보일러 노후화는 연료 소비 20~30% 증가, 실내 설정 온도는 1도당 약 5% 차이.</desc>
+  <rect x="0.5" y="0.5" width="719" height="399" rx="14" fill="#ffffff" stroke="#ece7dc"/>
+  <text x="40" y="46" font-size="21" font-weight="700" fill="#1f2d3d">겨울 난방비를 결정하는 3대 요인</text>
+  <text x="40" y="70" font-size="13" fill="#666f7a">보일러 설정과 함께 관리해야 절약 효과가 큽니다</text>
+
+  <g>
+    <rect x="40" y="92" width="640" height="90" rx="10" fill="#eef6f3"/>
+    <rect x="40" y="92" width="5" height="90" fill="#2fbf9b"/>
+    <text x="66" y="132" font-size="17" font-weight="700" fill="#1f2d3d">창문·문 단열 상태</text>
+    <text x="66" y="160" font-size="12.5" fill="#666f7a">열 손실 비중 · 단열필름·문풍지·방한 커튼으로 개선</text>
+    <text x="654" y="148" font-size="27" font-weight="700" fill="#189a7b" text-anchor="end">최대 40%</text>
+  </g>
+
+  <g>
+    <rect x="40" y="192" width="640" height="90" rx="10" fill="#eef6f3"/>
+    <rect x="40" y="192" width="5" height="90" fill="#2fbf9b"/>
+    <text x="66" y="232" font-size="17" font-weight="700" fill="#1f2d3d">보일러 노후화</text>
+    <text x="66" y="260" font-size="12.5" fill="#666f7a">연료 소비 증가 · 10년 이상 경과 시 교체 검토</text>
+    <text x="654" y="248" font-size="27" font-weight="700" fill="#189a7b" text-anchor="end">20~30%↑</text>
+  </g>
+
+  <g>
+    <rect x="40" y="292" width="640" height="90" rx="10" fill="#eef6f3"/>
+    <rect x="40" y="292" width="5" height="90" fill="#2fbf9b"/>
+    <text x="66" y="332" font-size="17" font-weight="700" fill="#1f2d3d">실내 설정 온도</text>
+    <text x="66" y="360" font-size="12.5" fill="#666f7a">난방비 차이 · 20~22°C 유지, 취침 시 18°C 권장</text>
+    <text x="654" y="348" font-size="27" font-weight="700" fill="#189a7b" text-anchor="end">1°C당 5%</text>
+  </g>
+</svg>
