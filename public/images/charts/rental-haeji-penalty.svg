@@ -1,0 +1,49 @@
+<svg viewBox="0 0 720 450" xmlns="http://www.w3.org/2000/svg" role="img" font-family="'Malgun Gothic','Apple SD Gothic Neo','Noto Sans KR',sans-serif">
+  <title>정수기 렌탈 해지 시점별 위약금 그래프</title>
+  <desc>월 3만원 5년 약정 정수기를 잔여 요금의 60% 기준으로 해지할 때 위약금. 1년차 약 86만원, 2년차 약 65만원, 3년차 약 43만원, 4년차 약 22만원, 5년 만료 시 0원으로 오래 쓸수록 위약금이 줄어듦.</desc>
+  <rect x="0.5" y="0.5" width="719" height="449" rx="14" fill="#ffffff" stroke="#ece7dc"/>
+  <text x="40" y="46" font-size="21" font-weight="700" fill="#1f2d3d">정수기 렌탈 해지 시점별 위약금</text>
+  <text x="40" y="70" font-size="13" fill="#666f7a">월 3만원·5년 약정 · 잔여 요금의 60% 기준</text>
+
+  <g stroke="#eee8db" stroke-width="1">
+    <line x1="78" y1="390" x2="690" y2="390"/>
+    <line x1="78" y1="331" x2="690" y2="331"/>
+    <line x1="78" y1="272" x2="690" y2="272"/>
+    <line x1="78" y1="213" x2="690" y2="213"/>
+    <line x1="78" y1="154" x2="690" y2="154"/>
+    <line x1="78" y1="95" x2="690" y2="95"/>
+  </g>
+  <g font-size="12" fill="#9a9488" text-anchor="end">
+    <text x="68" y="394">0</text>
+    <text x="68" y="335">20만</text>
+    <text x="68" y="276">40만</text>
+    <text x="68" y="217">60만</text>
+    <text x="68" y="158">80만</text>
+    <text x="68" y="99">100만</text>
+  </g>
+
+  <g fill="#2fbf9b">
+    <rect x="109" y="135" width="60" height="255" rx="4"/>
+    <rect x="232" y="199" width="60" height="191" rx="4"/>
+    <rect x="354" y="263" width="60" height="127" rx="4"/>
+    <rect x="476" y="326" width="60" height="64" rx="4"/>
+  </g>
+
+  <g font-size="13" font-weight="700" fill="#1f2d3d" text-anchor="middle">
+    <text x="139" y="127">86만</text>
+    <text x="262" y="191">65만</text>
+    <text x="384" y="255">43만</text>
+    <text x="506" y="318">22만</text>
+    <text x="629" y="382">0원</text>
+  </g>
+
+  <g font-size="12" fill="#1f2d3d" text-anchor="middle">
+    <text x="139" y="411">1년차</text>
+    <text x="262" y="411">2년차</text>
+    <text x="384" y="411">3년차</text>
+    <text x="506" y="411">4년차</text>
+    <text x="629" y="411">5년(만료)</text>
+  </g>
+
+  <text x="40" y="438" font-size="11" fill="#9a9488">※ 예시 계산. 업체·위약금률(잔여의 50~80%)에 따라 달라집니다.</text>
+</svg>

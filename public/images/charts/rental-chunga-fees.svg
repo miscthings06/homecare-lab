@@ -1,0 +1,38 @@
+<svg viewBox="0 0 720 430" xmlns="http://www.w3.org/2000/svg" role="img" font-family="'Malgun Gothic','Apple SD Gothic Neo','Noto Sans KR',sans-serif">
+  <title>렌탈 월 요금 외 추가 비용 항목 인포그래픽</title>
+  <desc>렌탈에서 월 요금 외에 발생할 수 있는 추가 비용. 설치비 0~5만원, 이전 설치비 2~10만원, 수리비(과실 파손) 10~50만원, 위약금은 잔여 약정 기준, 반납 처리비 0~3만원.</desc>
+  <rect x="0.5" y="0.5" width="719" height="429" rx="14" fill="#ffffff" stroke="#ece7dc"/>
+  <text x="40" y="46" font-size="21" font-weight="700" fill="#1f2d3d">월 요금 외 발생할 수 있는 추가 비용</text>
+  <text x="40" y="70" font-size="13" fill="#666f7a">광고 속 월 요금에는 포함되지 않을 수 있습니다</text>
+
+  <g>
+    <rect x="40" y="90" width="640" height="60" rx="8" fill="#f6f4ee"/>
+    <text x="62" y="126" font-size="15" font-weight="700" fill="#1f2d3d">설치비</text>
+    <text x="300" y="126" font-size="12.5" fill="#666f7a">최초 설치 시</text>
+    <text x="658" y="126" font-size="15" font-weight="700" fill="#189a7b" text-anchor="end">0~5만원</text>
+  </g>
+  <g>
+    <rect x="40" y="156" width="640" height="60" rx="8" fill="#f6f4ee"/>
+    <text x="62" y="192" font-size="15" font-weight="700" fill="#1f2d3d">이전 설치비</text>
+    <text x="300" y="192" font-size="12.5" fill="#666f7a">이사 시</text>
+    <text x="658" y="192" font-size="15" font-weight="700" fill="#189a7b" text-anchor="end">2~10만원</text>
+  </g>
+  <g>
+    <rect x="40" y="222" width="640" height="60" rx="8" fill="#f6f4ee"/>
+    <text x="62" y="258" font-size="15" font-weight="700" fill="#1f2d3d">수리비</text>
+    <text x="300" y="258" font-size="12.5" fill="#666f7a">과실 파손 시</text>
+    <text x="658" y="258" font-size="15" font-weight="700" fill="#189a7b" text-anchor="end">10~50만원+</text>
+  </g>
+  <g>
+    <rect x="40" y="288" width="640" height="60" rx="8" fill="#f6f4ee"/>
+    <text x="62" y="324" font-size="15" font-weight="700" fill="#1f2d3d">위약금</text>
+    <text x="300" y="324" font-size="12.5" fill="#666f7a">중도 해지 시</text>
+    <text x="658" y="324" font-size="15" font-weight="700" fill="#189a7b" text-anchor="end">잔여 약정 기준</text>
+  </g>
+  <g>
+    <rect x="40" y="354" width="640" height="60" rx="8" fill="#f6f4ee"/>
+    <text x="62" y="390" font-size="15" font-weight="700" fill="#1f2d3d">반납 처리비</text>
+    <text x="300" y="390" font-size="12.5" fill="#666f7a">약정 만료 반납 시</text>
+    <text x="658" y="390" font-size="15" font-weight="700" fill="#189a7b" text-anchor="end">0~3만원</text>
+  </g>
+</svg>

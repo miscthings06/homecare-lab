@@ -1,0 +1,45 @@
+<svg viewBox="0 0 720 450" xmlns="http://www.w3.org/2000/svg" role="img" font-family="'Malgun Gothic','Apple SD Gothic Neo','Noto Sans KR',sans-serif">
+  <title>렌탈 약정 해지 시점별 위약금 그래프</title>
+  <desc>5년 약정 월 3만원 정수기를 잔여 요금의 50% 기준으로 중도 해지할 때 위약금 중간값. 1년 경과 약 60만원, 2년 경과 약 45만원, 3년 경과 약 23만원, 4년 경과 약 10만원으로 오래 쓸수록 줄어듦.</desc>
+  <rect x="0.5" y="0.5" width="719" height="449" rx="14" fill="#ffffff" stroke="#ece7dc"/>
+  <text x="40" y="46" font-size="21" font-weight="700" fill="#1f2d3d">렌탈 약정 해지 시점별 위약금</text>
+  <text x="40" y="70" font-size="13" fill="#666f7a">5년 약정·월 3만원·잔여 요금 50% 기준</text>
+
+  <g stroke="#eee8db" stroke-width="1">
+    <line x1="78" y1="390" x2="690" y2="390"/>
+    <line x1="78" y1="316" x2="690" y2="316"/>
+    <line x1="78" y1="243" x2="690" y2="243"/>
+    <line x1="78" y1="169" x2="690" y2="169"/>
+    <line x1="78" y1="95" x2="690" y2="95"/>
+  </g>
+  <g font-size="12" fill="#9a9488" text-anchor="end">
+    <text x="68" y="394">0</text>
+    <text x="68" y="320">20만</text>
+    <text x="68" y="247">40만</text>
+    <text x="68" y="173">60만</text>
+    <text x="68" y="99">80만</text>
+  </g>
+
+  <g fill="#2fbf9b">
+    <rect x="119" y="169" width="72" height="221" rx="4"/>
+    <rect x="272" y="224" width="72" height="166" rx="4"/>
+    <rect x="425" y="305" width="72" height="85" rx="4"/>
+    <rect x="578" y="353" width="72" height="37" rx="4"/>
+  </g>
+
+  <g font-size="13" font-weight="700" fill="#1f2d3d" text-anchor="middle">
+    <text x="155" y="161">60만</text>
+    <text x="308" y="216">45만</text>
+    <text x="461" y="297">23만</text>
+    <text x="614" y="345">10만</text>
+  </g>
+
+  <g font-size="12" fill="#1f2d3d" text-anchor="middle">
+    <text x="155" y="411">1년 경과</text>
+    <text x="308" y="411">2년 경과</text>
+    <text x="461" y="411">3년 경과</text>
+    <text x="614" y="411">4년 경과</text>
+  </g>
+
+  <text x="40" y="438" font-size="11" fill="#9a9488">※ 예시 계산. 업체·위약금 계산 방식에 따라 달라집니다.</text>
+</svg>
