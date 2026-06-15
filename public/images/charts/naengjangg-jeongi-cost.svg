@@ -1,0 +1,45 @@
+<svg viewBox="0 0 720 450" xmlns="http://www.w3.org/2000/svg" role="img" font-family="'Malgun Gothic','Apple SD Gothic Neo','Noto Sans KR',sans-serif">
+  <title>냉장고 용량별 월 전기요금 그래프</title>
+  <desc>kWh당 165원 기준 냉장고 용량별 월 전기요금 중간값. 200L 이하 약 4,000원, 300~400L 약 6,250원, 500~600L 약 8,250원, 700L 이상 약 10,500원.</desc>
+  <rect x="0.5" y="0.5" width="719" height="449" rx="14" fill="#ffffff" stroke="#ece7dc"/>
+  <text x="40" y="46" font-size="21" font-weight="700" fill="#1f2d3d">냉장고 용량별 월 전기요금</text>
+  <text x="40" y="70" font-size="13" fill="#666f7a">kWh당 165원 기준 추정</text>
+
+  <g stroke="#eee8db" stroke-width="1">
+    <line x1="78" y1="390" x2="690" y2="390"/>
+    <line x1="78" y1="316" x2="690" y2="316"/>
+    <line x1="78" y1="243" x2="690" y2="243"/>
+    <line x1="78" y1="169" x2="690" y2="169"/>
+    <line x1="78" y1="95" x2="690" y2="95"/>
+  </g>
+  <g font-size="12" fill="#9a9488" text-anchor="end">
+    <text x="68" y="394">0</text>
+    <text x="68" y="320">3천</text>
+    <text x="68" y="247">6천</text>
+    <text x="68" y="173">9천</text>
+    <text x="68" y="99">1.2만</text>
+  </g>
+
+  <g fill="#2fbf9b">
+    <rect x="119" y="292" width="72" height="98" rx="4"/>
+    <rect x="272" y="236" width="72" height="154" rx="4"/>
+    <rect x="425" y="187" width="72" height="203" rx="4"/>
+    <rect x="578" y="132" width="72" height="258" rx="4"/>
+  </g>
+
+  <g font-size="13" font-weight="700" fill="#1f2d3d" text-anchor="middle">
+    <text x="155" y="284">4,000원</text>
+    <text x="308" y="228">6,250원</text>
+    <text x="461" y="179">8,250원</text>
+    <text x="614" y="124">10,500원</text>
+  </g>
+
+  <g font-size="13" fill="#1f2d3d" text-anchor="middle">
+    <text x="155" y="411">200L 이하</text>
+    <text x="308" y="411">300~400L</text>
+    <text x="461" y="411">500~600L</text>
+    <text x="614" y="411">700L 이상</text>
+  </g>
+
+  <text x="40" y="438" font-size="11" fill="#9a9488">※ 누진 구간·제품 연식·환경 온도에 따라 실제 요금은 달라집니다.</text>
+</svg>

@@ -1,0 +1,49 @@
+<svg viewBox="0 0 720 450" xmlns="http://www.w3.org/2000/svg" role="img" font-family="'Malgun Gothic','Apple SD Gothic Neo','Noto Sans KR',sans-serif">
+  <title>에어컨 유형별 월 전력 사용량 그래프</title>
+  <desc>하루 8시간 사용 기준 에어컨 유형별 월 전력 사용량(kWh) 중간값. 벽걸이 소형 약 200kWh, 벽걸이 중형 약 290kWh, 스탠드 중형 약 420kWh, 스탠드 대형 약 540kWh.</desc>
+  <rect x="0.5" y="0.5" width="719" height="449" rx="14" fill="#ffffff" stroke="#ece7dc"/>
+  <text x="40" y="46" font-size="21" font-weight="700" fill="#1f2d3d">에어컨 유형별 월 전력 사용량</text>
+  <text x="40" y="70" font-size="13" fill="#666f7a">하루 8시간 사용 기준 (단위: kWh)</text>
+
+  <g stroke="#eee8db" stroke-width="1">
+    <line x1="78" y1="390" x2="690" y2="390"/>
+    <line x1="78" y1="341" x2="690" y2="341"/>
+    <line x1="78" y1="292" x2="690" y2="292"/>
+    <line x1="78" y1="243" x2="690" y2="243"/>
+    <line x1="78" y1="193" x2="690" y2="193"/>
+    <line x1="78" y1="144" x2="690" y2="144"/>
+    <line x1="78" y1="95" x2="690" y2="95"/>
+  </g>
+  <g font-size="12" fill="#9a9488" text-anchor="end">
+    <text x="68" y="394">0</text>
+    <text x="68" y="345">100</text>
+    <text x="68" y="296">200</text>
+    <text x="68" y="247">300</text>
+    <text x="68" y="197">400</text>
+    <text x="68" y="148">500</text>
+    <text x="68" y="99">600</text>
+  </g>
+
+  <g fill="#2fbf9b">
+    <rect x="119" y="292" width="72" height="98" rx="4"/>
+    <rect x="272" y="247" width="72" height="143" rx="4"/>
+    <rect x="425" y="183" width="72" height="207" rx="4"/>
+    <rect x="578" y="124" width="72" height="266" rx="4"/>
+  </g>
+
+  <g font-size="13" font-weight="700" fill="#1f2d3d" text-anchor="middle">
+    <text x="155" y="284">200</text>
+    <text x="308" y="239">290</text>
+    <text x="461" y="175">420</text>
+    <text x="614" y="116">540</text>
+  </g>
+
+  <g font-size="13" fill="#1f2d3d" text-anchor="middle">
+    <text x="155" y="411">벽걸이 소형</text>
+    <text x="308" y="411">벽걸이 중형</text>
+    <text x="461" y="411">스탠드 중형</text>
+    <text x="614" y="411">스탠드 대형</text>
+  </g>
+
+  <text x="40" y="438" font-size="11" fill="#9a9488">※ 소비전력 범위의 중간값 기준. 인버터·정속형에 따라 달라집니다.</text>
+</svg>
