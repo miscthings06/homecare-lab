@@ -114,7 +114,8 @@ header {
   align-items: start;
 }
 .article-layout .article-col { min-width: 0; }
-.article-layout .article-wrap { max-width: none; margin: 0; padding: 32px 0 64px; }
+.article-layout .article-wrap { max-width: none; margin: 0; padding: 24px 0 64px; }
+.article-cover { display: block; width: 100%; height: auto; border-radius: 12px; margin: 28px 0 0; }
 .article-layout aside.side { position: sticky; top: 60px; padding-top: 32px; }
 @media (max-width: 900px) {
   .article-layout { grid-template-columns: 1fr; gap: 0; }
