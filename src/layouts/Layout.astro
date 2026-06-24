@@ -35,6 +35,8 @@ const buildDate = `${_now.getFullYear()}. ${_now.getMonth() + 1}. ${_now.getDate
 const _segs = Astro.url.pathname.split('/').filter(Boolean);
 const _cats = ['cheongso', 'rental', 'isa-junbi', 'jeolryak'];
 const isArticle = _cats.includes(_segs[0]) && _segs.length >= 2;
+const _catLabels = { cheongso: '청소비용', rental: '가전렌탈', 'isa-junbi': '이사준비', jeolryak: '생활비절감' };
+const catLabel = _catLabels[_segs[0]] || '';
 ---
 <!DOCTYPE html>
 <html lang="ko">
@@ -117,8 +119,18 @@ const isArticle = _cats.includes(_segs[0]) && _segs.length >= 2;
   <!-- 본문 -->
   <main>
     <div class:list={isArticle ? ['article-layout', 'container'] : ['l-pass']}>
-      <div class:list={isArticle ? ['article-col'] : ['l-pass']}>
-        {isArticle && cover && <img class="article-cover" src={cover} alt={title} width="1200" height="630" loading="eager" />}
+      <div class:list={isArticle ? ['article-col', _isRasterCover && 'has-cover'] : ['l-pass']}>
+        {isArticle && cover && (_isRasterCover ? (
+          <div class="article-hero">
+            <img class="article-cover" src={cover} alt={title} width="1200" height="630" loading="eager" />
+            <div class="article-hero-overlay">
+              {catLabel && <span class="article-hero-cat">{catLabel}</span>}
+              <p class="article-hero-title">{title}</p>
+            </div>
+          </div>
+        ) : (
+          <img class="article-cover" src={cover} alt={title} width="1200" height="630" loading="eager" />
+        ))}
         <slot />
       </div>
       {isArticle && <Sidebar />}
