@@ -105,6 +105,22 @@ header {
 .cat-nav a:hover { color: #fff; background: rgba(255,255,255,0.06); text-decoration: none; }
 .cat-nav a.active { color: #fff; font-weight: 700; border-bottom-color: var(--accent); }
 
+/* ===== 기사 2열 레이아웃 (뉴스형) ===== */
+.l-pass { display: contents; }
+.article-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 290px;
+  gap: 36px;
+  align-items: start;
+}
+.article-layout .article-col { min-width: 0; }
+.article-layout .article-wrap { max-width: none; margin: 0; padding: 32px 0 64px; }
+.article-layout aside.side { position: sticky; top: 60px; padding-top: 32px; }
+@media (max-width: 900px) {
+  .article-layout { grid-template-columns: 1fr; gap: 0; }
+  .article-layout aside.side { position: static; padding-top: 0; padding-bottom: 48px; }
+}
+
 /* ===== 히어로 (라이트 테마) ===== */
 .hero {
   background: linear-gradient(160deg, #f0faf7 0%, #e8f5f0 55%, #f5fbf9 100%);

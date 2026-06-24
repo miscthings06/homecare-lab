@@ -1,5 +1,6 @@
 ---
 import '../styles/global.css';
+import Sidebar from '../components/Sidebar.astro';
 
 interface Props {
   title: string;
@@ -24,6 +25,11 @@ const pageTitle = title.includes('홈케어랩') ? title : `${title} | 홈케어
 const _wd = ['일', '월', '화', '수', '목', '금', '토'];
 const _now = new Date();
 const buildDate = `${_now.getFullYear()}. ${_now.getMonth() + 1}. ${_now.getDate()}. (${_wd[_now.getDay()]})`;
+
+// 기사 페이지 판별 — 카테고리 하위 글에만 뉴스형 2열(본문+사이드바) 적용
+const _segs = Astro.url.pathname.split('/').filter(Boolean);
+const _cats = ['cheongso', 'rental', 'isa-junbi', 'jeolryak'];
+const isArticle = _cats.includes(_segs[0]) && _segs.length >= 2;
 ---
 <!DOCTYPE html>
 <html lang="ko">
@@ -105,7 +111,12 @@ const buildDate = `${_now.getFullYear()}. ${_now.getMonth() + 1}. ${_now.getDate
 
   <!-- 본문 -->
   <main>
-    <slot />
+    <div class:list={isArticle ? ['article-layout', 'container'] : ['l-pass']}>
+      <div class:list={isArticle ? ['article-col'] : ['l-pass']}>
+        <slot />
+      </div>
+      {isArticle && <Sidebar />}
+    </div>
   </main>
 
   <!-- 푸터 -->
