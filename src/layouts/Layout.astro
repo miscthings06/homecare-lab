@@ -19,8 +19,11 @@ const {
 } = Astro.props;
 
 const canonicalURL = canonical ?? new URL(Astro.url.pathname, Astro.site).href;
+// 실사(jpg/png/webp) 표지가 있으면 OG 공유 이미지로도 사용
+const _isRasterCover = !!cover && /\.(jpe?g|png|webp)$/i.test(cover);
+const _ogSrc = _isRasterCover ? cover : ogImage;
 // og:image는 반드시 절대 URL이어야 소셜/구글에서 인식됨
-const ogImageURL = ogImage.startsWith('http') ? ogImage : new URL(ogImage, Astro.site).href;
+const ogImageURL = _ogSrc.startsWith('http') ? _ogSrc : new URL(_ogSrc, Astro.site).href;
 const pageTitle = title.includes('홈케어랩') ? title : `${title} | 홈케어랩`;
 
 // 상단 유틸바 날짜 (빌드 시점 — 클라이언트 JS가 방문자 오늘 날짜로 갱신)
@@ -115,7 +118,7 @@ const isArticle = _cats.includes(_segs[0]) && _segs.length >= 2;
   <main>
     <div class:list={isArticle ? ['article-layout', 'container'] : ['l-pass']}>
       <div class:list={isArticle ? ['article-col'] : ['l-pass']}>
-        {isArticle && cover && <img class="article-cover" src={cover} alt="" width="1200" height="630" />}
+        {isArticle && cover && <img class="article-cover" src={cover} alt={title} width="1200" height="630" loading="eager" />}
         <slot />
       </div>
       {isArticle && <Sidebar />}
