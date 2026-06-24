@@ -1,0 +1,76 @@
+---
+// 뉴스형 사이드바 틀 — 홈/기사 페이지에서 사용 (2·3단계)
+// related: 기사 페이지에서 관련 가이드 목록을 넘기면 "관련 가이드" 박스가 표시됨
+export interface Props {
+  related?: { href: string; cat: string; title: string }[];
+}
+const { related = [] } = Astro.props;
+
+const popular = [
+  { href: '/cheongso/ipju-cheongso-biyong/', title: '입주청소 비용, 평수별 기준' },
+  { href: '/jeolryak/aircon-jeongi/', title: '에어컨 전기요금 계산법' },
+  { href: '/isa-junbi/homeservice-dday/', title: '이사 홈서비스 D-30 준비표' },
+  { href: '/rental/jeongsugi-rental/', title: '정수기 렌탈 5년 총비용 비교' },
+  { href: '/cheongso/yoksil-gompalgi/', title: '욕실 곰팡이 제거 방법' },
+];
+---
+<aside class="side">
+  <section class="side-box">
+    <h2 class="side-title">많이 본 가이드</h2>
+    <ol class="side-rank">
+      {popular.map((p, i) => (
+        <li>
+          <span class={i < 3 ? 'side-num hot' : 'side-num'}>{i + 1}</span>
+          <a href={p.href}>{p.title}</a>
+        </li>
+      ))}
+    </ol>
+  </section>
+
+  {related.length > 0 && (
+    <section class="side-box">
+      <h2 class="side-title">관련 가이드</h2>
+      <ul class="side-related">
+        {related.map((r) => (
+          <li>
+            <a href={r.href}><span class="side-cat">{r.cat}</span>{r.title}</a>
+          </li>
+        ))}
+      </ul>
+    </section>
+  )}
+
+  <section class="side-cta">
+    <p class="side-cta-intro">청소·렌탈 견적이 필요하다면</p>
+    <a class="side-cta-btn" href="https://ajd.co.kr" rel="nofollow sponsored noopener" data-partner-cta="true">무료 견적 비교 →</a>
+    <p class="side-cta-sub"><a href="/affiliate-disclosure/">제휴 고지</a></p>
+  </section>
+</aside>
+
+<style>
+  .side { display: flex; flex-direction: column; gap: 16px; }
+  .side-box { border: 1px solid var(--border); border-radius: 10px; padding: 14px 15px; background: #fff; }
+  .side-title {
+    font-size: 0.95rem; font-weight: 800; color: var(--primary);
+    margin: 0 0 12px; padding-bottom: 8px; border-bottom: 2px solid var(--primary);
+  }
+  .side-rank { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 11px; }
+  .side-rank li { display: flex; gap: 9px; align-items: baseline; }
+  .side-num { font-size: 0.85rem; font-weight: 800; color: #c4c0b6; min-width: 13px; }
+  .side-num.hot { color: var(--accent); }
+  .side-rank a { font-size: 0.85rem; line-height: 1.45; color: var(--text); }
+  .side-rank a:hover { color: var(--accent-dark); text-decoration: none; }
+  .side-related { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 12px; }
+  .side-related a { font-size: 0.85rem; line-height: 1.45; color: var(--text); display: block; }
+  .side-related a:hover { color: var(--accent-dark); text-decoration: none; }
+  .side-cat { display: block; font-size: 0.68rem; font-weight: 700; color: var(--accent-dark); margin-bottom: 3px; }
+  .side-cta { background: var(--primary); border-radius: 10px; padding: 16px 15px; text-align: center; }
+  .side-cta-intro { font-size: 0.8rem; color: rgba(255,255,255,0.75); margin: 0 0 10px; }
+  .side-cta-btn {
+    display: block; font-size: 0.85rem; font-weight: 700; color: var(--primary);
+    background: var(--accent); border-radius: 7px; padding: 9px 0;
+  }
+  .side-cta-btn:hover { background: #fff; text-decoration: none; }
+  .side-cta-sub { margin: 9px 0 0; font-size: 0.72rem; }
+  .side-cta-sub a { color: rgba(255,255,255,0.5); }
+</style>

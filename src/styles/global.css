@@ -37,53 +37,73 @@ ul { list-style: none; }
 /* ===== 레이아웃 ===== */
 .container { max-width: var(--max-w); margin: 0 auto; padding: 0 20px; }
 
-/* ===== 헤더 ===== */
+/* ===== 상단 유틸바 ===== */
+.util-bar {
+  background: #f4f1ea;
+  border-bottom: 1px solid var(--border);
+  font-size: 0.76rem;
+  color: var(--text-muted);
+}
+.util-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 34px;
+}
+.util-date { font-weight: 600; letter-spacing: 0.2px; }
+.util-links { display: flex; gap: 14px; }
+.util-links a { color: var(--text-muted); }
+.util-links a:hover { color: var(--primary); text-decoration: none; }
+
+/* ===== 헤더(마스트헤드) ===== */
 header {
   background: #fff;
-  border-bottom: 1px solid var(--border);
-  position: sticky;
-  top: 0;
-  z-index: 100;
-  box-shadow: 0 1px 8px rgba(0,0,0,0.06);
+  border-bottom: 2px solid var(--primary);
 }
 .header-inner {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 64px;
+  height: 66px;
 }
 .logo {
-  font-size: 1.3rem;
+  font-size: 1.45rem;
   font-weight: 800;
-  display: flex; align-items: baseline; gap: 6px;
+  display: flex; align-items: baseline; gap: 9px;
   color: var(--accent);
   letter-spacing: -0.5px;
 }
-.logo-name { color: var(--accent); }
-.logo-name em { color: var(--accent-dark); font-style: normal; }
-.logo-url {
-  font-size: 0.65rem; font-weight: 500; color: var(--primary);
-  letter-spacing: 0; opacity: 0.75; margin-left: 2px;
+.logo-name { color: var(--primary); }
+.logo-name em { color: var(--accent); font-style: normal; }
+.logo-tagline {
+  font-size: 0.72rem; font-weight: 500; color: var(--text-muted);
+  letter-spacing: 0; padding-left: 9px; border-left: 1px solid var(--border);
 }
+.masthead-link {
+  font-size: 0.84rem; font-weight: 700; color: var(--accent-dark);
+  border: 1.5px solid rgba(47,191,155,0.45); border-radius: 7px;
+  padding: 7px 14px; transition: background 0.15s, color 0.15s;
+}
+.masthead-link:hover { background: var(--accent); color: #fff; text-decoration: none; }
 
-nav { display: flex; gap: 6px; }
-nav a {
-  padding: 7px 14px;
-  border-radius: 6px;
-  font-size: 0.93rem;
+/* ===== 카테고리 탭 내비 (뉴스형) ===== */
+.cat-nav {
+  background: var(--primary);
+  position: sticky; top: 0; z-index: 100;
+  box-shadow: 0 1px 8px rgba(0,0,0,0.12);
+}
+.cat-nav-inner { display: flex; align-items: stretch; }
+.cat-nav a {
+  padding: 13px 18px;
+  font-size: 0.95rem;
   font-weight: 600;
-  color: var(--text);
-  transition: background 0.15s, color 0.15s;
+  color: rgba(255,255,255,0.82);
+  border-bottom: 3px solid transparent;
+  white-space: nowrap;
+  transition: color 0.15s, border-color 0.15s, background 0.15s;
 }
-nav a:hover, nav a.active {
-  background: var(--primary-light);
-  color: var(--primary);
-  text-decoration: none;
-}
-
-/* 모바일 햄버거 */
-.nav-toggle { display: none; background: none; border: none; cursor: pointer; padding: 8px; }
-.nav-toggle span { display: block; width: 24px; height: 2px; background: var(--text); margin: 5px 0; border-radius: 2px; transition: all 0.2s; }
+.cat-nav a:hover { color: #fff; background: rgba(255,255,255,0.06); text-decoration: none; }
+.cat-nav a.active { color: #fff; font-weight: 700; border-bottom-color: var(--accent); }
 
 /* ===== 히어로 (라이트 테마) ===== */
 .hero {
@@ -964,10 +984,11 @@ footer {
 
 /* ===== 반응형 ===== */
 @media (max-width: 768px) {
-  nav { display: none; position: absolute; top: 64px; left: 0; right: 0; background: #fff; border-bottom: 1px solid var(--border); flex-direction: column; padding: 12px; box-shadow: 0 8px 24px rgba(0,0,0,0.1); }
-  nav.open { display: flex; }
-  nav a { padding: 10px 16px; }
-  .nav-toggle { display: block; }
+  .cat-nav-inner { overflow-x: auto; -webkit-overflow-scrolling: touch; scrollbar-width: none; }
+  .cat-nav-inner::-webkit-scrollbar { display: none; }
+  .cat-nav a { padding: 12px 14px; font-size: 0.9rem; }
+  .masthead-link { display: none; }
+  .util-links { gap: 11px; }
   .hero { padding: 48px 20px 40px; }
   .hero-btns { flex-direction: column; align-items: center; }
   .hero-factors { grid-template-columns: repeat(2, 1fr); }

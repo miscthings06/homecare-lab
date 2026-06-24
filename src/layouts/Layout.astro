@@ -19,6 +19,11 @@ const canonicalURL = canonical ?? new URL(Astro.url.pathname, Astro.site).href;
 // og:image는 반드시 절대 URL이어야 소셜/구글에서 인식됨
 const ogImageURL = ogImage.startsWith('http') ? ogImage : new URL(ogImage, Astro.site).href;
 const pageTitle = title.includes('홈케어랩') ? title : `${title} | 홈케어랩`;
+
+// 상단 유틸바 날짜 (빌드 시점 — 클라이언트 JS가 방문자 오늘 날짜로 갱신)
+const _wd = ['일', '월', '화', '수', '목', '금', '토'];
+const _now = new Date();
+const buildDate = `${_now.getFullYear()}. ${_now.getMonth() + 1}. ${_now.getDate()}. (${_wd[_now.getDay()]})`;
 ---
 <!DOCTYPE html>
 <html lang="ko">
@@ -67,22 +72,36 @@ const pageTitle = title.includes('홈케어랩') ? title : `${title} | 홈케어
   </script>
 </head>
 <body>
-  <!-- 헤더 -->
-  <header>
-    <div class="container header-inner">
-      <a href="/" class="logo"><span class="logo-name">홈케어<em>랩</em></span><span class="logo-url">homecare-lab.co.kr</span></a>
-      <button class="nav-toggle" id="navToggle" aria-label="메뉴 열기">
-        <span></span><span></span><span></span>
-      </button>
-      <nav id="mainNav">
-        <a href="/cheongso/" class={Astro.url.pathname.startsWith('/cheongso') ? 'active' : ''}>청소비용</a>
-        <a href="/rental/" class={Astro.url.pathname.startsWith('/rental') ? 'active' : ''}>가전렌탈</a>
-        <a href="/isa-junbi/" class={Astro.url.pathname.startsWith('/isa-junbi') ? 'active' : ''}>이사준비</a>
-        <a href="/jeolryak/" class={Astro.url.pathname.startsWith('/jeolryak') ? 'active' : ''}>생활비절감</a>
-        <a href="/calculator/" class={Astro.url.pathname.startsWith('/calculator') ? 'active' : ''}>계산기</a>
+  <!-- 상단 유틸바 -->
+  <div class="util-bar">
+    <div class="container util-inner">
+      <span class="util-date" id="utilDate">{buildDate}</span>
+      <nav class="util-links" aria-label="유틸리티 메뉴">
+        <a href="/about/">소개</a>
+        <a href="/contact/">문의</a>
+        <a href="/affiliate-disclosure/">제휴 고지</a>
       </nav>
     </div>
+  </div>
+
+  <!-- 헤더(마스트헤드) -->
+  <header>
+    <div class="container header-inner">
+      <a href="/" class="logo"><span class="logo-name">홈케어<em>랩</em></span><span class="logo-tagline">생활·홈서비스 전문 정보</span></a>
+      <a href="/calculator/" class="masthead-link">비용 계산기 →</a>
+    </div>
   </header>
+
+  <!-- 카테고리 탭 내비 -->
+  <nav class="cat-nav" aria-label="카테고리 메뉴">
+    <div class="container cat-nav-inner">
+      <a href="/cheongso/" class={Astro.url.pathname.startsWith('/cheongso') ? 'active' : ''}>청소비용</a>
+      <a href="/rental/" class={Astro.url.pathname.startsWith('/rental') ? 'active' : ''}>가전렌탈</a>
+      <a href="/isa-junbi/" class={Astro.url.pathname.startsWith('/isa-junbi') ? 'active' : ''}>이사준비</a>
+      <a href="/jeolryak/" class={Astro.url.pathname.startsWith('/jeolryak') ? 'active' : ''}>생활비절감</a>
+      <a href="/calculator/" class={Astro.url.pathname.startsWith('/calculator') ? 'active' : ''}>계산기</a>
+    </div>
+  </nav>
 
   <!-- 본문 -->
   <main>
@@ -111,10 +130,14 @@ const pageTitle = title.includes('홈케어랩') ? title : `${title} | 홈케어
   </footer>
 
   <script>
-    // 모바일 햄버거 메뉴
-    const toggle = document.getElementById('navToggle');
-    const nav = document.getElementById('mainNav');
-    toggle?.addEventListener('click', () => nav?.classList.toggle('open'));
+    // 상단 유틸바 날짜 (방문자 기준 오늘)
+    (function () {
+      var el = document.getElementById('utilDate');
+      if (!el) return;
+      var wd = ['일', '월', '화', '수', '목', '금', '토'];
+      var d = new Date();
+      el.textContent = d.getFullYear() + '. ' + (d.getMonth() + 1) + '. ' + d.getDate() + '. (' + wd[d.getDay()] + ')';
+    })();
 
     // FAQ 아코디언
     document.querySelectorAll('.faq-q').forEach(q => {
