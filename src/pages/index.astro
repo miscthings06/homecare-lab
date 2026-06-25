@@ -257,25 +257,6 @@ import Sidebar from '../components/Sidebar.astro';
       <h2 class="section-title">전체 가이드 한눈에 보기</h2>
       <p class="section-sub">홈케어랩의 모든 청소·렌탈·이사·생활비 가이드를 주제별로 정리했습니다.</p>
     </div>
-    <svg class="guide-tree" viewBox="0 0 640 156" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="전체 가이드 62편이 청소비용 17편, 가전렌탈 17편, 이사준비 14편, 생활비절감 14편으로 구성된 구조">
-      <path d="M320 54 V76 M92 76 H548 M92 76 V94 M244 76 V94 M396 76 V94 M548 76 V94" fill="none" stroke="#cfd6dd" stroke-width="1.5"/>
-      <rect x="232" y="16" width="176" height="38" rx="9" fill="#1f2d3d"/>
-      <text x="320" y="40" text-anchor="middle" fill="#ffffff" font-family="'Noto Sans KR',sans-serif" font-size="14" font-weight="700">전체 가이드 62편</text>
-      <g font-family="'Noto Sans KR',sans-serif">
-        <rect x="28" y="94" width="128" height="46" rx="9" fill="#e6f1fb"/>
-        <text x="92" y="115" text-anchor="middle" fill="#1c5a8f" font-size="13" font-weight="700">청소비용</text>
-        <text x="92" y="132" text-anchor="middle" fill="#1c5a8f" font-size="11">17편</text>
-        <rect x="180" y="94" width="128" height="46" rx="9" fill="#e3f3e9"/>
-        <text x="244" y="115" text-anchor="middle" fill="#1f7a4d" font-size="13" font-weight="700">가전렌탈</text>
-        <text x="244" y="132" text-anchor="middle" fill="#1f7a4d" font-size="11">17편</text>
-        <rect x="332" y="94" width="128" height="46" rx="9" fill="#faeeda"/>
-        <text x="396" y="115" text-anchor="middle" fill="#9a6516" font-size="13" font-weight="700">이사준비</text>
-        <text x="396" y="132" text-anchor="middle" fill="#9a6516" font-size="11">14편</text>
-        <rect x="484" y="94" width="128" height="46" rx="9" fill="#efeafa"/>
-        <text x="548" y="115" text-anchor="middle" fill="#5b3fa3" font-size="13" font-weight="700">생활비절감</text>
-        <text x="548" y="132" text-anchor="middle" fill="#5b3fa3" font-size="11">14편</text>
-      </g>
-    </svg>
     <div class="guide-hubs">
       <div class="guide-hub guide-hub-blue">
         <div class="guide-hub-head"><span class="guide-hub-ic" aria-hidden="true">🧼</span><h3><a href="/cheongso/">청소비용</a></h3><span class="guide-hub-cnt">17편</span></div>
@@ -424,6 +405,7 @@ import Sidebar from '../components/Sidebar.astro';
 .lead-byline { font-size: .8rem; color: #9a9488; }
 
 /* 카테고리 섹션 블록 */
+.home-sec { padding: 0; }
 .home-sec-head {
   display: flex; align-items: center; justify-content: space-between;
   border-bottom: 2px solid var(--primary); padding-bottom: 6px; margin-bottom: 10px;
@@ -431,16 +413,15 @@ import Sidebar from '../components/Sidebar.astro';
 .home-sec-head h2 { font-size: 1.15rem; font-weight: 800; color: var(--primary); margin: 0; }
 .home-sec-more { font-size: .8rem; color: var(--text-muted); }
 .home-sec-more:hover { color: var(--accent-dark); text-decoration: none; }
-.home-list { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
-.home-item { display: flex; gap: 12px; align-items: center; text-decoration: none; color: inherit; }
+.home-list { display: flex; flex-direction: column; gap: 12px; }
+.home-item { display: flex; gap: 14px; align-items: center; text-decoration: none; color: inherit; }
 .home-thumb {
-  flex: 0 0 54px; width: 54px; height: 54px; border-radius: 8px;
-  display: flex; align-items: center; justify-content: center; font-size: 1.5rem;
+  flex: 0 0 132px; width: 132px; height: 84px; border-radius: 8px;
   object-fit: cover;
 }
-.home-item h3 { font-size: .92rem; font-weight: 700; line-height: 1.4; margin: 0 0 3px; color: var(--text); }
+.home-item h3 { font-size: 1rem; font-weight: 700; line-height: 1.4; margin: 0 0 4px; color: var(--text); }
 .home-item:hover h3 { color: var(--accent-dark); }
-.home-item .sub { font-size: .78rem; color: var(--text-muted); }
+.home-item .sub { font-size: .82rem; color: var(--text-muted); }
 
 /* 카테고리 헤드라인 리스트 */
 .home-heads { list-style: none; margin: 10px 0 0; padding: 9px 0 0; border-top: 1px solid var(--border); display: flex; flex-direction: column; }
@@ -450,31 +431,22 @@ import Sidebar from '../components/Sidebar.astro';
 .home-heads a::before { content: ""; position: absolute; left: 1px; top: 14px; width: 5px; height: 5px; border-radius: 50%; background: var(--accent); }
 .home-heads a:hover { color: var(--accent-dark); text-decoration: none; }
 
-/* 전체 가이드 인덱스 (트리 + 허브 카드) */
+/* 전체 가이드 인덱스 (허브 카드) */
 .guide-index { background: #f7f6f3; border-top: 1px solid var(--border); padding: 46px 20px 52px; }
-.guide-index-head { text-align: center; margin-bottom: 24px; }
-.guide-tree { display: block; width: 100%; max-width: 600px; height: auto; margin: 0 auto 30px; }
+.guide-index-head { text-align: center; margin-bottom: 26px; }
 .guide-hubs { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; }
 .guide-hub { background: #fff; border: 1px solid var(--border); border-radius: 12px; padding: 15px 16px 17px; }
 .guide-hub-head { display: flex; align-items: center; gap: 9px; margin: 0 0 12px; padding-bottom: 10px; border-bottom: 2px solid var(--primary); }
-.guide-hub-ic { flex: 0 0 30px; width: 30px; height: 30px; border-radius: 7px; display: flex; align-items: center; justify-content: center; font-size: 16px; }
+.guide-hub-ic { flex: 0 0 30px; width: 30px; height: 30px; border-radius: 7px; display: flex; align-items: center; justify-content: center; font-size: 16px; background: var(--primary-light); }
 .guide-hub-head h3 { font-size: 0.98rem; font-weight: 800; margin: 0; }
 .guide-hub-head h3 a { color: var(--primary); }
 .guide-hub-head h3 a:hover { color: var(--accent-dark); text-decoration: none; }
-.guide-hub-cnt { margin-left: auto; font-size: 0.7rem; font-weight: 700; border-radius: 999px; padding: 2px 9px; }
+.guide-hub-cnt { margin-left: auto; font-size: 0.7rem; font-weight: 700; border-radius: 999px; padding: 2px 9px; background: var(--primary-light); color: var(--accent-dark); }
 .guide-hub ul { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 8px; }
 .guide-hub li a { font-size: 0.85rem; color: var(--text-muted); line-height: 1.4; display: block; }
 .guide-hub li a:hover { color: var(--accent-dark); text-decoration: none; }
-.guide-hub-blue .guide-hub-ic { background: #e6f1fb; }
-.guide-hub-blue .guide-hub-cnt { background: #e6f1fb; color: #1c5a8f; }
-.guide-hub-green .guide-hub-ic { background: #e3f3e9; }
-.guide-hub-green .guide-hub-cnt { background: #e3f3e9; color: #1f7a4d; }
-.guide-hub-amber .guide-hub-ic { background: #faeeda; }
-.guide-hub-amber .guide-hub-cnt { background: #faeeda; color: #9a6516; }
-.guide-hub-violet .guide-hub-ic { background: #efeafa; }
-.guide-hub-violet .guide-hub-cnt { background: #efeafa; color: #5b3fa3; }
 @media (max-width: 900px) { .guide-hubs { grid-template-columns: 1fr 1fr; } }
-@media (max-width: 560px) { .guide-hubs { grid-template-columns: 1fr; } .guide-tree { display: none; } }
+@media (max-width: 560px) { .guide-hubs { grid-template-columns: 1fr; } }
 
 /* 비용 계산기 (다크) */
 .calc-cta-section { background: var(--primary); padding: 48px 20px 52px; text-align: center; }
@@ -498,7 +470,7 @@ import Sidebar from '../components/Sidebar.astro';
   .home-side { position: static; order: 2; }
 }
 @media (max-width: 560px) {
-  .home-list { grid-template-columns: 1fr; }
+  .home-thumb { flex-basis: 104px; width: 104px; height: 66px; }
   .lead { flex-direction: column; }
   .lead-cover { flex-basis: auto; min-height: 140px; }
   .lead-body { padding: 18px; }
