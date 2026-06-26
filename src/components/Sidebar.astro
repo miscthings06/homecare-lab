@@ -16,12 +16,17 @@ const popular = [
   { href: '/jeolryak/nanbangbi-jeollyak/', title: '겨울 난방비 줄이는 보일러 설정' },
 ];
 
-const cats = [
-  { href: '/cheongso/', label: '청소비용' },
-  { href: '/rental/', label: '가전렌탈' },
-  { href: '/isa-junbi/', label: '이사준비' },
-  { href: '/jeolryak/', label: '생활비절감' },
-  { href: '/calculator/', label: '비용 계산기' },
+const tags = [
+  { href: '/cheongso/ipju-cheongso-biyong/', label: '입주청소' },
+  { href: '/cheongso/aircon-cheongso/', label: '에어컨청소' },
+  { href: '/rental/jeongsugi-rental/', label: '정수기렌탈' },
+  { href: '/rental/rental-vs-purchase/', label: '렌탈vs구매' },
+  { href: '/jeolryak/jeongi-nujin/', label: '전기요금' },
+  { href: '/jeolryak/nanbangbi-jeollyak/', label: '난방비' },
+  { href: '/isa-junbi/pojang-isa/', label: '포장이사' },
+  { href: '/isa-junbi/dosigas/', label: '도시가스' },
+  { href: '/cheongso/yoksil-gompalgi/', label: '곰팡이제거' },
+  { href: '/jeolryak/energy-voucher/', label: '에너지바우처' },
 ];
 
 const recent = [
@@ -60,10 +65,10 @@ const recent = [
   )}
 
   <section class="side-box">
-    <h2 class="side-title">주제별 바로가기</h2>
-    <div class="side-cats">
-      {cats.map((c) => (
-        <a href={c.href} class="side-cat-chip">{c.label}</a>
+    <h2 class="side-title">인기 태그</h2>
+    <div class="side-tags">
+      {tags.map((t) => (
+        <a href={t.href} class="side-tag">#{t.label}</a>
       ))}
     </div>
   </section>
@@ -103,13 +108,12 @@ const recent = [
   .side-related a { font-size: 0.85rem; line-height: 1.45; color: var(--text); display: block; }
   .side-related a:hover { color: var(--accent-dark); text-decoration: none; }
   .side-cat { display: block; font-size: 0.68rem; font-weight: 700; color: var(--accent-dark); margin-bottom: 3px; }
-  .side-cats { display: flex; flex-wrap: wrap; gap: 7px; }
-  .side-cat-chip {
-    font-size: 0.8rem; font-weight: 600; color: var(--primary);
-    background: var(--primary-light); border: 1px solid var(--border);
-    border-radius: 999px; padding: 5px 12px;
+  .side-tags { display: flex; flex-wrap: wrap; gap: 6px; }
+  .side-tag {
+    font-size: 0.78rem; font-weight: 600; color: var(--accent-dark);
+    background: var(--primary-light); border-radius: 999px; padding: 4px 11px;
   }
-  .side-cat-chip:hover { background: var(--accent); color: #fff; border-color: var(--accent); text-decoration: none; }
+  .side-tag:hover { background: var(--accent); color: #fff; text-decoration: none; }
   .side-recent { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 12px; }
   .side-recent li { border-bottom: 1px dashed var(--border); padding-bottom: 12px; }
   .side-recent li:last-child { border-bottom: none; padding-bottom: 0; }
