@@ -26,3 +26,7 @@ npm-debug.log*
 ~$*
 ~WRL*.tmp
 *.tmp
+
+# 로컬 참고용 변환본 (원본은 COVER_PROMPTS.md)
+COVER_PROMPTS.docx
+COVER_PROMPTS.txt
