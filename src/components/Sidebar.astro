@@ -1,5 +1,5 @@
 ---
-// 뉴스형 사이드바 틀 — 홈/기사 페이지에서 사용 (2·3단계)
+// 뉴스형 사이드바 틀 — 홈/기사 페이지에서 사용
 // related: 기사 페이지에서 관련 가이드 목록을 넘기면 "관련 가이드" 박스가 표시됨
 export interface Props {
   related?: { href: string; cat: string; title: string }[];
@@ -7,13 +7,13 @@ export interface Props {
 const { related = [] } = Astro.props;
 
 const popular = [
-  { href: '/cheongso/ipju-cheongso-biyong/', title: '입주청소 비용, 평수별 기준' },
-  { href: '/jeolryak/aircon-jeongi/', title: '에어컨 전기요금 계산법' },
-  { href: '/isa-junbi/homeservice-dday/', title: '이사 홈서비스 D-30 준비표' },
-  { href: '/rental/jeongsugi-rental/', title: '정수기 렌탈 5년 총비용 비교' },
-  { href: '/cheongso/yoksil-gompalgi/', title: '욕실 곰팡이 제거 방법' },
-  { href: '/rental/rental-vs-purchase/', title: '렌탈 vs 구매, 어느 쪽이 유리?' },
-  { href: '/jeolryak/nanbangbi-jeollyak/', title: '겨울 난방비 줄이는 보일러 설정' },
+  { href: '/cheongso/ipju-cheongso-biyong/', img: '/images/covers/ipju-cheongso-biyong.jpg', title: '입주청소 비용, 평수별 기준' },
+  { href: '/jeolryak/aircon-jeongi/', img: '/images/covers/aircon-jeongi.jpg', title: '에어컨 전기요금 계산법' },
+  { href: '/isa-junbi/homeservice-dday/', img: '/images/covers/homeservice-dday.jpg', title: '이사 홈서비스 D-30 준비표' },
+  { href: '/rental/jeongsugi-rental/', img: '/images/covers/jeongsugi-rental.jpg', title: '정수기 렌탈 5년 총비용 비교' },
+  { href: '/cheongso/yoksil-gompalgi/', img: '/images/covers/yoksil-gompalgi.jpg', title: '욕실 곰팡이 제거 방법' },
+  { href: '/rental/rental-vs-purchase/', img: '/images/covers/rental-vs-purchase.jpg', title: '렌탈 vs 구매, 어느 쪽이 유리?' },
+  { href: '/jeolryak/nanbangbi-jeollyak/', img: '/images/covers/nanbangbi-jeollyak.jpg', title: '겨울 난방비 줄이는 보일러 설정' },
 ];
 
 const tags = [
@@ -30,12 +30,12 @@ const tags = [
 ];
 
 const recent = [
-  { href: '/isa-junbi/pojang-isa/', cat: '이사준비', title: '포장이사 vs 일반이사 비용 차이' },
-  { href: '/jeolryak/energy-voucher/', cat: '생활비절감', title: '에너지바우처 신청 방법' },
-  { href: '/cheongso/saetak-cheongso/', cat: '청소비용', title: '세탁기 청소 주기와 통세척 비용' },
-  { href: '/rental/gonggi-filter-biyong/', cat: '가전렌탈', title: '공기청정기 필터비 포함 비용' },
-  { href: '/jeolryak/jeongi-nujin/', cat: '생활비절감', title: '전기요금 누진제 구간 기준' },
-  { href: '/isa-junbi/dosigas/', cat: '이사준비', title: '도시가스 이전·명의변경 방법' },
+  { href: '/isa-junbi/pojang-isa/', img: '/images/covers/pojang-isa.jpg', cat: '이사준비', title: '포장이사 vs 일반이사 비용 차이', date: '2026.06.03' },
+  { href: '/jeolryak/energy-voucher/', img: '/images/covers/energy-voucher.jpg', cat: '생활비절감', title: '에너지바우처 신청 방법', date: '2026.05.25' },
+  { href: '/jeolryak/jeongi-nujin/', img: '/images/covers/jeongi-nujin.jpg', cat: '생활비절감', title: '전기요금 누진제 구간 기준', date: '2026.05.24' },
+  { href: '/isa-junbi/internet-sinyu-vs-isa/', img: '/images/covers/internet-sinyu-vs-isa.jpg', cat: '이사준비', title: '인터넷 이전 vs 신규가입', date: '2026.05.22' },
+  { href: '/isa-junbi/dosigas/', img: '/images/covers/dosigas.jpg', cat: '이사준비', title: '도시가스 이전·명의변경', date: '2026.05.20' },
+  { href: '/rental/geondogi-rental/', img: '/images/covers/geondogi-rental.jpg', cat: '가전렌탈', title: '건조기 렌탈 비용 비교', date: '2026.05.14' },
 ];
 ---
 <aside class="side">
@@ -45,7 +45,10 @@ const recent = [
       {popular.map((p, i) => (
         <li>
           <span class={i < 3 ? 'side-num hot' : 'side-num'}>{i + 1}</span>
-          <a href={p.href}>{p.title}</a>
+          <a href={p.href} class="side-rank-link">
+            <img class="side-thumb" src={p.img} alt="" loading="lazy" />
+            <span class="side-clip">{p.title}</span>
+          </a>
         </li>
       ))}
     </ol>
@@ -78,7 +81,14 @@ const recent = [
     <ul class="side-recent">
       {recent.map((r) => (
         <li>
-          <a href={r.href}><span class="side-cat">{r.cat}</span>{r.title}</a>
+          <a href={r.href} class="side-recent-link">
+            <img class="side-thumb" src={r.img} alt="" loading="lazy" />
+            <span class="side-recent-body">
+              <span class="side-cat">{r.cat}</span>
+              <span class="side-clip side-recent-title">{r.title}</span>
+              <span class="side-recent-date">{r.date}</span>
+            </span>
+          </a>
         </li>
       ))}
     </ul>
@@ -98,16 +108,20 @@ const recent = [
     font-size: 0.95rem; font-weight: 800; color: var(--primary);
     margin: 0 0 12px; padding-bottom: 8px; border-bottom: 2px solid var(--primary);
   }
+  .side-thumb { flex: 0 0 50px; width: 50px; height: 38px; border-radius: 5px; object-fit: cover; }
+  .side-clip { display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
   .side-rank { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 11px; }
-  .side-rank li { display: flex; gap: 9px; align-items: baseline; }
-  .side-num { font-size: 0.85rem; font-weight: 800; color: #c4c0b6; min-width: 13px; }
+  .side-rank li { display: flex; gap: 8px; align-items: center; }
+  .side-num { font-size: 0.9rem; font-weight: 800; color: #c4c0b6; min-width: 13px; text-align: center; }
   .side-num.hot { color: var(--accent); }
-  .side-rank a { font-size: 0.85rem; line-height: 1.45; color: var(--text); }
-  .side-rank a:hover { color: var(--accent-dark); text-decoration: none; }
+  .side-rank-link { display: flex; gap: 9px; align-items: center; flex: 1; min-width: 0; }
+  .side-rank-link .side-clip { font-size: 0.83rem; line-height: 1.35; color: var(--text); }
+  .side-rank-link:hover .side-clip { color: var(--accent-dark); }
+  .side-rank-link:hover { text-decoration: none; }
   .side-related { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 12px; }
   .side-related a { font-size: 0.85rem; line-height: 1.45; color: var(--text); display: block; }
   .side-related a:hover { color: var(--accent-dark); text-decoration: none; }
-  .side-cat { display: block; font-size: 0.68rem; font-weight: 700; color: var(--accent-dark); margin-bottom: 3px; }
+  .side-cat { display: block; font-size: 0.68rem; font-weight: 700; color: var(--accent-dark); margin-bottom: 2px; }
   .side-tags { display: flex; flex-wrap: wrap; gap: 6px; }
   .side-tag {
     font-size: 0.78rem; font-weight: 600; color: var(--accent-dark);
@@ -117,8 +131,12 @@ const recent = [
   .side-recent { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 12px; }
   .side-recent li { border-bottom: 1px dashed var(--border); padding-bottom: 12px; }
   .side-recent li:last-child { border-bottom: none; padding-bottom: 0; }
-  .side-recent a { font-size: 0.85rem; line-height: 1.4; color: var(--text); display: block; }
-  .side-recent a:hover { color: var(--accent-dark); text-decoration: none; }
+  .side-recent-link { display: flex; gap: 9px; align-items: flex-start; }
+  .side-recent-link:hover { text-decoration: none; }
+  .side-recent-body { display: flex; flex-direction: column; min-width: 0; }
+  .side-recent-title { font-size: 0.83rem; line-height: 1.35; color: var(--text); }
+  .side-recent-link:hover .side-recent-title { color: var(--accent-dark); }
+  .side-recent-date { font-size: 0.7rem; color: #9a9488; margin-top: 3px; }
   .side-cta { background: var(--primary); border-radius: 10px; padding: 16px 15px; text-align: center; }
   .side-cta-intro { font-size: 0.8rem; color: rgba(255,255,255,0.75); margin: 0 0 10px; }
   .side-cta-btn {
