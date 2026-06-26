@@ -1,9 +1,9 @@
 <svg viewBox="0 0 720 450" xmlns="http://www.w3.org/2000/svg" role="img" font-family="'Malgun Gothic','Apple SD Gothic Neo','Noto Sans KR',sans-serif">
   <title>이사청소 vs 입주청소 평균 비용 비교 그래프</title>
-  <desc>30평 기준 평균 비용 비교. 이사청소 약 20만원, 입주청소 약 37만원으로 입주청소가 약 1.8배 높음.</desc>
+  <desc>30평 기준 평균 비용 비교. 이사청소 약 32만원, 입주청소 약 42만원으로 입주청소가 약 1.3배 높음.</desc>
   <rect x="0.5" y="0.5" width="719" height="449" rx="14" fill="#ffffff" stroke="#ece7dc"/>
   <text x="40" y="46" font-size="21" font-weight="700" fill="#1f2d3d">이사청소 vs 입주청소 평균 비용</text>
-  <text x="40" y="70" font-size="13" fill="#666f7a">30평 기준 · 입주청소가 약 1.8배 높음</text>
+  <text x="40" y="70" font-size="13" fill="#666f7a">30평 기준 · 입주청소가 약 1.3배 높음</text>
 
   <g stroke="#eee8db" stroke-width="1">
     <line x1="78" y1="390" x2="690" y2="390"/>
@@ -23,13 +23,13 @@
   </g>
 
   <g fill="#2fbf9b">
-    <rect x="176" y="272" width="110" height="118" rx="4"/>
-    <rect x="482" y="172" width="110" height="218" rx="4"/>
+    <rect x="176" y="201" width="110" height="189" rx="4"/>
+    <rect x="482" y="142" width="110" height="248" rx="4"/>
   </g>
 
   <g font-size="15" font-weight="700" fill="#1f2d3d" text-anchor="middle">
-    <text x="231" y="262">20만원</text>
-    <text x="537" y="162">37만원</text>
+    <text x="231" y="191">32만원</text>
+    <text x="537" y="132">42만원</text>
   </g>
 
   <g font-size="14" fill="#1f2d3d" text-anchor="middle">

@@ -1,6 +1,6 @@
 <svg viewBox="0 0 720 450" xmlns="http://www.w3.org/2000/svg" role="img" font-family="'Malgun Gothic','Apple SD Gothic Neo','Noto Sans KR',sans-serif">
   <title>에어컨 종류별 업체 청소 비용 그래프</title>
-  <desc>전문업체 분해 청소 기준 에어컨 종류별 비용 중간값. 벽걸이형 약 6만원, 스탠드형 약 12만원, 천장형 약 15만원, 이동식 약 5만원.</desc>
+  <desc>전문업체 분해 청소 기준 에어컨 종류별 비용 중간값. 벽걸이형 약 8만원, 스탠드형 약 12만원, 천장형 약 18만원, 이동식 약 5만원.</desc>
   <rect x="0.5" y="0.5" width="719" height="449" rx="14" fill="#ffffff" stroke="#ece7dc"/>
   <text x="40" y="46" font-size="21" font-weight="700" fill="#1f2d3d">에어컨 종류별 업체 청소 비용</text>
   <text x="40" y="70" font-size="13" fill="#666f7a">전문업체 분해 청소 기준</text>
@@ -21,16 +21,16 @@
   </g>
 
   <g fill="#2fbf9b">
-    <rect x="119" y="301" width="72" height="89" rx="4"/>
+    <rect x="119" y="272" width="72" height="118" rx="4"/>
     <rect x="272" y="213" width="72" height="177" rx="4"/>
-    <rect x="425" y="169" width="72" height="221" rx="4"/>
+    <rect x="425" y="124" width="72" height="266" rx="4"/>
     <rect x="578" y="316" width="72" height="74" rx="4"/>
   </g>
 
   <g font-size="13" font-weight="700" fill="#1f2d3d" text-anchor="middle">
-    <text x="155" y="293">6만</text>
+    <text x="155" y="264">8만</text>
     <text x="308" y="205">12만</text>
-    <text x="461" y="161">15만</text>
+    <text x="461" y="116">18만</text>
     <text x="614" y="308">5만</text>
   </g>
 
