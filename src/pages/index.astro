@@ -261,97 +261,48 @@ import Sidebar from '../components/Sidebar.astro';
   </div>
 </div>
 
-<!-- 전체 가이드 인덱스 -->
-<section class="guide-index">
+<!-- 비용 빠른 참고 -->
+<section class="cost-ref">
   <div class="container">
-    <div class="guide-index-head">
-      <h2 class="section-title">전체 가이드 한눈에 보기</h2>
-      <p class="section-sub">홈케어랩의 모든 청소·렌탈·이사·생활비 가이드를 주제별로 정리했습니다.</p>
+    <div class="cost-ref-head">
+      <h2 class="section-title">홈서비스 비용 빠른 참고</h2>
+      <p class="section-sub">자주 찾는 서비스의 평균 비용 범위입니다. 항목을 누르면 산정 기준과 절약 방법을 확인할 수 있습니다.</p>
     </div>
-    <div class="guide-hubs">
-      <div class="guide-hub guide-hub-blue">
-        <div class="guide-hub-head"><span class="guide-hub-ic" aria-hidden="true">🧼</span><h3><a href="/cheongso/">청소비용</a></h3><span class="guide-hub-cnt">17편</span></div>
-        <ul>
-          <li><a href="/cheongso/ipju-cheongso-biyong/">입주청소 비용, 평수별 기준</a></li>
-          <li><a href="/cheongso/wonroom-ipju-cheongso/">원룸 입주청소 비용</a></li>
-          <li><a href="/cheongso/isa-cheongso/">이사청소 vs 입주청소</a></li>
-          <li><a href="/cheongso/ipju-cheongso-chukaiyogeum/">입주청소 추가요금</a></li>
-          <li><a href="/cheongso/aircon-cheongso/">에어컨 청소 셀프 vs 업체</a></li>
-          <li><a href="/cheongso/aircon-type-cheongso/">벽걸이·스탠드 에어컨 청소 차이</a></li>
-          <li><a href="/cheongso/system-aircon-cheongso/">시스템 에어컨 청소 확인사항</a></li>
-          <li><a href="/cheongso/saetak-cheongso/">세탁기 청소 주기와 비용</a></li>
-          <li><a href="/cheongso/saetak-type-cheongso/">드럼·통돌이 세탁기 청소 차이</a></li>
-          <li><a href="/cheongso/hood-biyong/">주방 후드 청소 비용</a></li>
-          <li><a href="/cheongso/yoksil-gompalgi/">욕실 곰팡이 제거</a></li>
-          <li><a href="/cheongso/changtul-cheongso/">창틀 청소 방법</a></li>
-          <li><a href="/cheongso/mattress-cheongso/">매트리스 청소 방법</a></li>
-          <li><a href="/cheongso/sofa-cheongso/">소파 청소</a></li>
-          <li><a href="/cheongso/cheongso-gyeonjeok-checklist/">청소 견적 체크리스트</a></li>
-          <li><a href="/cheongso/cheongso-checklist-all/">청소 견적 전 체크리스트 통합</a></li>
-          <li><a href="/cheongso/cheongso-upche-hugi/">청소업체 후기 보는 법</a></li>
-        </ul>
-      </div>
-      <div class="guide-hub guide-hub-green">
-        <div class="guide-hub-head"><span class="guide-hub-ic" aria-hidden="true">🔌</span><h3><a href="/rental/">가전렌탈</a></h3><span class="guide-hub-cnt">17편</span></div>
-        <ul>
-          <li><a href="/rental/rental-vs-purchase/">렌탈 vs 구매 비교 가이드</a></li>
-          <li><a href="/rental/jeongsugi-rental/">정수기 렌탈 비용</a></li>
-          <li><a href="/rental/jeongsugi-filter-rental/">정수기 렌탈 관리주기</a></li>
-          <li><a href="/rental/eoreum-jeongsugi-rental/">얼음정수기 렌탈</a></li>
-          <li><a href="/rental/gonggi-rental/">공기청정기 렌탈 비용</a></li>
-          <li><a href="/rental/gonggi-filter-biyong/">공기청정기 필터비 포함 비용</a></li>
-          <li><a href="/rental/geondogi-rental/">건조기 렌탈 비용</a></li>
-          <li><a href="/rental/naengjangg-rental/">냉장고 렌탈 비용</a></li>
-          <li><a href="/rental/saetak-rental/">세탁기 렌탈 비용</a></li>
-          <li><a href="/rental/aircon-rental/">에어컨 렌탈 vs 구매</a></li>
-          <li><a href="/rental/bidet-rental/">비데 렌탈 비용</a></li>
-          <li><a href="/rental/oin-rental/">1인 가구 가전렌탈</a></li>
-          <li><a href="/rental/bumonim-rental/">부모님 집 렌탈</a></li>
-          <li><a href="/rental/rental-yakjeong/">렌탈 약정 해지 위약금</a></li>
-          <li><a href="/rental/rental-haejibiyong/">렌탈 해지비용</a></li>
-          <li><a href="/rental/rental-chunga-biyong/">렌탈 청구 비용 항목</a></li>
-          <li><a href="/rental/rental-isa-transfer/">렌탈 이전 설치</a></li>
-        </ul>
-      </div>
-      <div class="guide-hub guide-hub-amber">
-        <div class="guide-hub-head"><span class="guide-hub-ic" aria-hidden="true">📦</span><h3><a href="/isa-junbi/">이사준비</a></h3><span class="guide-hub-cnt">14편</span></div>
-        <ul>
-          <li><a href="/isa-junbi/homeservice-dday/">이사 홈서비스 준비표</a></li>
-          <li><a href="/isa-junbi/isa-checklist/">이사 전 체크리스트</a></li>
-          <li><a href="/isa-junbi/pojang-isa/">포장이사 vs 일반이사</a></li>
-          <li><a href="/isa-junbi/wonroom-isa-junbi/">원룸 이사 준비</a></li>
-          <li><a href="/isa-junbi/sinhonjip-junbi/">신혼집 가전 마련·입주 준비</a></li>
-          <li><a href="/isa-junbi/internet-sinyu-vs-isa/">인터넷 이전 vs 신규가입</a></li>
-          <li><a href="/isa-junbi/internet-isa/">이사 시 인터넷 이전</a></li>
-          <li><a href="/isa-junbi/dosigas/">도시가스 이전·명의변경</a></li>
-          <li><a href="/isa-junbi/pye-gajeon/">폐가전 무상 수거 신청</a></li>
-          <li><a href="/isa-junbi/haja-jeongeom/">하자 점검표</a></li>
-          <li><a href="/isa-junbi/gwanrisauso-hwakyin/">관리사무소 입주 확인 항목</a></li>
-          <li><a href="/isa-junbi/isa-dangil-cheongso/">이사 당일 청소·정리 순서</a></li>
-          <li><a href="/isa-junbi/isa-service-sunseot/">생활서비스 신청처·연락처</a></li>
-          <li><a href="/isa-junbi/bumonim-isa-jeongeom/">부모님 집 이사 전 안전 점검</a></li>
-        </ul>
-      </div>
-      <div class="guide-hub guide-hub-violet">
-        <div class="guide-hub-head"><span class="guide-hub-ic" aria-hidden="true">💡</span><h3><a href="/jeolryak/">생활비절감</a></h3><span class="guide-hub-cnt">14편</span></div>
-        <ul>
-          <li><a href="/jeolryak/jeongi-nujin/">전기요금 누진제 기준</a></li>
-          <li><a href="/jeolryak/aircon-jeongi/">에어컨 전기요금 계산법</a></li>
-          <li><a href="/jeolryak/nanbangbi-jeollyak/">겨울 난방비 절감</a></li>
-          <li><a href="/jeolryak/energy-voucher/">에너지바우처 신청 방법</a></li>
-          <li><a href="/jeolryak/yeorim-jeongi/">여름철 냉방비 절약</a></li>
-          <li><a href="/jeolryak/naengjangg-jeongi/">냉장고 전기요금</a></li>
-          <li><a href="/jeolryak/saetakgi-jeongi/">세탁기 전기요금</a></li>
-          <li><a href="/jeolryak/gonggi-jeongi/">공기청정기 전기요금</a></li>
-          <li><a href="/jeolryak/jesiugi-jeongi/">제습기 전기요금</a></li>
-          <li><a href="/jeolryak/tv-jeongi/">TV 전기요금</a></li>
-          <li><a href="/jeolryak/daegi-jeonryok/">대기전력 차단</a></li>
-          <li><a href="/jeolryak/boiler-oechul-mode/">보일러 외출모드</a></li>
-          <li><a href="/jeolryak/sudo-jeollyak/">수도요금 절약 습관</a></li>
-          <li><a href="/jeolryak/gogoyul-hwanbul/">고효율 가전 환급 신청</a></li>
-        </ul>
-      </div>
+    <div class="cost-grid">
+      <a class="cost-item" href="/cheongso/ipju-cheongso-biyong/">
+        <span class="cost-label">입주청소 <em>30평 기준</em></span>
+        <span class="cost-value">28~40<b>만원</b></span>
+      </a>
+      <a class="cost-item" href="/cheongso/isa-cheongso/">
+        <span class="cost-label">이사청소 <em>30평 기준</em></span>
+        <span class="cost-value">18~28<b>만원</b></span>
+      </a>
+      <a class="cost-item" href="/cheongso/aircon-cheongso/">
+        <span class="cost-label">에어컨 청소 <em>벽걸이</em></span>
+        <span class="cost-value">5~9<b>만원</b></span>
+      </a>
+      <a class="cost-item" href="/cheongso/hood-biyong/">
+        <span class="cost-label">주방 후드 청소</span>
+        <span class="cost-value">8~15<b>만원</b></span>
+      </a>
+      <a class="cost-item" href="/rental/jeongsugi-rental/">
+        <span class="cost-label">정수기 렌탈 <em>월</em></span>
+        <span class="cost-value">1.5~3.5<b>만원</b></span>
+      </a>
+      <a class="cost-item" href="/rental/gonggi-rental/">
+        <span class="cost-label">공기청정기 렌탈 <em>월</em></span>
+        <span class="cost-value">1.5~3<b>만원</b></span>
+      </a>
+      <a class="cost-item" href="/rental/geondogi-rental/">
+        <span class="cost-label">건조기 렌탈 <em>월</em></span>
+        <span class="cost-value">2.5~4.5<b>만원</b></span>
+      </a>
+      <a class="cost-item" href="/isa-junbi/pojang-isa/">
+        <span class="cost-label">포장이사 <em>가정 이사</em></span>
+        <span class="cost-value">70~130<b>만원</b></span>
+      </a>
     </div>
+    <p class="cost-note">※ 위 금액은 일반적인 시장 평균 추정치이며, 평형·오염도·지역·업체에 따라 달라질 수 있습니다. 정확한 비용은 견적으로 확인하세요.</p>
   </div>
 </section>
 
@@ -452,22 +403,19 @@ import Sidebar from '../components/Sidebar.astro';
 .home-heads .head-d { display: block; font-size: 0.77rem; font-weight: 400; color: var(--text-muted); line-height: 1.4; margin-top: 2px; }
 .home-heads a:hover .head-t { color: var(--accent-dark); }
 
-/* 전체 가이드 인덱스 (허브 카드) */
-.guide-index { background: #f7f6f3; border-top: 1px solid var(--border); padding: 46px 20px 52px; }
-.guide-index-head { text-align: center; margin-bottom: 26px; }
-.guide-hubs { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; }
-.guide-hub { background: #fff; border: 1px solid var(--border); border-radius: 12px; padding: 15px 16px 17px; }
-.guide-hub-head { display: flex; align-items: center; gap: 9px; margin: 0 0 12px; padding-bottom: 10px; border-bottom: 2px solid var(--primary); }
-.guide-hub-ic { flex: 0 0 30px; width: 30px; height: 30px; border-radius: 7px; display: flex; align-items: center; justify-content: center; font-size: 16px; background: var(--primary-light); }
-.guide-hub-head h3 { font-size: 0.98rem; font-weight: 800; margin: 0; }
-.guide-hub-head h3 a { color: var(--primary); }
-.guide-hub-head h3 a:hover { color: var(--accent-dark); text-decoration: none; }
-.guide-hub-cnt { margin-left: auto; font-size: 0.7rem; font-weight: 700; border-radius: 999px; padding: 2px 9px; background: var(--primary-light); color: var(--accent-dark); }
-.guide-hub ul { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 8px; }
-.guide-hub li a { font-size: 0.85rem; color: var(--text-muted); line-height: 1.4; display: block; }
-.guide-hub li a:hover { color: var(--accent-dark); text-decoration: none; }
-@media (max-width: 900px) { .guide-hubs { grid-template-columns: 1fr 1fr; } }
-@media (max-width: 560px) { .guide-hubs { grid-template-columns: 1fr; } }
+/* 홈서비스 비용 빠른 참고 */
+.cost-ref { background: #f7f6f3; border-top: 1px solid var(--border); padding: 46px 20px 50px; }
+.cost-ref-head { text-align: center; margin-bottom: 26px; }
+.cost-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; }
+.cost-item { display: flex; flex-direction: column; gap: 6px; background: #fff; border: 1px solid var(--border); border-radius: 10px; padding: 16px 16px 17px; text-decoration: none; transition: box-shadow .2s, transform .2s; }
+.cost-item:hover { box-shadow: 0 4px 16px rgba(47,191,155,.14); transform: translateY(-2px); text-decoration: none; }
+.cost-label { font-size: 0.85rem; font-weight: 700; color: var(--primary); }
+.cost-label em { font-style: normal; font-weight: 400; font-size: 0.76rem; color: var(--text-muted); margin-left: 3px; }
+.cost-value { font-size: 1.25rem; font-weight: 800; color: var(--accent-dark); }
+.cost-value b { font-size: 0.85rem; font-weight: 700; margin-left: 1px; }
+.cost-note { margin: 18px 0 0; font-size: 0.76rem; color: var(--text-muted); line-height: 1.6; text-align: center; }
+@media (max-width: 860px) { .cost-grid { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 460px) { .cost-grid { grid-template-columns: 1fr; } }
 
 /* 비용 계산기 (다크) */
 .calc-cta-section { background: var(--primary); padding: 48px 20px 52px; text-align: center; }

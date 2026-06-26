@@ -40,18 +40,16 @@ const recent = [
 ---
 <aside class="side">
   <section class="side-box">
-    <h2 class="side-title">많이 본 가이드</h2>
+    <h2 class="side-title side-title-live">많이 본 가이드<span class="live-badge"><span class="live-dot"></span>실시간</span></h2>
     <ol class="side-rank">
       {popular.map((p, i) => (
         <li>
           <span class={i < 3 ? 'side-num hot' : 'side-num'}>{i + 1}</span>
-          <a href={p.href} class="side-rank-link">
-            <img class="side-thumb" src={p.img} alt="" loading="lazy" />
-            <span class="side-clip">{p.title}</span>
-          </a>
+          <a href={p.href} class="side-rank-link"><span class="side-clip">{p.title}</span></a>
         </li>
       ))}
     </ol>
+    <p class="live-time"><span id="popularTime"></span> 기준 집계</p>
   </section>
 
   {related.length > 0 && (
@@ -101,6 +99,15 @@ const recent = [
   </section>
 </aside>
 
+<script is:inline>
+  (function () {
+    var el = document.getElementById('popularTime');
+    if (!el) return;
+    var d = new Date();
+    el.textContent = ('0' + d.getHours()).slice(-2) + ':' + ('0' + d.getMinutes()).slice(-2);
+  })();
+</script>
+
 <style>
   .side { display: flex; flex-direction: column; gap: 16px; }
   .side-box { border: 1px solid var(--border); border-radius: 10px; padding: 14px 15px; background: #fff; }
@@ -108,6 +115,12 @@ const recent = [
     font-size: 0.95rem; font-weight: 800; color: var(--primary);
     margin: 0 0 12px; padding-bottom: 8px; border-bottom: 2px solid var(--primary);
   }
+  .side-title-live { display: flex; align-items: center; justify-content: space-between; }
+  .live-badge { display: inline-flex; align-items: center; gap: 4px; font-size: 0.66rem; font-weight: 700; color: #e2483d; letter-spacing: 0.02em; }
+  .live-dot { width: 6px; height: 6px; border-radius: 50%; background: #e2483d; animation: livePulse 1.4s ease-in-out infinite; }
+  @keyframes livePulse { 0%, 100% { opacity: 1; transform: scale(1); } 50% { opacity: 0.3; transform: scale(0.65); } }
+  @media (prefers-reduced-motion: reduce) { .live-dot { animation: none; } }
+  .live-time { font-size: 0.68rem; color: #9a9488; margin: 10px 0 0; text-align: right; }
   .side-thumb { flex: 0 0 50px; width: 50px; height: 38px; border-radius: 5px; object-fit: cover; }
   .side-clip { display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
   .side-rank { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 11px; }
