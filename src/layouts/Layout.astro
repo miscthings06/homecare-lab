@@ -8,6 +8,7 @@ interface Props {
   ogImage?: string;
   canonical?: string;
   cover?: string;
+  noindex?: boolean;
 }
 
 const {
@@ -16,6 +17,7 @@ const {
   ogImage = '/og-default.png',
   canonical,
   cover,
+  noindex = false,
 } = Astro.props;
 
 const canonicalURL = canonical ?? new URL(Astro.url.pathname, Astro.site).href;
@@ -46,6 +48,7 @@ const catLabel = _catLabels[_segs[0]] || '';
   <title>{pageTitle}</title>
   <meta name="description" content={description} />
   <link rel="canonical" href={canonicalURL} />
+  {noindex && <meta name="robots" content="noindex, follow" />}
   <meta name="google-site-verification" content="tIiMK28Yg0Un0owVfo9fp1vNqaQ2sI_ENMYmdR2Xot8" />
   <meta name="naver-site-verification" content="a4b0627aceb0db403506dfc1296e39b327975953" />
 
@@ -169,7 +172,7 @@ const catLabel = _catLabels[_segs[0]] || '';
           <a href="/rental/jeongsugi-rental/">정수기 렌탈</a>
           <a href="/rental/gonggi-rental/">공기청정기 렌탈</a>
           <a href="/rental/geondogi-rental/">건조기 렌탈</a>
-          <a href="/rental/rental-yakjeong/">렌탈 약정·위약금</a>
+          <a href="/rental/rental-haejibiyong/">렌탈 해지비용</a>
         </div>
         <div class="footer-col">
           <h3><a href="/isa-junbi/">이사준비</a></h3>
