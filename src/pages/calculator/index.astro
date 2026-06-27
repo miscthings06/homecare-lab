@@ -507,18 +507,21 @@ import Layout from '../../layouts/Layout.astro';
       <div class="csn-items">
         <div class="csn-item">
           <strong>🏠 입주청소 비용 계산</strong>
-          <p>수도권 기준 청소 업체 평균 견적 데이터(2026년 5월 기준)를 토대로 평수·주거 형태·오염도·거주 기간 등 변수를 곱해 예상 범위를 산출합니다. 지방·비수도권 지역은 실제 견적이 낮게 책정되는 경우가 많으며, 업체 이동 거리·특수 자재 사용 여부에 따라 달라집니다.</p>
+          <p>수도권 기준 청소 업체 평균 견적 데이터를 토대로 평수·주거 형태·오염도·거주 기간 등 변수를 곱해 예상 범위를 산출합니다. 지방·비수도권 지역은 실제 견적이 낮게 책정되는 경우가 많으며, 업체 이동 거리·특수 자재 사용 여부에 따라 달라집니다.</p>
+          <p class="csn-formula"><strong>산식</strong> 평수별 기본 범위(공실·일반오염·수도권 기준, 예: 30평 35~50만원) × 오염도(1~1.6) × 흡연(1~1.25) × 공실·거주(1~1.1) × 거주기간(0.9~1.5) × 주거형태(0.88~1) + 추가 항목 합계</p>
         </div>
         <div class="csn-item">
           <strong>🔄 렌탈 vs 구매 손익분기</strong>
           <p>입력한 렌탈료·약정 기간·구매 가격·유지비를 기준으로 단순 비용 합산 비교를 수행합니다. 위약금·이전 설치비·소모품 교체 빈도·이사 계획·브랜드별 서비스 차이 등 개인 변수는 반영되지 않으므로, 결과를 참고용으로만 활용하고 정확한 조건은 업체에 문의하세요.</p>
+          <p class="csn-formula"><strong>산식</strong> 렌탈 총비용 = (월 렌탈료 × 약정 개월) − 채널 혜택 + 소유권 이전비 · 구매 총비용 = 구매가 + (연 유지비 × 약정 개월 ÷ 12) · 손익분기 = 구매 누적이 렌탈 누적보다 낮아지는 첫 개월</p>
         </div>
         <div class="csn-item">
           <strong>⚡ 가전 전기요금 계산</strong>
-          <p>입력한 소비전력(W)과 사용 패턴을 기준으로 해당 기기의 월 추가 전기요금을 추정합니다. 실제 청구 요금에는 기후환경요금·연료비조정요금·부가가치세(10%)·전력산업기반기금이 더해집니다. 가구 전체 사용량에 따른 누진 구간은 반영되지 않으므로, 한전 홈페이지(kepco.co.kr) 또는 한전 스마트 앱에서 실제 요금을 확인하세요.</p>
+          <p>입력한 소비전력(W)과 사용 패턴을 기준으로 해당 기기의 월 추가 전기요금을 추정합니다. 실제 청구 요금에는 기후환경요금·연료비조정요금·부가가치세(10%)·전력산업기반기금이 더해집니다. 가구 전체 사용량에 따른 누진 구간은 반영되지 않으므로, 한전 홈페이지 또는 한전 스마트 앱에서 실제 요금을 확인하세요.</p>
+          <p class="csn-formula"><strong>산식</strong> 월 사용량(kWh) = 소비전력(W) ÷ 1,000 × 하루 사용시간 × 월 사용일수 · 월 요금 = 월 사용량 × 단가(저누진 120 / 평균 185 / 고누진 280원·kWh) · 연간 = 월 요금 × 12</p>
         </div>
       </div>
-      <p class="csn-footer-note">계산 결과는 "정답"이 아니라 <strong>예산 계획과 비교 판단의 출발점</strong>으로 활용하시기 바랍니다. 정확한 비용은 업체 현장 견적·계약서·공식 기관 기준을 반드시 확인하세요.</p>
+      <p class="csn-footer-note"><strong>데이터 기준일: 2026년 6월</strong> · 참고 출처: <a href="https://home.kepco.co.kr/" rel="noopener" target="_blank">한국전력공사</a>(전기요금) · <a href="https://www.kca.go.kr/" rel="noopener" target="_blank">한국소비자원</a>(청소·서비스 가격) · 복수 업체 공개 가격표. 계산 결과는 "정답"이 아니라 <strong>예산 계획과 비교 판단의 출발점</strong>으로 활용하시고, 정확한 비용은 업체 현장 견적·계약서·공식 기관 기준을 확인하세요.</p>
     </div>
   </div>
 
@@ -770,6 +773,12 @@ import Layout from '../../layouts/Layout.astro';
 .csn-item p {
   font-size: 0.83rem; color: var(--text-muted); line-height: 1.6; margin: 0;
 }
+.csn-item .csn-formula {
+  font-size: 0.8rem; color: var(--primary); background: #fff;
+  border: 1px dashed rgba(47,191,155,0.45); border-radius: 6px;
+  padding: 8px 11px; margin: 8px 0 0; line-height: 1.55;
+}
+.csn-formula strong { color: var(--accent-dark); margin-right: 4px; }
 .csn-footer-note {
   font-size: 0.82rem; color: var(--text-muted); line-height: 1.6;
   padding: 10px 14px; background: rgba(47,191,155,0.06);
@@ -817,8 +826,8 @@ document.getElementById('ipju-calc-btn')?.addEventListener('click', () => {
   const dirty = parseFloat((document.querySelector('input[name="ipju-dirty"]:checked') as HTMLInputElement)?.value ?? '1');
   const smoke = parseFloat((document.querySelector('input[name="ipju-smoke"]:checked') as HTMLInputElement)?.value ?? '1');
   const base: Record<number,[number,number]> = {
-    10:[100000,180000], 15:[130000,200000], 20:[160000,250000], 25:[220000,330000],
-    30:[280000,400000], 33:[320000,450000], 40:[400000,600000], 50:[600000,900000]
+    10:[130000,200000], 15:[180000,270000], 20:[240000,340000], 25:[290000,420000],
+    30:[350000,500000], 33:[400000,560000], 40:[500000,680000], 50:[680000,900000]
   };
   const typeBonus: Record<string,number> = { apt:1, villa:0.92, officetel:0.88 };
   let [low, high] = base[size];
