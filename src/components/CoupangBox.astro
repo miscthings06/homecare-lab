@@ -1,0 +1,63 @@
+---
+// 쿠팡 파트너스 추천 상품 박스
+// ────────────────────────────────────────────────────────────
+// ▸ 사용법: 아래 LINKS의 '' 안에 쿠팡 파트너스에서 생성한 트래킹 링크를 붙여넣으세요.
+//   링크가 비어 있으면(''=기본값) 박스가 렌더링되지 않아 사이트에 표시되지 않습니다.
+//   → 링크를 넣는 즉시 해당 글의 박스가 자동으로 노출됩니다. (죽은 링크 없음)
+const LINKS: Record<string, string> = {
+  jeongsugi: '', // 정수기 (jeongsugi-rental)
+  gonggi:    '', // 공기청정기 (gonggi-rental)
+  geondogi:  '', // 건조기 (geondogi-rental)
+  gajeon:    '', // 가전 일반 (rental-vs-purchase)
+  gompangi:  '', // 곰팡이 제거제 (yoksil-gompalgi)
+  hood:      '', // 주방 후드 세정제 (hood-biyong)
+  aircon:    '', // 에어컨 청소 용품 (aircon-cheongso)
+};
+
+interface Props {
+  item: string;
+  title?: string;
+  desc?: string;
+  ctaLabel?: string;
+}
+const {
+  item,
+  title = '쿠팡에서 관련 상품 보기',
+  desc = '',
+  ctaLabel = '쿠팡에서 최저가·후기 보기 →',
+} = Astro.props;
+const url = LINKS[item] ?? '';
+---
+{url && (
+  <div class="coupang-box">
+    <span class="coupang-tag">추천 상품 · 쿠팡</span>
+    <p class="coupang-title">{title}</p>
+    {desc && <p class="coupang-desc">{desc}</p>}
+    <a class="coupang-btn" href={url} rel="sponsored nofollow noopener" target="_blank">{ctaLabel}</a>
+    <p class="coupang-disc">이 링크는 쿠팡 파트너스 활동의 일환으로, 이에 따라 일정액의 수수료를 제공받습니다.</p>
+  </div>
+)}
+
+<style>
+  .coupang-box {
+    border: 1px solid var(--border);
+    border-left: 4px solid #ff6b35;
+    border-radius: 10px;
+    padding: 16px 18px;
+    margin: 26px 0;
+    background: #fff;
+  }
+  .coupang-tag {
+    display: inline-block;
+    font-size: 0.7rem; font-weight: 800; color: #d9531e;
+    background: #fff1eb; border-radius: 999px; padding: 3px 10px; margin-bottom: 8px;
+  }
+  .coupang-title { font-size: 0.98rem; font-weight: 700; color: var(--primary); margin: 0 0 4px; }
+  .coupang-desc { font-size: 0.86rem; color: var(--text-muted); line-height: 1.55; margin: 0 0 12px; }
+  .coupang-btn {
+    display: inline-block; font-size: 0.9rem; font-weight: 700; color: #fff;
+    background: #ff6b35; border-radius: 8px; padding: 10px 18px; text-decoration: none;
+  }
+  .coupang-btn:hover { background: #e85a28; text-decoration: none; }
+  .coupang-disc { font-size: 0.72rem; color: var(--text-muted); margin: 10px 0 0; line-height: 1.5; }
+</style>
