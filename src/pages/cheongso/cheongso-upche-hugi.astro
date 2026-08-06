@@ -9,7 +9,17 @@ import ArticleInfoCard from '../../components/ArticleInfoCard.astro';
 <div class="article-wrap">
   <div class="breadcrumb"><a href="/">홈</a><span>›</span><a href="/cheongso/">청소비용</a><span>›</span><strong>청소업체 후기 보는 법</strong></div>
   <div class="article-meta"><span class="badge badge-blue">청소비용</span> &nbsp;최종 수정: 2026년 5월</div>
-  <ArticleInfoCard publishDate="2026년 5월 12일" publishTime="오후" reviewDate="2026년 5월 11일" reviewCriteria="한국소비자원 소비자 피해 구제 사례, 생활서비스 업체 후기 신뢰도 평가 기준" />
+  <ArticleInfoCard
+    publishDate="2026년 5월 12일"
+    publishTime="오후"
+    reviewDate="2026년 8월 7일"
+    reviewCriteria="한국소비자원 청소서비스 분쟁 사례에서 반복되는 작업시간·재청소·파손 확인 항목"
+    sources={[
+      {label:'한국소비자원 청소서비스 분쟁조정 사례',url:'https://www.kca.go.kr/odr/bj/br/osBjDecisionExamDetW.do?brdId=00000007&dataStts=Y&seq=1001142714'},
+      {label:'한국소비자원 피해구제 절차',url:'https://www.kca.go.kr/odr/link/pg/pr/osPgStpSobiGuidW.do'},
+    ]}
+    sourceNote="후기 판독 기준은 특정 업체의 순위를 매기는 기준이 아니라, 계약 내용과 실제 작업 범위가 일치했는지 확인하기 위한 체크리스트입니다."
+  />
 
   <h1>청소업체 후기 볼 때 확인해야 할 7가지 기준</h1>
 

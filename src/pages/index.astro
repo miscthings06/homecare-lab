@@ -5,7 +5,14 @@ import Sidebar from '../components/Sidebar.astro';
 <Layout
   title="홈케어랩│homecare-lab.co.kr"
   description="청소부터 가전렌탈까지, 우리집 생활비 줄이는 홈서비스 가이드. 입주청소·이사청소 비용, 정수기·공기청정기 렌탈 비교, 이사 전후 준비, 전기요금 절약 정보를 확인하세요."
+  preloadImage="/images/covers/ipju-cheongso-biyong.jpg"
 >
+
+<section class="home-intro container">
+  <p class="home-intro-eyebrow">HOMECARE DECISION GUIDE</p>
+  <h1>집 관리 비용을 <span>숫자와 기준</span>으로 비교합니다</h1>
+  <p>청소 견적, 가전 렌탈, 이사 준비, 전기요금처럼 조건에 따라 달라지는 비용을 계산 과정과 확인 항목 중심으로 정리합니다.</p>
+</section>
 
 <!-- 뉴스 포털 본문 (메인 + 사이드바) -->
 <div class="home-news container">
@@ -14,7 +21,7 @@ import Sidebar from '../components/Sidebar.astro';
     <!-- 대표 기사 -->
     <a href="/cheongso/ipju-cheongso-biyong/" class="lead">
       <div class="lead-cover">
-        <img src="/images/covers/ipju-cheongso-biyong.jpg" alt="" loading="lazy" />
+        <img src="/images/covers/ipju-cheongso-biyong.jpg" alt="30평 입주청소 비용과 추가 항목 가이드" width="1672" height="941" loading="eager" fetchpriority="high" decoding="async" />
         <span class="lead-cover-label">이번 주 가이드</span>
       </div>
       <div class="lead-body">
@@ -44,19 +51,19 @@ import Sidebar from '../components/Sidebar.astro';
       </div>
       <div class="home-list">
         <a href="/cheongso/yoksil-gompalgi/" class="home-item">
-          <img class="home-thumb" src="/images/covers/yoksil-gompalgi.jpg" alt="" loading="lazy" />
+          <img class="home-thumb" src="/images/covers/yoksil-gompalgi.jpg" alt="욕실 곰팡이 제거 가이드" width="1672" height="941" loading="lazy" decoding="async" />
           <div><h3>욕실 곰팡이, 닦아도 다시 생기는 이유</h3><span class="sub">곰팡이는 줄눈과 실리콘 안쪽에 뿌리내려 표면만 닦으면 재발합니다. 부위별 제거법과 환기·방수로 재발을 막는 관리법을 정리했습니다.</span><span class="home-date">2026.05.10</span></div>
         </a>
         <a href="/cheongso/hood-biyong/" class="home-item">
-          <img class="home-thumb" src="/images/covers/hood-biyong.jpg" alt="" loading="lazy" />
+          <img class="home-thumb" src="/images/covers/hood-biyong.jpg" alt="주방 후드 청소 비용 가이드" width="1672" height="941" loading="lazy" decoding="async" />
           <div><h3>주방 후드 청소, 언제 얼마에 맡길까</h3><span class="sub">기름때가 쌓인 후드는 배기 효율이 떨어지고 화재 위험도 생깁니다. 후드 종류별 청소 주기와 셀프 한계, 전문 청소 비용을 정리했습니다.</span><span class="home-date">2026.05.09</span></div>
         </a>
         <a href="/cheongso/aircon-cheongso/" class="home-item">
-          <img class="home-thumb" src="/images/covers/aircon-cheongso.jpg" alt="" loading="lazy" />
+          <img class="home-thumb" src="/images/covers/aircon-cheongso.jpg" alt="에어컨 청소 비용 가이드" width="1672" height="941" loading="lazy" decoding="async" />
           <div><h3>에어컨 청소, 셀프와 업체 비용·효과 차이</h3><span class="sub">셀프는 비용이 적지만 내부까지 닦기 어렵고, 업체는 분해 세척으로 곰팡이까지 제거합니다. 에어컨 종류별 청소 비용과 선택 기준을 정리했습니다.</span><span class="home-date">2026.05.08</span></div>
         </a>
         <a href="/cheongso/isa-cheongso/" class="home-item">
-          <img class="home-thumb" src="/images/covers/isa-cheongso.jpg" alt="" loading="lazy" />
+          <img class="home-thumb" src="/images/covers/isa-cheongso.jpg" alt="이사청소와 입주청소 비교 가이드" width="1672" height="941" loading="lazy" decoding="async" />
           <div><h3>이사청소 vs 입주청소, 비용이 갈리는 이유</h3><span class="sub">이사청소와 입주청소는 청소 대상과 범위가 달라 비용도 차이가 납니다. 두 서비스의 포함 항목과 평형별 가격 기준을 비교해 정리했습니다.</span><span class="home-date">2026.05.07</span></div>
         </a>
       </div>
@@ -77,19 +84,19 @@ import Sidebar from '../components/Sidebar.astro';
       </div>
       <div class="home-list">
         <a href="/rental/rental-vs-purchase/" class="home-item">
-          <img class="home-thumb" src="/images/covers/rental-vs-purchase.jpg" alt="" loading="lazy" />
+          <img class="home-thumb" src="/images/covers/rental-vs-purchase.jpg" alt="가전 렌탈과 구매 비용 비교" width="1672" height="941" loading="lazy" decoding="async" />
           <div><h3>가전 렌탈 vs 구매, 손익이 갈리는 지점</h3><span class="sub">사용 기간과 관리 편의성에 따라 유불리가 달라집니다. 제품별 5년 총비용을 기준으로 렌탈과 구매의 손익분기점을 정리했습니다.</span><span class="home-date">2026.06.03</span></div>
         </a>
         <a href="/rental/geondogi-rental/" class="home-item">
-          <img class="home-thumb" src="/images/covers/geondogi-rental.jpg" alt="" loading="lazy" />
+          <img class="home-thumb" src="/images/covers/geondogi-rental.jpg" alt="건조기 렌탈 비용 가이드" width="1672" height="941" loading="lazy" decoding="async" />
           <div><h3>건조기 렌탈, 구매보다 유리한 조건은</h3><span class="sub">고가 건조기를 초기 비용 없이 쓰는 게 렌탈의 장점입니다. 히트펌프·드럼 방식별 렌탈 월 요금과 구매 비용을 비교했습니다.</span><span class="home-date">2026.05.14</span></div>
         </a>
         <a href="/rental/jeongsugi-rental/" class="home-item">
-          <img class="home-thumb" src="/images/covers/jeongsugi-rental.jpg" alt="" loading="lazy" />
+          <img class="home-thumb" src="/images/covers/jeongsugi-rental.jpg" alt="정수기 렌탈과 구매 비용 비교" width="1672" height="941" loading="lazy" decoding="async" />
           <div><h3>정수기 렌탈 vs 구매, 5년 총비용의 차이</h3><span class="sub">월 렌탈료만 보면 손해를 놓칩니다. 약정 기간과 필터 관리비까지 포함한 5년 총비용으로 렌탈과 구매를 비교했습니다.</span><span class="home-date">2026.05.13</span></div>
         </a>
         <a href="/rental/gonggi-rental/" class="home-item">
-          <img class="home-thumb" src="/images/covers/gonggi-rental.jpg" alt="" loading="lazy" />
+          <img class="home-thumb" src="/images/covers/gonggi-rental.jpg" alt="공기청정기 렌탈과 구매 비용 비교" width="1672" height="941" loading="lazy" decoding="async" />
           <div><h3>공기청정기, 렌탈과 구매 어느 쪽이 쌀까</h3><span class="sub">필터 교체 주기와 관리 편의성에서 렌탈과 구매가 갈립니다. 공간 면적별 제품 선택과 렌탈 월 요금 기준을 함께 비교했습니다.</span><span class="home-date">2026.05.13</span></div>
         </a>
       </div>
@@ -110,19 +117,19 @@ import Sidebar from '../components/Sidebar.astro';
       </div>
       <div class="home-list">
         <a href="/isa-junbi/homeservice-dday/" class="home-item">
-          <img class="home-thumb" src="/images/covers/homeservice-dday.jpg" alt="" loading="lazy" />
+          <img class="home-thumb" src="/images/covers/homeservice-dday.jpg" alt="이사 전 홈서비스 준비 일정" width="1672" height="941" loading="lazy" decoding="async" />
           <div><h3>이사 D-30, 홈서비스 신청 순서 정리</h3><span class="sub">인터넷·청소·렌탈·가스를 D-30 기준으로 언제 신청할지 타임라인으로 정리했습니다. 빠뜨리기 쉬운 항목을 한눈에 확인하세요.</span><span class="home-date">2026.06.04</span></div>
         </a>
         <a href="/isa-junbi/pojang-isa/" class="home-item">
-          <img class="home-thumb" src="/images/covers/pojang-isa.jpg" alt="" loading="lazy" />
+          <img class="home-thumb" src="/images/covers/pojang-isa.jpg" alt="포장이사와 일반이사 비용 비교" width="1672" height="941" loading="lazy" decoding="async" />
           <div><h3>포장이사 vs 일반이사, 평형별 비용 차이</h3><span class="sub">포장이사는 짐 정리까지 맡기고 일반이사는 비용이 저렴합니다. 짐 규모와 거리별 비용 차이, 상황별 선택 기준을 정리했습니다.</span><span class="home-date">2026.06.03</span></div>
         </a>
         <a href="/isa-junbi/internet-sinyu-vs-isa/" class="home-item">
-          <img class="home-thumb" src="/images/covers/internet-sinyu-vs-isa.jpg" alt="" loading="lazy" />
+          <img class="home-thumb" src="/images/covers/internet-sinyu-vs-isa.jpg" alt="인터넷 이전과 신규가입 비교" width="1672" height="941" loading="lazy" decoding="async" />
           <div><h3>인터넷 이전 vs 신규가입, 무엇이 이득일까</h3><span class="sub">이전 설치는 약정을 유지하고 신규 가입은 사은품이 큽니다. 위약금·혜택·개통 기간을 따져 유리한 쪽을 정리했습니다.</span><span class="home-date">2026.05.22</span></div>
         </a>
         <a href="/isa-junbi/dosigas/" class="home-item">
-          <img class="home-thumb" src="/images/covers/dosigas.jpg" alt="" loading="lazy" />
+          <img class="home-thumb" src="/images/covers/dosigas.jpg" alt="도시가스 이전 신청 순서" width="1672" height="941" loading="lazy" decoding="async" />
           <div><h3>도시가스 이전, 늦으면 남의 요금까지 낸다</h3><span class="sub">명의변경을 미루면 이전 거주자 명의로 요금이 청구됩니다. 나가는 집 정산과 새 집 개통 신청 순서를 단계별로 정리했습니다.</span><span class="home-date">2026.05.20</span></div>
         </a>
       </div>
@@ -143,19 +150,19 @@ import Sidebar from '../components/Sidebar.astro';
       </div>
       <div class="home-list">
         <a href="/jeolryak/energy-voucher/" class="home-item">
-          <img class="home-thumb" src="/images/covers/energy-voucher.jpg" alt="" loading="lazy" />
+          <img class="home-thumb" src="/images/covers/energy-voucher.jpg" alt="에너지바우처 신청 가이드" width="1672" height="941" loading="lazy" decoding="async" />
           <div><h3>에너지바우처, 얼마를 어디에 쓸 수 있나</h3><span class="sub">취약계층에 전기·가스·등유 구입비를 지원하는 제도입니다. 신청 자격과 지원 금액, 사용처와 신청 방법을 정리했습니다.</span><span class="home-date">2026.05.25</span></div>
         </a>
         <a href="/jeolryak/nanbangbi-jeollyak/" class="home-item">
-          <img class="home-thumb" src="/images/covers/nanbangbi-jeollyak.jpg" alt="" loading="lazy" />
+          <img class="home-thumb" src="/images/covers/nanbangbi-jeollyak.jpg" alt="겨울 난방비 절약 가이드" width="1672" height="941" loading="lazy" decoding="async" />
           <div><h3>보일러 1도만 낮춰도 난방비 7% 절감</h3><span class="sub">설정 온도를 1도 낮추면 연료비가 약 7% 줄어듭니다. 외출 모드 활용과 단열 팁까지 겨울 난방비를 줄이는 방법을 정리했습니다.</span><span class="home-date">2026.05.24</span></div>
         </a>
         <a href="/jeolryak/jeongi-nujin/" class="home-item">
-          <img class="home-thumb" src="/images/covers/jeongi-nujin.jpg" alt="" loading="lazy" />
+          <img class="home-thumb" src="/images/covers/jeongi-nujin.jpg" alt="가정용 전기요금 누진제 가이드" width="1672" height="941" loading="lazy" decoding="async" />
           <div><h3>전기요금 누진제, 어느 구간부터 비싸지나</h3><span class="sub">가정용 전기는 사용량이 많을수록 단가가 오릅니다. 1~3구간 단가 기준과 누진 구간을 넘지 않게 쓰는 방법을 정리했습니다.</span><span class="home-date">2026.05.24</span></div>
         </a>
         <a href="/jeolryak/aircon-jeongi/" class="home-item">
-          <img class="home-thumb" src="/images/covers/aircon-jeongi.jpg" alt="" loading="lazy" />
+          <img class="home-thumb" src="/images/covers/aircon-jeongi.jpg" alt="에어컨 월 전기요금 계산 가이드" width="1672" height="941" loading="lazy" decoding="async" />
           <div><h3>에어컨, 하루 8시간이면 전기료 얼마</h3><span class="sub">소비전력과 사용 시간, 누진제 구간에 따라 요금이 크게 달라집니다. 하루 사용 시간별 에어컨 전기요금 계산법을 정리했습니다.</span><span class="home-date">2026.05.23</span></div>
         </a>
       </div>
@@ -330,6 +337,32 @@ import Sidebar from '../components/Sidebar.astro';
 
 <style>
 /* 뉴스 포털 홈 */
+.home-intro {
+  padding-top: 34px;
+  padding-bottom: 24px;
+}
+.home-intro-eyebrow {
+  margin: 0 0 8px;
+  color: var(--accent-dark);
+  font-size: .74rem;
+  font-weight: 800;
+  letter-spacing: .12em;
+}
+.home-intro h1 {
+  margin: 0 0 10px;
+  color: var(--primary);
+  font-size: clamp(1.65rem, 4vw, 2.35rem);
+  line-height: 1.3;
+  letter-spacing: -.035em;
+}
+.home-intro h1 span { color: var(--accent-dark); }
+.home-intro > p:last-child {
+  max-width: 760px;
+  margin: 0;
+  color: var(--text-muted);
+  font-size: .94rem;
+  line-height: 1.75;
+}
 .home-news {
   display: grid;
   grid-template-columns: minmax(0, 1fr) 290px;

@@ -6,6 +6,7 @@ interface Props {
   author?: string;
   reviewCriteria: string;
   sources?: { label: string; url: string }[];
+  sourceNote?: string;
 }
 
 const {
@@ -15,6 +16,7 @@ const {
   author = "닥터 홈케어",
   reviewCriteria,
   sources = [],
+  sourceNote = '',
 } = Astro.props;
 ---
 <div class="article-info-card">
@@ -48,6 +50,7 @@ const {
       </span>
     </div>
   )}
+  {sourceNote && <p class="ai-source-note">{sourceNote}</p>}
 </div>
 
 <style>
@@ -95,6 +98,14 @@ const {
 .ai-source-links { display: flex; flex-wrap: wrap; gap: 8px 14px; }
 .ai-source-links a { font-size: 0.83rem; color: var(--accent-dark); font-weight: 600; }
 .ai-source-links a:hover { text-decoration: underline; }
+.ai-source-note {
+  margin: 0;
+  border-top: 1px dashed var(--border);
+  padding-top: 12px;
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  line-height: 1.65;
+}
 @media (max-width: 480px) {
   .ai-row { grid-template-columns: 1fr; gap: 10px; }
   .article-info-card { padding: 16px 18px; }

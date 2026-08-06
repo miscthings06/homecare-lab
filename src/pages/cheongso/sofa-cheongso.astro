@@ -1,6 +1,5 @@
 ---
 import Layout from '../../layouts/Layout.astro';
-import AffiliateDisclosure from '../../components/AffiliateDisclosure.astro';
 import ArticleInfoCard from '../../components/ArticleInfoCard.astro';
 ---
 <Layout
@@ -10,8 +9,17 @@ import ArticleInfoCard from '../../components/ArticleInfoCard.astro';
 <div class="article-wrap">
   <div class="breadcrumb"><a href="/">홈</a><span>›</span><a href="/cheongso/">청소비용</a><span>›</span><strong>소파 청소</strong></div>
   <div class="article-meta"><span class="badge badge-blue">청소비용</span> &nbsp;최종 수정: 2026년 5월</div>
-  <AffiliateDisclosure />
-  <ArticleInfoCard publishDate="2026년 5월 29일" publishTime="오후" reviewDate="2026년 5월 27일" reviewCriteria="한국소비자원 소파 소재별 관리 정보, 가구 제조사 권장 청소 기준" />
+  <ArticleInfoCard
+    publishDate="2026년 5월 29일"
+    publishTime="오후"
+    reviewDate="2026년 8월 7일"
+    reviewCriteria="한국소비자원 가구 피해 사례와 소재별 제조사 관리표시 확인 원칙"
+    sources={[
+      {label:'한국소비자원 온라인 가구 피해예방주의보',url:'https://www.kca.go.kr/home/sub.do?menukey=4005&mode=view&no=1003457618'},
+      {label:'한국소비자원 소비자분쟁해결기준',url:'https://www.kca.go.kr/odr/cm/in/rsltnCrtral.do'},
+    ]}
+    sourceNote="소파는 같은 소재명이라도 코팅·염색·충전재가 달라 세척 가능 범위가 다릅니다. 본문의 셀프 청소 순서는 일반 원칙이며, 실제 작업 전 제품 라벨과 제조사 안내를 우선 확인해야 합니다."
+  />
 
   <h1>소파 청소 비용과 방법 — 소재별 셀프 청소 기준</h1>
 
@@ -123,18 +131,6 @@ import ArticleInfoCard from '../../components/ArticleInfoCard.astro';
   <h2>정리</h2>
   <p>소파 청소는 소재에 맞는 방법을 선택하는 것이 핵심입니다. 패브릭 소파는 진공청소기와 베이킹소다로 기본 관리를 하고, 가죽 소파는 전용 클리너와 컨디셔너로 유지합니다. 오염이 깊어지기 전에 1~2년 주기로 전문 청소를 받는 것이 소파 수명을 늘리고 위생을 유지하는 가장 효율적인 방법입니다.</p>
 
-  <div class="cta-block" data-variant="article">
-    <p class="cta-intro">소파 청소 전문 업체 견적 비교</p>
-    <ul class="cta-chips">
-      <li class="cta-chip cta-chip-cash">무료 견적 비교</li>
-      <li class="cta-chip cta-chip-gift">소재별 전문 청소</li>
-      <li class="cta-chip cta-chip-shield">후기 기반 업체 매칭</li>
-    </ul>
-    <a class="cta-btn-pill" href="https://ajd.co.kr" rel="nofollow sponsored noopener" data-partner-cta="true">
-      업체별 견적받기 →
-    </a>
-    <p class="cta-subcopy">상담·계약은 아정당 및 각 업체를 통해 진행됩니다 · <a href="/affiliate-disclosure/" style="color:inherit;text-decoration:underline">제휴 고지</a></p>
-  </div>
   <div class="related-posts">
     <h3>관련 글</h3>
     <div class="related-grid">
