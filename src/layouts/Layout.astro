@@ -146,19 +146,20 @@ const shouldLoadAdSense = adsenseEnabled && !noindex && !_nonMonetizedPaths.has(
   <!-- 헤더(마스트헤드) -->
   <header>
     <div class="container header-inner">
-      <a href="/" class="logo"><span class="logo-name">홈케어<em>랩</em></span><span class="logo-tagline">생활·홈서비스 전문 정보</span></a>
-      <a href="/calculator/" class="masthead-link">비용 계산기 →</a>
+      <a href="/" class="logo"><span class="logo-name">홈케어<em>랩</em></span><span class="logo-tagline">우리 집 비용 비교 연구소</span></a>
+      <a href="/calculator/water-purifier/" class="masthead-link">정수기 비교 →</a>
     </div>
   </header>
 
   <!-- 카테고리 탭 내비 -->
   <nav class="cat-nav" aria-label="카테고리 메뉴">
     <div class="container cat-nav-inner">
+      <a href="/calculator/water-purifier/" class={Astro.url.pathname.startsWith('/calculator/water-purifier') ? 'active' : ''}>정수기 비교</a>
       <a href="/cheongso/" class={Astro.url.pathname.startsWith('/cheongso') ? 'active' : ''}>청소비용</a>
       <a href="/rental/" class={Astro.url.pathname.startsWith('/rental') ? 'active' : ''}>가전렌탈</a>
       <a href="/isa-junbi/" class={Astro.url.pathname.startsWith('/isa-junbi') ? 'active' : ''}>이사준비</a>
       <a href="/jeolryak/" class={Astro.url.pathname.startsWith('/jeolryak') ? 'active' : ''}>생활비절감</a>
-      <a href="/calculator/" class={Astro.url.pathname.startsWith('/calculator') ? 'active' : ''}>계산기</a>
+      <a href="/calculator/" class={Astro.url.pathname === '/calculator/' ? 'active' : ''}>계산기</a>
     </div>
   </nav>
 

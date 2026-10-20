@@ -1,0 +1,14 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import WaterComparison from '../../components/WaterComparison.astro';
+---
+<Layout title="정수기 렌탈 vs 구매 총비용 계산기" description="정수기 렌탈과 구매의 총비용을 같은 기간으로 비교합니다. 초기 할인, 관리비, 납부 종료 비용, 카드 할인을 구분하고 계산 근거를 확인하세요.">
+  <div class="container tool-page">
+    <nav aria-label="현재 위치"><a href="/">홈</a> / <a href="/calculator/">계산기</a> / 정수기 비교</nav>
+    <h1>정수기 렌탈 vs 구매 총비용 계산기</h1>
+    <p>월 요금보다 중요한 것은, 쓰는 동안 실제로 내는 총액입니다.</p>
+    <WaterComparison />
+    <a href="/rental/rental-vs-purchase/">렌탈과 구매 선택 기준 읽기 →</a>
+  </div>
+</Layout>
+<style>.tool-page{padding-top:28px;padding-bottom:48px}.tool-page>nav{font-size:.78rem;color:#687568;margin-bottom:24px}h1{font-size:clamp(1.6rem,4vw,2.3rem);letter-spacing:-.04em}.tool-page>p{color:#657466;margin-top:12px}</style>

@@ -1,0 +1,218 @@
+---
+const groups = [
+  { title: '렌탈 견적', tag: 'RENTAL', fields: [
+    ['rental', '기본 월 렌탈료', '원', '카드 할인 전, 초기 행사 종료 후 월 요금', 29900],
+    ['term', '렌탈료 납부 기간', '개월', '의무사용기간이 아닌 전체 납부 기간', 60],
+    ['rentalSetup', '등록·설치 등 초기 비용', '원', '면제라면 0원', 0],
+    ['rentalAnnual', '별도 연간 관리·필터 비용', '원/년', '렌탈료에 포함되어 있으면 0원', 0],
+  ]},
+  { title: '구매 견적', tag: 'PURCHASE', fields: [
+    ['purchase', '제품 구매 가격', '원', '동일 모델 또는 동등 사양의 실제 견적', 1200000],
+    ['purchaseSetup', '설치 등 초기 비용', '원', '제품 가격에 포함되어 있으면 0원', 0],
+    ['purchaseAnnual', '연간 관리·필터 비용', '원/년', '교체 주기별 필터·방문 관리비를 연간 합산', 120000],
+    ['purchaseBenefit', '확정 구매 할인·환급', '원', '제품 가격에 이미 반영한 할인은 중복 입력 금지', 0],
+  ]},
+];
+const extras = [
+  ['promo', '초기 행사 월 요금', '원', '할인액이 아니라 실제 청구되는 월 요금', 14950],
+  ['promoMonths', '초기 행사 적용 기간', '개월', '행사가 없으면 0개월', 6],
+  ['rentalBenefit', '확정 렌탈 현금 혜택', '원', '실제 받을 금액만 입력. 사은품 정가는 제외', 0],
+  ['endFee', '납부 종료 시 인수·반납 비용', '원', '전체 납부 기간이 끝나는 달에 한 번 반영', 0],
+  ['exitFee', '조기 종료 시 총 추가비용', '원', '위약금·회수비·혜택 환수액 합계. 비교 기간이 납부 기간보다 짧을 때 반영', 0],
+  ['afterRental', '납부 기간 이후 월 요금', '원', '계속 이용 가능한 조건의 요금. 소유권 이전 후 없으면 0원', 0],
+  ['afterAnnual', '납부 기간 이후 연간 관리비', '원/년', '소유권 이전 후 필터·수리·관리 비용 등', 120000],
+];
+const cards = [
+  ['card', '월 카드 할인액', '원', '실적 조건을 충족하는 달의 할인액', 0],
+  ['cardMonths', '카드 할인 적용 기간', '개월', '첫 달부터 연속으로 적용되는 것으로 가정', 0],
+  ['cardAnnual', '카드 연회비', '원/년', '새 카드 발급 기준으로 매 12개월 시작 시 반영', 0],
+];
+---
+<section id="compare" class="water-tool" aria-labelledby="compare-title">
+  <div class="tool-heading"><div><p class="eyebrow">WATER PURIFIER COST LAB</p><h2 id="compare-title">내 견적으로 총비용 비교</h2></div><span class="tool-label">무료 · 회원가입 없음</span></div>
+  <p class="tool-intro">같은 제품, 같은 사용 기간으로 맞춰보세요. 월 요금에 가려진 관리비와 할인 조건까지 나눠 계산합니다.</p>
+  <div class="example-notice" id="quote-mode"><strong>현재 금액은 계산 방법을 보여주는 가상 예시입니다.</strong> 실제 판매 가격이나 추천 상품이 아닙니다. 받은 견적으로 바꿔 입력하세요.</div>
+  <noscript><p class="example-notice">계산하려면 JavaScript를 활성화해주세요. 아래 계산 기준은 JavaScript 없이도 읽을 수 있습니다.</p></noscript>
+  <form id="water-form">
+    <div class="period-row">
+      <label for="water-months">얼마나 사용할 계획인가요?</label>
+      <div class="period-input"><input id="water-months" name="months" type="number" value="60" min="1" max="120" step="1" required /><span>개월</span></div>
+      <div class="period-buttons" aria-label="비교 기간 빠른 선택"><button type="button" data-period="36">3년</button><button type="button" data-period="60">5년</button><button type="button" data-period="84">7년</button></div>
+    </div>
+    <div class="quote-grid">
+      {groups.map(group => <fieldset class="quote-card">
+        <legend><span>{group.tag}</span>{group.title}</legend>
+        {group.fields.map(([name, label, unit, hint, value]) => <div class="field">
+          <label for={`water-${name}`}>{label}</label>
+          <div class="input-wrap"><input id={`water-${name}`} name={name} type="number" inputmode="numeric" min={name === 'term' ? 1 : 0} max={name === 'term' ? 120 : 100000000} step="1" value={value} required aria-describedby={`hint-${name}`} /><span>{unit}</span></div>
+          <small id={`hint-${name}`}>{hint}</small>
+        </div>)}
+      </fieldset>)}
+    </div>
+    <details class="extra-settings" open>
+      <summary>초기 할인·계약 종료 조건 <span>내 견적에 맞게 확인</span></summary>
+      <div class="extra-grid">{extras.map(([name, label, unit, hint, value]) => <div class="field">
+        <label for={`water-${name}`}>{label}</label>
+        <div class="input-wrap"><input id={`water-${name}`} name={name} type="number" inputmode="numeric" min="0" max={name === 'promoMonths' ? 120 : 100000000} step="1" value={value} required aria-describedby={`hint-${name}`} /><span>{unit}</span></div>
+        <small id={`hint-${name}`}>{hint}</small>
+      </div>)}</div>
+    </details>
+    <details class="extra-settings">
+      <summary>제휴카드 할인 시나리오 <span>기본 결과와 별도로 계산</span></summary>
+      <p class="details-note">카드 할인 전 총비용이 기본 비교 기준입니다. 실적을 채우기 위한 추가 소비와 다른 카드 혜택의 포기는 계산하지 않습니다.</p>
+      <div class="extra-grid">{cards.map(([name, label, unit, hint, value]) => <div class="field">
+        <label for={`water-${name}`}>{label}</label>
+        <div class="input-wrap"><input id={`water-${name}`} name={name} type="number" inputmode="numeric" min="0" max={name === 'cardMonths' ? 120 : 100000000} step="1" value={value} required aria-describedby={`hint-${name}`} /><span>{unit}</span></div>
+        <small id={`hint-${name}`}>{hint}</small>
+      </div>)}</div>
+    </details>
+    <p class="error-message" id="water-error" role="alert"></p>
+    <div class="form-actions"><button class="primary-action" type="submit">총비용 비교하기 <span aria-hidden="true">↗</span></button><button type="button" id="blank-quote" class="secondary-action">내 견적 새로 입력</button><button type="button" id="example-quote" class="text-action">가상 예시 불러오기</button></div>
+    <p class="privacy-note">입력한 견적은 서버로 전송하거나 저장하지 않습니다. 페이지를 닫으면 사라집니다.</p>
+  </form>
+  <section id="water-results" class="results" hidden tabindex="-1" aria-labelledby="result-title">
+    <div class="result-heading"><p class="eyebrow" id="result-context"></p><h3 id="result-title"></h3><p id="result-subtitle"></p></div>
+    <div class="totals"><div><span>렌탈 총비용 · 카드 할인 전</span><strong id="rental-total"></strong><div class="cost-bar"><i id="rental-bar"></i></div><small id="rental-monthly"></small></div><div><span>구매 총비용 · 관리비 포함</span><strong id="purchase-total"></strong><div class="cost-bar purchase-bar"><i id="purchase-bar"></i></div><small id="purchase-monthly"></small></div></div>
+    <p id="contract-warning" class="warning"></p>
+    <div id="card-result" class="card-result" hidden></div>
+    <div class="table-scroll"><table><caption>총비용 구성 · 원 단위</caption><thead><tr><th scope="col">항목</th><th scope="col">렌탈</th><th scope="col">구매</th></tr></thead><tbody id="breakdown"></tbody></table></div>
+    <details class="timeline-details"><summary>기간별 누적비용 보기</summary><div class="table-scroll"><table><caption>카드 할인 전 누적 지출 · 선택한 종료 시점의 추가비용 포함</caption><thead><tr><th scope="col">경과 기간</th><th scope="col">렌탈</th><th scope="col">구매</th></tr></thead><tbody id="timeline"></tbody></table></div></details>
+    <p class="result-caveat">입력 조건에 따른 예상 지출 비교이며, 상품 추천이나 최저가 보장이 아닙니다. 초기 혜택은 시작 시점에 반영하고 관리비는 월할 계산합니다. 실제 청구 시점과 다를 수 있습니다.</p>
+    <button type="button" id="copy-result" class="secondary-action">계산 내역 복사</button><span id="copy-status" role="status"></span>
+  </section>
+  <section class="methodology" id="calculation-method">
+    <p class="eyebrow">HOW WE CALCULATE</p><h3>숫자보다 중요한, 계산의 기준</h3>
+    <div class="method-grid"><div><h4>01 / 동일 조건으로 비교</h4><p>모델명·냉온수·얼음 기능·방문 관리 여부를 맞추세요. 렌탈료에 필터와 관리가 포함되어 있다면 별도 관리비를 중복 입력하지 않습니다.</p></div><div><h4>02 / 지출을 항목별로 합산</h4><p>렌탈 = 초기 비용 + 기간별 월 요금 + 별도 관리비 + 종료 비용 − 확정 혜택. 구매 = 제품 가격 + 설치비 + 관리비 − 확정 할인입니다.</p></div><div><h4>03 / 계약 이후도 확인</h4><p>의무사용기간과 전체 납부 기간은 다를 수 있습니다. 소유권 이전 시점, 반납·인수 비용, 이후 관리 조건을 견적서에서 확인하세요.</p></div></div>
+    <details><summary>계산 가정과 제외 항목 자세히 보기</summary><ul>
+      <li>1~120개월을 비교합니다. 모든 입력은 부가세 포함 원화 정수 기준입니다.</li>
+      <li>초기 행사 요금은 첫 달부터 입력 개월 수만큼 적용하고 이후 기본 월 요금을 적용합니다.</li>
+      <li>연간 관리비는 12로 나누어 사용 개월 수에 비례해 반영합니다. 필터 교체가 특정 달에 발생하는 실제 청구와는 다릅니다.</li>
+      <li>비교 기간이 전체 납부 기간보다 짧으면 그 시점에 계약을 끝내는 시나리오입니다. 추가비용은 자동 추정하지 않습니다. 업체에서 확인한 위약금·혜택 환수액·회수비를 직접 입력하세요.</li>
+      <li>납부 종료 후에는 입력한 이후 월 요금·관리비를 적용합니다. 기기를 반납하는 계약이라면 계속 사용할 수 없으므로 대체 기기 비용을 별도로 검토하세요.</li>
+      <li>카드 할인은 첫 달부터 연속 적용하고, 해당 월 렌탈 요금을 넘지 않도록 제한합니다. 연회비는 할인 적용 기간 동안 12개월마다 한 번 반영합니다.</li>
+      <li>전기·수도요금, 물가 상승, 이자, 제품 잔존가치, 미입력 수리비·이전 설치비는 제외합니다. 편의성과 A/S 조건은 금액 외에 따로 비교하세요.</li>
+      <li>실시간 가격 데이터나 특정 제조사 가격표를 사용하지 않습니다. 초기 값은 가상 예시이며, 입력한 견적이 계산의 데이터 출처입니다.</li>
+    </ul></details>
+    <p class="method-version">계산 기준 v1.0 · 2026.10.21 · <a href="/contact/">오류·개선 의견 보내기</a></p>
+  </section>
+</section>
+<script>
+  import { compare, example } from '../lib/water-cost.mjs';
+  const form = document.querySelector<HTMLFormElement>('#water-form')!;
+  const results = document.querySelector<HTMLElement>('#water-results')!;
+  const error = document.querySelector<HTMLElement>('#water-error')!;
+  const notice = document.querySelector<HTMLElement>('#quote-mode')!;
+  const money = (n: number) => `${n.toLocaleString('ko-KR')}원`;
+  let isExample = true, summary = '';
+  const el = (id: string) => document.getElementById(id)!;
+  const input = (key: string) => form.elements.namedItem(key) as HTMLInputElement;
+  function invalidate() {
+    results.hidden = true; error.textContent = ''; isExample = false;
+    notice.textContent = '직접 입력 모드 · 수정하지 않은 예시 금액도 남아 있을 수 있습니다. 모든 항목을 견적서와 대조해주세요.';
+  }
+  form.addEventListener('input', invalidate);
+  document.querySelectorAll<HTMLButtonElement>('[data-period]').forEach(button => {
+    button.addEventListener('click', () => { input('months').value = button.dataset.period!; invalidate(); });
+  });
+  el('blank-quote').addEventListener('click', () => {
+    invalidate();
+    for (const key of Object.keys(example)) input(key).value = key === 'months' || key === 'term' ? '60' : '0';
+    input('rental').value = ''; input('purchase').value = ''; input('purchaseAnnual').value = '';
+    notice.textContent = '새 견적 입력 · 렌탈료, 구매 가격, 관리비를 입력하고 나머지 조건도 확인해주세요. 초기 할인은 적용되지 않은 상태입니다.';
+    input('rental').focus();
+  });
+  el('example-quote').addEventListener('click', () => {
+    for (const [key, value] of Object.entries(example)) input(key).value = String(value);
+    results.hidden = true; error.textContent = ''; isExample = true;
+    notice.textContent = '가상 예시 · 실제 판매 가격이나 추천 상품이 아닙니다. 계산 방법을 확인한 뒤 받은 견적으로 바꿔주세요.';
+  });
+  function addRow(body: HTMLElement, values: string[]) {
+    const row = document.createElement('tr');
+    values.forEach((value, index) => {
+      const cell = document.createElement(index === 0 ? 'th' : 'td');
+      if (index === 0) cell.setAttribute('scope', 'row');
+      cell.textContent = value; row.append(cell);
+    });
+    body.append(row);
+  }
+  form.addEventListener('submit', event => {
+    event.preventDefault();
+    const values = Object.fromEntries(Object.keys(example).map(key => [key, input(key).value === '' ? NaN : Number(input(key).value)]));
+    try {
+      const r = compare(values), diff = r.rent - r.buy;
+      const headline = diff === 0 ? '입력 조건에서는 총비용이 같습니다' : `${diff > 0 ? '구매가' : '렌탈이'} ${money(Math.abs(diff))} 적게 듭니다`;
+      el('result-context').textContent = `${isExample ? '가상 예시 결과' : '입력 견적 기준'} · ${values.months}개월 비교 · 카드 할인 전`;
+      el('result-title').textContent = headline;
+      el('result-subtitle').textContent = '금액 차이와 함께 관리 서비스, 소유권, A/S 조건을 확인하세요.';
+      el('rental-total').textContent = money(r.rent); el('purchase-total').textContent = money(r.buy);
+      el('rental-monthly').textContent = `월평균 ${money(Math.round(r.rent / values.months))}`;
+      el('purchase-monthly').textContent = `월평균 ${money(Math.round(r.buy / values.months))}`;
+      const max = Math.max(r.rent, r.buy, 1);
+      el('rental-bar').style.width = `${r.rent / max * 100}%`; el('purchase-bar').style.width = `${r.buy / max * 100}%`;
+      el('contract-warning').textContent = values.months < values.term
+        ? `주의: 납부 기간 ${values.term}개월 전에 종료하는 비교입니다. 입력한 조기 종료 비용 ${money(values.exitFee)}만 반영했습니다. 업체 확인 전에는 최종 판단에 사용하지 마세요.`
+        : values.months > values.term
+          ? `납부 종료 후 ${values.months - values.term}개월은 입력한 이후 요금·관리비로 계산했습니다. 기기를 계속 보유·이용할 수 있는 계약인지 확인하세요.`
+          : '전체 납부 기간까지 비교했습니다. 소유권 이전·반납 조건과 입력한 종료 비용을 확인하세요.';
+      const card = el('card-result'); card.hidden = !(values.card > 0 && values.cardMonths > 0);
+      card.textContent = `카드 조건 충족 시 렌탈 총비용 ${money(r.cardRent)} (할인 −${money(r.cardDiscount)}, 연회비 +${money(r.cardFee)}). 구매 대비 ${money(Math.abs(r.cardRent - r.buy))} ${r.cardRent > r.buy ? '많음' : r.cardRent < r.buy ? '적음' : '차이 없음'}. 추가 소비 비용은 제외한 조건부 결과입니다.`;
+      const rows = [
+        ['제품·월 요금 합계', money(r.rentPayments), money(values.purchase)],
+        ['초기 등록·설치', money(values.rentalSetup), money(values.purchaseSetup)],
+        ['관리·필터 비용', money(r.rentCare), money(r.buyCare)],
+        ['인수·반납·조기 종료', money(r.transfer + r.exit), '미반영'],
+        ['확정 혜택·할인', `−${money(values.rentalBenefit)}`, `−${money(values.purchaseBenefit)}`],
+        ['총비용 (카드 할인 전)', money(r.rent), money(r.buy)],
+      ];
+      el('breakdown').replaceChildren(); rows.forEach(row => addRow(el('breakdown'), row));
+      el('timeline').replaceChildren();
+      r.series.filter((p: { month: number }) => p.month % 12 === 0 || p.month === values.months)
+        .forEach((p: { month: number; rent: number; buy: number }) => addRow(el('timeline'), [`${p.month}개월`, money(p.rent), money(p.buy)]));
+      summary = [`홈케어랩 정수기 총비용 비교 · ${isExample ? '가상 예시' : '사용자 입력'}`, `${values.months}개월 · ${headline}`,
+        ...rows.map(row => `${row[0]}: 렌탈 ${row[1]} / 구매 ${row[2]}`), ...(card.hidden ? [] : [card.textContent!]), el('contract-warning').textContent,
+        '입력값 (금액: 원, 기간: 개월, 연간 비용: 원/년):',
+        ...Object.keys(example).map(key => `${key === 'months' ? '비교 기간' : form.querySelector(`label[for="water-${key}"]`)?.textContent}: ${values[key]}`),
+        '관리비는 월할 계산. 미입력 비용·잔존가치·이자 제외.', 'https://www.homecare-lab.co.kr/calculator/water-purifier/'].join('\n');
+      error.textContent = ''; el('copy-status').textContent = ''; results.hidden = false;
+      results.focus({ preventScroll: true }); results.scrollIntoView({ block: 'start', behavior: 'instant' });
+    } catch (e) {
+      results.hidden = true; error.textContent = e instanceof Error ? e.message : '입력 조건을 확인해주세요.';
+    }
+  });
+  el('copy-result').addEventListener('click', async () => {
+    try { await navigator.clipboard.writeText(summary); el('copy-status').textContent = ' 계산 내역을 복사했습니다.'; }
+    catch { el('copy-status').textContent = ' 복사 권한이 없습니다. 화면의 결과를 직접 선택해 복사해주세요.'; }
+  });
+</script>
+<style>
+  .water-tool{scroll-margin-top:90px;max-width:1060px;margin:auto;padding:44px 0;color:#233e3b}
+  .eyebrow{font-size:.7rem;font-weight:800;letter-spacing:.13em;color:#317266;margin-bottom:10px}
+  .tool-heading{display:flex;justify-content:space-between;align-items:center;gap:20px}.tool-heading h2{font-size:clamp(1.5rem,3vw,2rem);letter-spacing:-.05em}
+  .tool-label{border:1px solid #bed5cd;border-radius:30px;padding:6px 12px;font-size:.75rem;white-space:nowrap}
+  .tool-intro{color:#596c67;margin:12px 0 24px}.example-notice{background:#f5f1e5;padding:16px 20px;border-radius:10px;font-size:.85rem;color:#655735;margin-bottom:24px}
+  .period-row{display:flex;align-items:center;gap:16px;flex-wrap:wrap;padding:20px 0 28px;font-weight:700}.period-input{display:flex;gap:8px;align-items:center}.period-input input{width:85px}
+  button,input{font:inherit}button{cursor:pointer}input{border:1px solid #b9cbc5;border-radius:8px;padding:12px;background:white;color:#233e3b;min-width:0;max-width:100%}
+  input:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid #29836e;outline-offset:3px}
+  .period-buttons{display:flex;gap:6px}.period-buttons button{background:#eaf2ee;border:1px solid #ccddd5;border-radius:7px;padding:8px 16px;color:#285a4d}
+  .quote-grid{display:grid;grid-template-columns:1fr 1fr;gap:22px}.quote-card{border:1px solid #d4dfd8;border-radius:16px;padding:24px;background:#fff;min-width:0}
+  legend{padding:0 10px;font-size:1.2rem;font-weight:800}legend span{font-size:.65rem;letter-spacing:.1em;color:#427664;display:block}
+  .field{margin-bottom:20px}.field:last-child{margin-bottom:0}.field label{display:block;font-size:.88rem;font-weight:700;margin-bottom:7px}
+  .input-wrap{display:flex;align-items:center;gap:10px}.input-wrap input{width:100%;font-weight:700}.input-wrap span{font-size:.8rem;white-space:nowrap;min-width:30px}
+  small{display:block;font-size:.75rem;line-height:1.65;color:#62736b;margin-top:6px}
+  .extra-settings{border:1px solid #d4dfd8;border-radius:12px;background:#fff;margin-top:18px}.extra-settings summary{padding:18px 22px;cursor:pointer;font-weight:700}
+  summary span{font-size:.73rem;font-weight:400;color:#61716a;margin-left:10px}.extra-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px 28px;padding:4px 24px 24px}.details-note{margin:0 24px 18px;font-size:.84rem;color:#61716a}
+  .form-actions{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin-top:22px}.primary-action{background:#235e50;color:#fff;padding:16px 26px;border:0;border-radius:9px;font-weight:700;min-width:230px;display:flex;justify-content:space-between;gap:30px}
+  .primary-action:hover{background:#183e36}.secondary-action{background:white;color:#285a4d;padding:12px 16px;border:1px solid #b9cbc5;border-radius:8px}.text-action{background:transparent;border:0;text-decoration:underline;color:#53695f;padding:12px;font-size:.8rem}
+  .privacy-note{font-size:.76rem;color:#61716a;margin-top:14px}.error-message{color:#ae3027;margin-top:16px;font-weight:700}
+  .results{background:#eef5ef;border:1px solid #bdcfc0;border-radius:18px;padding:30px;margin-top:30px;scroll-margin-top:90px}.results[hidden],.card-result[hidden]{display:none}.results:focus{outline:2px solid #639281}
+  .result-heading h3{font-size:clamp(1.25rem,3vw,1.8rem);letter-spacing:-.04em}.result-heading>p:last-child{font-size:.85rem;margin:10px 0;color:#52695a}
+  .totals{display:grid;grid-template-columns:1fr 1fr;gap:30px;margin:28px 0}.totals span{font-size:.82rem}.totals strong{display:block;font-size:clamp(1.4rem,3vw,2rem);margin:4px 0 14px}
+  .cost-bar{height:9px;background:#dde8df;border-radius:8px;overflow:hidden}.cost-bar i{display:block;background:#286451;height:100%;border-radius:8px}.purchase-bar i{background:#aa7944}
+  .warning,.card-result{font-size:.83rem;padding:14px 16px;background:#fff8e7;border-radius:9px;margin:14px 0}.card-result{background:#fff}
+  table{width:100%;border-collapse:collapse;font-size:.84rem}caption{text-align:left;font-weight:700;padding:18px 0 12px}.table-scroll :global(th),.table-scroll :global(td){text-align:right;padding:12px 8px;border-bottom:1px solid #cddbd0}.table-scroll :global(th:first-child){text-align:left}.table-scroll :global(tbody th){font-weight:500}thead{color:#58705f}.table-scroll :global(tbody tr:last-child){font-weight:800}
+  .table-scroll{overflow:auto}.timeline-details{margin-top:24px}.timeline-details summary{cursor:pointer;font-weight:700;font-size:.88rem}
+  .result-caveat{font-size:.77rem;color:#5c7060;margin:22px 0}#copy-status{font-size:.8rem}
+  .methodology{margin-top:64px;border-top:1px solid #d7e1d9;padding-top:36px}.methodology h3{font-size:1.5rem;letter-spacing:-.04em}.method-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;margin:28px 0}.method-grid h4{font-size:.95rem;margin-bottom:10px}.method-grid p{font-size:.85rem;color:#61716a}
+  .methodology details{font-size:.86rem}.methodology summary{cursor:pointer;font-weight:700}.methodology ul{list-style:disc;padding-left:22px;margin-top:18px;color:#61716a}.methodology li{margin-bottom:10px}.method-version{font-size:.75rem;color:#61716a;margin-top:24px}
+  @media(max-width:650px){.tool-heading{align-items:flex-start;flex-direction:column;gap:12px}.quote-grid,.extra-grid,.method-grid{grid-template-columns:1fr}.quote-card{padding:20px}.extra-grid{padding:4px 20px 20px}.period-row{gap:12px}.period-row>label{width:100%}.results{padding:20px 16px}.totals{gap:15px;grid-template-columns:minmax(0,1fr) minmax(0,1fr)}.totals span{font-size:.73rem}.totals strong{font-size:1.3rem;overflow-wrap:anywhere}summary span{display:block;margin-left:0}.form-actions{align-items:stretch}.primary-action{width:100%}.methodology{margin-top:44px}.table-scroll :global(th),.table-scroll :global(td){padding:10px 5px;font-size:.75rem}.tool-intro{font-size:.9rem}}
+</style>
