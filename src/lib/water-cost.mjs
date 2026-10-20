@@ -4,6 +4,7 @@ export const example = {
   rentalSetup: 0, rentalAnnual: 0, rentalBenefit: 0, endFee: 0,
   afterRental: 0, afterAnnual: 120000, exitFee: 0,
   purchase: 1200000, purchaseSetup: 0, purchaseAnnual: 120000, purchaseBenefit: 0,
+  purchaseCareMonths: 0, purchaseCareMonthly: 0,
   card: 0, cardMonths: 0, cardAnnual: 0,
 };
 function payments(v, m) {
@@ -17,6 +18,7 @@ export function validate(v) {
   }
   if (v.months < 1 || v.months > 120 || v.term < 1 || v.term > 120) throw new Error('비교 기간과 렌탈료 납부 기간은 1~120개월로 입력해주세요.');
   if (v.promoMonths > v.term) throw new Error('초기 할인 기간은 렌탈료 납부 기간 이하여야 합니다.');
+  if (v.purchaseCareMonths > 120) throw new Error('구매 초기 관리비 적용 기간은 120개월 이하여야 합니다.');
   if (v.cardMonths > v.months) throw new Error('카드 할인 적용 기간은 비교 기간 이하여야 합니다.');
   if (v.purchaseBenefit > v.purchase + v.purchaseSetup) throw new Error('구매 확정 할인은 제품 가격과 설치비의 합계를 넘을 수 없습니다.');
   if (v.rentalBenefit > v.rentalSetup + payments(v, Math.min(v.months, v.term))) throw new Error('렌탈 확정 혜택은 비교 기간 내 렌탈료와 초기 비용 합계를 넘을 수 없습니다.');
@@ -28,7 +30,8 @@ function atMonth(v, m) {
   const transfer = m >= v.term ? v.endFee : 0;
   const exit = m === v.months && m < v.term ? v.exitFee : 0;
   const rent = v.rentalSetup + rentPayments + rentCare + transfer + exit - v.rentalBenefit;
-  const buyCare = m * v.purchaseAnnual / 12;
+  const initialCare = Math.min(m, v.purchaseCareMonths);
+  const buyCare = initialCare * v.purchaseCareMonthly + (m - initialCare) * v.purchaseAnnual / 12;
   const buy = v.purchase + v.purchaseSetup + buyCare - v.purchaseBenefit;
   let cardDiscount = 0;
   for (let i = 1; i <= Math.min(m, v.cardMonths); i++) {

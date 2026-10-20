@@ -10,6 +10,12 @@ for (const path of ['index.html', 'calculator/water-purifier/index.html']) {
     assert.ok(html.includes('가상 예시'));
     assert.ok(html.includes('id="water-form"'));
     assert.ok(html.includes('id="water-results"'));
+    assert.ok(html.includes('id="official-products"'));
+    assert.equal((html.match(/data-product="/g) || []).length, 3);
+    assert.ok(html.includes('name="purchaseCareMonths"'));
+    assert.ok(html.includes('name="purchaseCareMonthly"'));
+    assert.ok(html.includes('2026-10-21'));
+    assert.ok(!html.includes('특정 제조사 가격표를 사용하지 않습니다'));
     assert.ok(html.includes('https://www.homecare-lab.co.kr/'));
     const ids = [...html.matchAll(/\sid="([^"]+)"/g)].map(m => m[1]);
     assert.equal(new Set(ids).size, ids.length, 'duplicate HTML IDs');

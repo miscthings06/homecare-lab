@@ -1,4 +1,6 @@
 ---
+import { products, verifiedAt } from '../data/water-products.mjs';
+const won = (value) => `${value.toLocaleString('ko-KR')}원`;
 const groups = [
   { title: '렌탈 견적', tag: 'RENTAL', fields: [
     ['rental', '기본 월 렌탈료', '원', '카드 할인 전, 초기 행사 종료 후 월 요금', 29900],
@@ -9,7 +11,9 @@ const groups = [
   { title: '구매 견적', tag: 'PURCHASE', fields: [
     ['purchase', '제품 구매 가격', '원', '동일 모델 또는 동등 사양의 실제 견적', 1200000],
     ['purchaseSetup', '설치 등 초기 비용', '원', '제품 가격에 포함되어 있으면 0원', 0],
-    ['purchaseAnnual', '연간 관리·필터 비용', '원/년', '교체 주기별 필터·방문 관리비를 연간 합산', 120000],
+    ['purchaseAnnual', '이후 연간 관리·필터 비용', '원/년', '초기 관리비 적용 기간이 끝난 뒤의 연간 비용', 120000],
+    ['purchaseCareMonths', '구매 초기 관리비 적용 기간', '개월', '무료·할인 관리 기간. 별도 조건이 없으면 0개월', 0],
+    ['purchaseCareMonthly', '구매 초기 월 관리비', '원', '첫 적용 기간 동안의 월 비용. 무료라면 0원', 0],
     ['purchaseBenefit', '확정 구매 할인·환급', '원', '제품 가격에 이미 반영한 할인은 중복 입력 금지', 0],
   ]},
 ];
@@ -29,11 +33,37 @@ const cards = [
 ];
 ---
 <section id="compare" class="water-tool" aria-labelledby="compare-title">
+  <section id="official-products" class="official-products" aria-labelledby="official-title">
+    <p class="eyebrow">OFFICIAL PRICE CHECK</p>
+    <h2 id="official-title">공식 가격부터, 같은 조건으로</h2>
+    <p class="tool-intro">코웨이·LG전자 3개 모델의 선택 옵션을 직접 확인했습니다. 카드·결합·선납 할인과 사은품은 제외한 가격입니다.</p>
+    <p class="price-date">공식몰 확인일 <time datetime={verifiedAt}>{verifiedAt}</time> · 실시간 연동 아님 · 주문 전 가격 재확인</p>
+    <p id="price-stale" class="warning" hidden>확인 후 30일이 지난 가격입니다. 행사 종료·요금 변경 여부를 공식몰에서 확인하고 입력값을 수정해주세요.</p>
+    <div class="product-grid">
+      {products.map(product => <article class="product-card">
+        <p class="product-brand">{product.brand}</p><h3>{product.name}</h3>
+        <p class="model-code">{product.model}</p><p class="product-option">{product.option}</p>
+        <dl><div><dt>제품 구매가 · 관리비 별도</dt><dd>{won(product.purchase)}</dd></div>
+          <div><dt>렌탈/구독 · {product.term}개월 납부</dt><dd class="rental-price">첫 {product.promoMonths}개월 월 {won(product.promo)}<span>이후 월 {won(product.rental)}</span></dd></div>
+          <div><dt>{product.term}개월 렌탈/구독 요금 합계</dt><dd class="contract-total">{won(product.rentalTotal)}</dd></div>
+        </dl>
+        <p class="product-care">{product.care}</p>
+        <details><summary>가격 조건·출처 확인</summary><p>{product.notes}</p>
+          {product.sources.map(source => <a href={source.url} target="_blank" rel="noopener noreferrer">{source.label} ↗</a>)}
+        </details>
+        <button type="button" class="select-product" data-product={product.id} aria-pressed="false">{product.brand} {product.name} 가격 불러오기</button>
+      </article>)}
+    </div>
+    <p class="privacy-note">각 카드의 계약 기간이 다르므로 합계만으로 브랜드 순위를 매기지 않습니다. 아래에서 동일 모델의 렌탈과 구매를 비교하세요. 공식 출처 링크는 제휴 추적 링크가 아닙니다.</p>
+  </section>
   <div class="tool-heading"><div><p class="eyebrow">WATER PURIFIER COST LAB</p><h2 id="compare-title">내 견적으로 총비용 비교</h2></div><span class="tool-label">무료 · 회원가입 없음</span></div>
   <p class="tool-intro">같은 제품, 같은 사용 기간으로 맞춰보세요. 월 요금에 가려진 관리비와 할인 조건까지 나눠 계산합니다.</p>
   <div class="example-notice" id="quote-mode"><strong>현재 금액은 계산 방법을 보여주는 가상 예시입니다.</strong> 실제 판매 가격이나 추천 상품이 아닙니다. 받은 견적으로 바꿔 입력하세요.</div>
   <noscript><p class="example-notice">계산하려면 JavaScript를 활성화해주세요. 아래 계산 기준은 JavaScript 없이도 읽을 수 있습니다.</p></noscript>
   <form id="water-form">
+    <div id="product-context" class="product-context" hidden><strong id="selected-product-name"></strong><p id="selected-product-notes"></p><p id="selected-product-sources"></p>
+      <label><input id="price-confirmed" type="checkbox" /> 선택 옵션·가격 확인일을 확인했고, 추가 설치비·종료 비용 등 내 견적 조건을 검토했습니다.</label>
+    </div>
     <div class="period-row">
       <label for="water-months">얼마나 사용할 계획인가요?</label>
       <div class="period-input"><input id="water-months" name="months" type="number" value="60" min="1" max="120" step="1" required /><span>개월</span></div>
@@ -86,35 +116,70 @@ const cards = [
     <details><summary>계산 가정과 제외 항목 자세히 보기</summary><ul>
       <li>1~120개월을 비교합니다. 모든 입력은 부가세 포함 원화 정수 기준입니다.</li>
       <li>초기 행사 요금은 첫 달부터 입력 개월 수만큼 적용하고 이후 기본 월 요금을 적용합니다.</li>
-      <li>연간 관리비는 12로 나누어 사용 개월 수에 비례해 반영합니다. 필터 교체가 특정 달에 발생하는 실제 청구와는 다릅니다.</li>
+      <li>구매 초기 관리비는 지정한 개월 수 동안 월 요금을 적용하고, 이후에는 연간 관리비를 12로 나누어 반영합니다. 무료 관리 기간에는 초기 월 관리비를 0원으로 입력하세요. 실제 필터 교체 청구 시점과는 다를 수 있습니다.</li>
       <li>비교 기간이 전체 납부 기간보다 짧으면 그 시점에 계약을 끝내는 시나리오입니다. 추가비용은 자동 추정하지 않습니다. 업체에서 확인한 위약금·혜택 환수액·회수비를 직접 입력하세요.</li>
       <li>납부 종료 후에는 입력한 이후 월 요금·관리비를 적용합니다. 기기를 반납하는 계약이라면 계속 사용할 수 없으므로 대체 기기 비용을 별도로 검토하세요.</li>
       <li>카드 할인은 첫 달부터 연속 적용하고, 해당 월 렌탈 요금을 넘지 않도록 제한합니다. 연회비는 할인 적용 기간 동안 12개월마다 한 번 반영합니다.</li>
       <li>전기·수도요금, 물가 상승, 이자, 제품 잔존가치, 미입력 수리비·이전 설치비는 제외합니다. 편의성과 A/S 조건은 금액 외에 따로 비교하세요.</li>
-      <li>실시간 가격 데이터나 특정 제조사 가격표를 사용하지 않습니다. 초기 값은 가상 예시이며, 입력한 견적이 계산의 데이터 출처입니다.</li>
+      <li>기본 입력값은 가상 예시입니다. 공식 가격 불러오기는 표시된 확인일·모델·옵션의 수동 확인 데이터이며 실시간 가격이 아닙니다. 불러온 값도 수정할 수 있으며 결과는 최종 입력값 기준입니다. 확인되지 않은 구매 관리비는 직접 입력해야 합니다.</li>
     </ul></details>
-    <p class="method-version">계산 기준 v1.0 · 2026.10.21 · <a href="/contact/">오류·개선 의견 보내기</a></p>
+    <p class="method-version">계산 기준 v1.1 · 2026.10.21 · <a href="/contact/">오류·개선 의견 보내기</a></p>
   </section>
 </section>
 <script>
   import { compare, example } from '../lib/water-cost.mjs';
+  import { products, productQuote, verifiedAt } from '../data/water-products.mjs';
   const form = document.querySelector<HTMLFormElement>('#water-form')!;
   const results = document.querySelector<HTMLElement>('#water-results')!;
   const error = document.querySelector<HTMLElement>('#water-error')!;
   const notice = document.querySelector<HTMLElement>('#quote-mode')!;
   const money = (n: number) => `${n.toLocaleString('ko-KR')}원`;
   let isExample = true, summary = '';
+  let selected: typeof products[number] | undefined;
   const el = (id: string) => document.getElementById(id)!;
   const input = (key: string) => form.elements.namedItem(key) as HTMLInputElement;
+  const confirmation = document.querySelector<HTMLInputElement>('#price-confirmed')!;
+  if (Date.now() - Date.parse(`${verifiedAt}T00:00:00+09:00`) > 30 * 86400000) el('price-stale').hidden = false;
+  function clearProduct() {
+    selected = undefined; el('product-context').hidden = true; confirmation.required = false; confirmation.checked = false;
+    document.querySelectorAll('[data-product]').forEach(button => button.setAttribute('aria-pressed', 'false'));
+  }
+  document.querySelectorAll<HTMLButtonElement>('[data-product]').forEach(button => {
+    button.addEventListener('click', () => {
+      selected = products.find(product => product.id === button.dataset.product)!;
+      for (const [key, value] of Object.entries(productQuote(selected))) input(key).value = value === null ? '' : String(value);
+      results.hidden = true; error.textContent = ''; isExample = false;
+      confirmation.checked = false; confirmation.required = true; el('product-context').hidden = false;
+      el('selected-product-name').textContent = `${selected.brand} ${selected.name} · ${selected.model} · 확인일 ${verifiedAt}`;
+      el('selected-product-notes').textContent = `${selected.option}. ${selected.notes}`;
+      el('selected-product-sources').replaceChildren();
+      for (const source of selected.sources) {
+        const link = document.createElement('a'); link.href = source.url; link.textContent = `${source.label} ↗ `;
+        link.target = '_blank'; link.rel = 'noopener noreferrer'; el('selected-product-sources').append(link);
+      }
+      document.querySelectorAll<HTMLButtonElement>('[data-product]').forEach(item => item.setAttribute('aria-pressed', String(item === button)));
+      notice.textContent = `공식 확인 가격 불러옴 · ${selected.brand} ${selected.name}. ${selected.purchaseAnnual === null ? '구매 1년 이후 연간 관리비는 확인되지 않아 비워두었습니다. 견적을 받아 입력해주세요.' : '구매 케어십의 기간별 요금도 반영했습니다.'} 추가 비용 0원은 기본 설치·정상 만기 시나리오이므로 견적서와 대조해주세요.`;
+      el('product-context').scrollIntoView({ block: 'start', behavior: 'instant' });
+    });
+  });
   function invalidate() {
     results.hidden = true; error.textContent = ''; isExample = false;
-    notice.textContent = '직접 입력 모드 · 수정하지 않은 예시 금액도 남아 있을 수 있습니다. 모든 항목을 견적서와 대조해주세요.';
+    notice.textContent = selected ? `공식 가격 기반 편집 · ${selected.brand} ${selected.name}. 결과는 수정된 입력값 기준이며 공식 견적이 아닙니다.` : '직접 입력 모드 · 수정하지 않은 예시 금액도 남아 있을 수 있습니다. 모든 항목을 견적서와 대조해주세요.';
+  }
+  function periodChanged() {
+    if (!selected) return;
+    input('exitFee').value = Number(input('months').value) < Number(input('term').value) ? '' : '0';
+    input('afterAnnual').value = Number(input('months').value) > Number(input('term').value) ? '' : '0';
+    confirmation.checked = false;
   }
   form.addEventListener('input', invalidate);
+  input('months').addEventListener('input', periodChanged);
+  input('term').addEventListener('input', periodChanged);
   document.querySelectorAll<HTMLButtonElement>('[data-period]').forEach(button => {
-    button.addEventListener('click', () => { input('months').value = button.dataset.period!; invalidate(); });
+    button.addEventListener('click', () => { input('months').value = button.dataset.period!; invalidate(); periodChanged(); });
   });
   el('blank-quote').addEventListener('click', () => {
+    clearProduct();
     invalidate();
     for (const key of Object.keys(example)) input(key).value = key === 'months' || key === 'term' ? '60' : '0';
     input('rental').value = ''; input('purchase').value = ''; input('purchaseAnnual').value = '';
@@ -122,6 +187,7 @@ const cards = [
     input('rental').focus();
   });
   el('example-quote').addEventListener('click', () => {
+    clearProduct();
     for (const [key, value] of Object.entries(example)) input(key).value = String(value);
     results.hidden = true; error.textContent = ''; isExample = true;
     notice.textContent = '가상 예시 · 실제 판매 가격이나 추천 상품이 아닙니다. 계산 방법을 확인한 뒤 받은 견적으로 바꿔주세요.';
@@ -139,9 +205,10 @@ const cards = [
     event.preventDefault();
     const values = Object.fromEntries(Object.keys(example).map(key => [key, input(key).value === '' ? NaN : Number(input(key).value)]));
     try {
+      if (selected && values.months > 84) throw new Error('공식 확인 관리비는 최대 84개월까지입니다. 그 이후는 업체에 확인한 후 ‘내 견적 새로 입력’으로 비교해주세요.');
       const r = compare(values), diff = r.rent - r.buy;
       const headline = diff === 0 ? '입력 조건에서는 총비용이 같습니다' : `${diff > 0 ? '구매가' : '렌탈이'} ${money(Math.abs(diff))} 적게 듭니다`;
-      el('result-context').textContent = `${isExample ? '가상 예시 결과' : '입력 견적 기준'} · ${values.months}개월 비교 · 카드 할인 전`;
+      el('result-context').textContent = `${selected ? `${selected.brand} ${selected.model} · 최종 입력값 기준` : isExample ? '가상 예시 결과' : '입력 견적 기준'} · ${values.months}개월 비교 · 카드 할인 전`;
       el('result-title').textContent = headline;
       el('result-subtitle').textContent = '금액 차이와 함께 관리 서비스, 소유권, A/S 조건을 확인하세요.';
       el('rental-total').textContent = money(r.rent); el('purchase-total').textContent = money(r.buy);
@@ -169,6 +236,7 @@ const cards = [
       r.series.filter((p: { month: number }) => p.month % 12 === 0 || p.month === values.months)
         .forEach((p: { month: number; rent: number; buy: number }) => addRow(el('timeline'), [`${p.month}개월`, money(p.rent), money(p.buy)]));
       summary = [`홈케어랩 정수기 총비용 비교 · ${isExample ? '가상 예시' : '사용자 입력'}`, `${values.months}개월 · ${headline}`,
+        ...(selected ? [`가격 시작점: ${selected.brand} ${selected.model} (${verifiedAt} 확인). 수정 입력 가능.`, selected.notes, ...selected.sources.map(source => source.url)] : []),
         ...rows.map(row => `${row[0]}: 렌탈 ${row[1]} / 구매 ${row[2]}`), ...(card.hidden ? [] : [card.textContent!]), el('contract-warning').textContent,
         '입력값 (금액: 원, 기간: 개월, 연간 비용: 원/년):',
         ...Object.keys(example).map(key => `${key === 'months' ? '비교 기간' : form.querySelector(`label[for="water-${key}"]`)?.textContent}: ${values[key]}`),
@@ -185,7 +253,9 @@ const cards = [
   });
 </script>
 <style>
+  .official-products{margin-bottom:48px;padding-bottom:36px;border-bottom:1px solid #d4dfd8;scroll-margin-top:90px}.official-products h2{font-size:clamp(1.5rem,3vw,2rem);letter-spacing:-.05em}.price-date{font-size:.8rem;color:#61716a;margin-bottom:20px}.product-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}.product-card{display:flex;flex-direction:column;min-width:0;padding:22px;border:1px solid #d4dfd8;border-radius:16px;background:#fffef9}.product-brand{font-size:.75rem;font-weight:800;color:#317266}.product-card h3{font-size:1.15rem;line-height:1.5;margin:8px 0;min-height:3em}.model-code{font-size:.72rem;overflow-wrap:anywhere;color:#52695a}.product-option{font-size:.75rem;color:#61716a;margin:8px 0 18px}.product-card dl>div{padding:12px 0;border-top:1px solid #e1e7df}.product-card dt{font-size:.73rem;color:#61716a}.product-card dd{margin:6px 0 0;font-size:1.55rem;font-weight:800;letter-spacing:-.04em}.product-card dd.rental-price{font-size:.94rem}.rental-price span{display:block;margin-top:5px;color:#317266}.product-card dd.contract-total{font-size:1.1rem}.product-care{font-size:.75rem;background:#edf3ed;padding:12px;border-radius:8px;margin:8px 0 16px}.product-card details{font-size:.75rem;margin-bottom:20px}.product-card summary{cursor:pointer;font-weight:700}.product-card details p{margin:12px 0;color:#61716a}.product-card a{display:block;text-decoration:underline;padding:4px 0}.select-product{margin-top:auto;background:#235e50;color:white;border:0;border-radius:8px;padding:13px 12px;font-size:.78rem;line-height:1.5}.select-product[aria-pressed=true]{background:#173e35;outline:3px solid #8db89b;outline-offset:3px}.product-context{padding:20px;background:#edf3ed;border-radius:12px;scroll-margin-top:90px;font-size:.85rem}.product-context p{margin:12px 0}.product-context label{display:flex;gap:10px;align-items:flex-start}.product-context input{width:18px;height:18px;flex-shrink:0;margin-top:3px}.product-context a{text-decoration:underline;margin-right:14px}.product-context[hidden],#price-stale[hidden]{display:none}@media(max-width:800px){.product-grid{grid-template-columns:1fr}.product-card h3{min-height:0}.product-card dl{display:grid;grid-template-columns:1fr 1fr;gap:0 18px}.product-card dl>div:last-child{grid-column:1/-1}}
   .water-tool{scroll-margin-top:90px;max-width:1060px;margin:auto;padding:44px 0;color:#233e3b}
+  @media(max-width:480px){.product-card dl{display:block}.product-card dd{white-space:nowrap;font-size:1.45rem}}
   .eyebrow{font-size:.7rem;font-weight:800;letter-spacing:.13em;color:#317266;margin-bottom:10px}
   .tool-heading{display:flex;justify-content:space-between;align-items:center;gap:20px}.tool-heading h2{font-size:clamp(1.5rem,3vw,2rem);letter-spacing:-.05em}
   .tool-label{border:1px solid #bed5cd;border-radius:30px;padding:6px 12px;font-size:.75rem;white-space:nowrap}
