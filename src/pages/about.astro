@@ -1,18 +1,13 @@
 ---
 import Layout from '../layouts/Layout.astro';
 
-const personLd = {
+const publisherLd = {
   "@context": "https://schema.org",
-  "@type": "Person",
-  "name": "닥터 홈케어",
-  "description": "홈케어랩 편집·검토 책임자. 청소·가전렌탈·이사·생활비 비용 정보를 공공기관 공시 자료 및 복수 업체 공개 가격과 대조해 검토합니다.",
+  "@type": "Organization",
+  "name": "홈케어랩",
+  "description": "청소·가전렌탈·이사·생활비 비용의 비교 기준을 정리하는 독립 정보 사이트입니다.",
   "url": "https://www.homecare-lab.co.kr/about/",
-  "knowsAbout": ["입주청소 비용", "가전 렌탈 비용", "이사 준비", "전기요금 누진제", "생활비 절감"],
-  "worksFor": {
-    "@type": "Organization",
-    "name": "홈케어랩",
-    "url": "https://www.homecare-lab.co.kr/"
-  }
+  "knowsAbout": ["입주청소 비용", "가전 렌탈 비용", "이사 준비", "전기요금 누진제", "생활비 절감"]
 };
 ---
 <Layout
@@ -21,7 +16,7 @@ const personLd = {
 >
   <div class="article-wrap">
     <div class="breadcrumb"><a href="/">홈</a><span>›</span><strong>소개</strong></div>
-    <div class="article-meta"><span class="badge badge-blue">사이트 안내</span> &nbsp;최종 수정: 2026년 6월</div>
+    <div class="article-meta"><span class="badge badge-blue">사이트 안내</span> &nbsp;최종 수정: 2026년 10월 21일</div>
 
     <h1>홈케어랩 소개·비교 기준</h1>
 
@@ -40,9 +35,9 @@ const personLd = {
     <div style="display:flex;align-items:flex-start;gap:24px;background:var(--bg-soft,#f8f9fa);border-radius:12px;padding:24px 28px;margin:28px 0 36px">
       <div style="flex-shrink:0;width:72px;height:72px;border-radius:50%;background:linear-gradient(135deg,#1f2d3d,#2fbf9b);display:flex;align-items:center;justify-content:center;font-size:2rem">🏠</div>
       <div>
-        <p style="font-size:1.05rem;font-weight:700;margin:0 0 4px">닥터 홈케어</p>
-        <p style="font-size:0.88rem;color:var(--text-muted);margin:0 0 10px">홈케어랩 편집·검토 책임 · 2026년 운영 시작</p>
-        <p style="font-size:0.93rem;margin:0 0 12px;line-height:1.75">이사·청소·가전렌탈을 직접 겪으면서 "정확한 비용 기준을 찾기가 왜 이렇게 어렵지?"라는 불편함으로 홈케어랩을 시작했습니다. 모든 글의 비용·기준 수치를 <strong>공공기관 공시 자료와 복수 업체의 공개 가격에 직접 대조</strong>해 검토하고, 요금·약정 조건이 바뀌면 최종 수정일을 갱신합니다. 업체 홍보가 아닌 소비자 입장의 정보를 만든다는 원칙으로 운영합니다.</p>
+        <p style="font-size:1.05rem;font-weight:700;margin:0 0 4px">홈케어랩 편집</p>
+        <p style="font-size:0.88rem;color:var(--text-muted);margin:0 0 10px">공식 자료와 계산 가정 구분</p>
+        <p style="font-size:0.93rem;margin:0 0 12px;line-height:1.75">공개 자료를 바탕으로 비용 비교에 필요한 항목을 정리합니다. 직접 사용·상담·견적 경험은 확인 가능한 기록이 있을 때만 표시합니다. 현재 기존 글의 출처와 수치를 순차 점검 중이며, 모든 글의 검증이 완료된 것은 아닙니다.</p>
         <div style="display:flex;flex-wrap:wrap;gap:6px">
           <span style="font-size:0.75rem;font-weight:600;color:var(--accent-dark);background:var(--primary-light);border-radius:999px;padding:3px 10px">청소비용</span>
           <span style="font-size:0.75rem;font-weight:600;color:var(--accent-dark);background:var(--primary-light);border-radius:999px;padding:3px 10px">가전렌탈</span>
@@ -54,11 +49,7 @@ const personLd = {
 
     <h2>이 사이트를 만든 이유</h2>
 
-    <p>이사를 준비하면서 입주청소 비용을 알아본 적이 있습니다. 검색 결과에 나오는 정보들은 대부분 특정 업체의 홍보 글이거나, "평수에 따라 다르다"는 말만 반복하는 내용이었습니다. 실제로 30평 아파트에 입주청소를 맡기면 얼마가 드는지, 에어컨 청소를 포함하면 얼마가 추가되는지 — 구체적인 기준을 찾기가 어려웠습니다.</p>
-
-    <p>가전렌탈도 마찬가지였습니다. 정수기 렌탈이 구매보다 정말 비용이 더 드는지, 5년 약정이 끝나기 전에 해지하면 위약금이 얼마인지 — 이런 내용을 한 곳에서 비교해주는 곳이 없었습니다. 있더라도 렌탈 업체가 운영하는 홍보 사이트인 경우가 많았습니다.</p>
-
-    <p>홈케어랩은 이런 불편함에서 출발했습니다. 업체 홍보가 아닌 <strong>소비자 입장에서 비용 기준을 정리하는 독립 정보 사이트</strong>를 만들겠다는 것이 목표였습니다. 청소·렌탈·이사·생활비처럼 매일 집에서 발생하는 비용에 대해, 기준을 잡고 비교할 수 있는 정보를 제공합니다.</p>
+    <p>청소 견적의 포함 범위, 정수기의 렌탈·구매 총비용처럼 서로 다른 조건을 비교할 때 필요한 기준을 정리하기 위해 운영합니다. 소비자가 계약 전에 확인할 항목을 이해할 수 있도록 돕는 것이 목표입니다.</p>
 
     <h2>다루는 주제</h2>
     <ul>
@@ -70,27 +61,27 @@ const personLd = {
 
     <h2>정보를 작성하는 방법</h2>
 
-    <p>홈케어랩의 비용 정보는 다음 세 가지 방법으로 수집·정리합니다.</p>
+    <p>다음은 자료를 다루는 편집 기준입니다. 각 글에서 실제 확인한 출처와 확인일을 따로 표시하며, 모든 기존 글의 검증 완료를 뜻하지는 않습니다.</p>
 
     <div class="table-wrap">
       <table>
-        <thead><tr><th>방법</th><th>내용</th><th>활용 비율</th></tr></thead>
+        <thead><tr><th>자료 유형</th><th>표시 원칙</th></tr></thead>
         <tbody>
-          <tr><td>공공 기관 공시 자료</td><td>한국소비자원·한국에너지공단·국토교통부·한국전력공사·공정거래위원회 등 공개 데이터 및 보도자료</td><td>높음</td></tr>
-          <tr><td>업체 공개 가격 정보</td><td>수도권 복수 청소·렌탈 업체의 공개 견적표 및 약관 비교</td><td>높음</td></tr>
-          <tr><td>소비자 제보·사례 검토</td><td>실제 이용자 후기·커뮤니티 사례를 통한 실세 범위 검증</td><td>보조</td></tr>
+          <tr><td>공공기관·제조사 공식 자료</td><td>해당 주장에 연결되는 출처·확인일·적용 모델과 조건 표시</td></tr>
+          <tr><td>계산 예시·추정</td><td>가정과 제외 항목을 공개하고 실제 견적·공식 확정 가격과 구분</td></tr>
+          <tr><td>직접 견적·경험</td><td>원자료와 조사 조건을 확인할 수 있는 경우에만 실제 경험으로 기재</td></tr>
         </tbody>
       </table>
     </div>
 
-    <p>수치 범위(예: "15~25만원")는 단일 업체 기준이 아니라 <strong>복수 업체 비교 후 중간 범위</strong>를 제시합니다. 지역·오염도·조건에 따라 실제 금액이 달라지므로, 각 글에서 변수 요인을 함께 안내합니다. 비용 정보는 참고 기준이며, 실제 금액은 반드시 방문 견적서를 통해 확인하시기 바랍니다.</p>
+    <p>원자료가 확인되지 않는 가격 범위를 평균 시세나 복수 업체 조사 결과로 표현하지 않습니다. 미확인 비용은 무료로 취급하지 않으며, 오류를 발견하면 문장과 계산 전제를 함께 고칩니다. 2026년 10월 21일 입주청소 글에서 증빙을 확보하지 못한 직접 견적 서술과 금액표를 정정했습니다.</p>
 
     <h2>글 작성 및 검토 기준</h2>
 
     <ul class="checklist">
       <li>각 글에 <strong>발행일·최종 검토일·검토 기준</strong>을 상단에 명시합니다</li>
       <li>핵심 수치는 공공 기관 자료 또는 공개 약관을 근거로 기재합니다</li>
-      <li>비용 범위는 수도권 기준이며, 지역 차이가 있는 경우 별도 표기합니다</li>
+      <li>지역·시점·모델·계약 조건이 다른 수치를 하나의 기준으로 일반화하지 않습니다</li>
       <li>정보 변동(물가·약정 조건 변화 등)이 있으면 최종 수정일을 갱신합니다</li>
       <li>오류 발견 시 <a href="/contact/">문의 페이지</a>를 통해 알려주시면 검토 후 수정합니다</li>
     </ul>
@@ -125,6 +116,6 @@ const personLd = {
 
     <p style="margin-top:2rem;font-size:0.9rem;color:var(--text-muted)">문의: <a href="/contact/">contact@homecare-lab.co.kr</a></p>
 
-    <script type="application/ld+json" set:html={JSON.stringify(personLd)} />
+    <script type="application/ld+json" set:html={JSON.stringify(publisherLd)} />
   </div>
 </Layout>

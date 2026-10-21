@@ -4,6 +4,7 @@ import { readFileSync, existsSync } from 'node:fs';
 import { createHash } from 'node:crypto';
 import { resolve } from 'node:path';
 const audit = JSON.parse(readFileSync('docs/content-audit-2026-10-21.json', 'utf8'));
+const revisions = JSON.parse(readFileSync('docs/content-revisions-2026-10-21.json', 'utf8'));
 const built = { skip: !existsSync('dist/index.html') };
 test('home is an introduction, while calculator retains both comparison tables', built, () => {
   const home = readFileSync('dist/index.html', 'utf8');
@@ -34,11 +35,15 @@ test('new hub and navigation have valid links and three primary choices', built,
   const hub = readFileSync('dist/guides/index.html', 'utf8');
   for (const category of ['cheongso', 'rental', 'isa-junbi', 'jeolryak']) assert.ok(hub.includes(`href="/${category}/"`));
 });
-test('all 62 existing article bodies and indexing choices remain unchanged', built, () => {
+test('all 62 URLs and indexing choices remain; only explicitly reviewed article bodies change', built, () => {
   assert.equal(audit.articles.length, 62);
+  assert.equal(revisions.articles.length, 4);
+  assert.equal(new Set(revisions.articles.map(a => a.path)).size, 4);
+  for (const revision of revisions.articles) assert.ok(audit.articles.some(a => a.path === revision.path));
   for (const article of audit.articles) {
     const source = readFileSync(article.path, 'utf8');
-    assert.equal(createHash('sha256').update(source.replace(/\r\n/g, '\n')).digest('hex'), article.sourceSha256, article.path);
+    const reviewed = revisions.articles.find(a => a.path === article.path);
+    assert.equal(createHash('sha256').update(source.replace(/\r\n/g, '\n')).digest('hex'), reviewed?.sourceSha256 ?? article.sourceSha256, article.path);
     const output = resolve('dist', `.${article.url}index.html`);
     assert.ok(existsSync(output), article.url);
     const html = readFileSync(output, 'utf8');

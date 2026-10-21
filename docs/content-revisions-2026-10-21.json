@@ -1,0 +1,73 @@
+{
+  "reviewedAt": "2026-10-21",
+  "purpose": "사용자 요청에 따른 공식 근거 보강 및 증빙 미확인 직접 견적 주장 정정. 기존 62개 URL과 색인 설정 유지.",
+  "articles": [
+    {
+      "path": "src/pages/rental/jeongsugi-filter-rental.astro",
+      "sourceSha256": "9b5112635890ebba5b082670d4ff203dcf2f927a75af9f44b60cc177b711b15a"
+    },
+    {
+      "path": "src/pages/rental/rental-haejibiyong.astro",
+      "sourceSha256": "e9ab87ff85504457fe9ab8ea0e272c0ea5fefa6731feeb1f3036015900310752"
+    },
+    {
+      "path": "src/pages/rental/rental-yakjeong.astro",
+      "sourceSha256": "5e458d33b82c7d0a7034366815eb7184d60969b00ac56ed439dbff521a39289a"
+    },
+    {
+      "path": "src/pages/cheongso/ipju-cheongso-biyong.astro",
+      "sourceSha256": "2764a067ad641730e13bb272f03eb6cddaaf9c7fe7fc9e44b8d2c453d756f579"
+    }
+  ],
+  "sources": [
+    {
+      "url": "https://www.coway.com/product/detail?prdno=1520",
+      "observed": "CHP/CP-7220N 전용 6개월차 자가교체키트 140000원",
+      "method": "공식 페이지 브라우저 표시"
+    },
+    {
+      "url": "https://www.coway.com/product/detail?prdno=1521",
+      "observed": "CHP/CP-7220N 전용 12개월차 자가교체키트 160000원",
+      "method": "공식 페이지 브라우저 표시"
+    },
+    {
+      "url": "https://www.coway.com/product/detail?prdno=1596&optno=1",
+      "observed": "CHP-7211N 전용 6개월형 104000원. V2 등 세부 모델 호환은 미확인"
+    },
+    {
+      "url": "https://www.cuckoo.co.kr/mall/productView?productNo=9977",
+      "observed": "CPFS-8M802T 135000원. TS100/TS011/SS101 계열 안내. CP-WS100HW 호환 미확인"
+    },
+    {
+      "url": "https://www.coway.com/",
+      "location": "하단 계약/멤버십 약관 → 렌탈/구매계약약관 → 2026년09월14일 버전",
+      "observed": "제11조1항 정수기: 잔여 의무사용 일수×월렌탈료/30×10%. 회수비·등록비·할인반환·미납/당월요금 별도 조건은 제4·10·11조. 소유권 제12조. 정기배송 제8조, 구매관리 제20조.",
+      "method": "공식 약관 팝업 전문 열람, 본문은 요약"
+    },
+    {
+      "url": "https://www.lge.co.kr/care-solutions/water-purifiers/wd520awb?dpType=careTab",
+      "location": "구독 확인사항 / 구매시 유의사항 → 계약 및 해지; 구매 → 케어십 서비스",
+      "observed": "자가관리 필터 정기배송. 구매 케어십 첫36회차 월5000원(37회차 변경). 해지: 할인전 월요금 기준 잔여 의무기간 요금의 1년미만30%,1~2년20%,2년이후10%;2년계약 예외20%/10%. 회수비·사은품·미납 별도.",
+      "method": "공식 제품 브라우저 표시"
+    },
+    {
+      "url": "https://www.kca.go.kr/odr/cm/in/rsltnCrtral.do",
+      "observed": "분쟁해결기준의 합의·권고 성격 및 적용원칙. 가격표나 모든 사건의 환불 보장으로 인용하지 않음"
+    },
+    {
+      "url": "https://www.skmagic.com/customer/mainFeeCertify",
+      "observed": "물품대여서비스업 분쟁해결 안내. 개별 모델 계약의 위약금 확정 근거로 사용하지 않음"
+    }
+  ],
+  "corrections": [
+    "5곳 직접 견적의 원자료를 작업 폴더에서 확보하지 못함. 실제 상담이 없었다고 단정하지 않으며 조사 서술·금액표 삭제, 정정 안내 표시.",
+    "입주청소의 기타 근거 미확인 가격 범위·그래프 제거; 빈 견적 비교 양식과 가상 계산으로 대체.",
+    "필터와 해지 글의 브랜드 공통 평균·주기·요율 일반화 제거. 미확인 및 예상 비용 구분.",
+    "소개 페이지 직접 경험·모든 글 검증 완료·복수업체 중간 범위 주장 정정. 전체 기존 글 검증 완료 아님 명시."
+  ],
+  "remaining": [
+    "정확한 SKU 호환 및 일부 필터비 미확인 유지",
+    "미검토 58개 글의 본문은 기존 감사본 그대로 유지; 이번 작업으로 검증 완료 처리하지 않음",
+    "모든 기존 계약에 현행 공개 약관을 소급 적용하지 않음"
+  ]
+}
