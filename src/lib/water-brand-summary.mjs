@@ -18,9 +18,9 @@ export function summarizeProduct(product, months) {
   const care = careKnown ? Math.round(initial * product.purchaseCareMonthly + Math.max(0, months - initial) * (product.purchaseAnnual ?? 0) / 12) : null;
   const purchaseTotal = product.purchase !== null && care !== null ? product.purchase + care : null;
   return { months, rental, rentalNote, remaining, care, purchaseTotal,
-    careStatus: careKnown ? '관리비 확인' : '관리비 미확인',
+    careStatus: careKnown ? '관리비 확인' : product.careEvidence?.items.length ? '부품가 확인 · 총관리비 미확인' : '관리비 미확인',
     careNote: careKnown ? (months <= product.purchaseCareMonths && product.purchaseCareMonthly === 0 ? '확인된 무상 관리 기간 내' : '선택 기간의 관리비 합계') : (careLimit > 0 ? `${careLimit + 1}개월 차 이후 관리비 확인 필요` : '관리비·무료 관리 기간 확인 필요'),
-    purchaseNote: product.purchase === null ? '구매가·관리비 견적 필요' : care === null ? '제품가만 확인 · 총비용 산출 불가' : '제품가 + 확인된 관리비',
+    purchaseNote: product.purchase === null ? '구매가·관리비 견적 필요' : care === null ? '관리 조건 미확정 · 총비용 산출 불가' : '제품가 + 확인된 관리비',
     contractNote: months < product.term ? `${remaining}개월 계약 남음` : months === product.term ? '계약 만기' : `계약 후 ${months - product.term}개월 포함`,
   };
 }

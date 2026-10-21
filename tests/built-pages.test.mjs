@@ -15,6 +15,9 @@ for (const path of ['index.html', 'calculator/water-purifier/index.html']) {
     assert.ok(html.includes('id="brand-months"'));
     assert.equal((html.match(/data-summary-product="/g) || []).length, 5);
     assert.ok(html.includes('관리비 미확인')); assert.ok(html.includes('계약을 계속 유지'));
+    assert.ok(html.includes('부품가 확인 · 총관리비 미확인'));
+    for (const price of ['140,000원', '160,000원', '104,000원', '135,000원']) assert.ok(html.includes(price));
+    assert.ok(html.includes('판매 단위')); assert.ok(html.includes('기간을 바꿔도 부품 단가는 그대로'));
     assert.equal((html.match(/data-product="/g) || []).length, 5);
     assert.ok(html.includes('CP-TS011WS(S)')); assert.ok(html.includes('WPUJAC104DWH'));
     assert.ok(html.includes('견적 확인 필요')); assert.ok(html.includes('data-brand-filter="쿠쿠"'));

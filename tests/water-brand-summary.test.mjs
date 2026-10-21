@@ -2,7 +2,25 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import { products } from '../src/data/water-products.mjs';
 import { summarizeProduct, summaryMoney } from '../src/lib/water-brand-summary.mjs';
+import { productQuote } from '../src/data/water-products.mjs';
 const product = id => products.find(p => p.id === id);
+test('official part prices never become unverified service fees or period totals', () => {
+  const expected = [['coway-icon3', [140000, 160000]], ['coway-icon2', [104000]], ['cuckoo-ts011ws', [135000]]];
+  for (const [id, prices] of expected) {
+    const p = product(id);
+    assert.deepEqual(p.careEvidence.items.map(item => item.price), prices);
+    for (const months of [36, 60, 72, 84, 120]) {
+      const result = summarizeProduct(p, months);
+      assert.equal(result.care, null);
+      assert.equal(result.purchaseTotal, null);
+      assert.match(result.careStatus, /부품가 확인/);
+    }
+    assert.equal(productQuote(p).purchaseAnnual, null);
+    assert.ok(p.careEvidence.items.every(item => item.url.startsWith('https://www.')));
+  }
+  assert.deepEqual(product('skmagic-jac104').careEvidence.items, []);
+  assert.equal(summarizeProduct(product('coway-icon3'), 12).careStatus, '관리비 확인');
+});
 test('72 months means the same horizon for every model, with remaining obligations visible', () => {
   const rows = products.map(p => summarizeProduct(p, 72));
   assert.deepEqual(rows.map(r => r.rental), [1854000, 1794000, 1906800, 1266300, 1874400]);
