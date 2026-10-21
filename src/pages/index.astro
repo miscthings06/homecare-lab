@@ -1,6 +1,5 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import WaterComparison from '../components/WaterComparison.astro';
 ---
 <Layout title="홈케어랩 — 정수기 렌탈 vs 구매, 공식 가격으로 총비용 비교" description="코웨이·LG·쿠쿠·SK매직 공식 가격과 약정 조건을 확인하세요. 확인된 가격만 불러오고 미확인 구매가·관리비는 내 견적으로 입력해 총비용을 비교합니다.">
   <section class="home-hero">
@@ -9,7 +8,7 @@ import WaterComparison from '../components/WaterComparison.astro';
         <p class="eyebrow">우리 집 비용을 이해하는 작은 연구소</p>
         <h1>정수기, 렌탈이<br />정말 더 <span>저렴할까요?</span></h1>
         <p class="hero-description">월 요금만으로는 알 수 없으니까.<br />브랜드별 공식 가격을 불러오고,<br />필터·관리비까지 같은 기간으로 비교해보세요.</p>
-        <a class="hero-button" href="#compare">내 견적 비교하기 <span>↗</span></a>
+        <a class="hero-button" href="/calculator/water-purifier/">정수기 총비용 비교하기 <span>↗</span></a>
         <p class="hero-note">무료 계산 · 가입 없이 · 계산 근거 공개</p>
       </div>
       <div class="hero-visual" aria-label="월 요금에 사용 기간, 관리 비용, 계약 조건을 더해 총비용을 비교합니다.">
@@ -23,23 +22,21 @@ import WaterComparison from '../components/WaterComparison.astro';
       </div>
     </div>
   </section>
-  <div class="principles"><div class="container"><span><b>01</b> 같은 사용 기간</span><span><b>02</b> 관리비까지 포함</span><span><b>03</b> 조건부 할인은 따로</span></div></div>
-  <div class="container"><WaterComparison /></div>
   <section class="guide-section">
     <div class="container">
-      <p class="eyebrow">BEFORE YOU DECIDE</p><h2>계산 다음에, 확인할 것들</h2>
+      <p class="eyebrow">먼저 읽어보세요</p><h2>결정 전에 필요한 세 가지 가이드</h2>
       <div class="guide-grid">
-        <a href="/rental/jeongsugi-filter-rental/"><span>관리 조건</span><h3>필터와 방문 관리,<br />어디까지 포함일까?</h3><p>비용에 넣을 항목을 확인하세요.</p><b>가이드 읽기 ↗</b></a>
-        <a href="/rental/rental-haejibiyong/"><span>계약 조건</span><h3>중간에 해지하면<br />얼마를 더 내야 할까?</h3><p>위약금과 혜택 환수 조건을 확인하세요.</p><b>가이드 읽기 ↗</b></a>
-        <a href="/rental/rental-vs-purchase/"><span>선택 기준</span><h3>비용이 비슷하다면,<br />무엇으로 결정할까?</h3><p>관리 편의성과 소유권을 함께 살펴보세요.</p><b>가이드 읽기 ↗</b></a>
+        <a href="/rental/rental-vs-purchase/"><span>정수기 · 비교 방법</span><h3>렌탈과 구매,<br />어떻게 계산할까요?</h3><p>가상 사례로 총비용 계산을 따라가세요.</p><b>계산 방법 읽기 ↗</b></a>
+        <a href="/cheongso/cheongso-gyeonjeok-checklist/"><span>청소 · 견적 준비</span><h3>견적 전에<br />무엇을 알려줘야 할까요?</h3><p>공간 정보와 오염 상태, 작업 범위를 정리하세요.</p><b>체크리스트 읽기 ↗</b></a>
+        <a href="/isa-junbi/isa-checklist/"><span>이사 · 준비 순서</span><h3>이사 준비,<br />무엇부터 할까요?</h3><p>계약부터 이사 당일까지 챙길 일을 살펴보세요.</p><b>준비 순서 읽기 ↗</b></a>
       </div>
+      <a class="guide-all" href="/guides/">생활비 가이드 전체 보기 →</a>
     </div>
   </section>
-  <section class="more-tools container"><div><p class="eyebrow">EXPLORE HOMECARE LAB</p><h2>다른 생활비도 살펴보세요</h2><p>기존 청소·이사·생활비 가이드도 계속 이용할 수 있습니다.</p></div><div class="more-links"><a href="/calculator/#ipju">입주청소 예상비용 <span>↗</span></a><a href="/calculator/#jeongi">가전 전기요금 <span>↗</span></a><a href="/isa-junbi/">이사 준비 가이드 <span>↗</span></a></div></section>
-  <section class="trust-section container"><h2>비교의 기준을 숨기지 않습니다.</h2><p>제품 순위나 확인되지 않은 최저가를 만들지 않습니다. 입력한 견적과 공개된 계산식으로 결과를 보여드립니다. 제휴 여부는 계산 결과에 영향을 주지 않습니다.</p><a href="/affiliate-disclosure/">광고·제휴 운영 기준 →</a></section>
+  <section class="trust-section container"><h2>숫자 옆에 근거를 둡니다.</h2><p>정수기 비교에서는 공식 확인 가격과 가정이 포함된 예상 비용을 나눕니다. 확인되지 않은 비용을 0원으로 채우거나 브랜드 순위를 만들지 않습니다.</p><a href="/about/#comparison-method">소개·비교 기준 →</a></section>
 </Layout>
 <style>
-  .home-hero{background:#edf2eb;padding:64px 0 62px;border-bottom:1px solid #d9e2d7}.hero-grid{display:grid;grid-template-columns:1.1fr 1fr;align-items:center;gap:65px}
+  .home-hero{background:#edf2eb;padding:46px 0;border-bottom:1px solid #d9e2d7}.hero-grid{display:grid;grid-template-columns:1.1fr 1fr;align-items:center;gap:65px}.guide-all{display:inline-block;font-size:.85rem;font-weight:700;color:#235e50;margin-top:12px}a:focus-visible{outline:3px solid #29836e;outline-offset:5px}
   .eyebrow{font-size:.72rem;font-weight:800;letter-spacing:.1em;color:#3c705c;margin-bottom:20px}
   h1{font-size:clamp(2.1rem,4.3vw,3.3rem);line-height:1.25;letter-spacing:-.06em;font-weight:800;color:#233e34}h1 span{color:#347762}
   .hero-description{font-size:1rem;color:#607166;line-height:1.9;margin:25px 0}.hero-button{display:inline-flex;gap:60px;align-items:center;background:#235e50;color:#fff;border-radius:8px;padding:15px 24px;font-weight:700}.hero-button:hover{background:#183e36;text-decoration:none}.hero-note{font-size:.72rem;color:#617568;margin-top:13px}

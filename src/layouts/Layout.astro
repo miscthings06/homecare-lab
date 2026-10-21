@@ -30,10 +30,6 @@ const _ogSrc = _isRasterCover ? cover : ogImage;
 const ogImageURL = _ogSrc.startsWith('http') ? _ogSrc : new URL(_ogSrc, Astro.site).href;
 const pageTitle = title.includes('홈케어랩') ? title : `${title} | 홈케어랩`;
 
-// 상단 유틸바 날짜 (빌드 시점 — 클라이언트 JS가 방문자 오늘 날짜로 갱신)
-const _wd = ['일', '월', '화', '수', '목', '금', '토'];
-const _now = new Date();
-const buildDate = `${_now.getFullYear()}. ${_now.getMonth() + 1}. ${_now.getDate()}. (${_wd[_now.getDay()]})`;
 
 // 기사 페이지 판별 — 카테고리 하위 글에만 뉴스형 2열(본문+사이드바) 적용
 const _segs = Astro.url.pathname.split('/').filter(Boolean);
@@ -131,23 +127,11 @@ const shouldLoadAdSense = adsenseEnabled && !noindex && !_nonMonetizedPaths.has(
   </script>
 </head>
 <body>
-  <!-- 상단 유틸바 -->
-  <div class="util-bar">
-    <div class="container util-inner">
-      <span class="util-date" id="utilDate">{buildDate}</span>
-      <nav class="util-links" aria-label="유틸리티 메뉴">
-        <a href="/about/">소개</a>
-        <a href="/contact/">문의</a>
-        <a href="/affiliate-disclosure/">제휴 고지</a>
-      </nav>
-    </div>
-  </div>
 
   <!-- 헤더(마스트헤드) -->
   <header>
     <div class="container header-inner">
       <a href="/" class="logo"><span class="logo-name">홈케어<em>랩</em></span><span class="logo-tagline">우리 집 비용 비교 연구소</span></a>
-      <a href="/calculator/water-purifier/" class="masthead-link">정수기 비교 →</a>
     </div>
   </header>
 
@@ -155,11 +139,8 @@ const shouldLoadAdSense = adsenseEnabled && !noindex && !_nonMonetizedPaths.has(
   <nav class="cat-nav" aria-label="카테고리 메뉴">
     <div class="container cat-nav-inner">
       <a href="/calculator/water-purifier/" class={Astro.url.pathname.startsWith('/calculator/water-purifier') ? 'active' : ''}>정수기 비교</a>
-      <a href="/cheongso/" class={Astro.url.pathname.startsWith('/cheongso') ? 'active' : ''}>청소비용</a>
-      <a href="/rental/" class={Astro.url.pathname.startsWith('/rental') ? 'active' : ''}>가전렌탈</a>
-      <a href="/isa-junbi/" class={Astro.url.pathname.startsWith('/isa-junbi') ? 'active' : ''}>이사준비</a>
-      <a href="/jeolryak/" class={Astro.url.pathname.startsWith('/jeolryak') ? 'active' : ''}>생활비절감</a>
-      <a href="/calculator/" class={Astro.url.pathname === '/calculator/' ? 'active' : ''}>계산기</a>
+      <a href="/guides/" class={Astro.url.pathname === '/guides/' || _cats.includes(_segs[0]) || Astro.url.pathname === '/calculator/' ? 'active' : ''}>생활비 가이드</a>
+      <a href="/about/" class={Astro.url.pathname === '/about/' ? 'active' : ''}>소개·비교 기준</a>
     </div>
   </nav>
 
@@ -200,39 +181,9 @@ const shouldLoadAdSense = adsenseEnabled && !noindex && !_nonMonetizedPaths.has(
           <a href="/sitemap/">사이트맵</a>
         </div>
       </div>
-      <nav class="footer-cols">
-        <div class="footer-col">
-          <h3><a href="/cheongso/">청소비용</a></h3>
-          <a href="/cheongso/ipju-cheongso-biyong/">입주청소 비용</a>
-          <a href="/cheongso/aircon-cheongso/">에어컨 청소</a>
-          <a href="/cheongso/yoksil-gompalgi/">욕실 곰팡이 제거</a>
-          <a href="/cheongso/saetak-cheongso/">세탁기 청소</a>
-          <a href="/cheongso/hood-biyong/">주방 후드 청소</a>
-        </div>
-        <div class="footer-col">
-          <h3><a href="/rental/">가전렌탈</a></h3>
-          <a href="/rental/rental-vs-purchase/">렌탈 vs 구매</a>
-          <a href="/rental/jeongsugi-rental/">정수기 렌탈</a>
-          <a href="/rental/gonggi-rental/">공기청정기 렌탈</a>
-          <a href="/rental/geondogi-rental/">건조기 렌탈</a>
-          <a href="/rental/rental-haejibiyong/">렌탈 해지비용</a>
-        </div>
-        <div class="footer-col">
-          <h3><a href="/isa-junbi/">이사준비</a></h3>
-          <a href="/isa-junbi/homeservice-dday/">이사 홈서비스 준비표</a>
-          <a href="/isa-junbi/pojang-isa/">포장이사 vs 일반이사</a>
-          <a href="/isa-junbi/dosigas/">도시가스 이전</a>
-          <a href="/isa-junbi/internet-sinyu-vs-isa/">인터넷 이전 vs 신규</a>
-          <a href="/isa-junbi/isa-checklist/">이사 체크리스트</a>
-        </div>
-        <div class="footer-col">
-          <h3><a href="/jeolryak/">생활비절감</a></h3>
-          <a href="/jeolryak/jeongi-nujin/">전기요금 누진제</a>
-          <a href="/jeolryak/aircon-jeongi/">에어컨 전기요금</a>
-          <a href="/jeolryak/nanbangbi-jeollyak/">겨울 난방비 절감</a>
-          <a href="/jeolryak/energy-voucher/">에너지바우처</a>
-          <a href="/calculator/">비용 계산기</a>
-        </div>
+      <nav class="footer-cols" aria-label="하단 안내">
+        <div class="footer-col"><h3><a href="/calculator/water-purifier/">정수기 비교</a></h3><a href="/calculator/water-purifier/#self-care-comparison">직접 교체 예상 비용</a><a href="/about/#comparison-method">가격·계산 기준</a></div>
+        <div class="footer-col"><h3><a href="/guides/">생활비 가이드</a></h3><a href="/guides/">청소·렌탈·이사·절약</a><a href="/calculator/">생활비 계산기</a></div>
       </nav>
     </div>
     <div class="container footer-bottom">
@@ -242,14 +193,6 @@ const shouldLoadAdSense = adsenseEnabled && !noindex && !_nonMonetizedPaths.has(
   </footer>
 
   <script>
-    // 상단 유틸바 날짜 (방문자 기준 오늘)
-    (function () {
-      var el = document.getElementById('utilDate');
-      if (!el) return;
-      var wd = ['일', '월', '화', '수', '목', '금', '토'];
-      var d = new Date();
-      el.textContent = d.getFullYear() + '. ' + (d.getMonth() + 1) + '. ' + d.getDate() + '. (' + wd[d.getDay()] + ')';
-    })();
 
     // FAQ 아코디언
     document.querySelectorAll('.faq-q').forEach(q => {

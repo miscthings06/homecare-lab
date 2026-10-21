@@ -1,0 +1,1712 @@
+{
+  "date": "2026-10-21",
+  "scope": "전체 글의 제목·소제목·본문 정적 신호 1차 점검. 우선 위험 글은 본문 상세 점검. 전체 사실검증·검색 유입 분석은 미실시. 통합 실행·삭제·noindex 변경 없음.",
+  "counts": {
+    "total": 62,
+    "keep": 4,
+    "strengthen": 49,
+    "merge": 9
+  },
+  "articles": [
+    {
+      "path": "src/pages/cheongso/aircon-cheongso.astro",
+      "url": "/cheongso/aircon-cheongso/",
+      "title": "에어컨 청소 셀프와 업체 청소 차이 비교 — 비용과 효과 기준",
+      "headings": [
+        "에어컨 청소 셀프와 업체 청소 차이 비교 — 비용과 효과 기준",
+        "에어컨 청소가 필요한 이유와 청소 주기",
+        "셀프 청소의 범위와 한계",
+        "전문업체 청소의 범위와 비용 기준",
+        "셀프 청소 vs 업체 청소 비교",
+        "실제 청소 비용 예시 (여러 대 할인 포함)",
+        "업체 청소가 필요한 경우와 셀프로 충분한 경우",
+        "업체 선택 시 확인해야 할 사항",
+        "자주 묻는 질문",
+        "에어컨 청소 방식 선택 기준 정리"
+      ],
+      "sourceSha256": "d3d5d59d0202bc56f0abf3f28acec28e6f304ff1f1e65170768d14e55f9daeae",
+      "decision": "보강 후보",
+      "action": "P1: 가격 조사 조건·실제 사례 근거·제조사별 세척 주의사항 보강",
+      "proposedTarget": null,
+      "evidenceLinks": [
+        "https://www.kca.go.kr/"
+      ],
+      "existingNoindex": false,
+      "reviewDates": [
+        "2026년 5월 6일"
+      ],
+      "firstHandClaims": []
+    },
+    {
+      "path": "src/pages/cheongso/aircon-type-cheongso.astro",
+      "url": "/cheongso/aircon-type-cheongso/",
+      "title": "벽걸이 에어컨과 스탠드 에어컨 청소 차이",
+      "headings": [
+        "벽걸이 에어컨과 스탠드 에어컨 청소 차이",
+        "1. 벽걸이 vs 스탠드 에어컨 청소 비용 비교",
+        "2. 구조 차이가 비용에 영향을 주는 이유",
+        "3. 청소 단계별 비교",
+        "4. 청소 주기 기준",
+        "5. 청소 시 발생하는 추가 비용 항목",
+        "6. 에어컨 청소 업체 선택 시 확인할 사항",
+        "7. 여름 시즌 전 미리 청소해야 하는 이유",
+        "체크리스트",
+        "자주 묻는 질문",
+        "정리"
+      ],
+      "sourceSha256": "9cce88c8c8ee51f7282c5697082adf9446f1c36f8ea46178658638d03d18de4e",
+      "decision": "통합 후보",
+      "action": "P1: 본문 비교축 중복 검토; 고유 항목과 유입 확인 후 대표 URL 결정",
+      "proposedTarget": "/cheongso/aircon-cheongso/",
+      "evidenceLinks": [],
+      "existingNoindex": false,
+      "reviewDates": [
+        "2026년 5월 26일"
+      ],
+      "firstHandClaims": []
+    },
+    {
+      "path": "src/pages/cheongso/changtul-cheongso.astro",
+      "url": "/cheongso/changtul-cheongso/",
+      "title": "창틀 청소 방법과 주기 — 곰팡이·먼지·물때 제거 가이드",
+      "headings": [
+        "창틀 청소 방법과 주기 — 곰팡이·먼지·물때 제거 가이드",
+        "창틀 오염의 주요 원인과 발생 부위",
+        "창틀 부위별 셀프 청소 방법",
+        "청소 난이도별 창틀 오염 유형 비교",
+        "창틀 청소 주기와 계절별 관리 포인트",
+        "전문 청소가 필요한 경우와 비용 기준",
+        "자주 묻는 질문",
+        "창틀 청소 방법과 관리 주기 선택 기준 정리"
+      ],
+      "sourceSha256": "302da98c95dbb0b1895112d4dccf5ac1920d397187a2583629e96edfc2ae894e",
+      "decision": "보강 후보",
+      "action": "P1: 가격 조사 조건·실제 사례 근거·제조사별 세척 주의사항 보강",
+      "proposedTarget": null,
+      "evidenceLinks": [],
+      "existingNoindex": false,
+      "reviewDates": [
+        "2026년 5월 7일"
+      ],
+      "firstHandClaims": []
+    },
+    {
+      "path": "src/pages/cheongso/cheongso-checklist-all.astro",
+      "url": "/cheongso/cheongso-checklist-all/",
+      "title": "청소 견적 전 체크리스트 통합",
+      "headings": [
+        "청소 견적 전 체크리스트 통합",
+        "1. 입주청소·이사청소 견적 전 확인사항",
+        "2. 에어컨 청소 견적 전 확인사항",
+        "3. 세탁기 청소 견적 전 확인사항",
+        "4. 욕실 곰팡이 제거 견적 전 확인사항",
+        "5. 홈서비스 선택 체크리스트 (공통)",
+        "6. 청소 견적서에서 반드시 확인해야 할 항목",
+        "7. 청소 완료 후 반드시 해야 할 확인 절차",
+        "8. 청소 업체 후기를 제대로 보는 방법",
+        "청소 종류별 견적 체크리스트",
+        "자주 묻는 질문",
+        "정리"
+      ],
+      "sourceSha256": "c619840f6a6df61bd3a9bb3345821fad614a159f796abb6d9c978836880bd23d",
+      "decision": "통합 후보",
+      "action": "P1: 본문 비교축 중복 검토; 고유 항목과 유입 확인 후 대표 URL 결정",
+      "proposedTarget": "/cheongso/cheongso-gyeonjeok-checklist/",
+      "evidenceLinks": [],
+      "existingNoindex": false,
+      "reviewDates": [
+        "2026년 6월 3일"
+      ],
+      "firstHandClaims": []
+    },
+    {
+      "path": "src/pages/cheongso/cheongso-gyeonjeok-checklist.astro",
+      "url": "/cheongso/cheongso-gyeonjeok-checklist/",
+      "title": "청소 견적 요청 전 확인해야 할 체크리스트 20가지",
+      "headings": [
+        "청소 견적 요청 전 확인해야 할 체크리스트 20가지",
+        "1. 공간 기본 정보 (5가지)",
+        "2. 오염도 관련 (5가지)",
+        "3. 청소 범위 관련 (5가지)",
+        "4. 계약·서비스 조건 관련 (5가지)",
+        "5. 업체 신뢰도 확인 — 견적 전에 먼저 할 것",
+        "견적 비교 시 주의할 점",
+        "자주 묻는 질문",
+        "정리"
+      ],
+      "sourceSha256": "167de0642bdeb93c1eb6d85a61694576d8fd3be0ff7701ed1a0fd839ee2a286b",
+      "decision": "유지 후보",
+      "action": "P2: 독립 목적 유지; 유지 후보는 정확성 검증 완료를 뜻하지 않음",
+      "proposedTarget": null,
+      "evidenceLinks": [],
+      "existingNoindex": true,
+      "reviewDates": [
+        "2026년 5월 10일"
+      ],
+      "firstHandClaims": []
+    },
+    {
+      "path": "src/pages/cheongso/cheongso-upche-hugi.astro",
+      "url": "/cheongso/cheongso-upche-hugi/",
+      "title": "청소업체 후기 볼 때 확인해야 할 7가지 기준",
+      "headings": [
+        "청소업체 후기 볼 때 확인해야 할 7가지 기준",
+        "1. 시간 약속 관련 내용이 있는지",
+        "2. A/S(재청소) 대응에 대한 내용이 있는지",
+        "3. 평수·청소 범위가 나와 비슷한 후기인지",
+        "4. 추가 비용 발생 여부에 대한 언급이 있는지",
+        "5. 작업자 수와 소요 시간에 대한 내용이 있는지",
+        "6. 부정적인 후기에 대한 업체 댓글이 있는지",
+        "7. 후기 날짜가 최근인지",
+        "8. 후기 조작 의심 패턴 식별하는 방법",
+        "후기 판독 체크리스트",
+        "좋은 후기 vs 의미 없는 후기 구별하기",
+        "자주 묻는 질문",
+        "정리"
+      ],
+      "sourceSha256": "37dc8201b2347abb9be060c134c39788b86614e0f60e06b0b9e2333d95b06942",
+      "decision": "유지 후보",
+      "action": "P2: 독립 목적 유지; 유지 후보는 정확성 검증 완료를 뜻하지 않음",
+      "proposedTarget": null,
+      "evidenceLinks": [
+        "https://www.kca.go.kr/odr/bj/br/osBjDecisionExamDetW.do?brdId=00000007&dataStts=Y&seq=1001142714",
+        "https://www.kca.go.kr/odr/link/pg/pr/osPgStpSobiGuidW.do"
+      ],
+      "existingNoindex": false,
+      "reviewDates": [
+        "2026년 8월 7일"
+      ],
+      "firstHandClaims": []
+    },
+    {
+      "path": "src/pages/cheongso/hood-biyong.astro",
+      "url": "/cheongso/hood-biyong/",
+      "title": "주방 후드 청소 비용과 주기 — 셀프 청소와 업체 청소 비교",
+      "headings": [
+        "주방 후드 청소 비용과 주기 — 셀프 청소와 업체 청소 비교",
+        "주방 후드 오염의 특성과 청소 주기 기준",
+        "셀프 후드 청소 방법과 처리 가능한 범위",
+        "전문 후드 청소 비용과 서비스 범위",
+        "셀프 청소 vs 전문 청소 비교",
+        "실제 청소 비용 예시",
+        "후드 청소 비용을 결정하는 요인",
+        "후드 청소 주기와 관리 체크리스트",
+        "자주 묻는 질문",
+        "주방 후드 청소 방식과 비용 선택 기준 정리"
+      ],
+      "sourceSha256": "ef1a7c2113d11f2c2e2c7b8820bd1e6e516934b315a806e7420072c4733cae29",
+      "decision": "보강 후보",
+      "action": "P1: 가격 조사 조건·실제 사례 근거·제조사별 세척 주의사항 보강",
+      "proposedTarget": null,
+      "evidenceLinks": [
+        "https://www.kca.go.kr/"
+      ],
+      "existingNoindex": false,
+      "reviewDates": [
+        "2026년 5월 8일"
+      ],
+      "firstHandClaims": []
+    },
+    {
+      "path": "src/pages/cheongso/ipju-cheongso-biyong.astro",
+      "url": "/cheongso/ipju-cheongso-biyong/",
+      "title": "입주청소 비용은 어떻게 정해질까? 평수별 확인 기준 총정리",
+      "headings": [
+        "입주청소 비용은 어떻게 정해질까? 평수별 확인 기준 총정리",
+        "1. 입주청소 비용이 달라지는 핵심 요인",
+        "2. 평수별 예상 비용 (2026년 기준)",
+        "3. 직접 청소 vs 업체 청소 — 어떤 경우 업체를 써야 할까?",
+        "4. 견적 요청 전 체크리스트",
+        "5. 이런 경우 업체 청소가 특히 유리합니다",
+        "수도권 30평 아파트 입주청소 — 업체 5곳 직접 견적 비교",
+        "자주 묻는 질문",
+        "정리"
+      ],
+      "sourceSha256": "d05f7e236564b572564d57b469ef938ec9e1196625b0d35942d68712cc684c46",
+      "decision": "보강 후보",
+      "action": "P0: 업체 5곳 직접 견적 주장 원본 확인; 카테고리 요약표와 가격 범위 대조",
+      "proposedTarget": null,
+      "evidenceLinks": [
+        "https://www.kca.go.kr/odr/bj/br/osBjDecisionExamDetW.do?brdId=00000007&dataStts=Y&seq=1001142714",
+        "https://www.kca.go.kr/odr/cm/in/rsltnCrtral.do"
+      ],
+      "existingNoindex": false,
+      "reviewDates": [
+        "2026년 8월 7일"
+      ],
+      "firstHandClaims": [
+        "2026년 5월, 수도권(경기 성남·수원·서울 강동) 기준으로 동일 조건(30평 아파트, 일반 오염도, 창틀 포함, 베란다 2개, 에어컨 청소 제외)의 견적을 5개 업체에서 직접 받아 비교했습니다."
+      ]
+    },
+    {
+      "path": "src/pages/cheongso/ipju-cheongso-chukaiyogeum.astro",
+      "url": "/cheongso/ipju-cheongso-chukaiyogeum/",
+      "title": "입주청소 추가요금이 붙는 대표적인 경우 7가지",
+      "headings": [
+        "입주청소 추가요금이 붙는 대표적인 경우 7가지",
+        "추가요금이 발생하는 7가지 상황",
+        "추가요금 방지를 위한 사전 확인 체크리스트",
+        "추가요금 분쟁을 예방하는 한 가지 방법",
+        "자주 묻는 질문",
+        "정리"
+      ],
+      "sourceSha256": "949e33cbd90fb81723aaea38ccb9ee2130c31ea596053d1f9aa8037832cb8c68",
+      "decision": "보강 후보",
+      "action": "P1: 가격 조사 조건·실제 사례 근거·제조사별 세척 주의사항 보강",
+      "proposedTarget": null,
+      "evidenceLinks": [],
+      "existingNoindex": false,
+      "reviewDates": [
+        "2026년 5월 10일"
+      ],
+      "firstHandClaims": []
+    },
+    {
+      "path": "src/pages/cheongso/isa-cheongso.astro",
+      "url": "/cheongso/isa-cheongso/",
+      "title": "이사청소와 입주청소 차이 — 비용이 달라지는 이유",
+      "headings": [
+        "이사청소와 입주청소 차이 — 비용이 달라지는 이유",
+        "이사청소와 입주청소의 기본 개념 차이",
+        "이사청소의 범위와 주요 확인 사항",
+        "입주청소의 범위와 추가 비용이 발생하는 항목",
+        "비용이 달라지는 핵심 요인 분석",
+        "실제 견적 계산 예시 (30평 기준)",
+        "상황별 선택 기준 — 어떤 서비스가 필요한가",
+        "견적 비교 시 반드시 확인해야 할 체크리스트",
+        "자주 묻는 질문",
+        "이사청소·입주청소 선택 기준과 비용 관리 방법"
+      ],
+      "sourceSha256": "a125ae434a600e2f49794b62976edb01f68141ed2510519e8d5b1229daa1974d",
+      "decision": "보강 후보",
+      "action": "P1: 가격 조사 조건·실제 사례 근거·제조사별 세척 주의사항 보강",
+      "proposedTarget": null,
+      "evidenceLinks": [
+        "https://www.kca.go.kr/"
+      ],
+      "existingNoindex": false,
+      "reviewDates": [
+        "2026년 5월 6일"
+      ],
+      "firstHandClaims": []
+    },
+    {
+      "path": "src/pages/cheongso/mattress-cheongso.astro",
+      "url": "/cheongso/mattress-cheongso/",
+      "title": "매트리스 청소 방법과 주기 — 진드기·냄새·얼룩 제거 기준",
+      "headings": [
+        "매트리스 청소 방법과 주기 — 진드기·냄새·얼룩 제거 기준",
+        "매트리스 내부 오염의 원인과 위생 문제",
+        "매트리스 소재별 청소 가능 범위",
+        "셀프 매트리스 청소 방법 — 단계별 절차",
+        "전문 매트리스 청소 서비스 비용 기준",
+        "매트리스 청소 주기와 일상 관리 방법",
+        "자주 묻는 질문",
+        "매트리스 청소 방법과 주기 선택 기준 정리"
+      ],
+      "sourceSha256": "0c6481572a8c466b61e72b1aac0204ee0cb6c8fbe7248267f00a2b165837212b",
+      "decision": "보강 후보",
+      "action": "P1: 가격 조사 조건·실제 사례 근거·제조사별 세척 주의사항 보강",
+      "proposedTarget": null,
+      "evidenceLinks": [],
+      "existingNoindex": false,
+      "reviewDates": [
+        "2026년 5월 8일"
+      ],
+      "firstHandClaims": []
+    },
+    {
+      "path": "src/pages/cheongso/saetak-cheongso.astro",
+      "url": "/cheongso/saetak-cheongso/",
+      "title": "세탁기 청소 주기와 통세척 비용 — 드럼·통돌이 차이 기준",
+      "headings": [
+        "세탁기 청소 주기와 통세척 비용 — 드럼·통돌이 차이 기준",
+        "세탁기 내부에 곰팡이가 생기는 원인",
+        "세탁기 종류별 청소 주기 기준",
+        "셀프 세탁기 청소 방법과 효과 범위",
+        "전문 통세척 서비스 비용과 청소 범위",
+        "셀프 청소로 충분한 경우와 전문 청소가 필요한 경우",
+        "업체 선택과 견적 확인 시 체크사항",
+        "세탁기 오염 예방을 위한 일상 관리 방법",
+        "자주 묻는 질문",
+        "세탁기 청소 방식과 주기 선택 기준 정리"
+      ],
+      "sourceSha256": "cdc6550f4155f95495df227070ef19e3a4842008effd6fce98d39faf3af402f5",
+      "decision": "보강 후보",
+      "action": "P1: 가격 조사 조건·실제 사례 근거·제조사별 세척 주의사항 보강",
+      "proposedTarget": null,
+      "evidenceLinks": [],
+      "existingNoindex": false,
+      "reviewDates": [
+        "2026년 5월 7일"
+      ],
+      "firstHandClaims": []
+    },
+    {
+      "path": "src/pages/cheongso/saetak-type-cheongso.astro",
+      "url": "/cheongso/saetak-type-cheongso/",
+      "title": "드럼세탁기와 통돌이세탁기 청소 차이",
+      "headings": [
+        "드럼세탁기와 통돌이세탁기 청소 차이",
+        "1. 드럼 vs 통돌이세탁기 청소 비용 비교",
+        "2. 각 세탁기 구조와 청소 포인트",
+        "3. 세탁기 청소가 필요한 신호",
+        "4. 자가 관리 방법",
+        "5. 건조 겸용 세탁기(콤보) 청소 시 추가 사항",
+        "6. 세탁기 청소 업체 선택 기준과 비용 절감 방법",
+        "7. 세탁기 전문 청소 후 관리 방법",
+        "체크리스트",
+        "자주 묻는 질문",
+        "정리"
+      ],
+      "sourceSha256": "a87f2094df3094b2a75ec5903d428f425d0e186ea786424b060aec5fb59f1c8d",
+      "decision": "통합 후보",
+      "action": "P1: 본문 비교축 중복 검토; 고유 항목과 유입 확인 후 대표 URL 결정",
+      "proposedTarget": "/cheongso/saetak-cheongso/",
+      "evidenceLinks": [],
+      "existingNoindex": false,
+      "reviewDates": [
+        "2026년 5월 27일"
+      ],
+      "firstHandClaims": []
+    },
+    {
+      "path": "src/pages/cheongso/sofa-cheongso.astro",
+      "url": "/cheongso/sofa-cheongso/",
+      "title": "소파 청소 비용과 방법 — 소재별 셀프 청소 기준",
+      "headings": [
+        "소파 청소 비용과 방법 — 소재별 셀프 청소 기준",
+        "1. 소파 오염의 주요 원인과 방치 시 문제점",
+        "2. 소파 소재별 청소 방법 비교",
+        "3. 소재별 셀프 소파 청소 방법 — 단계별 절차",
+        "4. 전문 소파 청소 서비스 비용 기준",
+        "5. 소파 청소 주기와 일상 관리법",
+        "6. 소파 종류별 청소 업체 선택 기준",
+        "체크리스트",
+        "자주 묻는 질문",
+        "정리"
+      ],
+      "sourceSha256": "aaad2c0f25451f67786b0554dd9a1341c362742a1ae71a374ee8e81bc9eeed99",
+      "decision": "보강 후보",
+      "action": "P1: 가격 조사 조건·실제 사례 근거·제조사별 세척 주의사항 보강",
+      "proposedTarget": null,
+      "evidenceLinks": [
+        "https://www.kca.go.kr/home/sub.do?menukey=4005&mode=view&no=1003457618",
+        "https://www.kca.go.kr/odr/cm/in/rsltnCrtral.do"
+      ],
+      "existingNoindex": false,
+      "reviewDates": [
+        "2026년 8월 7일"
+      ],
+      "firstHandClaims": []
+    },
+    {
+      "path": "src/pages/cheongso/system-aircon-cheongso.astro",
+      "url": "/cheongso/system-aircon-cheongso/",
+      "title": "시스템 에어컨 청소 전 확인해야 할 것",
+      "headings": [
+        "시스템 에어컨 청소 전 확인해야 할 것",
+        "1. 시스템 에어컨 종류별 청소 비용",
+        "2. 청소 전 반드시 확인해야 할 항목",
+        "3. 시스템 에어컨 청소 주기 기준",
+        "4. 셀프 청소 vs 전문 업체 비교",
+        "5. 시스템 에어컨 청소 비용을 높이는 요인",
+        "6. 청소 완료 후 확인해야 할 사항",
+        "7. 시스템 에어컨 청소 업체 찾는 방법",
+        "체크리스트",
+        "자주 묻는 질문",
+        "정리"
+      ],
+      "sourceSha256": "ff83f0f624052780984d2ec07656067cd30a7b699083ba575a0fa20a44052f42",
+      "decision": "보강 후보",
+      "action": "P1: 가격 조사 조건·실제 사례 근거·제조사별 세척 주의사항 보강",
+      "proposedTarget": null,
+      "evidenceLinks": [
+        "https://www.lge.co.kr/support/solutions-20154434042899"
+      ],
+      "existingNoindex": false,
+      "reviewDates": [
+        "2026년 7월 16일"
+      ],
+      "firstHandClaims": []
+    },
+    {
+      "path": "src/pages/cheongso/wonroom-ipju-cheongso.astro",
+      "url": "/cheongso/wonroom-ipju-cheongso/",
+      "title": "원룸 입주청소 비용이 아파트와 다른 이유",
+      "headings": [
+        "원룸 입주청소 비용이 아파트와 다른 이유",
+        "1. 원룸 입주청소 비용이 아파트와 다른 핵심 이유",
+        "2. 원룸·오피스텔 유형별 예상 비용 (2026년 기준)",
+        "3. 원룸 청소에서 추가 비용이 자주 붙는 항목",
+        "4. 원룸 입주청소 — 셀프로 해도 되는 경우 vs 업체가 필요한 경우",
+        "5. 견적 전 체크리스트",
+        "6. 원룸 입주청소 — 홈케어랩 비용 판단 기준",
+        "자주 묻는 질문",
+        "정리"
+      ],
+      "sourceSha256": "4c5eb1a5e401b53fdcb90de11517319228345346aa1696e8d2babc8e745c3403",
+      "decision": "보강 후보",
+      "action": "P1: 가격 조사 조건·실제 사례 근거·제조사별 세척 주의사항 보강",
+      "proposedTarget": null,
+      "evidenceLinks": [],
+      "existingNoindex": false,
+      "reviewDates": [
+        "2026년 5월 9일"
+      ],
+      "firstHandClaims": []
+    },
+    {
+      "path": "src/pages/cheongso/yoksil-gompalgi.astro",
+      "url": "/cheongso/yoksil-gompalgi/",
+      "title": "욕실 곰팡이 제거 방법과 재발 방지 — 타일·줄눈·실리콘 기준",
+      "headings": [
+        "욕실 곰팡이 제거 방법과 재발 방지 — 타일·줄눈·실리콘 기준",
+        "욕실 곰팡이가 발생하는 원인과 위험성",
+        "욕실 곰팡이 부위별 특성과 제거 난이도",
+        "셀프 곰팡이 제거 방법 — 부위별 절차",
+        "전문 줄눈 시공과 실리콘 교체 비용 기준",
+        "곰팡이 상태별 처리 방법과 예상 비용",
+        "욕실 곰팡이 재발 방지를 위한 일상 관리법",
+        "자주 묻는 질문",
+        "욕실 곰팡이 제거와 재발 방지의 핵심 기준"
+      ],
+      "sourceSha256": "b3ffb89ad3792bf3a347b79539a12859b0563f4fd7cfd7e3cc15958aac3d6c59",
+      "decision": "보강 후보",
+      "action": "P1: 가격 조사 조건·실제 사례 근거·제조사별 세척 주의사항 보강",
+      "proposedTarget": null,
+      "evidenceLinks": [
+        "https://www.kdca.go.kr/",
+        "https://www.kca.go.kr/"
+      ],
+      "existingNoindex": false,
+      "reviewDates": [
+        "2026년 5월 9일"
+      ],
+      "firstHandClaims": []
+    },
+    {
+      "path": "src/pages/rental/aircon-rental.astro",
+      "url": "/rental/aircon-rental/",
+      "title": "에어컨 렌탈 vs 구매 — 5년 총비용과 선택 기준",
+      "headings": [
+        "에어컨 렌탈 vs 구매 — 5년 총비용과 선택 기준",
+        "1. 에어컨 렌탈 vs 구매 — 비용 구조 비교",
+        "2. 5년 총비용 시뮬레이션",
+        "3. 에어컨 렌탈이 유리한 경우",
+        "4. 에어컨 구매가 유리한 경우",
+        "5. 에어컨 렌탈 계약 전 반드시 확인할 조건",
+        "6. 에어컨 렌탈 브랜드 선택 기준",
+        "체크리스트",
+        "자주 묻는 질문",
+        "정리"
+      ],
+      "sourceSha256": "1fb66fde1130f2e3bff989a78f42b7e546d9e4839af43daa09184ce1d497cdbb",
+      "decision": "보강 후보",
+      "action": "P1: 모델·납부기간·포함 관리·행사 조건·공식 링크와 재현 계산 보강",
+      "proposedTarget": null,
+      "evidenceLinks": [],
+      "existingNoindex": false,
+      "reviewDates": [
+        "2026년 6월 2일"
+      ],
+      "firstHandClaims": []
+    },
+    {
+      "path": "src/pages/rental/bidet-rental.astro",
+      "url": "/rental/bidet-rental/",
+      "title": "비데 렌탈 비용과 구매 비교 — 월 요금·설치비·관리비 기준",
+      "headings": [
+        "비데 렌탈 비용과 구매 비교 — 월 요금·설치비·관리비 기준",
+        "비데 렌탈 서비스의 구조와 포함 내용",
+        "비데 유형별 렌탈 월 요금 기준",
+        "렌탈 vs 구매 총비용 비교",
+        "비데 렌탈 계약 전 확인 사항",
+        "비데 설치 시 기술적 확인 사항",
+        "자주 묻는 질문",
+        "비데 렌탈 방식과 비용 선택 기준 정리"
+      ],
+      "sourceSha256": "8fc62c9edd49e260ea72d0086e674c4f57aff311ee2f3590146799dd6918867c",
+      "decision": "보강 후보",
+      "action": "P1: 모델·납부기간·포함 관리·행사 조건·공식 링크와 재현 계산 보강",
+      "proposedTarget": null,
+      "evidenceLinks": [],
+      "existingNoindex": false,
+      "reviewDates": [
+        "2026년 5월 12일"
+      ],
+      "firstHandClaims": []
+    },
+    {
+      "path": "src/pages/rental/bumonim-rental.astro",
+      "url": "/rental/bumonim-rental/",
+      "title": "부모님 집에 렌탈 가전이 유리한 경우",
+      "headings": [
+        "부모님 집에 렌탈 가전이 유리한 경우",
+        "1. 부모님 댁 렌탈이 특히 유리한 이유",
+        "2. 가전별 부모님 댁 렌탈 적합도",
+        "3. 부모님 댁 렌탈 선택 시 확인할 항목",
+        "4. 특히 조심해야 할 경우",
+        "5. 부모님 댁 렌탈 연간 비용 계산 예시",
+        "6. 코디 방문 관리 — 부모님이 준비해야 할 것들",
+        "자주 묻는 질문",
+        "정리"
+      ],
+      "sourceSha256": "283708ac22ef815b33a0d183bc4d5cf31aec981a8296fba30f3e86b7f279774d",
+      "decision": "보강 후보",
+      "action": "P1: 모델·납부기간·포함 관리·행사 조건·공식 링크와 재현 계산 보강",
+      "proposedTarget": null,
+      "evidenceLinks": [],
+      "existingNoindex": false,
+      "reviewDates": [
+        "2026년 5월 16일"
+      ],
+      "firstHandClaims": []
+    },
+    {
+      "path": "src/pages/rental/eoreum-jeongsugi-rental.astro",
+      "url": "/rental/eoreum-jeongsugi-rental/",
+      "title": "얼음정수기 렌탈 전 확인해야 할 전기요금과 관리 조건",
+      "headings": [
+        "얼음정수기 렌탈 전 확인해야 할 전기요금과 관리 조건",
+        "1. 얼음정수기 vs 일반 정수기 비교",
+        "2. 얼음정수기 선택 전 확인할 항목",
+        "3. 얼음정수기가 유리한 경우 vs 일반 정수기가 유리한 경우",
+        "4. 얼음 위생 관리가 중요한 이유",
+        "5. 얼음정수기 렌탈 선택 시 놓치기 쉬운 조건",
+        "6. 얼음 위생 관리 — 정기 점검에서 확인해야 할 것",
+        "자주 묻는 질문",
+        "정리"
+      ],
+      "sourceSha256": "c9af8a8d479c99b0ed2ee2488a2d7f13332159123e2e981631c61d78e7bdd22a",
+      "decision": "보강 후보",
+      "action": "P1: 모델·납부기간·포함 관리·행사 조건·공식 링크와 재현 계산 보강",
+      "proposedTarget": null,
+      "evidenceLinks": [],
+      "existingNoindex": false,
+      "reviewDates": [
+        "2026년 5월 17일"
+      ],
+      "firstHandClaims": []
+    },
+    {
+      "path": "src/pages/rental/geondogi-rental.astro",
+      "url": "/rental/geondogi-rental/",
+      "title": "건조기 렌탈 비용과 구매 비교 — 드럼·히트펌프 기준",
+      "headings": [
+        "건조기 렌탈 비용과 구매 비교 — 드럼·히트펌프 기준",
+        "건조기 방식별 특징과 비용 구조",
+        "건조기 유형별 렌탈 월 요금 기준",
+        "렌탈 vs 구매 총비용 비교",
+        "상황별 선택 기준 — 렌탈 vs 구매",
+        "건조기 렌탈 계약 전 체크리스트",
+        "건조기 관리와 효율적인 사용 방법",
+        "자주 묻는 질문",
+        "건조기 렌탈 방식 선택과 비용 관리 기준 정리"
+      ],
+      "sourceSha256": "5b34b91477c7695e9d591912df7d019d4457bddc9d890499582511defc506bbb",
+      "decision": "보강 후보",
+      "action": "P1: 모델·납부기간·포함 관리·행사 조건·공식 링크와 재현 계산 보강",
+      "proposedTarget": null,
+      "evidenceLinks": [
+        "https://www.ftc.go.kr/",
+        "https://www.energy.or.kr/"
+      ],
+      "existingNoindex": false,
+      "reviewDates": [
+        "2026년 5월 13일"
+      ],
+      "firstHandClaims": []
+    },
+    {
+      "path": "src/pages/rental/gonggi-filter-biyong.astro",
+      "url": "/rental/gonggi-filter-biyong/",
+      "title": "공기청정기 필터 교체비까지 포함한 렌탈 vs 구매 비용 비교",
+      "headings": [
+        "공기청정기 필터 교체비까지 포함한 렌탈 vs 구매 비용 비교",
+        "1. 공기청정기 렌탈 vs 구매 5년 총비용 비교",
+        "2. 공기청정기 필터 교체 주기와 비용",
+        "3. 렌탈이 유리한 경우 vs 구매가 유리한 경우",
+        "4. 공간 면적별 적정 공기청정기 용량과 필터 비용 관계",
+        "5. 공기청정기 필터 비용 절감 방법",
+        "6. 렌탈 계약 시 필터 관련 확인 포인트",
+        "체크리스트",
+        "자주 묻는 질문",
+        "정리"
+      ],
+      "sourceSha256": "2a79d95e8d97e1493244407ca70bba3a5cd7a70bad033984645f03c287ba8de4",
+      "decision": "통합 후보",
+      "action": "P1: 본문 비교축 중복 검토; 고유 항목과 유입 확인 후 대표 URL 결정",
+      "proposedTarget": "/rental/gonggi-rental/",
+      "evidenceLinks": [],
+      "existingNoindex": false,
+      "reviewDates": [
+        "2026년 5월 28일"
+      ],
+      "firstHandClaims": []
+    },
+    {
+      "path": "src/pages/rental/gonggi-rental.astro",
+      "url": "/rental/gonggi-rental/",
+      "title": "공기청정기 렌탈 비용과 구매 비교 — 필터 관리비 포함 기준",
+      "headings": [
+        "공기청정기 렌탈 비용과 구매 비교 — 필터 관리비 포함 기준",
+        "공기청정기 렌탈 서비스의 구조와 특징",
+        "공간 면적별 공기청정기 적정 용량 기준",
+        "렌탈 vs 구매 총비용 비교 분석",
+        "상황별 선택 기준 — 렌탈 vs 구매",
+        "공기청정기 렌탈 계약 전 확인 사항",
+        "공기청정기 렌탈 브랜드와 주요 특징",
+        "자주 묻는 질문",
+        "공기청정기 렌탈 방식 선택 기준과 비용 절감 방법"
+      ],
+      "sourceSha256": "29347b324cf43e44685b8a96e6d564094cda87fee559d160acf94d3cf931c2a3",
+      "decision": "보강 후보",
+      "action": "P1: 모델·납부기간·포함 관리·행사 조건·공식 링크와 재현 계산 보강",
+      "proposedTarget": null,
+      "evidenceLinks": [
+        "https://www.me.go.kr/",
+        "https://www.ftc.go.kr/"
+      ],
+      "existingNoindex": false,
+      "reviewDates": [
+        "2026년 5월 12일"
+      ],
+      "firstHandClaims": []
+    },
+    {
+      "path": "src/pages/rental/jeongsugi-filter-rental.astro",
+      "url": "/rental/jeongsugi-filter-rental/",
+      "title": "정수기 렌탈 관리주기와 필터 교체 조건 확인법",
+      "headings": [
+        "정수기 렌탈 관리주기와 필터 교체 조건 확인법",
+        "1. 주요 브랜드별 방문 관리 주기 비교",
+        "2. 필터 종류별 교체 주기 기준",
+        "3. 렌탈 계약 전 확인해야 할 관리 조건",
+        "4. 필터를 제때 교체하지 않으면 어떻게 될까?",
+        "5. 방문 관리 vs 셀프 관리 — 어느 쪽이 더 경제적일까?",
+        "6. 정수기 렌탈 계약 시 놓치기 쉬운 추가 비용 항목",
+        "체크리스트",
+        "자주 묻는 질문",
+        "정리"
+      ],
+      "sourceSha256": "09377d555482b244d1a25d49f0b95c458a7e9e840e979004570ef3d2e0379c18",
+      "decision": "보강 후보",
+      "action": "P0: 브랜드 단위 관리 주기·연 5~10만원 필터비를 모델별 공식 근거와 대조",
+      "proposedTarget": null,
+      "evidenceLinks": [],
+      "existingNoindex": false,
+      "reviewDates": [
+        "2026년 5월 28일"
+      ],
+      "firstHandClaims": []
+    },
+    {
+      "path": "src/pages/rental/jeongsugi-rental.astro",
+      "url": "/rental/jeongsugi-rental/",
+      "title": "정수기 렌탈 비용과 구매 비교 — 월 요금·약정·관리비 기준",
+      "headings": [
+        "정수기 렌탈 비용과 구매 비교 — 월 요금·약정·관리비 기준",
+        "정수기 렌탈 서비스의 구조와 포함 내용",
+        "정수기 유형별 렌탈 월 요금 기준",
+        "렌탈 vs 구매 총비용 비교",
+        "상황별 선택 기준 — 렌탈 vs 구매·자가관리",
+        "정수기 렌탈 계약 시 확인해야 할 사항",
+        "정수기 렌탈 브랜드 선택 기준",
+        "4인 가족 기준 — 정수기 선택지별 5년 총비용 직접 계산",
+        "자주 묻는 질문",
+        "정수기 렌탈 선택 기준과 비용 관리 방법 정리"
+      ],
+      "sourceSha256": "774b2c02cd3a233833076b98a736589667eff8c53896ff5ef6739d26cbe6e44a",
+      "decision": "보강 후보",
+      "action": "P0: 기존 5년 계산을 현재 모델별 비교와 구분; 생수 비교의 독립 목적 검토",
+      "proposedTarget": null,
+      "evidenceLinks": [
+        "https://www.me.go.kr/",
+        "https://www.ftc.go.kr/"
+      ],
+      "existingNoindex": false,
+      "reviewDates": [
+        "2026년 5월 11일"
+      ],
+      "firstHandClaims": []
+    },
+    {
+      "path": "src/pages/rental/naengjangg-rental.astro",
+      "url": "/rental/naengjangg-rental/",
+      "title": "냉장고 렌탈 비용과 구매 비교 — 용량별 월 요금 기준",
+      "headings": [
+        "냉장고 렌탈 비용과 구매 비교 — 용량별 월 요금 기준",
+        "냉장고 렌탈 서비스의 특징",
+        "냉장고 용량별 렌탈 월 요금 기준",
+        "냉장고 렌탈 vs 구매 총비용 비교",
+        "냉장고 렌탈 계약 전 확인 사항",
+        "냉장고 선택 시 에너지 효율 고려 방법",
+        "자주 묻는 질문",
+        "냉장고 렌탈 방식과 비용 선택 기준 정리"
+      ],
+      "sourceSha256": "0899f740b7b8859c1c7299471819d79b3d3000ba0a7dca795ad2f975965334be",
+      "decision": "보강 후보",
+      "action": "P1: 모델·납부기간·포함 관리·행사 조건·공식 링크와 재현 계산 보강",
+      "proposedTarget": null,
+      "evidenceLinks": [],
+      "existingNoindex": false,
+      "reviewDates": [
+        "2026년 5월 13일"
+      ],
+      "firstHandClaims": []
+    },
+    {
+      "path": "src/pages/rental/oin-rental.astro",
+      "url": "/rental/oin-rental/",
+      "title": "1인 가구 가전렌탈, 구매보다 유리할까?",
+      "headings": [
+        "1인 가구 가전렌탈, 구매보다 유리할까?",
+        "1. 1인 가구에서 렌탈이 유리한 경우",
+        "2. 가전별 1인 가구 렌탈 vs 구매 비교",
+        "3. 1인 가구가 렌탈 선택 시 꼭 확인할 조건",
+        "4. 1인 가구 렌탈 적합도 판단표",
+        "5. 이사 잦은 1인 가구를 위한 렌탈 계약 전략",
+        "6. 원룸 설치 공간이 좁을 때 확인할 것들",
+        "자주 묻는 질문",
+        "정리"
+      ],
+      "sourceSha256": "9607c4fe7fa37879d921af63c9678ba8c8fb0b91094f6be5edd5ad1bd07365b8",
+      "decision": "보강 후보",
+      "action": "P1: 모델·납부기간·포함 관리·행사 조건·공식 링크와 재현 계산 보강",
+      "proposedTarget": null,
+      "evidenceLinks": [],
+      "existingNoindex": false,
+      "reviewDates": [
+        "2026년 5월 16일"
+      ],
+      "firstHandClaims": []
+    },
+    {
+      "path": "src/pages/rental/rental-chunga-biyong.astro",
+      "url": "/rental/rental-chunga-biyong/",
+      "title": "렌탈 청구 비용 항목 정리 — 월 요금 외 추가 청구 기준",
+      "headings": [
+        "렌탈 청구 비용 항목 정리 — 월 요금 외 추가 청구 기준",
+        "렌탈 비용의 기본 구조",
+        "렌탈 계약에서 발생할 수 있는 비용 항목 전체 정리",
+        "월 요금에 포함 여부를 반드시 확인해야 할 항목",
+        "렌탈 계약 시 비용 관련 필수 확인 체크리스트",
+        "렌탈 비용 분쟁 예방을 위한 계약 방법",
+        "자주 묻는 질문",
+        "렌탈 청구 비용 전체 파악과 관리 방법 정리"
+      ],
+      "sourceSha256": "0b5c0bf0ee7302b06b3cf74d4ebe6f02edb6ac124df08f4b99a9287b6d96cbea",
+      "decision": "보강 후보",
+      "action": "P1: 모델·납부기간·포함 관리·행사 조건·공식 링크와 재현 계산 보강",
+      "proposedTarget": null,
+      "evidenceLinks": [
+        "https://www.kca.go.kr/odr/cm/in/rsltnCrtral.do",
+        "https://www.ftc.go.kr/www/selectBbsNttList.do?bordCd=201&key=202"
+      ],
+      "existingNoindex": false,
+      "reviewDates": [
+        "2026년 8월 7일"
+      ],
+      "firstHandClaims": []
+    },
+    {
+      "path": "src/pages/rental/rental-haejibiyong.astro",
+      "url": "/rental/rental-haejibiyong/",
+      "title": "가전렌탈 해지비용 확인 전 꼭 봐야 할 항목",
+      "headings": [
+        "가전렌탈 해지비용 확인 전 꼭 봐야 할 항목",
+        "1. 렌탈 해지비용(위약금)의 기본 구조",
+        "2. 약정 기간별 위약금 기준 비교",
+        "3. 해지비용을 줄이는 방법",
+        "4. 해지 전 체크리스트",
+        "5. 홈케어랩 렌탈 해지 판단 기준",
+        "6. 렌탈 해지 분쟁 예방 — 통화 기록 남기는 방법",
+        "자주 묻는 질문",
+        "정리"
+      ],
+      "sourceSha256": "0ac25bd4c0d8eabb12f6c8b5f7fb7de5a13784e49609e0adf74a08d2432a773e",
+      "decision": "보강 후보",
+      "action": "P0: 잔여요금 50~80% 일반화 근거·계약별 약관 확인",
+      "proposedTarget": null,
+      "evidenceLinks": [],
+      "existingNoindex": false,
+      "reviewDates": [
+        "2026년 5월 15일"
+      ],
+      "firstHandClaims": []
+    },
+    {
+      "path": "src/pages/rental/rental-isa-transfer.astro",
+      "url": "/rental/rental-isa-transfer/",
+      "title": "이사할 때 렌탈 가전 이전 설치 비용 확인법",
+      "headings": [
+        "이사할 때 렌탈 가전 이전 설치 비용 확인법",
+        "1. 렌탈 이전 설치란?",
+        "2. 이전 설치 비용",
+        "3. 이전 설치가 불가능한 경우",
+        "4. 이전 설치 신청 절차",
+        "5. 렌탈 브랜드별 이전 설치 정책 차이",
+        "6. 이전 설치 시 자주 발생하는 문제와 예방법",
+        "7. 이전 설치 전 체크리스트",
+        "6. 이전 설치 vs 해지 비용 비교",
+        "자주 묻는 질문",
+        "정리"
+      ],
+      "sourceSha256": "d3521f231c956d5a16070d25ae48a92aa42559e660bf66837351c012c2f167cc",
+      "decision": "보강 후보",
+      "action": "P1: 모델·납부기간·포함 관리·행사 조건·공식 링크와 재현 계산 보강",
+      "proposedTarget": null,
+      "evidenceLinks": [],
+      "existingNoindex": false,
+      "reviewDates": [
+        "2026년 5월 17일"
+      ],
+      "firstHandClaims": []
+    },
+    {
+      "path": "src/pages/rental/rental-vs-purchase.astro",
+      "url": "/rental/rental-vs-purchase/",
+      "title": "정수기 렌탈과 구매, 총비용으로 비교하는 방법",
+      "headings": [
+        "정수기 렌탈과 구매, 총비용으로 비교하는 방법",
+        "1. 가격보다 먼저 맞춰야 할 조건",
+        "2. 5년 비교를 직접 계산한 가상 사례",
+        "3. 계산에서 놓치기 쉬운 네 가지",
+        "4. 금액 차이가 작다면 무엇을 볼까요?",
+        "계산 근거와 한계"
+      ],
+      "sourceSha256": "1264c89f929358489a407ab7f8e0a99d46688015f4034981607368059190ecb6",
+      "decision": "유지 후보",
+      "action": "P2: 독립 목적 유지; 유지 후보는 정확성 검증 완료를 뜻하지 않음",
+      "proposedTarget": null,
+      "evidenceLinks": [],
+      "existingNoindex": false,
+      "reviewDates": [],
+      "firstHandClaims": []
+    },
+    {
+      "path": "src/pages/rental/rental-yakjeong.astro",
+      "url": "/rental/rental-yakjeong/",
+      "title": "렌탈 약정 해지 위약금 계산 방법 — 중도 해지 기준 정리",
+      "headings": [
+        "렌탈 약정 해지 위약금 계산 방법 — 중도 해지 기준 정리",
+        "렌탈 약정과 위약금 발생 구조",
+        "렌탈 약정 기간별 예상 위약금 범위",
+        "위약금 없이 또는 최소화하며 해지하는 방법",
+        "렌탈 해지 전 반드시 확인해야 할 사항",
+        "렌탈 계약 분쟁 발생 시 대응 방법",
+        "자주 묻는 질문",
+        "렌탈 약정 해지와 위약금 관리 기준 정리"
+      ],
+      "sourceSha256": "4d91369757041cf60d8cf87bc94678cd171faeadd0f5d14ea89678b0ca136377",
+      "decision": "통합 후보",
+      "action": "P0: 50% 적용 설명과 표·차트 수치 불일치; 해지비용 글과 통합 검토",
+      "proposedTarget": "/rental/rental-haejibiyong/",
+      "evidenceLinks": [],
+      "existingNoindex": true,
+      "reviewDates": [
+        "2026년 5월 15일"
+      ],
+      "firstHandClaims": []
+    },
+    {
+      "path": "src/pages/rental/saetak-rental.astro",
+      "url": "/rental/saetak-rental/",
+      "title": "세탁기 렌탈 비용과 구매 비교 — 드럼·통돌이 월 요금 기준",
+      "headings": [
+        "세탁기 렌탈 비용과 구매 비교 — 드럼·통돌이 월 요금 기준",
+        "세탁기 렌탈 서비스의 특징과 구매와의 차이",
+        "세탁기 유형별 렌탈 월 요금 기준",
+        "렌탈 vs 구매 총비용 비교",
+        "세탁기 렌탈 계약 전 확인 사항",
+        "드럼세탁기 vs 통돌이 세탁기 선택 기준",
+        "자주 묻는 질문",
+        "세탁기 렌탈과 구매 선택 기준 정리"
+      ],
+      "sourceSha256": "3681e9ceebd5063adee4cacbfefd3ba16bbce461bb2d23b0c482c4ffd2a24396",
+      "decision": "보강 후보",
+      "action": "P1: 모델·납부기간·포함 관리·행사 조건·공식 링크와 재현 계산 보강",
+      "proposedTarget": null,
+      "evidenceLinks": [],
+      "existingNoindex": false,
+      "reviewDates": [
+        "2026년 5월 14일"
+      ],
+      "firstHandClaims": []
+    },
+    {
+      "path": "src/pages/isa-junbi/bumonim-isa-jeongeom.astro",
+      "url": "/isa-junbi/bumonim-isa-jeongeom/",
+      "title": "부모님 집 이사 전 확인해야 할 안전 점검 항목",
+      "headings": [
+        "부모님 집 이사 전 확인해야 할 안전 점검 항목",
+        "1. 부모님 집 이사 전 안전 점검 체크리스트",
+        "2. 이사 전 준비해야 할 생활서비스",
+        "3. 부모님 집 이사 시 특히 챙겨야 할 항목",
+        "4. 고령자 낙상 예방을 위한 집 구조 개선 포인트",
+        "5. 부모님 이사 시 가전·설비 교체 기준",
+        "6. 이사 후 부모님 생활 안전을 위한 정기 점검 항목",
+        "체크리스트",
+        "자주 묻는 질문",
+        "정리"
+      ],
+      "sourceSha256": "7646923f672a381edcc3344059c8b2927e83b93f763b0119e4607b13533ca9f0",
+      "decision": "보강 후보",
+      "action": "P1: 절차·연락처·기한·비용의 공식 출처와 지역별 예외 보강",
+      "proposedTarget": null,
+      "evidenceLinks": [],
+      "existingNoindex": false,
+      "reviewDates": [
+        "2026년 5월 29일"
+      ],
+      "firstHandClaims": []
+    },
+    {
+      "path": "src/pages/isa-junbi/dosigas.astro",
+      "url": "/isa-junbi/dosigas/",
+      "title": "도시가스 이전·명의변경 방법 — 이사 시 처리 순서 정리",
+      "headings": [
+        "도시가스 이전·명의변경 방법 — 이사 시 처리 순서 정리",
+        "이사 시 도시가스 처리의 두 가지 과제",
+        "이사 나가는 집 도시가스 정산 절차",
+        "이사 들어가는 집 도시가스 명의 변경 절차",
+        "상황별 도시가스 처리 한눈에",
+        "도시가스 신규 개통이 필요한 경우",
+        "이사 시 도시가스 처리 체크리스트",
+        "도시가스 외 전기·수도 처리 방법",
+        "자주 묻는 질문",
+        "이사 시 도시가스 처리 순서와 주의사항 정리"
+      ],
+      "sourceSha256": "d4203ccfc4d5b3beee7df902b51b608390eefd12ac0e513b3c418cbf2e34481b",
+      "decision": "보강 후보",
+      "action": "P1: 절차·연락처·기한·비용의 공식 출처와 지역별 예외 보강",
+      "proposedTarget": null,
+      "evidenceLinks": [
+        "https://www.kogas.or.kr/",
+        "https://www.motie.go.kr/"
+      ],
+      "existingNoindex": false,
+      "reviewDates": [
+        "2026년 5월 19일"
+      ],
+      "firstHandClaims": []
+    },
+    {
+      "path": "src/pages/isa-junbi/gwanrisauso-hwakyin.astro",
+      "url": "/isa-junbi/gwanrisauso-hwakyin/",
+      "title": "입주 전 관리사무소에서 확인해야 할 항목",
+      "headings": [
+        "입주 전 관리사무소에서 확인해야 할 항목",
+        "1. 입주 시 관리사무소 확인 항목 목록",
+        "2. 오피스텔 입주 시 추가 확인 항목",
+        "3. 관리사무소 방문 전 준비할 것",
+        "4. 건물 유형별 관리사무소 확인 차이점",
+        "5. 관리비 구조 이해하기 — 불필요한 청구 방지",
+        "6. 이사 후 공용시설 이용 분쟁 예방법",
+        "체크리스트",
+        "자주 묻는 질문",
+        "정리"
+      ],
+      "sourceSha256": "6d54b33b59fd6147bd5f2d966b011b96dd9468a30475a9198907b0a5f947f54f",
+      "decision": "유지 후보",
+      "action": "P2: 독립 목적 유지; 유지 후보는 정확성 검증 완료를 뜻하지 않음",
+      "proposedTarget": null,
+      "evidenceLinks": [],
+      "existingNoindex": false,
+      "reviewDates": [
+        "2026년 5월 30일"
+      ],
+      "firstHandClaims": []
+    },
+    {
+      "path": "src/pages/isa-junbi/haja-jeongeom.astro",
+      "url": "/isa-junbi/haja-jeongeom/",
+      "title": "입주 전 하자 점검표 작성 방법",
+      "headings": [
+        "입주 전 하자 점검표 작성 방법",
+        "1. 입주 전 하자 점검이 중요한 이유",
+        "2. 점검해야 할 항목",
+        "3. 하자 기록 방법",
+        "4. 하자 발견 후 처리 방법",
+        "5. 임대인 수리 의무 vs 임차인 원상복구 범위 구분",
+        "6. 퇴거 시 보증금 분쟁 예방을 위한 입주 전 기록 전략",
+        "자주 묻는 질문",
+        "정리"
+      ],
+      "sourceSha256": "6fd24977572a1eaa7bba7bd227aeb53327fbbfc18c0b2c9d212f749caba6c043",
+      "decision": "보강 후보",
+      "action": "P1: 절차·연락처·기한·비용의 공식 출처와 지역별 예외 보강",
+      "proposedTarget": null,
+      "evidenceLinks": [],
+      "existingNoindex": false,
+      "reviewDates": [
+        "2026년 5월 21일"
+      ],
+      "firstHandClaims": []
+    },
+    {
+      "path": "src/pages/isa-junbi/homeservice-dday.astro",
+      "url": "/isa-junbi/homeservice-dday/",
+      "title": "이사 전후 홈서비스 준비표",
+      "headings": [
+        "이사 전후 홈서비스 준비표",
+        "이사 전후 홈서비스 D-day 준비표",
+        "카테고리별 신청 우선순위",
+        "이사 홈서비스 예상 총비용 (30평 가족 이사 예시)",
+        "이사 후 반드시 처리해야 할 주소 변경 항목",
+        "이사 준비 비용 절감 포인트",
+        "자주 묻는 질문",
+        "체크리스트",
+        "정리"
+      ],
+      "sourceSha256": "6dcd810b4f1147becd7d7d87935b826f9e311b1dae8189f57fc50766b39a028f",
+      "decision": "통합 후보",
+      "action": "P1: 본문 비교축 중복 검토; 고유 항목과 유입 확인 후 대표 URL 결정",
+      "proposedTarget": "/isa-junbi/isa-checklist/",
+      "evidenceLinks": [
+        "https://www.kca.go.kr/",
+        "https://www.molit.go.kr/"
+      ],
+      "existingNoindex": false,
+      "reviewDates": [
+        "2026년 6월 2일"
+      ],
+      "firstHandClaims": []
+    },
+    {
+      "path": "src/pages/isa-junbi/internet-isa.astro",
+      "url": "/isa-junbi/internet-isa/",
+      "title": "이사 시 인터넷 이전과 신규 가입 비교 — 비용과 절차 기준",
+      "headings": [
+        "이사 시 인터넷 이전과 신규 가입 비교 — 비용과 절차 기준",
+        "인터넷 이전과 신규 가입의 차이",
+        "인터넷 이전 vs 신규 가입 비용 비교",
+        "이사 전 인터넷 신청 타이밍과 순서",
+        "통신사별 인터넷 요금 및 선택 기준",
+        "인터넷 이사 시 자주 발생하는 문제와 해결 방법",
+        "자주 묻는 질문",
+        "이사 시 인터넷 처리 방법 선택 기준 정리"
+      ],
+      "sourceSha256": "5158d507964555c4563493e472ac4fe18f6629bdbcb5eb71951773144f338be7",
+      "decision": "보강 후보",
+      "action": "P1: 절차·연락처·기한·비용의 공식 출처와 지역별 예외 보강",
+      "proposedTarget": null,
+      "evidenceLinks": [],
+      "existingNoindex": true,
+      "reviewDates": [
+        "2026년 5월 18일"
+      ],
+      "firstHandClaims": []
+    },
+    {
+      "path": "src/pages/isa-junbi/internet-sinyu-vs-isa.astro",
+      "url": "/isa-junbi/internet-sinyu-vs-isa/",
+      "title": "인터넷 이전 설치 vs 신규가입 — 어떤 경우가 유리할까?",
+      "headings": [
+        "인터넷 이전 설치 vs 신규가입 — 어떤 경우가 유리할까?",
+        "1. 인터넷 이전 설치란?",
+        "2. 신규 가입이란?",
+        "3. 이전 설치 vs 신규 가입 비교표",
+        "4. 상황별 유리한 선택",
+        "5. 신규 가입 혜택 수준 확인이 중요한 이유",
+        "6. 인터넷 이전·신규 신청 타이밍",
+        "7. 이전 설치 vs 신규 가입 — 실제 절약 금액 계산 예시",
+        "8. 통신사별 이전 설치·신규 가입 신청 방법",
+        "신청 전 체크리스트",
+        "자주 묻는 질문",
+        "정리"
+      ],
+      "sourceSha256": "3fe420c5c7290cea06b123e61d4dc5c50d9d95f31a715f4933bd82edbf4b4bdc",
+      "decision": "통합 후보",
+      "action": "P1: 본문 비교축 중복 검토; 고유 항목과 유입 확인 후 대표 URL 결정",
+      "proposedTarget": "/isa-junbi/internet-isa/",
+      "evidenceLinks": [
+        "https://www.msit.go.kr/",
+        "https://www.kcc.go.kr/"
+      ],
+      "existingNoindex": false,
+      "reviewDates": [
+        "2026년 5월 20일"
+      ],
+      "firstHandClaims": []
+    },
+    {
+      "path": "src/pages/isa-junbi/isa-checklist.astro",
+      "url": "/isa-junbi/isa-checklist/",
+      "title": "이사 전 점검 체크리스트 — 계약부터 이사 당일까지 단계별 정리",
+      "headings": [
+        "이사 전 점검 체크리스트 — 계약부터 이사 당일까지 단계별 정리",
+        "이사 1개월 전 준비 사항",
+        "이사 2주 전 준비 사항",
+        "이사 1주 전 준비 사항",
+        "이사 당일 확인 사항",
+        "이사 후 1주일 이내 처리 사항",
+        "이사 후 반드시 처리해야 할 행정 사항",
+        "자주 묻는 질문",
+        "이사 전후 체크리스트 완료 기준 정리"
+      ],
+      "sourceSha256": "f5ab9e7b597d4d49d7845df974d0381ca551a72bc291f0bce28757317559cb27",
+      "decision": "보강 후보",
+      "action": "P1: 절차·연락처·기한·비용의 공식 출처와 지역별 예외 보강",
+      "proposedTarget": null,
+      "evidenceLinks": [],
+      "existingNoindex": false,
+      "reviewDates": [
+        "2026년 5월 18일"
+      ],
+      "firstHandClaims": []
+    },
+    {
+      "path": "src/pages/isa-junbi/isa-dangil-cheongso.astro",
+      "url": "/isa-junbi/isa-dangil-cheongso/",
+      "title": "이사 당일 청소와 짐 정리 순서",
+      "headings": [
+        "이사 당일 청소와 짐 정리 순서",
+        "1. 이사 당일 전체 타임라인",
+        "2. 짐 입주 전 청소 — 왜 먼저 해야 하나",
+        "3. 이사 당일 하자 점검 포인트",
+        "4. 이사 당일 처리해야 할 행정 항목",
+        "5. 짐 정리 순서와 우선순위 — 무엇부터 풀어야 하나",
+        "6. 이사 당일 절대 하지 말아야 할 실수",
+        "7. 이사 당일 놓치기 쉬운 세부 확인 항목",
+        "체크리스트",
+        "자주 묻는 질문",
+        "정리"
+      ],
+      "sourceSha256": "27d00386ec1c73f9b414bfd95f28e4fdd0012159707097d7100da6034b172f3b",
+      "decision": "보강 후보",
+      "action": "P1: 절차·연락처·기한·비용의 공식 출처와 지역별 예외 보강",
+      "proposedTarget": null,
+      "evidenceLinks": [],
+      "existingNoindex": false,
+      "reviewDates": [
+        "2026년 5월 29일"
+      ],
+      "firstHandClaims": []
+    },
+    {
+      "path": "src/pages/isa-junbi/isa-service-sunseot.astro",
+      "url": "/isa-junbi/isa-service-sunseot/",
+      "title": "이사 생활서비스 신청처·연락처 총정리",
+      "headings": [
+        "이사 생활서비스 신청처·연락처 총정리",
+        "1. 서비스별 신청처·연락처 한눈에",
+        "2. 인터넷 — 가장 먼저 신청해야 하는 이유",
+        "3. 렌탈 가전 이전 설치 신청 시 확인사항",
+        "4. 도시가스 전입 신청 방법",
+        "5. 이사 유형별 추가 확인 항목",
+        "6. 인터넷 이전 vs 신규 가입 — 어느 것이 유리한가",
+        "7. 이사 준비 일정에서 자주 하는 실수와 예방법",
+        "체크리스트",
+        "자주 묻는 질문",
+        "정리"
+      ],
+      "sourceSha256": "14aeae062a7cf83399ab732c9a7a9da1cd0a3b277a65c85515cc3d385119a7be",
+      "decision": "보강 후보",
+      "action": "P1: 절차·연락처·기한·비용의 공식 출처와 지역별 예외 보강",
+      "proposedTarget": null,
+      "evidenceLinks": [],
+      "existingNoindex": false,
+      "reviewDates": [
+        "2026년 5월 30일"
+      ],
+      "firstHandClaims": []
+    },
+    {
+      "path": "src/pages/isa-junbi/pojang-isa.astro",
+      "url": "/isa-junbi/pojang-isa/",
+      "title": "포장이사 vs 일반이사 비용 차이 — 상황별 선택 기준",
+      "headings": [
+        "포장이사 vs 일반이사 비용 차이 — 상황별 선택 기준",
+        "1. 포장이사 vs 일반이사 핵심 차이",
+        "2. 평수별 이사 비용 기준 (수도권 기준)",
+        "3. 포장이사 선택이 유리한 경우",
+        "4. 일반이사 선택이 유리한 경우",
+        "5. 이사 비용에 영향을 주는 주요 변수",
+        "실제 이사 견적 예시 (상황별)",
+        "6. 이사 견적 받을 때 꼭 확인할 사항",
+        "체크리스트",
+        "자주 묻는 질문",
+        "정리"
+      ],
+      "sourceSha256": "a5d82b88ace883fa1ff07048b5d8b3d1ab37183d21a22889292dbb5538393a89",
+      "decision": "보강 후보",
+      "action": "P1: 절차·연락처·기한·비용의 공식 출처와 지역별 예외 보강",
+      "proposedTarget": null,
+      "evidenceLinks": [
+        "https://www.kca.go.kr/",
+        "https://www.molit.go.kr/"
+      ],
+      "existingNoindex": false,
+      "reviewDates": [
+        "2026년 6월 2일"
+      ],
+      "firstHandClaims": []
+    },
+    {
+      "path": "src/pages/isa-junbi/pye-gajeon.astro",
+      "url": "/isa-junbi/pye-gajeon/",
+      "title": "폐가전 무상 수거 신청 방법 — 이사 전 버리는 가전 처리 가이드",
+      "headings": [
+        "폐가전 무상 수거 신청 방법 — 이사 전 버리는 가전 처리 가이드",
+        "대형 폐가전 무상 방문 수거 서비스 개요",
+        "무상 수거 대상 품목과 수거 불가 품목",
+        "폐가전 무상 수거 신청 방법",
+        "에어컨 폐기 시 별도 확인 사항",
+        "무상 수거 외 폐가전 처리 방법",
+        "자주 묻는 질문",
+        "이사 시 폐가전 처리 방법과 신청 기준 정리"
+      ],
+      "sourceSha256": "b599435535ff83c0ea609cb0a39e2eb02f445874805dbb2307a5b6e26927f637",
+      "decision": "보강 후보",
+      "action": "P1: 절차·연락처·기한·비용의 공식 출처와 지역별 예외 보강",
+      "proposedTarget": null,
+      "evidenceLinks": [],
+      "existingNoindex": false,
+      "reviewDates": [
+        "2026년 5월 19일"
+      ],
+      "firstHandClaims": []
+    },
+    {
+      "path": "src/pages/isa-junbi/sinhonjip-junbi.astro",
+      "url": "/isa-junbi/sinhonjip-junbi/",
+      "title": "신혼집 가전 마련과 입주 준비",
+      "headings": [
+        "신혼집 가전 마련과 입주 준비",
+        "신혼집만의 준비 — 두 살림 합치기",
+        "1. 인터넷 개통 — 가장 먼저 신청해야 하는 이유",
+        "2. 렌탈 가전 — 신혼집에서 고려할 제품",
+        "3. 입주청소 — 신혼집에서 특히 중요한 이유",
+        "4. 입주 전 반드시 확인할 체크리스트",
+        "자주 묻는 질문",
+        "정리"
+      ],
+      "sourceSha256": "11c713e7e68b7a05cf28e227ac5f2a4b3cfb31db7017496944efc18ff310d727",
+      "decision": "보강 후보",
+      "action": "P1: 절차·연락처·기한·비용의 공식 출처와 지역별 예외 보강",
+      "proposedTarget": null,
+      "evidenceLinks": [],
+      "existingNoindex": false,
+      "reviewDates": [
+        "2026년 5월 20일"
+      ],
+      "firstHandClaims": []
+    },
+    {
+      "path": "src/pages/isa-junbi/wonroom-isa-junbi.astro",
+      "url": "/isa-junbi/wonroom-isa-junbi/",
+      "title": "원룸 이사 전 준비해야 할 생활서비스 목록",
+      "headings": [
+        "원룸 이사 전 준비해야 할 생활서비스 목록",
+        "원룸 이사 전 생활서비스 체크리스트",
+        "1. 인터넷 개통 — 가장 먼저 해야 하는 이유",
+        "2. 입주청소 — 원룸에서 특히 중요한 이유",
+        "3. 도시가스 전입 — 당일 처리가 원칙",
+        "4. 원룸 이사 시 자주 빠뜨리는 항목",
+        "5. 원룸 이사 비용 절감 포인트",
+        "원룸 이사 최종 체크리스트",
+        "자주 묻는 질문",
+        "정리"
+      ],
+      "sourceSha256": "aa66f8d1042a55add848aa12129a016ac6715e3c4fa894f0e1eded908e15b81b",
+      "decision": "보강 후보",
+      "action": "P1: 절차·연락처·기한·비용의 공식 출처와 지역별 예외 보강",
+      "proposedTarget": null,
+      "evidenceLinks": [],
+      "existingNoindex": false,
+      "reviewDates": [
+        "2026년 5월 21일"
+      ],
+      "firstHandClaims": []
+    },
+    {
+      "path": "src/pages/jeolryak/aircon-jeongi.astro",
+      "url": "/jeolryak/aircon-jeongi/",
+      "title": "에어컨 전기요금 계산법 — 하루 사용 시간별 요금 기준 정리",
+      "headings": [
+        "에어컨 전기요금 계산법 — 하루 사용 시간별 요금 기준 정리",
+        "에어컨 전기요금 계산에 필요한 기본 개념",
+        "에어컨 소비전력과 월간 전력 사용량 계산",
+        "전기요금 누진제 구간과 단가 기준",
+        "실제 월 전기요금 계산 예시 (에어컨 추가분)",
+        "에어컨 전기요금을 줄이는 실용적인 방법",
+        "에너지 효율 등급에 따른 전기요금 차이",
+        "자주 묻는 질문",
+        "에어컨 전기요금 관리와 절감 기준 정리"
+      ],
+      "sourceSha256": "08dca73acd400fecb4d4d2f2e2575dffc84532a8d87ae7e140300522b58a7e0a",
+      "decision": "보강 후보",
+      "action": "P1: 소비전력 가정·요금 조건·절약 효과 근거와 산식 보강",
+      "proposedTarget": null,
+      "evidenceLinks": [
+        "https://home.kepco.co.kr/",
+        "https://www.energy.or.kr/"
+      ],
+      "existingNoindex": false,
+      "reviewDates": [
+        "2026년 5월 22일"
+      ],
+      "firstHandClaims": []
+    },
+    {
+      "path": "src/pages/jeolryak/boiler-oechul-mode.astro",
+      "url": "/jeolryak/boiler-oechul-mode/",
+      "title": "보일러 외출모드와 예약모드 차이 — 난방비 절약 설정법",
+      "headings": [
+        "보일러 외출모드와 예약모드 차이 — 난방비 절약 설정법",
+        "1. 보일러 주요 모드 비교",
+        "2. 외출모드가 전원 OFF보다 효율적인 이유",
+        "3. 상황별 보일러 설정 가이드",
+        "4. 난방비 절약을 위한 보일러 설정 팁",
+        "5. 보일러 유형별 외출모드 차이",
+        "6. 겨울철 난방비를 결정하는 3가지 핵심 요인",
+        "체크리스트",
+        "자주 묻는 질문",
+        "정리"
+      ],
+      "sourceSha256": "7fb99e5f887decd55e89002eab7db542b0ce18f11f23582a7b23b90aa04ded14",
+      "decision": "통합 후보",
+      "action": "P1: 본문 비교축 중복 검토; 고유 항목과 유입 확인 후 대표 URL 결정",
+      "proposedTarget": "/jeolryak/nanbangbi-jeollyak/",
+      "evidenceLinks": [],
+      "existingNoindex": false,
+      "reviewDates": [
+        "2026년 5월 25일"
+      ],
+      "firstHandClaims": []
+    },
+    {
+      "path": "src/pages/jeolryak/daegi-jeonryok.astro",
+      "url": "/jeolryak/daegi-jeonryok/",
+      "title": "대기전력 차단하면 실제로 얼마나 절약될까?",
+      "headings": [
+        "대기전력 차단하면 실제로 얼마나 절약될까?",
+        "1. 대기전력이란?",
+        "2. 가전별 대기전력 소비량",
+        "3. 대기전력 차단 시 절약 금액",
+        "4. 효과적으로 대기전력 줄이는 방법",
+        "5. 대기전력 차단이 특히 효과적인 상황",
+        "6. 대기전력 차단 습관을 쉽게 만드는 방법",
+        "7. 가전별 대기전력 차단 우선순위",
+        "체크리스트",
+        "자주 묻는 질문",
+        "정리"
+      ],
+      "sourceSha256": "74242c2014e2a052b92a5d9335f4366b5de15a6fba8a34cab4054f74a3f27720",
+      "decision": "보강 후보",
+      "action": "P1: 소비전력 가정·요금 조건·절약 효과 근거와 산식 보강",
+      "proposedTarget": null,
+      "evidenceLinks": [],
+      "existingNoindex": false,
+      "reviewDates": [
+        "2026년 5월 25일"
+      ],
+      "firstHandClaims": []
+    },
+    {
+      "path": "src/pages/jeolryak/energy-voucher.astro",
+      "url": "/jeolryak/energy-voucher/",
+      "title": "에너지바우처 신청 방법 — 지원 대상·금액·사용처 완전 정리",
+      "headings": [
+        "에너지바우처 신청 방법 — 지원 대상·금액·사용처 완전 정리",
+        "에너지바우처 지원 대상 — 두 가지 조건을 모두 충족해야 함",
+        "에너지바우처 지원 금액 — 가구원 수와 계절에 따라 다름",
+        "신청 가능 여부 빠른 자가진단",
+        "신청 기간 — 하절기·동절기 각각 신청 필요",
+        "신청 방법 — 주민센터 방문 또는 온라인 신청",
+        "에너지바우처 사용 방법 — 전기·가스·등유 각각 다름",
+        "에너지바우처 관련 추가 지원 제도",
+        "자주 묻는 질문",
+        "에너지바우처 신청 핵심 정리"
+      ],
+      "sourceSha256": "7dd8aa4ea8202e2538e4aeb565476626c114bcb9afe3885dcb5a77680070ac3c",
+      "decision": "보강 후보",
+      "action": "P0: 사업연도·금액·대상·계절별 신청 설명을 최신 공식 공고와 대조",
+      "proposedTarget": null,
+      "evidenceLinks": [
+        "https://www.energyvoucher.go.kr/",
+        "https://www.energy.or.kr/"
+      ],
+      "existingNoindex": false,
+      "reviewDates": [
+        "2026년 5월 23일"
+      ],
+      "firstHandClaims": []
+    },
+    {
+      "path": "src/pages/jeolryak/gogoyul-hwanbul.astro",
+      "url": "/jeolryak/gogoyul-hwanbul/",
+      "title": "고효율 가전 환급 신청 방법 — 한국에너지공단 환급 기준 정리",
+      "headings": [
+        "고효율 가전 환급 신청 방법 — 한국에너지공단 환급 기준 정리",
+        "고효율 가전 환급 사업이란",
+        "환급 대상 제품과 환급 기준",
+        "신청 자격 — 개인과 사업자 모두 가능",
+        "신청 방법 — 구매 후 영수증 보관이 핵심",
+        "고효율 가전 교체 시 전기요금 절감 효과",
+        "구매 전 에너지 소비효율 등급 라벨 확인 방법",
+        "자주 묻는 질문",
+        "고효율 가전 환급 핵심 정리"
+      ],
+      "sourceSha256": "3f7029efea3d16749b295c9f66ad7a1f3afd98be0b17c4220598b75e2be31d55",
+      "decision": "보강 후보",
+      "action": "P0: 사업명·운영기관·자격·신청 기간을 공식 공고별로 분리",
+      "proposedTarget": null,
+      "evidenceLinks": [],
+      "existingNoindex": false,
+      "reviewDates": [
+        "2026년 5월 24일"
+      ],
+      "firstHandClaims": []
+    },
+    {
+      "path": "src/pages/jeolryak/gonggi-jeongi.astro",
+      "url": "/jeolryak/gonggi-jeongi/",
+      "title": "공기청정기 전기요금은 얼마나 나올까?",
+      "headings": [
+        "공기청정기 전기요금은 얼마나 나올까?",
+        "1. 공기청정기 용량별 전기요금",
+        "2. 공기청정기를 24시간 켜둬야 하나요?",
+        "3. 풍량 설정별 소비전력 비교 (중형 기준)",
+        "4. 전기요금 줄이는 공기청정기 사용법",
+        "5. 공기청정기 전기요금 직접 계산하는 방법",
+        "6. 공기청정기 에너지효율 등급 확인하는 법",
+        "7. 공기청정기와 주요 가전 전기요금 비교",
+        "체크리스트",
+        "자주 묻는 질문",
+        "정리"
+      ],
+      "sourceSha256": "44c147dc7a7300803e5a5c449bd899686e5b1c6f31b3e4887a5946958e2208d1",
+      "decision": "보강 후보",
+      "action": "P1: 소비전력 가정·요금 조건·절약 효과 근거와 산식 보강",
+      "proposedTarget": null,
+      "evidenceLinks": [],
+      "existingNoindex": true,
+      "reviewDates": [
+        "2026년 6월 1일"
+      ],
+      "firstHandClaims": []
+    },
+    {
+      "path": "src/pages/jeolryak/jeongi-nujin.astro",
+      "url": "/jeolryak/jeongi-nujin/",
+      "title": "전기요금 누진제 구간 기준 완전 정리 — 여름·겨울 절약 방법",
+      "headings": [
+        "전기요금 누진제 구간 기준 완전 정리 — 여름·겨울 절약 방법",
+        "가정용 전기요금 누진제 구조 — 3구간 체계",
+        "누진제 계산 예시 — 사용량별 요금 차이",
+        "여름철 누진 구간 관리 — 에어컨 사용량과 연동",
+        "겨울철 누진 구간 관리 — 전기 히터 사용 주의",
+        "전기요금 절감을 위한 실용적인 방법",
+        "한전 스마트 앱으로 사용량 관리하는 법",
+        "자주 묻는 질문",
+        "전기요금 누진제 관리 핵심 정리"
+      ],
+      "sourceSha256": "4f53f37599bd14dbd785da3e350282f47902ee6cbef8d8769b42d4974f68d52d",
+      "decision": "보강 후보",
+      "action": "P0: 계약종별·계절·요금 구성과 예시 재계산",
+      "proposedTarget": null,
+      "evidenceLinks": [
+        "https://home.kepco.co.kr/",
+        "https://www.motie.go.kr/"
+      ],
+      "existingNoindex": false,
+      "reviewDates": [
+        "2026년 5월 23일"
+      ],
+      "firstHandClaims": []
+    },
+    {
+      "path": "src/pages/jeolryak/jesiugi-jeongi.astro",
+      "url": "/jeolryak/jesiugi-jeongi/",
+      "title": "제습기 전기요금과 적정 용량 확인법",
+      "headings": [
+        "제습기 전기요금과 적정 용량 확인법",
+        "1. 제습기 소비전력과 전기요금",
+        "2. 집 크기에 맞는 적정 제습 용량",
+        "3. 제습기 전기요금 줄이는 사용법",
+        "4. 제습기 에너지 효율 등급과 구매 기준",
+        "5. 계절별 제습기 활용 전략",
+        "체크리스트",
+        "자주 묻는 질문",
+        "정리"
+      ],
+      "sourceSha256": "9cec87cdd04ddb205ba90d56fcb5339ecb4902f80b4d49a7284089ce37b2b048",
+      "decision": "보강 후보",
+      "action": "P1: 소비전력 가정·요금 조건·절약 효과 근거와 산식 보강",
+      "proposedTarget": null,
+      "evidenceLinks": [],
+      "existingNoindex": true,
+      "reviewDates": [
+        "2026년 5월 26일"
+      ],
+      "firstHandClaims": []
+    },
+    {
+      "path": "src/pages/jeolryak/naengjangg-jeongi.astro",
+      "url": "/jeolryak/naengjangg-jeongi/",
+      "title": "냉장고 전기요금 줄이는 온도 설정 기준",
+      "headings": [
+        "냉장고 전기요금 줄이는 온도 설정 기준",
+        "1. 냉장고 전기요금 — 얼마나 나올까?",
+        "2. 냉장고 적정 온도 설정 기준",
+        "3. 냉장고 전기요금 줄이는 7가지 습관",
+        "4. 오래된 냉장고 vs 신제품 전기요금 차이",
+        "5. 냉장고 종류별 전기요금 추가 고려 사항",
+        "체크리스트",
+        "자주 묻는 질문",
+        "정리"
+      ],
+      "sourceSha256": "3f3d6413ce4e8ef7ed496b6f059cf7ffbb4da807ddccaf41252c24ca4ac6055f",
+      "decision": "보강 후보",
+      "action": "P1: 소비전력 가정·요금 조건·절약 효과 근거와 산식 보강",
+      "proposedTarget": null,
+      "evidenceLinks": [],
+      "existingNoindex": true,
+      "reviewDates": [
+        "2026년 5월 24일"
+      ],
+      "firstHandClaims": []
+    },
+    {
+      "path": "src/pages/jeolryak/nanbangbi-jeollyak.astro",
+      "url": "/jeolryak/nanbangbi-jeollyak/",
+      "title": "겨울 난방비 줄이는 보일러 설정법 — 온도·외출모드·단열 기준",
+      "headings": [
+        "겨울 난방비 줄이는 보일러 설정법 — 온도·외출모드·단열 기준",
+        "보일러 설정 온도 — 실내 온도 기준으로 설정해야 하는 이유",
+        "외출 모드 — 껐다 켰다 반복보다 유지가 유리한 경우가 많다",
+        "보일러 운전 모드별 특징과 선택 기준",
+        "난방비 절감 효과 — 온도 인하 시 예상 절약액",
+        "실내 단열 개선 — 비용 적고 효과 큰 방법부터",
+        "도시가스 요금 체계와 절감 계산 기준",
+        "보일러 유지관리 — 연 1회 점검이 연료비 절감의 기본",
+        "콘덴싱 보일러 vs 일반 보일러 — 교체 시 절감 효과",
+        "자주 묻는 질문",
+        "겨울 난방비 절감 핵심 정리"
+      ],
+      "sourceSha256": "4715062a2e27f178bd4c1e51327d398b04d3cf3bfaf5d85efa7a2b9810c6ff1c",
+      "decision": "보강 후보",
+      "action": "P1: 소비전력 가정·요금 조건·절약 효과 근거와 산식 보강",
+      "proposedTarget": null,
+      "evidenceLinks": [
+        "https://www.energy.or.kr/",
+        "https://www.kogas.or.kr/"
+      ],
+      "existingNoindex": false,
+      "reviewDates": [
+        "2026년 5월 22일"
+      ],
+      "firstHandClaims": []
+    },
+    {
+      "path": "src/pages/jeolryak/saetakgi-jeongi.astro",
+      "url": "/jeolryak/saetakgi-jeongi/",
+      "title": "세탁기 전기요금 절약 방법 — 사용 습관부터 설정까지",
+      "headings": [
+        "세탁기 전기요금 절약 방법 — 사용 습관부터 설정까지",
+        "1. 세탁기 유형별 전기요금 비교",
+        "2. 세탁 온도별 전기요금 차이",
+        "3. 세탁기 전기요금 절약 실천 방법 7가지",
+        "4. 드럼 vs 통돌이 — 전기요금 기준 어떤 것이 유리한가",
+        "5. 세탁기 에너지 효율 등급과 전기요금 차이",
+        "6. 세탁기 렌탈 vs 구매 — 전기요금 이외의 비용 고려",
+        "체크리스트",
+        "자주 묻는 질문",
+        "정리"
+      ],
+      "sourceSha256": "065fd34be376423977114b3d8f0885759d09c3305bd6f6cac1a425284b9e2a2f",
+      "decision": "보강 후보",
+      "action": "P1: 소비전력 가정·요금 조건·절약 효과 근거와 산식 보강",
+      "proposedTarget": null,
+      "evidenceLinks": [],
+      "existingNoindex": true,
+      "reviewDates": [
+        "2026년 5월 27일"
+      ],
+      "firstHandClaims": []
+    },
+    {
+      "path": "src/pages/jeolryak/sudo-jeollyak.astro",
+      "url": "/jeolryak/sudo-jeollyak/",
+      "title": "수도요금 줄이는 세탁·샤워 습관",
+      "headings": [
+        "수도요금 줄이는 세탁·샤워 습관",
+        "1. 가정 내 생활용수 사용 비율",
+        "2. 세탁기 사용 습관 개선",
+        "3. 샤워 수도요금 절약 방법",
+        "4. 주방·기타 절수 방법",
+        "5. 수도 누수 자가 진단 방법",
+        "6. 절수 설비 교체 비용 vs 절약 효과 비교",
+        "체크리스트",
+        "자주 묻는 질문",
+        "정리"
+      ],
+      "sourceSha256": "4386c4f548b6e57b8bfafb4d32c0eac17253e37fec6bab2153305aeb4962e15f",
+      "decision": "보강 후보",
+      "action": "P1: 소비전력 가정·요금 조건·절약 효과 근거와 산식 보강",
+      "proposedTarget": null,
+      "evidenceLinks": [],
+      "existingNoindex": false,
+      "reviewDates": [
+        "2026년 5월 31일"
+      ],
+      "firstHandClaims": []
+    },
+    {
+      "path": "src/pages/jeolryak/tv-jeongi.astro",
+      "url": "/jeolryak/tv-jeongi/",
+      "title": "TV 전기요금 얼마나 나올까? — 크기·종류별 월 요금 계산",
+      "headings": [
+        "TV 전기요금 얼마나 나올까? — 크기·종류별 월 요금 계산",
+        "1. TV 종류별 소비전력 비교",
+        "2. TV 크기별 월 전기요금 (하루 5시간 기준)",
+        "3. 사용 시간별 월 전기요금 차이 (55인치 LCD 기준)",
+        "4. TV 전기요금 절약 방법",
+        "5. 에너지효율 등급이 TV 전기요금에 미치는 영향",
+        "체크리스트",
+        "자주 묻는 질문",
+        "정리"
+      ],
+      "sourceSha256": "ec877101f5b5c93403b4669777b4dc89e58b6c9f4c638dcbd3fa47833bc5fb80",
+      "decision": "보강 후보",
+      "action": "P1: 소비전력 가정·요금 조건·절약 효과 근거와 산식 보강",
+      "proposedTarget": null,
+      "evidenceLinks": [],
+      "existingNoindex": true,
+      "reviewDates": [
+        "2026년 6월 7일"
+      ],
+      "firstHandClaims": []
+    },
+    {
+      "path": "src/pages/jeolryak/yeorim-jeongi.astro",
+      "url": "/jeolryak/yeorim-jeongi/",
+      "title": "여름철 전기요금 줄이는 냉방기 사용법",
+      "headings": [
+        "여름철 전기요금 줄이는 냉방기 사용법",
+        "1. 냉방 설정 온도와 전기요금 관계",
+        "2. 전기요금 줄이는 에어컨 사용법 7가지",
+        "3. 상황별 냉방 전략 비교",
+        "4. 여름철 전기요금 누진제 구간과 실질 절감 금액",
+        "5. 인버터 에어컨 vs 정속형 에어컨 — 전기요금 차이",
+        "6. 실외기 관리가 냉방 효율에 미치는 영향",
+        "체크리스트",
+        "자주 묻는 질문",
+        "정리"
+      ],
+      "sourceSha256": "bec30f95141c4331492755adc7f8dd0b982128285854f848bb8f77e4d785a541",
+      "decision": "통합 후보",
+      "action": "P1: 본문 비교축 중복 검토; 고유 항목과 유입 확인 후 대표 URL 결정",
+      "proposedTarget": "/jeolryak/aircon-jeongi/",
+      "evidenceLinks": [],
+      "existingNoindex": false,
+      "reviewDates": [
+        "2026년 5월 31일"
+      ],
+      "firstHandClaims": []
+    }
+  ]
+}

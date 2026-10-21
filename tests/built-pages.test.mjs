@@ -3,7 +3,7 @@ import assert from 'node:assert/strict';
 import { readFileSync, existsSync } from 'node:fs';
 import { resolve } from 'node:path';
 // Run after npm run build.
-for (const path of ['index.html', 'calculator/water-purifier/index.html']) {
+for (const path of ['calculator/water-purifier/index.html']) {
   test(`built page structure and internal links: ${path}`, { skip: !existsSync('dist/index.html') }, () => {
     const html = readFileSync(resolve('dist', path), 'utf8');
     assert.equal((html.match(/<h1[\s>]/g) || []).length, 1);

@@ -1,0 +1,27 @@
+---
+import Layout from '../layouts/Layout.astro';
+const articleSources = import.meta.glob('./{cheongso,rental,isa-junbi,jeolryak}/*.astro', { eager: true, query: '?raw', import: 'default' });
+const articles = Object.entries(articleSources).filter(([path]) => !path.endsWith('/index.astro')).map(([path, source]) => ({
+  href: path.replace(/^\./, '').replace(/\.astro$/, '/'),
+  title: String(source).match(/<h1[^>]*>([\s\S]*?)<\/h1>/)?.[1].replace(/<[^>]*>/g, ' ').replace(/\s+/g, ' ').trim() || path,
+})).sort((a,b) => a.title.localeCompare(b.title, 'ko'));
+const topics = [
+  {href:'/cheongso/', title:'청소비용', description:'청소 범위와 추가 항목을 정리하고, 같은 조건으로 견적을 비교하세요.', links:[['/cheongso/cheongso-gyeonjeok-checklist/','견적 요청 전 체크리스트'],['/cheongso/ipju-cheongso-chukaiyogeum/','추가요금 확인 항목']]},
+  {href:'/rental/', title:'가전렌탈', description:'월 요금 외에 약정 기간, 관리 범위와 계약 종료 조건을 확인하세요.', links:[['/rental/rental-vs-purchase/','렌탈과 구매 계산 방법'],['/rental/rental-chunga-biyong/','월 요금 외 청구 항목']]},
+  {href:'/isa-junbi/', title:'이사준비', description:'시기별 할 일부터 입주 전 공간 점검까지 준비할 내용을 찾아보세요.', links:[['/isa-junbi/isa-checklist/','이사 전후 체크리스트'],['/isa-junbi/gwanrisauso-hwakyin/','관리사무소 확인 항목']]},
+  {href:'/jeolryak/', title:'생활비 절감', description:'전기·수도·난방 사용 조건과 비용에 영향을 주는 항목을 살펴보세요.', links:[['/jeolryak/daegi-jeonryok/','대기전력 확인하기'],['/jeolryak/sudo-jeollyak/','생활 속 물 사용 점검']]},
+];
+---
+<Layout title="생활비 가이드 — 청소·렌탈·이사·절약" description="청소비용, 가전렌탈, 이사준비, 생활비 절감 가이드를 한곳에서 찾아보세요. 기존 글은 각 주제별 목록에서 모두 확인할 수 있습니다.">
+  <div class="container guide-hub">
+    <p class="breadcrumb"><a href="/">홈</a><span>›</span><strong>생활비 가이드</strong></p>
+    <h1>어떤 생활비가 궁금하세요?</h1><p class="lead">필요한 주제를 고르면 기존 가이드 전체를 볼 수 있습니다.</p>
+    <div class="topic-grid">{topics.map(topic=><section><h2><a href={topic.href}>{topic.title} <span aria-hidden="true">↗</span></a></h2><p>{topic.description}</p><ul>{topic.links.map(([href,label])=><li><a href={href}>{label} →</a></li>)}</ul><details><summary>전체 글 목록 ({articles.filter(a=>a.href.startsWith(topic.href)).length}편)</summary><ul>{articles.filter(a=>a.href.startsWith(topic.href)).map(article=><li><a href={article.href}>{article.title}</a></li>)}</ul></details><a class="all-link" href={topic.href}>{topic.title} 주제 안내 →</a></section>)}</div>
+    <aside class="tools"><h2>내 조건으로 계산하고 싶다면</h2><p>정수기는 전용 비교 도구에서, 입주청소·전기요금은 생활비 계산기에서 확인하세요. 입력값과 가정에 따른 참고 결과이며 실제 견적·고지서와 다를 수 있습니다.</p><div><a href="/calculator/water-purifier/">정수기 총비용 비교 →</a><a href="/calculator/">생활비 계산기 →</a></div></aside>
+    <p class="note">가격·지원제도·계약 조건은 바뀔 수 있습니다. 각 글의 검토일과 출처를 확인하고 실제 신청·계약 전에는 해당 기관이나 업체의 최신 안내를 확인하세요.</p>
+  </div>
+</Layout>
+<style>
+  details{border-top:1px solid #d4dfd8;padding:14px 0;margin-bottom:8px;font-size:.85rem}summary{cursor:pointer;color:#235e50;font-weight:600}details li{line-height:1.7}
+  .guide-hub{padding-top:18px;padding-bottom:48px;max-width:1050px}h1{font-size:clamp(1.7rem,4vw,2.4rem);letter-spacing:-.04em;margin:24px 0 14px}.lead{color:#617568;margin-bottom:30px}.topic-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px}.topic-grid section{border:1px solid #d4dfd8;border-radius:12px;padding:26px;background:#fffef9;display:flex;flex-direction:column}.topic-grid h2{font-size:1.3rem;margin:0 0 14px}.topic-grid h2 a{display:flex;justify-content:space-between;color:#235e50}.topic-grid p{font-size:.9rem;line-height:1.8;color:#617568}.topic-grid ul{list-style:none;padding:0;margin:18px 0}.topic-grid li{margin:10px 0;font-size:.88rem}.all-link{font-size:.82rem;font-weight:700;margin-top:auto}.tools{margin-top:30px;padding:26px;background:#edf2eb;border-radius:12px}.tools h2{font-size:1.15rem;margin:0 0 12px}.tools p,.note{font-size:.85rem;line-height:1.8;color:#617568}.tools div{display:flex;gap:18px;flex-wrap:wrap;font-size:.88rem;font-weight:700;margin-top:16px}.note{margin-top:24px}a:focus-visible{outline:3px solid #29836e;outline-offset:4px}@media(max-width:640px){.topic-grid{grid-template-columns:1fr}.topic-grid section{padding:22px}}
+</style>

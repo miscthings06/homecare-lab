@@ -152,6 +152,114 @@
 - 기간 선택 연동, 코웨이 첫해 필터비 제외 선택 기능, 공식 단가 출처 및 계산식 제공.
 - LG는 공식 자가교체 케어십, SK매직은 견적 필요로 유지. 전체 빌드 및 29개 테스트 통과.
 
+## 2026-10-21 구조 정리 및 기존 글 1차 점검
+
+홈은 소개·정수기 비교 진입·핵심 가이드 3개·비교 기준 안내로 단순화했다. 긴 공식표·자가교체 예상표·계산기는 기존 `/calculator/water-purifier/`에서 유지한다. 상단 메뉴는 정수기 비교 / 생활비 가이드 / 소개·비교 기준으로 통합하고 `/guides/`가 기존 네 카테고리 및 생활비 계산기를 연결한다.
+
+### 점검 범위와 제한
+
+네 카테고리의 기존 글 62편의 제목·소제목·본문 정적 신호(외부 URL, 검토일, 경험 주장 등)를 전수 목록화했다. 정수기 필터·렌탈 해지 두 글·입주청소 비용·비교 방법 등 우선 대상은 본문을 상세 확인했다. 모든 글의 사실·가격·공식 출처 유효성을 재검증한 것은 아니며, 검색 유입·조회수 자료도 이번 점검에 사용하지 않았다. 루트의 별도 종합 가이드와 정책 페이지는 62편 분류에 포함하지 않았다. 글 수나 외부 링크 수만으로 품질을 판정하지 않는다.
+
+**유지 후보 4 / 보강 후보 49 / 통합 후보 9.** 유지는 독립적인 역할을 남기자는 뜻이지 사실검증 완료가 아니다. 통합은 초안 제안이며 실제 병합·삭제·리디렉션·canonical·noindex 변경은 하지 않았다. 기존 기사 소스의 SHA-256 및 주소·기존 색인 설정을 회귀 테스트로 보존한다.
+
+상세 목록과 소제목·출처 URL·원문 해시는 [점검 데이터](content-audit-2026-10-21.json)에 있다. `node scripts/audit-content.mjs`는 파일을 수정하지 않고 현재 목록을 출력한다.
+
+### 가장 먼저 보강할 항목
+
+1. **입주청소 직접 견적 주장**: 본문에 2026년 5월 5개 업체에서 직접 받은 견적이라고 명시되어 있다. 원본 견적서·상담 기록을 이번에 확인하지 못했으므로 사실로 보증할 수 없다. 자료 확인 전 홍보 문구로 재사용하지 말 것. 카테고리 요약과 본문 가격 범위도 다르므로 조사 조건을 맞춰 대조해야 한다.
+2. **정수기 필터 글**: 브랜드별 일반 관리 주기, 셀프 필터비 연 5~10만원, LG 필터 별도 구매 등의 포괄 표현은 현재 모델별 공식 비교와 구분해야 한다. 모델·관리 계약·호환 부품별로 재작성할 후보이며 이번에는 본문을 바꾸지 않았다.
+3. **해지비용 두 글**: 잔여요금 50~80% 일반화 및 6개월 이내 만료 대기가 유리하다는 표는 조건 근거가 필요하다. 약정 글의 월 3만원·잔여요금 50% 설명대로라면 1년 사용 후 72만원, 2년 후 54만원, 3년 후 36만원, 4년 후 18만원이지만 표/그래프와 일치하지 않는 항목이 있다. 약관 출처 확인 후 대표 글 하나로 정리할 후보.
+4. **지원사업·전기요금**: 에너지바우처·고효율 환급·누진제는 사업 연도/계약종별/계절별 공식 문서 검증을 우선한다. 현재 설명의 적법성·최신성을 이번 구조 점검으로 보증하지 않는다.
+5. **소개 페이지 신뢰 표현**: 기존 ‘직접 겪음’, ‘모든 수치를 대조’, 소비자 제보 활용, 닥터 홈케어의 인물 스키마는 운영자 확인이 필요하다. 현재 광고 게재 문구도 광고 비활성화 상태와 대조해야 한다. 이번에는 요청 범위인 비교 기준 섹션만 추가했다.
+6. **출처 구체성**: 기관 홈페이지 링크만으로 특정 요금·효능·법률 주장 근거가 되지 않는다. 상세 문서와 적용 문장, 확인일을 연결하는 방향으로 보강한다.
+
+### 통합 후보와 보존 기준
+
+다음 대표 주소는 임시 제안이다. 검색 유입·노출·외부 링크 및 본문의 고유 정보 확인 후 확정한다. 통합 실행 시에는 고유 문단을 보존하고 필요한 리디렉션·내부 링크·사이트맵 갱신을 별도 작업한다. 시스템 에어컨·원룸 등 설치 조건이 다른 글은 제목이 비슷하다는 이유만으로 합치지 않는다.
+
+| 통합 후보 | 대표 글 후보 |
+|---|---|
+| /cheongso/aircon-type-cheongso/ | /cheongso/aircon-cheongso/ |
+| /cheongso/cheongso-checklist-all/ | /cheongso/cheongso-gyeonjeok-checklist/ |
+| /cheongso/saetak-type-cheongso/ | /cheongso/saetak-cheongso/ |
+| /rental/gonggi-filter-biyong/ | /rental/gonggi-rental/ |
+| /rental/rental-yakjeong/ | /rental/rental-haejibiyong/ |
+| /isa-junbi/homeservice-dday/ | /isa-junbi/isa-checklist/ |
+| /isa-junbi/internet-sinyu-vs-isa/ | /isa-junbi/internet-isa/ |
+| /jeolryak/boiler-oechul-mode/ | /jeolryak/nanbangbi-jeollyak/ |
+| /jeolryak/yeorim-jeongi/ | /jeolryak/aircon-jeongi/ |
+
+### 전체 글 분류
+
+| 글 | 1차 분류 | 다음 점검 |
+|---|---|---|
+| [에어컨 청소 셀프와 업체 청소 차이 비교 — 비용과 효과 기준](https://www.homecare-lab.co.kr/cheongso/aircon-cheongso/) | 보강 후보 | P1: 가격 조사 조건·실제 사례 근거·제조사별 세척 주의사항 보강 |
+| [벽걸이 에어컨과 스탠드 에어컨 청소 차이](https://www.homecare-lab.co.kr/cheongso/aircon-type-cheongso/) | 통합 후보 | P1: 본문 비교축 중복 검토; 고유 항목과 유입 확인 후 대표 URL 결정 |
+| [창틀 청소 방법과 주기 — 곰팡이·먼지·물때 제거 가이드](https://www.homecare-lab.co.kr/cheongso/changtul-cheongso/) | 보강 후보 | P1: 가격 조사 조건·실제 사례 근거·제조사별 세척 주의사항 보강 |
+| [청소 견적 전 체크리스트 통합](https://www.homecare-lab.co.kr/cheongso/cheongso-checklist-all/) | 통합 후보 | P1: 본문 비교축 중복 검토; 고유 항목과 유입 확인 후 대표 URL 결정 |
+| [청소 견적 요청 전 확인해야 할 체크리스트 20가지](https://www.homecare-lab.co.kr/cheongso/cheongso-gyeonjeok-checklist/) | 유지 후보 | P2: 독립 목적 유지; 유지 후보는 정확성 검증 완료를 뜻하지 않음 |
+| [청소업체 후기 볼 때 확인해야 할 7가지 기준](https://www.homecare-lab.co.kr/cheongso/cheongso-upche-hugi/) | 유지 후보 | P2: 독립 목적 유지; 유지 후보는 정확성 검증 완료를 뜻하지 않음 |
+| [주방 후드 청소 비용과 주기 — 셀프 청소와 업체 청소 비교](https://www.homecare-lab.co.kr/cheongso/hood-biyong/) | 보강 후보 | P1: 가격 조사 조건·실제 사례 근거·제조사별 세척 주의사항 보강 |
+| [입주청소 비용은 어떻게 정해질까? 평수별 확인 기준 총정리](https://www.homecare-lab.co.kr/cheongso/ipju-cheongso-biyong/) | 보강 후보 | P0: 업체 5곳 직접 견적 주장 원본 확인; 카테고리 요약표와 가격 범위 대조 |
+| [입주청소 추가요금이 붙는 대표적인 경우 7가지](https://www.homecare-lab.co.kr/cheongso/ipju-cheongso-chukaiyogeum/) | 보강 후보 | P1: 가격 조사 조건·실제 사례 근거·제조사별 세척 주의사항 보강 |
+| [이사청소와 입주청소 차이 — 비용이 달라지는 이유](https://www.homecare-lab.co.kr/cheongso/isa-cheongso/) | 보강 후보 | P1: 가격 조사 조건·실제 사례 근거·제조사별 세척 주의사항 보강 |
+| [매트리스 청소 방법과 주기 — 진드기·냄새·얼룩 제거 기준](https://www.homecare-lab.co.kr/cheongso/mattress-cheongso/) | 보강 후보 | P1: 가격 조사 조건·실제 사례 근거·제조사별 세척 주의사항 보강 |
+| [세탁기 청소 주기와 통세척 비용 — 드럼·통돌이 차이 기준](https://www.homecare-lab.co.kr/cheongso/saetak-cheongso/) | 보강 후보 | P1: 가격 조사 조건·실제 사례 근거·제조사별 세척 주의사항 보강 |
+| [드럼세탁기와 통돌이세탁기 청소 차이](https://www.homecare-lab.co.kr/cheongso/saetak-type-cheongso/) | 통합 후보 | P1: 본문 비교축 중복 검토; 고유 항목과 유입 확인 후 대표 URL 결정 |
+| [소파 청소 비용과 방법 — 소재별 셀프 청소 기준](https://www.homecare-lab.co.kr/cheongso/sofa-cheongso/) | 보강 후보 | P1: 가격 조사 조건·실제 사례 근거·제조사별 세척 주의사항 보강 |
+| [시스템 에어컨 청소 전 확인해야 할 것](https://www.homecare-lab.co.kr/cheongso/system-aircon-cheongso/) | 보강 후보 | P1: 가격 조사 조건·실제 사례 근거·제조사별 세척 주의사항 보강 |
+| [원룸 입주청소 비용이 아파트와 다른 이유](https://www.homecare-lab.co.kr/cheongso/wonroom-ipju-cheongso/) | 보강 후보 | P1: 가격 조사 조건·실제 사례 근거·제조사별 세척 주의사항 보강 |
+| [욕실 곰팡이 제거 방법과 재발 방지 — 타일·줄눈·실리콘 기준](https://www.homecare-lab.co.kr/cheongso/yoksil-gompalgi/) | 보강 후보 | P1: 가격 조사 조건·실제 사례 근거·제조사별 세척 주의사항 보강 |
+| [에어컨 렌탈 vs 구매 — 5년 총비용과 선택 기준](https://www.homecare-lab.co.kr/rental/aircon-rental/) | 보강 후보 | P1: 모델·납부기간·포함 관리·행사 조건·공식 링크와 재현 계산 보강 |
+| [비데 렌탈 비용과 구매 비교 — 월 요금·설치비·관리비 기준](https://www.homecare-lab.co.kr/rental/bidet-rental/) | 보강 후보 | P1: 모델·납부기간·포함 관리·행사 조건·공식 링크와 재현 계산 보강 |
+| [부모님 집에 렌탈 가전이 유리한 경우](https://www.homecare-lab.co.kr/rental/bumonim-rental/) | 보강 후보 | P1: 모델·납부기간·포함 관리·행사 조건·공식 링크와 재현 계산 보강 |
+| [얼음정수기 렌탈 전 확인해야 할 전기요금과 관리 조건](https://www.homecare-lab.co.kr/rental/eoreum-jeongsugi-rental/) | 보강 후보 | P1: 모델·납부기간·포함 관리·행사 조건·공식 링크와 재현 계산 보강 |
+| [건조기 렌탈 비용과 구매 비교 — 드럼·히트펌프 기준](https://www.homecare-lab.co.kr/rental/geondogi-rental/) | 보강 후보 | P1: 모델·납부기간·포함 관리·행사 조건·공식 링크와 재현 계산 보강 |
+| [공기청정기 필터 교체비까지 포함한 렌탈 vs 구매 비용 비교](https://www.homecare-lab.co.kr/rental/gonggi-filter-biyong/) | 통합 후보 | P1: 본문 비교축 중복 검토; 고유 항목과 유입 확인 후 대표 URL 결정 |
+| [공기청정기 렌탈 비용과 구매 비교 — 필터 관리비 포함 기준](https://www.homecare-lab.co.kr/rental/gonggi-rental/) | 보강 후보 | P1: 모델·납부기간·포함 관리·행사 조건·공식 링크와 재현 계산 보강 |
+| [정수기 렌탈 관리주기와 필터 교체 조건 확인법](https://www.homecare-lab.co.kr/rental/jeongsugi-filter-rental/) | 보강 후보 | P0: 브랜드 단위 관리 주기·연 5~10만원 필터비를 모델별 공식 근거와 대조 |
+| [정수기 렌탈 비용과 구매 비교 — 월 요금·약정·관리비 기준](https://www.homecare-lab.co.kr/rental/jeongsugi-rental/) | 보강 후보 | P0: 기존 5년 계산을 현재 모델별 비교와 구분; 생수 비교의 독립 목적 검토 |
+| [냉장고 렌탈 비용과 구매 비교 — 용량별 월 요금 기준](https://www.homecare-lab.co.kr/rental/naengjangg-rental/) | 보강 후보 | P1: 모델·납부기간·포함 관리·행사 조건·공식 링크와 재현 계산 보강 |
+| [1인 가구 가전렌탈, 구매보다 유리할까?](https://www.homecare-lab.co.kr/rental/oin-rental/) | 보강 후보 | P1: 모델·납부기간·포함 관리·행사 조건·공식 링크와 재현 계산 보강 |
+| [렌탈 청구 비용 항목 정리 — 월 요금 외 추가 청구 기준](https://www.homecare-lab.co.kr/rental/rental-chunga-biyong/) | 보강 후보 | P1: 모델·납부기간·포함 관리·행사 조건·공식 링크와 재현 계산 보강 |
+| [가전렌탈 해지비용 확인 전 꼭 봐야 할 항목](https://www.homecare-lab.co.kr/rental/rental-haejibiyong/) | 보강 후보 | P0: 잔여요금 50~80% 일반화 근거·계약별 약관 확인 |
+| [이사할 때 렌탈 가전 이전 설치 비용 확인법](https://www.homecare-lab.co.kr/rental/rental-isa-transfer/) | 보강 후보 | P1: 모델·납부기간·포함 관리·행사 조건·공식 링크와 재현 계산 보강 |
+| [정수기 렌탈과 구매, 총비용으로 비교하는 방법](https://www.homecare-lab.co.kr/rental/rental-vs-purchase/) | 유지 후보 | P2: 독립 목적 유지; 유지 후보는 정확성 검증 완료를 뜻하지 않음 |
+| [렌탈 약정 해지 위약금 계산 방법 — 중도 해지 기준 정리](https://www.homecare-lab.co.kr/rental/rental-yakjeong/) | 통합 후보 | P0: 50% 적용 설명과 표·차트 수치 불일치; 해지비용 글과 통합 검토 |
+| [세탁기 렌탈 비용과 구매 비교 — 드럼·통돌이 월 요금 기준](https://www.homecare-lab.co.kr/rental/saetak-rental/) | 보강 후보 | P1: 모델·납부기간·포함 관리·행사 조건·공식 링크와 재현 계산 보강 |
+| [부모님 집 이사 전 확인해야 할 안전 점검 항목](https://www.homecare-lab.co.kr/isa-junbi/bumonim-isa-jeongeom/) | 보강 후보 | P1: 절차·연락처·기한·비용의 공식 출처와 지역별 예외 보강 |
+| [도시가스 이전·명의변경 방법 — 이사 시 처리 순서 정리](https://www.homecare-lab.co.kr/isa-junbi/dosigas/) | 보강 후보 | P1: 절차·연락처·기한·비용의 공식 출처와 지역별 예외 보강 |
+| [입주 전 관리사무소에서 확인해야 할 항목](https://www.homecare-lab.co.kr/isa-junbi/gwanrisauso-hwakyin/) | 유지 후보 | P2: 독립 목적 유지; 유지 후보는 정확성 검증 완료를 뜻하지 않음 |
+| [입주 전 하자 점검표 작성 방법](https://www.homecare-lab.co.kr/isa-junbi/haja-jeongeom/) | 보강 후보 | P1: 절차·연락처·기한·비용의 공식 출처와 지역별 예외 보강 |
+| [이사 전후 홈서비스 준비표](https://www.homecare-lab.co.kr/isa-junbi/homeservice-dday/) | 통합 후보 | P1: 본문 비교축 중복 검토; 고유 항목과 유입 확인 후 대표 URL 결정 |
+| [이사 시 인터넷 이전과 신규 가입 비교 — 비용과 절차 기준](https://www.homecare-lab.co.kr/isa-junbi/internet-isa/) | 보강 후보 | P1: 절차·연락처·기한·비용의 공식 출처와 지역별 예외 보강 |
+| [인터넷 이전 설치 vs 신규가입 — 어떤 경우가 유리할까?](https://www.homecare-lab.co.kr/isa-junbi/internet-sinyu-vs-isa/) | 통합 후보 | P1: 본문 비교축 중복 검토; 고유 항목과 유입 확인 후 대표 URL 결정 |
+| [이사 전 점검 체크리스트 — 계약부터 이사 당일까지 단계별 정리](https://www.homecare-lab.co.kr/isa-junbi/isa-checklist/) | 보강 후보 | P1: 절차·연락처·기한·비용의 공식 출처와 지역별 예외 보강 |
+| [이사 당일 청소와 짐 정리 순서](https://www.homecare-lab.co.kr/isa-junbi/isa-dangil-cheongso/) | 보강 후보 | P1: 절차·연락처·기한·비용의 공식 출처와 지역별 예외 보강 |
+| [이사 생활서비스 신청처·연락처 총정리](https://www.homecare-lab.co.kr/isa-junbi/isa-service-sunseot/) | 보강 후보 | P1: 절차·연락처·기한·비용의 공식 출처와 지역별 예외 보강 |
+| [포장이사 vs 일반이사 비용 차이 — 상황별 선택 기준](https://www.homecare-lab.co.kr/isa-junbi/pojang-isa/) | 보강 후보 | P1: 절차·연락처·기한·비용의 공식 출처와 지역별 예외 보강 |
+| [폐가전 무상 수거 신청 방법 — 이사 전 버리는 가전 처리 가이드](https://www.homecare-lab.co.kr/isa-junbi/pye-gajeon/) | 보강 후보 | P1: 절차·연락처·기한·비용의 공식 출처와 지역별 예외 보강 |
+| [신혼집 가전 마련과 입주 준비](https://www.homecare-lab.co.kr/isa-junbi/sinhonjip-junbi/) | 보강 후보 | P1: 절차·연락처·기한·비용의 공식 출처와 지역별 예외 보강 |
+| [원룸 이사 전 준비해야 할 생활서비스 목록](https://www.homecare-lab.co.kr/isa-junbi/wonroom-isa-junbi/) | 보강 후보 | P1: 절차·연락처·기한·비용의 공식 출처와 지역별 예외 보강 |
+| [에어컨 전기요금 계산법 — 하루 사용 시간별 요금 기준 정리](https://www.homecare-lab.co.kr/jeolryak/aircon-jeongi/) | 보강 후보 | P1: 소비전력 가정·요금 조건·절약 효과 근거와 산식 보강 |
+| [보일러 외출모드와 예약모드 차이 — 난방비 절약 설정법](https://www.homecare-lab.co.kr/jeolryak/boiler-oechul-mode/) | 통합 후보 | P1: 본문 비교축 중복 검토; 고유 항목과 유입 확인 후 대표 URL 결정 |
+| [대기전력 차단하면 실제로 얼마나 절약될까?](https://www.homecare-lab.co.kr/jeolryak/daegi-jeonryok/) | 보강 후보 | P1: 소비전력 가정·요금 조건·절약 효과 근거와 산식 보강 |
+| [에너지바우처 신청 방법 — 지원 대상·금액·사용처 완전 정리](https://www.homecare-lab.co.kr/jeolryak/energy-voucher/) | 보강 후보 | P0: 사업연도·금액·대상·계절별 신청 설명을 최신 공식 공고와 대조 |
+| [고효율 가전 환급 신청 방법 — 한국에너지공단 환급 기준 정리](https://www.homecare-lab.co.kr/jeolryak/gogoyul-hwanbul/) | 보강 후보 | P0: 사업명·운영기관·자격·신청 기간을 공식 공고별로 분리 |
+| [공기청정기 전기요금은 얼마나 나올까?](https://www.homecare-lab.co.kr/jeolryak/gonggi-jeongi/) | 보강 후보 | P1: 소비전력 가정·요금 조건·절약 효과 근거와 산식 보강 |
+| [전기요금 누진제 구간 기준 완전 정리 — 여름·겨울 절약 방법](https://www.homecare-lab.co.kr/jeolryak/jeongi-nujin/) | 보강 후보 | P0: 계약종별·계절·요금 구성과 예시 재계산 |
+| [제습기 전기요금과 적정 용량 확인법](https://www.homecare-lab.co.kr/jeolryak/jesiugi-jeongi/) | 보강 후보 | P1: 소비전력 가정·요금 조건·절약 효과 근거와 산식 보강 |
+| [냉장고 전기요금 줄이는 온도 설정 기준](https://www.homecare-lab.co.kr/jeolryak/naengjangg-jeongi/) | 보강 후보 | P1: 소비전력 가정·요금 조건·절약 효과 근거와 산식 보강 |
+| [겨울 난방비 줄이는 보일러 설정법 — 온도·외출모드·단열 기준](https://www.homecare-lab.co.kr/jeolryak/nanbangbi-jeollyak/) | 보강 후보 | P1: 소비전력 가정·요금 조건·절약 효과 근거와 산식 보강 |
+| [세탁기 전기요금 절약 방법 — 사용 습관부터 설정까지](https://www.homecare-lab.co.kr/jeolryak/saetakgi-jeongi/) | 보강 후보 | P1: 소비전력 가정·요금 조건·절약 효과 근거와 산식 보강 |
+| [수도요금 줄이는 세탁·샤워 습관](https://www.homecare-lab.co.kr/jeolryak/sudo-jeollyak/) | 보강 후보 | P1: 소비전력 가정·요금 조건·절약 효과 근거와 산식 보강 |
+| [TV 전기요금 얼마나 나올까? — 크기·종류별 월 요금 계산](https://www.homecare-lab.co.kr/jeolryak/tv-jeongi/) | 보강 후보 | P1: 소비전력 가정·요금 조건·절약 효과 근거와 산식 보강 |
+| [여름철 전기요금 줄이는 냉방기 사용법](https://www.homecare-lab.co.kr/jeolryak/yeorim-jeongi/) | 통합 후보 | P1: 본문 비교축 중복 검토; 고유 항목과 유입 확인 후 대표 URL 결정 |
+
+### 후속 순서
+
+먼저 P0 근거·계산 충돌을 보강하고, 검색 유입 자료가 확보되면 통합 후보의 대표 URL을 결정한다. 그다음 P1 가격·출처·절차, 마지막으로 P2 유지 후보를 검토한다. 이 구조 변경은 애드센스 승인 보장이 아니며 재신청을 자동 진행하지 않는다. 구조 변경 검증: 80페이지 빌드, 31개 테스트 통과. 브라우저에서 홈·가이드 목록 펼치기·비교 도구 유지 확인.
+
 ## 다음 작업에 필요한 정보
 
 - 애드센스 거절 사유가 보이는 화면 또는 메일
