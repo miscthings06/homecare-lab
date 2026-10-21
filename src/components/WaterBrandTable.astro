@@ -1,0 +1,63 @@
+---
+import { products, verifiedAt } from '../data/water-products.mjs';
+import { summarizeProduct, summaryMoney } from '../lib/water-brand-summary.mjs';
+const months = 72;
+const rows = products.map(product => ({ product, result: summarizeProduct(product, months) }));
+---
+<section id="brand-comparison" class="brand-comparison" aria-labelledby="brand-comparison-title">
+  <p class="eyebrow">SAME PERIOD · BRAND COMPARISON</p>
+  <h2 id="brand-comparison-title">같은 사용 기간으로 한눈에 비교</h2>
+  <p class="intro">모든 모델에 동일한 기간을 적용합니다. 확인되지 않은 구매 관리비는 0원으로 채우지 않습니다.</p>
+  <div class="table-controls">
+    <label for="brand-months">공통 사용 기간</label>
+    <select id="brand-months"><option value="12">1년 · 12개월</option><option value="36">3년 · 36개월</option><option value="60">5년 · 60개월</option><option value="72" selected>6년 · 72개월</option><option value="84">7년 · 84개월</option><option value="120">10년 · 120개월</option></select>
+    <span id="brand-summary-status" role="status">{months}개월 기준 · 구매 관리비 미확인 {rows.filter(row => row.result.care === null).length}개 · 구매가 미확인 {products.filter(product => product.purchase === null).length}개</span>
+  </div>
+  <p class="basis"><strong>계약을 계속 유지하며 사용하는 기준입니다.</strong> 렌탈 금액은 선택 기간까지의 납부액으로, 그때 해지하는 총비용이 아닙니다. 남은 계약·위약금은 별도이며 약정 자체를 선택 기간으로 바꾼 견적도 아닙니다.</p>
+  <p class="scroll-hint">작은 화면에서는 표를 좌우로 움직여 확인하세요.</p>
+  <div class="comparison-scroll" role="region" aria-label="같은 기간 브랜드별 비용표" tabindex="0">
+    <table>
+      <caption><span id="brand-table-period">72개월</span> 사용 기준 · 카드 할인 전 · 공식 가격 확인일 {verifiedAt}</caption>
+      <thead><tr><th scope="col">브랜드 / 모델</th><th scope="col">선택 계약</th><th scope="col">기간 내 렌탈 납부액</th><th scope="col">제품 구매가</th><th scope="col">기간 내 구매 관리비</th><th scope="col">구매 합계</th></tr></thead>
+      <tbody>{rows.map(({ product, result }) => <tr data-summary-product={product.id} class:list={{'care-unknown': result.care === null}}>
+        <th scope="row"><strong>{product.brand}</strong><span>{product.name}</span><small>{product.model}</small><small>{product.option}</small><a href={product.sources[0].url} target="_blank" rel="noopener noreferrer">공식 출처 ↗</a></th>
+        <td><strong>{product.term}개월</strong><small data-summary-field="contractNote">{result.contractNote}</small></td>
+        <td><strong data-summary-field="rental">{summaryMoney(result.rental)}</strong><small data-summary-field="rentalNote">{result.rentalNote}</small></td>
+        <td><strong>{product.purchase === null ? '구매가 미확인' : summaryMoney(product.purchase)}</strong><small>관리비 별도</small></td>
+        <td><span class:list={['care-badge', {unknown: result.care === null}]} data-summary-field="careStatus">{result.careStatus}</span><strong data-summary-field="care">{result.care === null ? '견적 필요' : summaryMoney(result.care)}</strong><small data-summary-field="careNote">{result.careNote}</small></td>
+        <td><strong data-summary-field="purchaseTotal">{summaryMoney(result.purchaseTotal)}</strong><small data-summary-field="purchaseNote">{result.purchaseNote}</small></td>
+      </tr>)}</tbody>
+    </table>
+  </div>
+  <ul class="table-notes">
+    <li>노란 표시 = 선택 기간의 구매 관리비 미확인. 제품 구매가를 총비용으로 대신 표시하거나 최저가 순위를 매기지 않습니다.</li>
+    <li>쿠쿠의 5개월 면제는 적용 회차 미확인으로 72개월 만기에서만 반영합니다. 계약이 끝난 이후의 렌탈 관리비는 확인되지 않아 해당 기간의 렌탈 합계를 표시하지 않습니다.</li>
+    <li>기본 설치·추가 비용 없음 가정. 추가 설치·해지·수리·전기·수도 비용, 카드·사은품 혜택은 제외합니다. 관리 서비스 범위와 A/S 조건은 브랜드마다 다릅니다.</li>
+    <li>표는 저장된 공식 확인 가격 기준이며 실시간 가격이 아닙니다. 아래 브랜드 필터·개별 견적 입력과 독립적으로 전체 모델을 비교합니다.</li>
+  </ul>
+  <noscript><p>JavaScript가 꺼져 있어 기본 72개월 표를 표시합니다. 기간 변경은 JavaScript가 필요합니다.</p></noscript>
+</section>
+<script>
+  import { products } from '../data/water-products.mjs';
+  import { summarizeProduct, summaryMoney } from '../lib/water-brand-summary.mjs';
+  const select = document.querySelector<HTMLSelectElement>('#brand-months')!;
+  select.addEventListener('change', () => {
+    const months = Number(select.value);
+    let missingCare = 0;
+    for (const product of products) {
+      const result = summarizeProduct(product, months);
+      const row = document.querySelector<HTMLElement>(`[data-summary-product="${product.id}"]`)!;
+      row.classList.toggle('care-unknown', result.care === null);
+      if (result.care === null) missingCare++;
+      const values = { ...result, rental: summaryMoney(result.rental), care: result.care === null ? '견적 필요' : summaryMoney(result.care), purchaseTotal: summaryMoney(result.purchaseTotal) };
+      row.querySelectorAll<HTMLElement>('[data-summary-field]').forEach(cell => { cell.textContent = String(values[cell.dataset.summaryField as keyof typeof values]); });
+      row.querySelector('.care-badge')!.classList.toggle('unknown', result.care === null);
+    }
+    document.getElementById('brand-table-period')!.textContent = `${months}개월`;
+    document.getElementById('brand-summary-status')!.textContent = `${months}개월 기준 · 구매 관리비 미확인 ${missingCare}개 · 구매가 미확인 ${products.filter(product => product.purchase === null).length}개`;
+  });
+</script>
+<style>
+  .brand-comparison thead th{color:#31594b;background:#edf3ed}.brand-comparison tbody th{color:#233e3b;background:#fff}
+  .brand-comparison{margin:0 0 44px;padding:28px 0 36px;border-bottom:1px solid #d4dfd8;scroll-margin-top:90px;color:#233e3b}.eyebrow{font-size:.7rem;font-weight:800;letter-spacing:.13em;color:#317266;margin-bottom:10px}h2{font-size:clamp(1.45rem,3vw,1.9rem);letter-spacing:-.05em}.intro{color:#596c67;font-size:.9rem;margin:12px 0 20px}.table-controls{display:flex;align-items:center;flex-wrap:wrap;gap:12px;margin:20px 0}.table-controls label{font-weight:700;font-size:.9rem}select{font:inherit;color:#235e50;border:1px solid #b9cbc5;border-radius:8px;background:#fff;padding:10px}#brand-summary-status{font-size:.78rem;color:#687164}.basis{background:#edf3ed;border-radius:10px;padding:16px;font-size:.83rem;margin-bottom:16px}.comparison-scroll{overflow-x:auto;border:1px solid #cddbd0;border-radius:12px;background:#fff}.comparison-scroll:focus-visible,select:focus-visible{outline:3px solid #29836e;outline-offset:3px}table{border-collapse:collapse;width:100%;min-width:960px;font-size:.81rem}caption{text-align:left;padding:16px;font-weight:700;background:#f5f7f2}th,td{text-align:left;vertical-align:top;padding:16px 12px;border-bottom:1px solid #dce4dc}thead th{background:#edf3ed;font-size:.75rem}tbody th{width:23%;font-weight:400}td{width:15.4%}td strong{white-space:nowrap;font-size:.9rem}strong,th span,small{display:block}small{font-size:.71rem;line-height:1.65;color:#657366;margin-top:6px}th span{font-size:.8rem;margin-top:4px}th a{display:inline-block;font-size:.7rem;text-decoration:underline;margin-top:8px;color:#317266}.care-badge{display:inline-block;border-radius:5px;font-size:.68rem;font-weight:700;background:#e8f3ed;color:#245c47;padding:3px 6px;margin-bottom:7px}.care-badge.unknown{background:#f7e5bb;color:#795a23}.care-unknown td:nth-child(5),.care-unknown td:nth-child(6){background:#fffaf0}.table-notes{padding-left:19px;margin-top:18px;list-style:disc;font-size:.76rem;color:#61716a}.table-notes li{margin:8px 0}.scroll-hint{font-size:.73rem;color:#61716a;margin:10px 0}@media(min-width:1050px){.scroll-hint{display:none}}@media(max-width:650px){.table-controls label{width:100%}#brand-summary-status{width:100%}.basis{font-size:.78rem}.brand-comparison{padding-top:12px}}
+</style>

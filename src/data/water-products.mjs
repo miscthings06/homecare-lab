@@ -26,7 +26,7 @@ export const products = [
     id: 'lg-wd520awb', brand: 'LG전자', name: '퓨리케어 오브제컬렉션 맞춤 lite',
     model: 'WD520AWB', option: '카밍 크림 화이트 · 냉온정 · 자가관리',
     purchase: 1410000, rental: 28900, promo: 14400, promoMonths: 12, term: 72,
-    purchaseCareMonths: 36, purchaseCareMonthly: 5000, purchaseAnnual: 198000,
+    purchaseCareMonths: 36, purchaseCareMonthly: 5000, purchaseAnnual: 198000, purchaseCareVerifiedMonths: 84,
     rentalTotal: 1906800,
     sources: [
       { label: 'LG 공식 구매 가격', url: 'https://www.lge.co.kr/water-purifiers/wd520awb' },
