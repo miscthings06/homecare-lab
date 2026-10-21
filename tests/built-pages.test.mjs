@@ -11,7 +11,10 @@ for (const path of ['index.html', 'calculator/water-purifier/index.html']) {
     assert.ok(html.includes('id="water-form"'));
     assert.ok(html.includes('id="water-results"'));
     assert.ok(html.includes('id="official-products"'));
-    assert.equal((html.match(/data-product="/g) || []).length, 3);
+    assert.equal((html.match(/data-product="/g) || []).length, 5);
+    assert.ok(html.includes('CP-TS011WS(S)')); assert.ok(html.includes('WPUJAC104DWH'));
+    assert.ok(html.includes('견적 확인 필요')); assert.ok(html.includes('data-brand-filter="쿠쿠"'));
+    assert.ok(html.includes('name="rentalTermDiscount"'));
     assert.ok(html.includes('name="purchaseCareMonths"'));
     assert.ok(html.includes('name="purchaseCareMonthly"'));
     assert.ok(html.includes('2026-10-21'));
