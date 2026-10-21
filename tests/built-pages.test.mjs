@@ -14,6 +14,12 @@ for (const path of ['index.html', 'calculator/water-purifier/index.html']) {
     assert.ok(html.includes('id="brand-comparison"'));
     assert.ok(html.includes('id="brand-months"'));
     assert.equal((html.match(/data-summary-product="/g) || []).length, 5);
+    assert.equal((html.match(/data-self-product="/g) || []).length, 5);
+    assert.ok(html.includes('id="self-care-comparison"'));
+    assert.ok(html.includes('id="self-care-free-year"'));
+    assert.ok(html.includes('id="self-care-months"'));
+    assert.ok(html.includes('예상 비용 · 가정 포함'));
+    for (const amount of ['2,810,000원', '2,300,000원', '3,115,000원']) assert.ok(html.includes(amount));
     assert.ok(html.includes('관리비 미확인')); assert.ok(html.includes('계약을 계속 유지'));
     assert.ok(html.includes('부품가 확인 · 총관리비 미확인'));
     for (const price of ['140,000원', '160,000원', '104,000원', '135,000원']) assert.ok(html.includes(price));

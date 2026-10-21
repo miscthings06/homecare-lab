@@ -1,0 +1,64 @@
+---
+import { products, verifiedAt } from '../data/water-products.mjs';
+import { summarizeSelfCare } from '../lib/water-self-care.mjs';
+import { summaryMoney } from '../lib/water-brand-summary.mjs';
+const rows = products.map(product => ({ product, result: summarizeSelfCare(product, 72) }));
+---
+<section id="self-care-comparison" class="self-care" aria-labelledby="self-care-title">
+  <p class="eyebrow">SELF REPLACEMENT · ESTIMATED BUDGET</p>
+  <h3 id="self-care-title">필터를 직접 교체하면 얼마일까요?</h3>
+  <p>위의 공통 사용 기간을 그대로 적용합니다. <strong>제품 구매가 + 필요한 필터 구매 예산</strong>을 비교하며, 주황색은 공식 확정 총액이 아닌 예상 비용입니다.</p>
+  <label class="period-label" for="self-care-months">공통 사용 기간 <select id="self-care-months"><option value="12">1년 · 12개월</option><option value="36">3년 · 36개월</option><option value="60">5년 · 60개월</option><option value="72" selected>6년 · 72개월</option><option value="84">7년 · 84개월</option><option value="120">10년 · 120개월</option></select></label>
+  <label class="free-year"><input type="checkbox" id="self-care-free-year" checked /> 코웨이 첫 12개월 필터비 제외 <span>(무상 서비스에 필터가 모두 포함된다는 가정)</span></label>
+  <p id="self-care-status" role="status">72개월 기준 · 코웨이 첫해 필터비 제외 가정</p>
+  <div class="self-scroll" role="region" aria-label="직접 필터 교체 예상 비용표" tabindex="0">
+    <table>
+      <caption><span id="self-care-period">72개월</span> 기준 · 공식 단가 확인일 {verifiedAt} · 미래 가격 동일 가정</caption>
+      <thead><tr><th scope="col">브랜드 / 모델</th><th scope="col">렌탈 납부액</th><th scope="col">필터·케어 예산</th><th scope="col">구매 + 필터·케어 합계</th><th scope="col">계산 근거 / 가정</th></tr></thead>
+      <tbody>{rows.map(({ product, result }) => <tr data-self-product={product.id}>
+        <th scope="row"><strong>{product.brand}</strong><span>{product.name}</span><small>{product.model}</small><small>제품가: {summaryMoney(product.purchase)}</small></th>
+        <td><strong data-self-field="rental">{summaryMoney(result.rental)}</strong><small>{result.rentalNote}</small></td>
+        <td><strong data-self-field="care">{summaryMoney(result.care)}</strong><small data-self-field="budgetLabel">{result.estimated ? '필터 구매 예상 예산' : result.care === null ? '단가·조건 확인 필요' : '케어십 요금 합계'}</small></td>
+        <td class:list={{estimate: result.estimated}}><span class:list={['badge', {estimated: result.estimated}]}>{result.status}</span><strong data-self-field="total">{summaryMoney(result.total)}</strong><small>방문관리·수리·전기·수도 비용 제외</small></td>
+        <td><strong class="formula" data-self-field="formula">{result.formula || '계산 근거 부족'}</strong><small data-self-field="assumption">{result.assumption}</small><details><summary>공식 단가 출처</summary>{(product.careEvidence?.items.length ? product.careEvidence.items : product.sources).map(source => <a href={source.url} target="_blank" rel="noopener noreferrer">{source.label} ↗</a>)}</details></td>
+      </tr>)}</tbody>
+    </table>
+  </div>
+  <ul>
+    <li>필터는 유료 사용 기간을 충당하도록 처음에 필요한 묶음을 확보하는 예산입니다. 남는 개월은 올림하여 한 묶음을 더 잡습니다. 실제 교체·결제 시점이나 남은 재고의 가치는 반영하지 않습니다.</li>
+    <li>코웨이 아이콘2·쿠쿠는 정확한 모델 호환도 가정입니다. 예상 금액은 구매·호환 보증이나 공식 견적이 아닙니다. 최초 포함 필터와 무상 범위가 다르면 실제 지출이 달라집니다.</li>
+    <li>렌탈은 선택 기간까지의 납부액입니다. 남은 약정·중도해지비는 별도이며, 렌탈에 포함된 관리·A/S와 필터만 직접 사는 조건은 같지 않습니다. 최저가 순위를 매기지 않습니다.</li>
+    <li>일반 설치·추가 비용 없음, 가격 인상 없음 가정. 배송·추가 설치·출장·수리·추가 소모품 비용은 미포함이며, 없다는 뜻이 아닙니다. 이 예상 표는 위의 공식 확인 표와 아래 개별 견적 계산기 입력을 바꾸지 않습니다.</li>
+  </ul>
+</section>
+<script>
+  import { products } from '../data/water-products.mjs';
+  import { summarizeSelfCare } from '../lib/water-self-care.mjs';
+  import { summaryMoney } from '../lib/water-brand-summary.mjs';
+  const period = document.querySelector<HTMLSelectElement>('#brand-months')!;
+  const free = document.querySelector<HTMLInputElement>('#self-care-free-year')!;
+  const selfPeriod = document.querySelector<HTMLSelectElement>('#self-care-months')!;
+  function renderSelfCare() {
+    const months = Number(period.value);
+    selfPeriod.value = period.value;
+    for (const product of products) {
+      const result = summarizeSelfCare(product, months, free.checked);
+      const row = document.querySelector<HTMLElement>(`[data-self-product="${product.id}"]`)!;
+      const values = { rental: summaryMoney(result.rental), care: summaryMoney(result.care), total: summaryMoney(result.total),
+        formula: result.formula || '계산 근거 부족', assumption: result.assumption,
+        budgetLabel: result.estimated ? '필터 구매 예상 예산' : result.care === null ? '단가·조건 확인 필요' : '케어십 요금 합계' };
+      row.querySelectorAll<HTMLElement>('[data-self-field]').forEach(cell => { cell.textContent = values[cell.dataset.selfField as keyof typeof values]; });
+      row.querySelector('td small')!.textContent = result.rentalNote;
+      row.querySelector('.badge')!.textContent = result.status;
+    }
+    document.getElementById('self-care-period')!.textContent = `${months}개월`;
+    document.getElementById('self-care-status')!.textContent = `${months}개월 기준 · 코웨이 첫해 필터비 ${free.checked ? '제외 가정' : '포함 가정'}`;
+  }
+  period.addEventListener('change', renderSelfCare);
+  selfPeriod.addEventListener('change', () => { period.value = selfPeriod.value; period.dispatchEvent(new Event('change')); });
+  free.addEventListener('change', renderSelfCare);
+</script>
+<style>
+  .period-label{display:flex;align-items:center;gap:12px;font-size:.85rem;margin-top:16px}select{font:inherit;color:#235e50;padding:10px;border:1px solid #b9cbc5;border-radius:8px;background:white}
+  .self-care{margin-top:36px;border-top:1px solid #d4dfd8;padding-top:28px;scroll-margin-top:90px;color:#233e3b}h3{font-size:1.6rem;margin:8px 0 16px}.eyebrow{font-size:.7rem;letter-spacing:.1em;color:#317266;font-weight:800}.self-care>p{font-size:.87rem;line-height:1.7}.free-year{display:flex;gap:9px;align-items:center;flex-wrap:wrap;margin:20px 0;padding:14px;background:#fff3df;border-radius:8px;font-size:.85rem}.free-year input{width:18px;height:18px}.free-year span{font-size:.76rem;color:#795a23}#self-care-status{font-size:.78rem;color:#687164}.self-scroll{overflow-x:auto;border:1px solid #cddbd0;border-radius:12px}.self-scroll:focus-visible{outline:3px solid #29836e}table{width:100%;min-width:960px;border-collapse:collapse;font-size:.8rem}caption{text-align:left;padding:14px;background:#f5f7f2}th,td{padding:15px 12px;text-align:left;vertical-align:top;border-bottom:1px solid #dce4dc}.self-care thead th{background:#edf3ed;color:#31594b}.self-care tbody th{background:#fff;color:#233e3b;width:20%;font-weight:400}td{width:17%}td:last-child{width:29%}td strong{white-space:nowrap;font-size:.92rem}.self-care .formula{white-space:normal;font-size:.78rem}th strong,th span,small{display:block}small{font-size:.72rem;color:#61716a;line-height:1.65;margin-top:8px}.badge{display:inline-block;font-size:.68rem;padding:4px 6px;border-radius:4px;background:#edf3ed;color:#31594b;margin-bottom:8px}.badge.estimated{background:#ffe3b0;color:#744515}.self-care td.estimate{background:#fff5e5}details{margin-top:10px;font-size:.72rem}summary{cursor:pointer}details a{display:block;margin:8px 0;text-decoration:underline;color:#317266}ul{padding-left:20px;font-size:.75rem;line-height:1.7;color:#61716a}li{margin:8px 0}
+</style>
